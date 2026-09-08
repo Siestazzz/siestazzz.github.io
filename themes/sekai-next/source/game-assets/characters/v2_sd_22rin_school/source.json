@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/v2_sd_22rin_school",
+  "cache": "fcef15c54fda3cd0077f40322ce28623",
+  "sha256": "e67795d3877334f632f800f24cc128142bac1758077c9cb4f18ece0c7c1480bf",
+  "objects": [
+    {
+      "id": "-5265904768173846152",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    },
+    {
+      "id": "-4688807710506005539",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "1292560634392106686",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    },
+    {
+      "id": "5780373731572544122",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": -5265904768173846152
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": 4366475687607637237
+          }
+        ]
+      }
+    }
+  ]
+}

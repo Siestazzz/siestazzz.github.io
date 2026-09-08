@@ -1,0 +1,20 @@
+<% const posts=site.posts.sort('-date').toArray(); const marked=posts.filter(p=>p.featured===true); const featured=(marked.length?marked:posts).slice(0,marked.length?5:3); function cover(p){const m=String(p.content||'').match(/<img\b[^>]*src=["']([^"']+)/i);return p.cover||(m&&m[1])||'/game-assets/bg_sekai.png';} const github=(theme.home||{}).github||''; %>
+<section class="game-home" aria-label="SEKAI 大厅">
+  <div class="home-name"><small>WELCOME TO</small><h1><%= config.title %></h1></div>
+  <nav class="home-social" aria-label="社交入口">
+    <% if(/^https:\/\/github\.com\//i.test(github)){ %><a class="home-github" href="<%= github %>" target="_blank" rel="noopener noreferrer"><img src="<%- url_for('/game-assets/home/github.svg') %>" alt=""><small>GitHub</small></a><% } %>
+    <a class="home-friends" href="<%- url_for('/friends/') %>" aria-label="Friends"><img src="<%- url_for('/game-assets/btn_friend.png') %>" alt=""><small>FRIENDS</small></a>
+  </nav>
+  <div class="home-bottom">
+    <% if(featured.length){ %><section class="home-featured" aria-label="精选文章" aria-roledescription="轮播">
+      <div class="home-featured-window"><div class="home-featured-track"><% featured.forEach((p,i)=>{ %>
+        <a class="home-featured-slide" href="<%- url_for(p.path) %>" aria-label="精选文章：<%= p.title %>" <%- i?'inert aria-hidden="true"':'' %>><img src="<%- url_for(cover(p)) %>" alt="" draggable="false"><span><small>精选文章 · FEATURED</small><strong><%= p.title %></strong></span></a>
+      <% }) %></div></div>
+      <div class="home-carousel-controls"><div class="home-carousel-dots"><% featured.forEach((p,i)=>{ %><button type="button" data-slide="<%= i %>" aria-label="第 <%= i+1 %> 篇：<%= p.title %>" aria-pressed="<%= i===0 %>"></button><% }) %></div></div>
+    </section><% } %>
+    <div class="home-bottom-bar"><button type="button" class="home-gacha" <%- posts.length?'':'disabled' %> aria-label="GACHA 随机阅读一篇文章"><i class="home-gacha-icon" aria-hidden="true"></i><span>随机一篇<small>GACHA</small></span></button><a class="home-live" href="<%- url_for('/live/') %>"><i class="home-live-icon" aria-hidden="true"></i><span>全部文章<small>READING LIVE　▶</small></span></a></div>
+  </div>
+  <script type="application/json" id="home-post-paths"><%- JSON.stringify(posts.map(p=>url_for(p.path))).replace(/</g,'\\u003c') %></script>
+</section>
+<link rel="stylesheet" href="<%- url_for('/css/home.css') %>">
+<script src="<%- url_for('/js/home.js') %>" defer></script>

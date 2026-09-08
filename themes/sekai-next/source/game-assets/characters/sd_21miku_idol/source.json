@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/sd_21miku_idol",
+  "cache": "6d7dbe8c92dca1727975f041a11fde5a",
+  "sha256": "a51595a25f52c57c17a764211f19752cab66b411a46445b2dabac9cf1c5a63d3",
+  "objects": [
+    {
+      "id": "-7974644070609845097",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    },
+    {
+      "id": "-4420772812945362305",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "-4355395266695143162",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    },
+    {
+      "id": "8115804070485717300",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": -7974644070609845097
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": -904689503564129981
+          }
+        ]
+      }
+    }
+  ]
+}

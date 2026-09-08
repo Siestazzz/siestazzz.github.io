@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/sd_02saki_normal",
+  "cache": "f9d9aa3994c43a3123025d2baff338ee",
+  "sha256": "be1175b36b76dd869b766f7de3e2013499009cdf78cc24ed170da15b83744872",
+  "objects": [
+    {
+      "id": "-9180204733816637183",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "-8026061446664841642",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": 5708463014371153505
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": -3323601857595850098
+          }
+        ]
+      }
+    },
+    {
+      "id": "474751805373695252",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    },
+    {
+      "id": "5708463014371153505",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<section class="panel-page">
+  <header class="panel-page__head"><p>SELECT A SEKAI</p><h1>文章分类</h1><span>从不同主题进入记录</span></header>
+  <div class="collection-grid">
+    <% ['CTF', 'Android', '漏洞挖掘', '逆向工程', 'AI', '其他'].forEach(function(name, index) {
+      const category = site.categories.findOne({name: name}) || {name: name, length: 0, path: '/search/?category=' + encodeURIComponent(name)}; %>
+      <a class="collection-card accent-<%= ['cyan','pink','yellow'][index % 3] %>" href="<%- url_for(category.path) %>">
+        <span><%= String(index + 1).padStart(2, '0') %></span><div><small>CATEGORY</small><strong><%= category.name %></strong><em><%= category.length %> 条记录</em></div><i>›</i>
+      </a>
+    <% }) %>
+  </div>
+</section>

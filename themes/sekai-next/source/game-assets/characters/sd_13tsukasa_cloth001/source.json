@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/sd_13tsukasa_cloth001",
+  "cache": "4ab9026cd1d391ee3ab74cc8803b2d6f",
+  "sha256": "79fbf0ceb6159dfe86ce876920df1cd04559ec9d5fcc4cd84cc3592ae62fae0d",
+  "objects": [
+    {
+      "id": "-5470766180170721562",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    },
+    {
+      "id": "-4400490225561097722",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": 4556543759716806945
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": 2230188496553051601
+          }
+        ]
+      }
+    },
+    {
+      "id": "2378833231292508541",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "4556543759716806945",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    }
+  ]
+}

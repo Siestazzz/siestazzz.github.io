@@ -1,0 +1,7 @@
+<section class="panel-page">
+  <header class="panel-page__head"><p>ATTRIBUTES</p><h1>标签索引</h1><span>通过关键词定位内容</span></header>
+  <div class="tag-cloud">
+    <% site.tags.sort('name').each(function(tag) { %><a href="<%- url_for(tag.path) %>"><span>#</span><%= tag.name %><small><%= tag.length %></small></a><% }) %>
+  </div>
+</section>
+

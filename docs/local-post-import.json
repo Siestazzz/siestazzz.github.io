@@ -1,0 +1,1072 @@
+[
+  {
+    "title": "2025腾讯游戏安全技术竞赛PC端初赛",
+    "source": "2025腾讯游戏安全技术竞赛PC端初赛\\2025腾讯游戏安全技术竞赛PC端初赛.md",
+    "target": "source\\_posts\\tencent-game-security-2025-pc.md",
+    "source_sha256": "379e214027cb69ee3833c6948da8f0e704f6e067fb2fb670901d382d629d2fb0",
+    "date": "2025-09-14 15:53:34",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "CTF题解",
+    "tags": [
+      "CTF",
+      "逆向工程",
+      "游戏安全",
+      "Windows",
+      "驱动分析"
+    ],
+    "assets": [
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\1.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\f060952cf2b0ab76.png",
+        "sha256": "f060952cf2b0ab760369158a59ca64f476fc63fe515f17e9887a03dceb18b3bc"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\2.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\e317ae5478687bc9.png",
+        "sha256": "e317ae5478687bc9b7eeff53d9d4cff2a126a2fc0d8fddf411e80dcf26b66d51"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\3.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\a1a91b3bcba85427.png",
+        "sha256": "a1a91b3bcba854276145343b8b5d0899cff15def3a7ee9fbb0b463fee92f2056"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\4.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\e1c7f1057ef45dfe.png",
+        "sha256": "e1c7f1057ef45dfed8ae8e2d6b9bf4095cc4fd9f1a480251d0e05e81587a4c40"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\5.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\c7fea408a85bf998.png",
+        "sha256": "c7fea408a85bf9987ab81cb371b3982d31e00767405b3b7842e2a959583aebd7"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\6.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\fc3cdcba63e775ed.png",
+        "sha256": "fc3cdcba63e775edc3c76b372f57503c6480a6624db067ae2e99c8bc1802755e"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\7.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\a58e136915d1440b.png",
+        "sha256": "a58e136915d1440b8b5117029ee2a12dff7c3fe468137e14a4f33536a2ae28d9"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\8.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\1e83e8b935e4aed9.png",
+        "sha256": "1e83e8b935e4aed96d7261fe5ba8216da0b20ee23b45c0266662700fdf6df36e"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\9.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\104910e6398522e0.png",
+        "sha256": "104910e6398522e068c997cd08fee326218e1fda535d0d52261f1639b5658445"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\10.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\3a4dce9165e6cf39.png",
+        "sha256": "3a4dce9165e6cf39283e426729a51f3af055c2533928c9029b02da37d11124b0"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\11.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\6f6ab0eac4eddf7b.png",
+        "sha256": "6f6ab0eac4eddf7b78b5df0d4bc69c6b3d32d76f97d9d27e6b88e8ce07bf1c34"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\12.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\a8d887b0b72cd9bc.png",
+        "sha256": "a8d887b0b72cd9bc2e6e411fdf85c92fe83e39a52efff9e2b3658e3cc1437b71"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\13.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\fbbb82a18f12f41a.png",
+        "sha256": "fbbb82a18f12f41a031a206392336dd4d1f215a4750ce8fae64145d6b7c8432f"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\20.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\c2c3bf003d06de02.png",
+        "sha256": "c2c3bf003d06de02da5f4d79bffbd691908c70fe98cc3182913e9fab372c7bab"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\14.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\4b81d5da8855d930.png",
+        "sha256": "4b81d5da8855d930d87fca750bd50f6f8c029201e7ac38fccbe5f530ad876cf6"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\15.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\c16ccd821b1dabfa.png",
+        "sha256": "c16ccd821b1dabfa87adcd59abdb1e5c12f87fd5ca7a71dd3fe1dda8ae05edf1"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\16.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\fe709c56bd1a42ec.png",
+        "sha256": "fe709c56bd1a42ecf2cb2738f059b24729b46e23142b8333affaeede1ac42e05"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\17.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\a5bd31393ada39c5.png",
+        "sha256": "a5bd31393ada39c5c1a9de4f1cb85be21d56b9ff2989590242175b4d1be5d7d3"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\18.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\fd7197c58efeb541.png",
+        "sha256": "fd7197c58efeb54158332cf983700209bcb9f398277666e0e12ce78c063dd9af"
+      },
+      {
+        "source": "2025腾讯游戏安全技术竞赛PC端初赛\\assets\\19.png",
+        "target": "source\\media\\posts\\tencent-game-security-2025-pc\\c953acee0f930211.png",
+        "sha256": "c953acee0f930211ba251ca30b4b5d06f9274c3f336cae1dbb5ca501331ef7d6"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "2025腾讯游戏安全技术竞赛PC端初赛 - 副本.md"
+    ]
+  },
+  {
+    "title": "强网杯s9初赛 PolyEncryption wp",
+    "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.md",
+    "target": "source\\_posts\\qwb-s9-polyencryption.md",
+    "source_sha256": "581de6ce6b361d5bd942a545b44a220c2c7bd8e11210976a91db46502160ed58",
+    "date": "2025-10-20 19:41:39",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "CTF题解",
+    "tags": [
+      "CTF",
+      "强网杯",
+      "逆向工程",
+      ".NET",
+      "Python",
+      "密码分析"
+    ],
+    "assets": [
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020103759920.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\499320651b38c108.png",
+        "sha256": "499320651b38c10849e6ee2e9346daa73e88dfc504e44968df6eba123bb07e21"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020105334136.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\543dc886182d97a7.png",
+        "sha256": "543dc886182d97a75ab1b89f2ad31ad5635ed9324d1acc67384bfcafc50d343f"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020105444469.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\72f908856f3bbdb1.png",
+        "sha256": "72f908856f3bbdb157bf8dd8d2cf8cd87c2f66c53d43668051cbe02c1b3cd195"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020110800809.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\9f5b530b77fa8e97.png",
+        "sha256": "9f5b530b77fa8e976d96149dcb07cb3b78edce8c6bb147bcff168be21fe282aa"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020110845564.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\f87261a36104d91e.png",
+        "sha256": "f87261a36104d91e1b30b337fae86c889c623f6b7e4ef8ff4b8e7c8a15b396ef"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020111135171.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\5bc95acaa5de9a50.png",
+        "sha256": "5bc95acaa5de9a50287581e83330e5cef541dcb13e598323a13aee400455d6ff"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020111725982.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\9ff86c0dbf284459.png",
+        "sha256": "9ff86c0dbf284459cc404f7c3b0564fbfbf36879e8d38c894339d474474eb033"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020112205845.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\03b8652f15b29de3.png",
+        "sha256": "03b8652f15b29de335ce069b612da93bb4f6f18a2efc1852bf5169362011922e"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020112349305.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\3c6a756a92567d37.png",
+        "sha256": "3c6a756a92567d3791990ab50a20f48f79aa79765d6a8f89d626ceeaae599e5e"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020112634452.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\8ea55f80c4fdbdcc.png",
+        "sha256": "8ea55f80c4fdbdccc53aafec5e7e353fe7cb8f97ace93feb5cf15a9d619a1f30"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020113902619.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\baa4fadcd2590549.png",
+        "sha256": "baa4fadcd259054964bfa08a4afdf9699a8075cc5aeae4fbcf4c1371d27daa58"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020114345682.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\0a603e29d9eff111.png",
+        "sha256": "0a603e29d9eff111cda820a3faf5046868fbe491bf50cd84f6c392f37d03bd1f"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020114643357.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\2c75e68bf7583754.png",
+        "sha256": "2c75e68bf75837541109c8ebf5dc6dac7b94b6f101e4617bbafe2dc3ee8397ee"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020115237136.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\056c05e88cd13e1a.png",
+        "sha256": "056c05e88cd13e1a11a9663a2526357a3b063b98dd3c615f4b1ac12b4cdf6831"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020115619855.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\70eb87d141551660.png",
+        "sha256": "70eb87d14155166024913e6687dce2f67d5b4f308a4c1afe66b7d365cbbf4c05"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020121113756.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\8156a126b8b7077d.png",
+        "sha256": "8156a126b8b7077d437fe94d63b9b7c1996284127be6a7b841bf101fc04f208d"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020153159062.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\22bcc3727e0265ae.png",
+        "sha256": "22bcc3727e0265aee72a299817931bddaebbe0a0874fa2eb2d0f7ffaf9a759b4"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020143328530.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\03dbbbe402be935e.png",
+        "sha256": "03dbbbe402be935e628b8b1f1dd382dd122e2e7fb8d17096da6d2bf06d5de338"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020154532030.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\09d43c83bba17595.png",
+        "sha256": "09d43c83bba17595e189328879389e4a769141cf52787a8302455c38fc318862"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020155803088.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\2b7ec2d1d267b319.png",
+        "sha256": "2b7ec2d1d267b319b8ead2bac24cf8f60ba2c5f1daca65c7b4d48ad024ffa0eb"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020155907824.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\421391f9e27448d1.png",
+        "sha256": "421391f9e27448d1fc89473e2fae875b52ce734a41d5f277690d74c10d04c5d5"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020162552475.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\a8b8645f1b621c9c.png",
+        "sha256": "a8b8645f1b621c9cf6a3076c1059e025ee0095009196a1d7ab34fa35e5a2e35a"
+      },
+      {
+        "source": "强网杯s9初赛 PolyEncryption wp\\强网杯s9初赛 PolyEncryption wp.assets\\image-20251020163216397.png",
+        "target": "source\\media\\posts\\qwb-s9-polyencryption\\9c956bcb785feadb.png",
+        "sha256": "9c956bcb785feadb906f14c8716c6e6cc5e555062c746e3affbf67f98de26cc2"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "强网杯s9初赛 PolyEncryption wp - 副本.md"
+    ]
+  },
+  {
+    "title": "强网杯s9初赛 Qcalc wp",
+    "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.md",
+    "target": "source\\_posts\\qwb-s9-qcalc.md",
+    "source_sha256": "4a57854fe4f2cfd2c352ce2e5c1b76cb3f75fde38035b3d9d6a116ecfb392c94",
+    "date": "2025-11-10 11:29:30",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "CTF题解",
+    "tags": [
+      "CTF",
+      "强网杯",
+      "Android",
+      "逆向工程",
+      "Deep Link",
+      "漏洞分析"
+    ],
+    "assets": [
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110102908507.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\1f79e290fd195e6d.png",
+        "sha256": "1f79e290fd195e6d2f27219d096a5890046155484d68e472eebd9c088a6a10a5"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110102631486.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\c1c02f3d3523d699.png",
+        "sha256": "c1c02f3d3523d699f04a4aa4ab7e7c3a4f09455515f1d9c6822a4641e5f7f278"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110102702092.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\abe93c77087c9f8d.png",
+        "sha256": "abe93c77087c9f8d6262f7323d70670b5a3c032cdeb3e46a01ec3127413082a8"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110103051735.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\f928d2e6a57cb95f.png",
+        "sha256": "f928d2e6a57cb95f10279f2fefe6cd802b32f42f2a964984171e38490fb8c5f7"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110103328909.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\96146b0c8e459760.png",
+        "sha256": "96146b0c8e459760c5d5c0383a614e818f10648a6e4877036f36e7acdb7335c8"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110103911786.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\9759423d5b2e79e7.png",
+        "sha256": "9759423d5b2e79e7ed28f25d7051e8014a54986434f8d2909015331eb97b0431"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110103926219.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\b8e421466de9fbf9.png",
+        "sha256": "b8e421466de9fbf96e04ab9de9c15b6648129df24ba47ad3baa0bb2cba4f693c"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110104148336.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\30004f5ce235959e.png",
+        "sha256": "30004f5ce235959e19a83348840f3f38ccda4db1e6e2e7ae4194e28313574c28"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110104746578.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\68f00fe6be9ccf0a.png",
+        "sha256": "68f00fe6be9ccf0a340b041ea3733f9a791b66ef3875afb19a3f88802f898701"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110105135923.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\3eef883e6a748065.png",
+        "sha256": "3eef883e6a748065c0e2d6ccf4020afc96966726345bc350a1a53cf4687b00a2"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110110634120.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\90c6f8bfc7c99504.png",
+        "sha256": "90c6f8bfc7c995044714af05591b73f82c0085d7f20bf3809caa5bbfa8115786"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110111924542.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\4072e5896d4f21c0.png",
+        "sha256": "4072e5896d4f21c01d0f1832f9dab5da4a4e846c65c678108c82de6818a62db8"
+      },
+      {
+        "source": "强网杯s9初赛 Qcalc wp\\强网杯s9初赛 Qcalc wp.assets\\image-20251110112916867.png",
+        "target": "source\\media\\posts\\qwb-s9-qcalc\\57bb126517118a0f.png",
+        "sha256": "57bb126517118a0f0bda48b90a667c96e9cb7739a2072c2beb9045d44c88d902"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "强网杯s9初赛 Qcalc wp - 副本.md",
+      "强网杯s9初赛 Qcalc wp.pdf"
+    ]
+  },
+  {
+    "title": "一次某梆加固的反root和反frida绕过with GPT5.6sol",
+    "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.md",
+    "target": "source\\_posts\\android-root-frida-bypass.md",
+    "source_sha256": "b82dd8457009e65a055f515b2073616f593c82ae453892147f7c7d812225670c",
+    "date": "2026-08-09 15:33:11",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "Android安全",
+    "tags": [
+      "Android",
+      "逆向工程",
+      "Frida",
+      "Root检测",
+      "反调试",
+      "加固"
+    ],
+    "assets": [
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808221323235.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\3955a371df16052a.png",
+        "sha256": "3955a371df16052af516d8182f0efcdd79d7ac7563dd0191a957a65187bca2a4"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808221659911.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\aaf3f1800ca1b6fc.png",
+        "sha256": "aaf3f1800ca1b6fc13a5232a1a3463823978103dd89b9f43c0164c41a68704da"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808222127925.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\051f6f46a68d29fc.png",
+        "sha256": "051f6f46a68d29fcd03f577eb9404fa82e2aaa14167ed4dec146a262efea2850"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808222628138.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\c7809564ac5b7136.png",
+        "sha256": "c7809564ac5b71364b9acffc33c2e29b45a26d7dd88f2aef38e2ad7b38ded8a4"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808223519677.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\1aa0fcda27b2bbcc.png",
+        "sha256": "1aa0fcda27b2bbccaa8703355810eea7014f6b4aa8cb3bda929f1b19963fb7f6"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808225851798.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\1605bb48eb8c5da1.png",
+        "sha256": "1605bb48eb8c5da10b7a778612571b4d373a7b3f16e515e167f13ea5ac5208f1"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260808225932042.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\d55aecf3c3bf44e9.png",
+        "sha256": "d55aecf3c3bf44e9c472359fbdf3983f2658b0e8cf474de729658635b254bc45"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260809144823752.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\36e0572b9b6cbb3b.png",
+        "sha256": "36e0572b9b6cbb3b843fbb807e98ed35fd60eb3882264a7202da17a370a59a7a"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260809145118426.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\b3839a386eefe96f.png",
+        "sha256": "b3839a386eefe96f4a24e988cfd0e69c1e0591ef5c303b8b6704a6b86bf06cf7"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260809152121745.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\aec6bdb5e509723a.png",
+        "sha256": "aec6bdb5e509723ac183ccaea262a963d14f7b1906ab16c41ed8de0fc5f43701"
+      },
+      {
+        "source": "一次某梆加固的反root和反frida绕过with GPT5.6sol\\一次某梆加固的反root和反frida绕过with GPT5.6sol.assets\\image-20260809152036466.png",
+        "target": "source\\media\\posts\\android-root-frida-bypass\\baf7a96ba5f76751.png",
+        "sha256": "baf7a96ba5f767515ce0a3038e09fdf676e6a642e7f84a3d4e1b6c9ed183b538"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "一次某梆加固的反root和反frida绕过with GPT5.6sol - 副本.md"
+    ]
+  },
+  {
+    "title": "allsafe wp",
+    "source": "allsafe-wp\\allsafe-wp.md",
+    "target": "source\\_posts\\allsafe-android-writeup.md",
+    "source_sha256": "622b38abe3823da5234165c63273b8e12403009c47df717fcb1b33e6f204a2fb",
+    "date": "2025-09-14 15:53:34",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "Android安全",
+    "tags": [
+      "Android",
+      "靶场",
+      "Allsafe",
+      "Frida",
+      "漏洞分析"
+    ],
+    "assets": [
+      {
+        "source": "allsafe-wp\\assets\\1.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\995a3c914fe9b35d.png",
+        "sha256": "995a3c914fe9b35d138dc45e959ce43f613b2d4a221f1411b263ac6e16c59751"
+      },
+      {
+        "source": "allsafe-wp\\assets\\2.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\6fd0f578f06757e4.png",
+        "sha256": "6fd0f578f06757e4bcf761f854be0d3290c643609f7a6ff3ca95f8d95b2e03d9"
+      },
+      {
+        "source": "allsafe-wp\\assets\\3.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\96d76ad15b33aa12.png",
+        "sha256": "96d76ad15b33aa122fcd2dd6754c5ad235f6ee7605a6926a6ca2e148933129d9"
+      },
+      {
+        "source": "allsafe-wp\\assets\\4.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\798af14502f55ee9.png",
+        "sha256": "798af14502f55ee9e97b69f991c8350db7e3f9f033a5198f822ac413b2f9829c"
+      },
+      {
+        "source": "allsafe-wp\\assets\\5.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\3be7e5301d21e3a4.png",
+        "sha256": "3be7e5301d21e3a45e223d500d7dc3180f207c27e8b1fa25c2fbe749f9f2da74"
+      },
+      {
+        "source": "allsafe-wp\\assets\\6.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\64933290d0965f09.png",
+        "sha256": "64933290d0965f09e93ab719944d24c982ca7b67678ece9a3e90513550ed8d69"
+      },
+      {
+        "source": "allsafe-wp\\assets\\7.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\b70b829cd417e827.png",
+        "sha256": "b70b829cd417e8276b3a53a8e2a1e808bdf77639efdd8aab0ebf453b3a855c5a"
+      },
+      {
+        "source": "allsafe-wp\\assets\\8.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\035e96423f76fc5f.png",
+        "sha256": "035e96423f76fc5f60f3a16d8f6f574e2b8556f8a7f3203bce0f526c33a87a30"
+      },
+      {
+        "source": "allsafe-wp\\assets\\9.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\4690652e074765e2.png",
+        "sha256": "4690652e074765e224fca81428a362387358d570df2100f9699d4176e5708c68"
+      },
+      {
+        "source": "allsafe-wp\\assets\\10.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\1bef70d0dfe95028.png",
+        "sha256": "1bef70d0dfe95028e11893daf3b87d7f59887011e34183db1a49a7351a10615d"
+      },
+      {
+        "source": "allsafe-wp\\assets\\11.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\da63bee14177207b.png",
+        "sha256": "da63bee14177207bb2043a63bd04c1c120fa1c444147024bd1d5a7e2e39ca454"
+      },
+      {
+        "source": "allsafe-wp\\assets\\12.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\361c18cf788679f3.png",
+        "sha256": "361c18cf788679f32b529b4cb1be7587628a2a09e3a40f1833e86783fe75113a"
+      },
+      {
+        "source": "allsafe-wp\\assets\\13.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\53be6695d7802ec0.png",
+        "sha256": "53be6695d7802ec01524e5de153f58dff294bbd3e293f85c1f2fffd310e0b946"
+      },
+      {
+        "source": "allsafe-wp\\assets\\14.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\457709224581421e.png",
+        "sha256": "457709224581421e0d5bc4141e6df97a43725b46fb160bcb3a3904859d0c8a48"
+      },
+      {
+        "source": "allsafe-wp\\assets\\15.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\2803cbc2eb75adbd.png",
+        "sha256": "2803cbc2eb75adbd50976583825c1f7a875573ff65b66a0de5fc44985744a525"
+      },
+      {
+        "source": "allsafe-wp\\assets\\19.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\eddaa25c56944013.png",
+        "sha256": "eddaa25c569440136486707e28b10a3195cafa3eec34196d16ab8990634f64aa"
+      },
+      {
+        "source": "allsafe-wp\\assets\\20.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\ece896b77490a87e.png",
+        "sha256": "ece896b77490a87e29b18207cd3a06cf15a0c46bc2a901a8495d5a4cdc621e05"
+      },
+      {
+        "source": "allsafe-wp\\assets\\21.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\969ce9dd14117526.png",
+        "sha256": "969ce9dd14117526948b15001119646057ddb8c9c08e6008392df68333912e42"
+      },
+      {
+        "source": "allsafe-wp\\assets\\22.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\6ca0a62c5fb7549f.png",
+        "sha256": "6ca0a62c5fb7549f89252914e257ebe5e25140c880a1305678af23ab9ab434db"
+      },
+      {
+        "source": "allsafe-wp\\assets\\23.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\dfba201af6018442.png",
+        "sha256": "dfba201af60184422080eacfa8e2507d4bce88776d8a6a7be0a32502e6d9d905"
+      },
+      {
+        "source": "allsafe-wp\\assets\\24.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\5f78e6734dcc79f1.png",
+        "sha256": "5f78e6734dcc79f1c0ea0060264b284f99422de7f7aab34a37b2f4ba6c512e1d"
+      },
+      {
+        "source": "allsafe-wp\\assets\\25.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\a029ad035122965c.png",
+        "sha256": "a029ad035122965c532027debd4e0941a23803ef3d1128a9b6b94f9076af2995"
+      },
+      {
+        "source": "allsafe-wp\\assets\\26.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\c9e8e2a765b58b59.png",
+        "sha256": "c9e8e2a765b58b595b22d1f94b30b50fb25989e1d7a8db9a2dad1ccd9949164c"
+      },
+      {
+        "source": "allsafe-wp\\assets\\27.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\bb2cb81c72bd7910.png",
+        "sha256": "bb2cb81c72bd7910fa0e6074c37f0bc1234619376414dedc3552b5423c0ce04a"
+      },
+      {
+        "source": "allsafe-wp\\assets\\28.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\b2c644406a00a995.png",
+        "sha256": "b2c644406a00a99537b99545872636e5bfe5a5e60a422496c5cf7738892da6f5"
+      },
+      {
+        "source": "allsafe-wp\\assets\\16.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\03ecfc44ea266f2c.png",
+        "sha256": "03ecfc44ea266f2c70e7c481b648c7f8c5d341d499f777bf70370391f7343cca"
+      },
+      {
+        "source": "allsafe-wp\\assets\\17.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\dc9f6e933949d429.png",
+        "sha256": "dc9f6e933949d4295d23b9c2976b00e6224297cd1fb778e0ebee4e78d8d26f20"
+      },
+      {
+        "source": "allsafe-wp\\assets\\18.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\29c0b32618fc2976.png",
+        "sha256": "29c0b32618fc2976fd71c7ee220d4126a807b6d46bae3d8dc4c862d38875c390"
+      },
+      {
+        "source": "allsafe-wp\\assets\\30.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\4589091450d3e285.png",
+        "sha256": "4589091450d3e285495bf638ef13e424ea694208967ea4a11367306555b4b78e"
+      },
+      {
+        "source": "allsafe-wp\\assets\\29.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\210fa6352e81218a.png",
+        "sha256": "210fa6352e81218afd1672ee09228e65b8443b542e866b0f203ba280903dfe2e"
+      },
+      {
+        "source": "allsafe-wp\\assets\\41.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\1629afbb43e884fe.png",
+        "sha256": "1629afbb43e884fe5722689dd479734db3c6d9b8e40f5ac3634089e4dbb95ccf"
+      },
+      {
+        "source": "allsafe-wp\\assets\\42.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\02b87fa731e7369e.png",
+        "sha256": "02b87fa731e7369eed878b2b4887af9acb1c53310b506fa8d48b741f748d0448"
+      },
+      {
+        "source": "allsafe-wp\\assets\\43.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\b3bb8cd47b0ce194.png",
+        "sha256": "b3bb8cd47b0ce19402acde2fbe6d880e15ee0638c88d7b6d1b0827fd83b4bb9f"
+      },
+      {
+        "source": "allsafe-wp\\assets\\40.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\14e17627d136e5c0.png",
+        "sha256": "14e17627d136e5c0b22b09074c05082729c015ae12a2ec0169c8da00a49f14a1"
+      },
+      {
+        "source": "allsafe-wp\\assets\\39.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\f5814e42306163be.png",
+        "sha256": "f5814e42306163bec55fe90aa85148a7269234d6de6bf02802125afc87990fdc"
+      },
+      {
+        "source": "allsafe-wp\\assets\\31.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\0aeccb7074af238a.png",
+        "sha256": "0aeccb7074af238a5e0a45c2c78165ce975d950193c36ecd9010218a039f9a2d"
+      },
+      {
+        "source": "allsafe-wp\\assets\\32.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\ab61298591184ad4.png",
+        "sha256": "ab61298591184ad449369c28a06ea202de950abe2fec9a4bff4e25c0a1856daa"
+      },
+      {
+        "source": "allsafe-wp\\assets\\33.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\c4b5c58b3c171841.png",
+        "sha256": "c4b5c58b3c171841a6f745cecfcf946e75daae63433a1902639202ddb9aa5dba"
+      },
+      {
+        "source": "allsafe-wp\\assets\\34.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\b9c4b7cff1556dc5.png",
+        "sha256": "b9c4b7cff1556dc574c2dcb8e2edf2a345dcf90453fcf63971de19b9c78be30a"
+      },
+      {
+        "source": "allsafe-wp\\assets\\35.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\3e32656c40b7cfef.png",
+        "sha256": "3e32656c40b7cfefcd9834432c2ef7e6bb5e3e065f97b05b95fce5f7683cd46d"
+      },
+      {
+        "source": "allsafe-wp\\assets\\36.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\670473535af35249.png",
+        "sha256": "670473535af35249fc8fd89848dd65a0ca83196e68ab71a222681710acd509ab"
+      },
+      {
+        "source": "allsafe-wp\\assets\\37.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\a8ac65b0bcba89c5.png",
+        "sha256": "a8ac65b0bcba89c5879680cc299ae9ef0d7501136740006708ce9ed787d1d2df"
+      },
+      {
+        "source": "allsafe-wp\\assets\\38.png",
+        "target": "source\\media\\posts\\allsafe-android-writeup\\d0adad9240e7fbeb.png",
+        "sha256": "d0adad9240e7fbebd3a7f6cf011763fcc0f41550be83fe8c772d9a2027f72249"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "allsafe-wp - 副本.md"
+    ]
+  },
+  {
+    "title": "Arduino下载1.x版本stm32方法",
+    "source": "Arduino下载1.x版本stm32方法\\Arduino下载1.x版本stm32方法.md",
+    "target": "source\\_posts\\arduino-stm32-1x.md",
+    "source_sha256": "e5a191742caefe317fdb0a6808d9d75774d3cbc3dda4906062e409e00bc2e1a4",
+    "date": "2025-09-14 15:53:35",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "嵌入式开发",
+    "tags": [
+      "Arduino",
+      "STM32",
+      "嵌入式",
+      "环境搭建"
+    ],
+    "assets": [
+      {
+        "source": "Arduino下载1.x版本stm32方法\\Arduino下载1.x版本stm32方法.assets\\image-20250807185634957.png",
+        "target": "source\\media\\posts\\arduino-stm32-1x\\72dcb8c9e1b726b1.png",
+        "sha256": "72dcb8c9e1b726b12f520ecb2bb78710f3362800f1ad9381f4252680ce47a06f"
+      },
+      {
+        "source": "Arduino下载1.x版本stm32方法\\Arduino下载1.x版本stm32方法.assets\\image-20250807185726291.png",
+        "target": "source\\media\\posts\\arduino-stm32-1x\\6763d98770c64422.png",
+        "sha256": "6763d98770c6442229357648b673ecf79d01778306f44c10fcb29bf017d2e5b2"
+      },
+      {
+        "source": "Arduino下载1.x版本stm32方法\\Arduino下载1.x版本stm32方法.assets\\image-20250807190438406.png",
+        "target": "source\\media\\posts\\arduino-stm32-1x\\039a24ef74a3056c.png",
+        "sha256": "039a24ef74a3056c1ca7dc913d3ce5565f6f7c5942dc72b0cd38fbe1a8efd970"
+      },
+      {
+        "source": "Arduino下载1.x版本stm32方法\\Arduino下载1.x版本stm32方法.assets\\image-20250807190615560.png",
+        "target": "source\\media\\posts\\arduino-stm32-1x\\4caf3360b533a987.png",
+        "sha256": "4caf3360b533a9876db9601040c290f68e291554eadb1e8855ca73de756e9a84"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "Arduino下载1.x版本stm32方法 - 副本.md"
+    ]
+  },
+  {
+    "title": "Binder.getCallingPid()和Binder.getCallingUid()漏洞分析",
+    "source": "Binder.getCallingPid()和Binder.getCallingUid()漏洞分析\\Binder.getCallingPid()和Binder.getCallingUid()漏洞分析.md",
+    "target": "source\\_posts\\android-binder-calling-identity.md",
+    "source_sha256": "dd8ae4304b04cefe74b9351add204faee27bef9fc0da50c5bc4d226d7a41d988",
+    "date": "2025-10-11 13:15:41",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "Android安全",
+    "tags": [
+      "Android",
+      "Binder",
+      "IPC",
+      "权限校验",
+      "漏洞分析"
+    ],
+    "assets": [],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": []
+  },
+  {
+    "title": "ciscn2024 Reverse全题解 复盘",
+    "source": "ciscn2024 Reverse全题解 复盘\\ciscn2024 Reverse全题解 复盘.md",
+    "target": "source\\_posts\\ciscn-2024-reverse.md",
+    "source_sha256": "2db1d052163893216edda81f9f4dd999b01652a884b7b0b778b72fa05f81e213",
+    "date": "2025-09-14 15:53:35",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "CTF题解",
+    "tags": [
+      "CTF",
+      "CISCN",
+      "逆向工程",
+      "ARM",
+      "Android",
+      "Rust",
+      "Go"
+    ],
+    "assets": [],
+    "downloaded_images": [
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522172813999-2139067763.png",
+        "local": "/media/posts/ciscn-2024-reverse/257d1c612c861357.png",
+        "sha256": "257d1c612c861357135b456933f60661b2c2fd2a3b4c4ab7c123a85437cc47ff",
+        "bytes": 110254
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522173152547-2103608858.png",
+        "local": "/media/posts/ciscn-2024-reverse/1614b631433e59b8.png",
+        "sha256": "1614b631433e59b83150b5b11d24c6cba5f32ce56fe18032a784d8107b21bf90",
+        "bytes": 40161
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180418856-1042694519.png",
+        "local": "/media/posts/ciscn-2024-reverse/eb7582050c4b66f3.png",
+        "sha256": "eb7582050c4b66f34d9453c3dba361a0c9e12687dd071a25a31625b8ad13c201",
+        "bytes": 62966
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180556228-279354744.png",
+        "local": "/media/posts/ciscn-2024-reverse/1811f46b1258b4bd.png",
+        "sha256": "1811f46b1258b4bd606bbb851f2f3d9a9186cc9bdf553b7ffe67dee644397824",
+        "bytes": 37538
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180426286-776367990.png",
+        "local": "/media/posts/ciscn-2024-reverse/72fa326f09faf182.png",
+        "sha256": "72fa326f09faf1829ca5e93fa378adeaf14316842c9e942cbde3b75da63ea9c1",
+        "bytes": 46899
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180427603-676398527.png",
+        "local": "/media/posts/ciscn-2024-reverse/5dbb7b73a5ecc90d.png",
+        "sha256": "5dbb7b73a5ecc90dcd16e085ce923fe3d9675559c7a0e2bc87bdfc09426818a2",
+        "bytes": 36949
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180431476-988359216.png",
+        "local": "/media/posts/ciscn-2024-reverse/5087e0b97b2125ee.png",
+        "sha256": "5087e0b97b2125eedeb374aa64730acc28d1b6fa07d733a0286369a92638617b",
+        "bytes": 32358
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180434908-1970326888.png",
+        "local": "/media/posts/ciscn-2024-reverse/a957880b5fbb9a20.png",
+        "sha256": "a957880b5fbb9a200795b37eca5587cff2f8a36125fb3fc20fd459f28f9218ae",
+        "bytes": 15748
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180438134-1257922794.png",
+        "local": "/media/posts/ciscn-2024-reverse/f4e8354660106920.png",
+        "sha256": "f4e835466010692078df9072cc698f49ded7fc605b117d8764ccf2a39fdf0e9e",
+        "bytes": 23117
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180444602-1058805174.png",
+        "local": "/media/posts/ciscn-2024-reverse/4163e1dd8ab77767.png",
+        "sha256": "4163e1dd8ab7776704fd0000cc2b1203a3417497931831a74f6235a2eec2f2e9",
+        "bytes": 269789
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240522180447142-1855108568.png",
+        "local": "/media/posts/ciscn-2024-reverse/21f2b89763b3a818.png",
+        "sha256": "21f2b89763b3a81820bb7268d8cc1e698b6d45156b58080df5bc8aa48c1b33e7",
+        "bytes": 16942
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523161727270-1442673588.png",
+        "local": "/media/posts/ciscn-2024-reverse/24fecdc1909d5282.png",
+        "sha256": "24fecdc1909d52824237d3c74cf765227c2a2cfd748976977d083f2d693543c9",
+        "bytes": 80815
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523162018025-333417526.png",
+        "local": "/media/posts/ciscn-2024-reverse/2963216875ee05c9.png",
+        "sha256": "2963216875ee05c9ebbbe552922dcbaefeb76c012b3f7933b6da920d82a7e40f",
+        "bytes": 7138
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523162358076-1233143747.png",
+        "local": "/media/posts/ciscn-2024-reverse/f46b978cc2a52a38.png",
+        "sha256": "f46b978cc2a52a38798c3573d551d5fdf3f5df121510d1308e58e0e8005089aa",
+        "bytes": 13797
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523162625064-1322425557.png",
+        "local": "/media/posts/ciscn-2024-reverse/3c132e6e51942201.png",
+        "sha256": "3c132e6e519422019c01de8f71b215838d9059b090a33cb58d29033b001ae4c8",
+        "bytes": 15872
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523162825797-944134879.png",
+        "local": "/media/posts/ciscn-2024-reverse/bde648aa61d11498.png",
+        "sha256": "bde648aa61d114980ff9e3f0d84857240bf00da43f4c4533299f5243952c8ebb",
+        "bytes": 1804
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523162929604-1449505952.png",
+        "local": "/media/posts/ciscn-2024-reverse/c6bf35fe59675fa9.png",
+        "sha256": "c6bf35fe59675fa90c6a21271c038a12731bf7de558f805ff038ffa701d149de",
+        "bytes": 15346
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523163139730-1563997551.png",
+        "local": "/media/posts/ciscn-2024-reverse/22ba5c761bfb5002.png",
+        "sha256": "22ba5c761bfb5002caf40263e21aca49cd79603d37dc1652961a6f0c601a6186",
+        "bytes": 68778
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523163557520-1582678854.png",
+        "local": "/media/posts/ciscn-2024-reverse/fe3cbe01f755f706.png",
+        "sha256": "fe3cbe01f755f7062a02604eceb004e82ab14b1f6cb381871e92826f4988ec33",
+        "bytes": 12595
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523163618658-659633049.png",
+        "local": "/media/posts/ciscn-2024-reverse/01efa19fbf7e4a09.png",
+        "sha256": "01efa19fbf7e4a09e574fddce5d65472cd0b781669536ff25a1be9ab2f24c02f",
+        "bytes": 8370
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523164135603-274715577.png",
+        "local": "/media/posts/ciscn-2024-reverse/3900a139f24225c4.png",
+        "sha256": "3900a139f24225c4635ae71bf34fce6f4e3ca0d339a499581c9d0c34fe6f3705",
+        "bytes": 8807
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523164320300-878541528.png",
+        "local": "/media/posts/ciscn-2024-reverse/1c480c0432d33a48.png",
+        "sha256": "1c480c0432d33a48afb6bfae938727b721c58b053e2cdfb3d50caaf050b3f932",
+        "bytes": 7727
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523164739809-2127857712.png",
+        "local": "/media/posts/ciscn-2024-reverse/9be9f50636c609c1.png",
+        "sha256": "9be9f50636c609c195aa6b81b729f5b70432f94fe467a974beb6507f68b05a42",
+        "bytes": 49564
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523164826951-917626318.png",
+        "local": "/media/posts/ciscn-2024-reverse/b53b28bf7904c5fc.png",
+        "sha256": "b53b28bf7904c5fc3f44fe5e2594e8029cb17ff0e842c4b3aa35c24227aa5a19",
+        "bytes": 23422
+      },
+      {
+        "url": "https://img2023.cnblogs.com/blog/3451107/202405/3451107-20240523165711963-1266457209.png",
+        "local": "/media/posts/ciscn-2024-reverse/3361b3b02f0cb10b.png",
+        "sha256": "3361b3b02f0cb10b941e3d1483a2d06beef483514534754119f7c68d06020a30",
+        "bytes": 30093
+      }
+    ],
+    "external_images": [],
+    "excluded_versions": []
+  },
+  {
+    "title": "Nepctf2025 部分reverse misc题解",
+    "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.md",
+    "target": "source\\_posts\\nepctf-2025-reverse-misc.md",
+    "source_sha256": "524259e229c27640ba24036524a198cade7a36af96ff6272954418b9cd6cb588",
+    "date": "2025-09-14 15:53:35",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "CTF题解",
+    "tags": [
+      "CTF",
+      "NepCTF",
+      "逆向工程",
+      "Misc",
+      "反调试",
+      "RC4"
+    ],
+    "assets": [
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727192518283.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\5ccf75caa32e90cd.png",
+        "sha256": "5ccf75caa32e90cd5fca3f108b56f865ac0f976f1da50e3f2cbc90feb46f739e"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727192637889.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\2c8ac522e7e9cabd.png",
+        "sha256": "2c8ac522e7e9cabd5ea4c69bea07e7067d456f9a4ef1edb16cdd846ac26f1c5b"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727192658492.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\103e3999b84e303c.png",
+        "sha256": "103e3999b84e303cb1ea95c674da1313bf5f9ec1ea43c2061d00b1df874b3f8b"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727195846566.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\bdced0fba15c4793.png",
+        "sha256": "bdced0fba15c4793fbfba6394d8c5f213283bf607a4b689263c0acfd3ba67b3d"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727195923115.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\33ad38e75ca2ec7d.png",
+        "sha256": "33ad38e75ca2ec7dc71380701589f79bad5bdd6d79c168894e52aa3011f8d7fa"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727200717753.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\e2c359f5da3a76ba.png",
+        "sha256": "e2c359f5da3a76ba9d6b7560c7e005684503e047df20cfab68374693c3931b20"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727201056537.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\4e00de55500f8776.png",
+        "sha256": "4e00de55500f8776d869c22f7a09c7e6a0409a58c33ffd6777cce96a63a6f67c"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727201743026.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\02bafdca1c0c1da8.png",
+        "sha256": "02bafdca1c0c1da8070073eebb35f729322015e37c2b5a6cbf1e2f19790440f7"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727202338170.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\26fe27da14834dc4.png",
+        "sha256": "26fe27da14834dc46b1db65a1a5c04613f665a9cff60f2277857e4c12f2b25d2"
+      },
+      {
+        "source": "Nepctf2025 部分reverse misc题解\\Nepctf2025 部分reverse misc题解.assets\\image-20250727202608724.png",
+        "target": "source\\media\\posts\\nepctf-2025-reverse-misc\\f715d0eddfaef751.png",
+        "sha256": "f715d0eddfaef751a6ff5c127f7e8036888af8b34c2356649764fb72bf6d278c"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": []
+  },
+  {
+    "title": "Tenda-AC6路由器漏洞复现",
+    "source": "Tenda-AC6路由器漏洞复现\\Tenda-AC6路由器漏洞复现.md",
+    "target": "source\\_posts\\tenda-ac6-vulnerability.md",
+    "source_sha256": "9cf029c91f62e0390a873afbf7d52d2ce80ed3cdff4b5cdb9afe48fce7bbe65c",
+    "date": "2025-09-14 15:53:36",
+    "date_basis": "File modification time; original publication date unavailable",
+    "category": "IoT安全",
+    "tags": [
+      "IoT",
+      "Tenda",
+      "路由器",
+      "固件分析",
+      "漏洞复现",
+      "ARM"
+    ],
+    "assets": [
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\1.jpg",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\71a3d482745271ec.jpg",
+        "sha256": "71a3d482745271ec7c965f3a5fa13964b30416075a0779101b9cc5d41653bad5"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\2.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\33839021a1e7811b.png",
+        "sha256": "33839021a1e7811bce833ae527b132bb0af88f17ffd097be02dde1c2d72056a5"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\3.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\c34a18e8aa8eb304.png",
+        "sha256": "c34a18e8aa8eb304c176fbd5e803a56c7807c1b4c9e589a3f63b34328fbddbfc"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\4.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\4549c89dc0fb8e88.png",
+        "sha256": "4549c89dc0fb8e88a228d365307012b68bff44e72afac9c48e5db525e553d4e7"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\5.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\bf43b8f68d23ce8c.png",
+        "sha256": "bf43b8f68d23ce8c13c615f15cd75c21185721bf8ec38d3125dd6593471913e8"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\6.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\2f4250a3bf3a1b8d.png",
+        "sha256": "2f4250a3bf3a1b8d6eb6eb0d88ce2463b16270937bb1031ddf4ffb298cd0925f"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\7.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\351189dc8197e4d4.png",
+        "sha256": "351189dc8197e4d44aede1f7ee62f28fb100b9c6f088c2d68f1c8d5cf067c139"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\8.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\38a758ee333a7dc5.png",
+        "sha256": "38a758ee333a7dc5e33303e2a2e67efd2f5b26e6fa1a45c03681d48e2ba84c20"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\9.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\48ecfe5dc66be69a.png",
+        "sha256": "48ecfe5dc66be69ab7f2d1489282793ca0acef174fa22701e8ffaf80117d4506"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\10.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\4aa2b11d4714765d.png",
+        "sha256": "4aa2b11d4714765dc4e6c9ce3b637c8fed0f85e927efd585298c00c27789db1b"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\11.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\2f3b4455251d4a49.png",
+        "sha256": "2f3b4455251d4a49704aced345f62f530ade4e335dad6de0e8d8aa5ab7e8899a"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\12.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\65cc56391d86be28.png",
+        "sha256": "65cc56391d86be2826684b8278e3f0c9b2281bfa95baf27ea3124c679fb16442"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\13.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\7bbdc48c0a261c46.png",
+        "sha256": "7bbdc48c0a261c466c069d18e722b00c8dbb759d9fd2ebd604e2202caf71bcca"
+      },
+      {
+        "source": "Tenda-AC6路由器漏洞复现\\assets\\14.png",
+        "target": "source\\media\\posts\\tenda-ac6-vulnerability\\e8404c6f6e74e879.png",
+        "sha256": "e8404c6f6e74e879951608a2546713d18a6484ba54a01bbfe161f0477dfbe750"
+      }
+    ],
+    "downloaded_images": [],
+    "external_images": [],
+    "excluded_versions": [
+      "Tenda-AC6路由器漏洞复现 - 副本.md"
+    ]
+  }
+]

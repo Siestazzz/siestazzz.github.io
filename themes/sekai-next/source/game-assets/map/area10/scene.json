@@ -1,0 +1,177 @@
+{
+  "source": "area/area10",
+  "sha256": "ca2388307160e9ceef5274b7b120564300605d5814d4ac34bd41bf3389d6dc84",
+  "sprites": [
+    {
+      "path": "area10/View/try2_view/sprite (2)",
+      "renderer": "-8705880428555136276",
+      "sprite": "8721099696574903168",
+      "file": "try2.png",
+      "position": [
+        2653.300048828125,
+        -1421.699951171875
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        742.0,
+        343.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 1781,
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "area10/Background/background",
+      "renderer": "4339685190670556740",
+      "sprite": "-8993683364943105056",
+      "file": "bg.png",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3378.144396322671,
+        1600.0000314614213
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 0,
+      "webLayer": "back",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "area10/View/try1_view/sprite (1)",
+      "renderer": "9034726566253210095",
+      "sprite": "2347622400733906189",
+      "file": "try1.png",
+      "position": [
+        771.9999389648438,
+        -1517.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        1429.0,
+        564.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 1877,
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    }
+  ],
+  "groundFile": "bg.png",
+  "coordinateSize": [
+    3378.144396322671,
+    1600.0000314614213
+  ],
+  "areaController": {
+    "id": "3946379252017081923",
+    "m_GameObject": {
+      "m_FileID": 0,
+      "m_PathID": 417002326723470453
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+      "m_FileID": 0,
+      "m_PathID": 8118162702052055285
+    },
+    "m_Name": "",
+    "useResources": [
+      {
+        "m_FileID": 0,
+        "m_PathID": -6266283162528264851
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": 2970923521653943988
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": -8361542844488854579
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": 5404972113962775613
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": -9182416307699211989
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": 2400730056960186597
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": 1447392630907733032
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": -1949659715844586659
+      }
+    ],
+    "areaViewType": 1,
+    "gridData": {
+      "m_FileID": 0,
+      "m_PathID": -4886737850469058545
+    },
+    "scrollMin": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "scrollMax": {
+      "x": 3378.0,
+      "y": 1600.0
+    },
+    "defaultPosition": {
+      "x": 1689.0,
+      "y": 785.0,
+      "z": 0.0
+    },
+    "multiScrollContentRoot": {
+      "m_FileID": 0,
+      "m_PathID": -3790745876652750889
+    },
+    "sideViewParam": {
+      "BaseLineY": 1141.0,
+      "ScaleRev": 0.0017000000225380063
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "file": "2d471b72a918b47299ea05bd02b71ecd",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_allPerfect"
+  },
+  {
+    "file": "501ad0daf426f499aa4e3a33940114ac",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_fullCombo"
+  }
+]

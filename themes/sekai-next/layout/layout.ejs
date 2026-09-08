@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="<%= config.language || 'zh-CN' %>">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#454774">
+  <script src="<%- url_for('/js/page-router.js') %>"></script>
+  <% const documentTitle = page.title || page.category || page.tag; %>
+  <title><%= documentTitle ? documentTitle + ' · ' : '' %><%= config.title %></title>
+  <meta name="description" content="<%= page.excerpt ? strip_html(page.excerpt).replace(/\n/g, ' ') : config.description %>">
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
+  <link rel="stylesheet" href="<%- url_for('/css/game.css') %>">
+  <link rel="stylesheet" href="<%- url_for('/css/refinements.css') %>">
+  <% const isHome = is_home(); const hasWorld = page.layout !== 'sekai-map'; %>
+  <% if (hasWorld) { %><script>(()=>{let w='27';try{w=localStorage.getItem('sekai-home-world')||w;}catch{}const q=new URLSearchParams(location.search).get('world');if(['5','7','8','9','10','27'].includes(q)){w=q;try{localStorage.setItem('sekai-home-world',w);}catch{}}document.documentElement.dataset.homeWorld=['5','7','8','9','10'].includes(w)?w:'27';})();</script><% } %>
+  <% if (hasWorld) { %><link rel="stylesheet" href="<%- url_for('/css/sekai-map.css') %>"><link rel="stylesheet" href="<%- url_for('/css/home-characters.css') %>"><% } %>
+  <% if (isHome) { %><script>try{if(Date.now()-Number(sessionStorage.getItem('sekai-world-transfer'))<15000)document.documentElement.classList.add('world-arriving');}catch{}</script><% } %>
+  <% if (page.layout === 'friends') { %><link rel="stylesheet" href="<%- url_for('/css/friends.css') %>"><% } %>
+</head>
+<body class="page-type-<%= isHome ? 'index' : (page.layout === 'index' ? 'archive' : (page.layout || 'other')) %>" data-root="<%- url_for('/') %>">
+  <div class="world-backdrop" aria-hidden="true">
+    <% if (hasWorld) { %><%- partial('_partial/home-world') %><% } %>
+    <div class="scene-dim"></div>
+    <span class="sky-shape sky-shape-a"></span>
+    <span class="sky-shape sky-shape-b"></span>
+    <span class="city city-back"></span>
+    <span class="city city-front"></span>
+  </div>
+
+  <header class="topbar">
+    <% if (isHome) { %><a class="map-globe" href="<%- url_for('/map/') %>" aria-label="打开 SEKAI 地图"><img src="<%- url_for('/game-assets/map/icon_worldMap_wh.png') %>" alt=""></a><% } %>
+    <% const backPath = page.layout === 'post' ? '/search/' : page.layout === 'search' ? '/live/' : page.category ? '/categories/' : page.tag ? '/tags/' : (page.year || page.month) ? '/archives/' : '/'; %>
+    <a class="game-back" href="<%- url_for(backPath) %>" aria-label="返回上一级"><img src="<%- url_for('/game-assets/icon_back_wh.png') %>" alt=""></a>
+    <div class="topbar__right">
+      <a class="game-stat game-stat-rank" href="<%- url_for('/search/') %>"><span class="stat-note" aria-hidden="true"><img src="<%- url_for('/game-assets/icon_playerRank.png') %>" alt=""></span><small>文章数</small><b><%= site.posts.length %></b></a>
+      <span class="game-stat" title="仅当前浏览器的文章访问次数，不是全站统计"><span class="stat-gem">◆</span><small>阅读量</small><b data-total-views>0</b><sup>本机</sup></span>
+      <button class="round-button menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <aside class="menu-panel" aria-hidden="true">
+    <div class="menu-panel__head"><span>SEKAI MENU</span><button class="menu-close" type="button" aria-label="关闭菜单">×</button></div>
+    <nav>
+      <a href="<%- url_for('/') %>"><b>01</b><span>主页<small>HOME</small></span></a>
+      <a href="<%- url_for('/live/') %>"><b>♪</b><span>阅读入口<small>READING</small></span></a>
+      <a href="<%- url_for('/friends/') %>"><b>◇</b><span>友链<small>FRIENDS</small></span></a>
+      <a href="<%- url_for('/archives/') %>"><b>02</b><span>记录档案<small>ARCHIVE</small></span></a>
+      <a href="<%- url_for('/categories/') %>"><b>03</b><span>分类<small>CATEGORIES</small></span></a>
+      <a href="<%- url_for('/tags/') %>"><b>04</b><span>标签<small>TAGS</small></span></a>
+      <a href="<%- url_for('/search/') %>"><b>05</b><span>搜索<small>SEARCH</small></span></a>
+      <a href="<%- url_for('/about/') %>"><b>06</b><span>关于我<small>PROFILE</small></span></a>
+    </nav>
+  </aside>
+  <div class="menu-scrim"></div>
+
+  <main class="site-main"><%- body %></main>
+  <script src="<%- url_for('/js/tap-mesh.js') %>" defer></script>
+  <script src="<%- url_for('/js/effects.js') %>" defer></script>
+  <script src="<%- url_for('/js/street-pan.js') %>" defer></script>
+  <script src="<%- url_for('/js/street-blur.js') %>" defer></script>
+  <script src="<%- url_for('/js/main.js') %>" defer></script>
+  <% if (hasWorld) { %><script src="<%- url_for('/game-assets/map/spine-webgl.js') %>" defer></script><script src="<%- url_for('/js/home-world.js') %>" defer></script><script src="<%- url_for('/js/home-effects.js') %>" defer></script><script src="<%- url_for('/js/home-characters.js') %>" defer></script><% } %>
+  <% if (page.layout === 'friends') { %><script src="<%- url_for('/js/friends.js') %>" defer></script><% } %>
+  <script src="<%- url_for('/js/jacket-blur.js') %>" defer></script>
+  <script src="<%- url_for('/js/reader.js') %>" defer></script>
+  <script src="<%- url_for('/js/live-menu.js') %>" defer></script>
+  <script src="<%- url_for('/js/home.js') %>" defer></script>
+  <script src="<%- url_for('/js/friends.js') %>" defer></script>
+  <% if (isHome || page.layout === 'sekai-map') { %><script src="<%- url_for('/js/world-transfer.js') %>" defer></script><% } %>
+</body>
+</html>

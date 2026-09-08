@@ -1,0 +1,397 @@
+---
+title: "Nepctf2025 部分reverse misc题解"
+date: 2025-09-14 15:53:35
+updated: 2025-09-14 15:53:35
+categories:
+  - "CTF"
+tags:
+  - "CTF"
+  - "NepCTF"
+  - "逆向工程"
+  - "Misc"
+  - "反调试"
+  - "RC4"
+excerpt: "NepCTF 2025 部分 Reverse 与 Misc 题解，记录反调试、SMC 和解题过程。"
+source_date_basis: file-mtime
+---
+## Reverse
+
+### Realme
+
+一开始看是魔改的rc4，发现解出来并不对，但调试时输出的结果是正确的，怀疑有反调试，同时发现rc4函数位于自定义的段，应该还有smc
+
+![image-20250727192518283](/media/posts/nepctf-2025-reverse-misc/5ccf75caa32e90cd.png)
+
+随便翻汇编代码无意中发现两个比较可疑的函数，反编译后发现有反调试，并且对rc4函数进行了hook
+
+一个是用peb检测调试位
+
+<img src="/media/posts/nepctf-2025-reverse-misc/2c8ac522e7e9cabd.png" alt="image-20250727192637889" style="zoom: 67%;" />
+
+一个则是通过closehandle来反调试
+
+<img src="/media/posts/nepctf-2025-reverse-misc/103e3999b84e303c.png" alt="image-20250727192658492" style="zoom: 67%;" />
+
+patch掉反调试后动调查看rc4逻辑
+
+sbox多异或了两次
+
+<img src="/media/posts/nepctf-2025-reverse-misc/bdced0fba15c4793.png" alt="image-20250727195846566" style="zoom:67%;" />
+
+最后的异或换成了加减法
+
+<img src="/media/posts/nepctf-2025-reverse-misc/33ad38e75ca2ec7d.png" alt="image-20250727195923115" style="zoom:67%;" />
+
+解密即可
+
+```c++
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+
+void rc4(char* data, char* key, int datalen, int keylen)
+{
+    unsigned char s_box[256] = { 0 };
+    int i = 0, j = 0, k = 0;
+
+    for (i = 0;i < 256;i++)
+        s_box[i] = i ^ 0xCF;
+    for (i = 0;i < 256;i++)
+    {
+        j = (j + s_box[i] + key[i % keylen]) % 256;
+        std::swap(s_box[j], s_box[i]);
+        s_box[j] ^= 0xAD;
+    }
+    i = j = 0;
+    for (k = 0;k < datalen;k++)
+    {
+        i = (i + 1) % 256;
+        j = (j + i * s_box[i]) % 256;
+        std::swap(s_box[i], s_box[j]);
+        if (k % 2)
+            data[k] -= s_box[(s_box[i] + s_box[j]) % 256];
+        else
+            data[k] += s_box[(s_box[i] + s_box[j]) % 256];
+        // return;
+            // data[k] %= s_box[(s_box[i] + s_box[j]) % 256];
+    }
+}
+
+int main()
+{
+    char data[36] = {
+        0x50, 0x59, 0xA2, 0x94, 0x2E, 0x8E, 0x5C, 0x95, 0x79, 0x16, 0xE5, 0x36, 0x60, 0xC7, 0xE8, 0x06,
+        0x33, 0x78, 0xF0, 0xD0, 0x36, 0xC8, 0x73, 0x1B, 0x65, 0x40, 0xB5, 0xD4, 0xE8, 0x9C, 0x65, 0xF4,
+        0xBA, 0x62, 0xd0,0
+    };;
+    char key[] = "Y0u_Can't_F1nd_Me!";
+    int datalen = 35, keylen = strlen(key);
+    rc4(data, key, datalen, keylen);
+    for (int i = 0;i < datalen;i++)
+        printf("%c", (unsigned char)data[i]);
+    return 0;
+}//NepCTF{Y0u_FiN1sH_Th1s_E3sy_Smc!!!}
+
+```
+
+
+
+### Crackme
+
+将用户名的哈希值作为aes ecb的密钥，用户名+showmaker11作为aes的密文，解密得出的就是用户的注册码
+
+<img src="/media/posts/nepctf-2025-reverse-misc/e2c359f5da3a76ba.png" alt="image-20250727200717753" style="zoom:80%;" />
+
+aes函数混淆的很严重，但是还是能看出每个分支对应的aes部分，打断点一路动调发现在列混淆的时候多异或了一个0x55
+
+![image-20250727201056537](/media/posts/nepctf-2025-reverse-misc/4e00de55500f8776.png)
+
+动调取出密钥和密文就可以解出注册码了
+
+```c++
+/* AES128-EBC_mode */
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+unsigned char sbox[256] = {
+0x63, 0x7C, 0x77, 0x7B, 0xF2, 0x6B, 0x6F, 0xC5, 0x30, 0x01, 0x67, 0x2B, 0xFE, 0xD7, 0xAB, 0x76,
+0xCA, 0x82, 0xC9, 0x7D, 0xFA, 0x59, 0x47, 0xF0, 0xAD, 0xD4, 0xA2, 0xAF, 0x9C, 0xA4, 0x72, 0xC0,
+0xB7, 0xFD, 0x93, 0x26, 0x36, 0x3F, 0xF7, 0xCC, 0x34, 0xA5, 0xE5, 0xF1, 0x71, 0xD8, 0x31, 0x15,
+0x04, 0xC7, 0x23, 0xC3, 0x18, 0x96, 0x05, 0x9A, 0x07, 0x12, 0x80, 0xE2, 0xEB, 0x27, 0xB2, 0x75,
+0x09, 0x83, 0x2C, 0x1A, 0x1B, 0x6E, 0x5A, 0xA0, 0x52, 0x3B, 0xD6, 0xB3, 0x29, 0xE3, 0x2F, 0x84,
+0x53, 0xD1, 0x00, 0xED, 0x20, 0xFC, 0xB1, 0x5B, 0x6A, 0xCB, 0xBE, 0x39, 0x4A, 0x4C, 0x58, 0xCF,
+0xD0, 0xEF, 0xAA, 0xFB, 0x43, 0x4D, 0x33, 0x85, 0x45, 0xF9, 0x02, 0x7F, 0x50, 0x3C, 0x9F, 0xA8,
+0x51, 0xA3, 0x40, 0x8F, 0x92, 0x9D, 0x38, 0xF5, 0xBC, 0xB6, 0xDA, 0x21, 0x10, 0xFF, 0xF3, 0xD2,
+0xCD, 0x0C, 0x13, 0xEC, 0x5F, 0x97, 0x44, 0x17, 0xC4, 0xA7, 0x7E, 0x3D, 0x64, 0x5D, 0x19, 0x73,
+0x60, 0x81, 0x4F, 0xDC, 0x22, 0x2A, 0x90, 0x88, 0x46, 0xEE, 0xB8, 0x14, 0xDE, 0x5E, 0x0B, 0xDB,
+0xE0, 0x32, 0x3A, 0x0A, 0x49, 0x06, 0x24, 0x5C, 0xC2, 0xD3, 0xAC, 0x62, 0x91, 0x95, 0xE4, 0x79,
+0xE7, 0xC8, 0x37, 0x6D, 0x8D, 0xD5, 0x4E, 0xA9, 0x6C, 0x56, 0xF4, 0xEA, 0x65, 0x7A, 0xAE, 0x08,
+0xBA, 0x78, 0x25, 0x2E, 0x1C, 0xA6, 0xB4, 0xC6, 0xE8, 0xDD, 0x74, 0x1F, 0x4B, 0xBD, 0x8B, 0x8A,
+0x70, 0x3E, 0xB5, 0x66, 0x48, 0x03, 0xF6, 0x0E, 0x61, 0x35, 0x57, 0xB9, 0x86, 0xC1, 0x1D, 0x9E,
+0xE1, 0xF8, 0x98, 0x11, 0x69, 0xD9, 0x8E, 0x94, 0x9B, 0x1E, 0x87, 0xE9, 0xCE, 0x55, 0x28, 0xDF,
+0x8C, 0xA1, 0x89, 0x0D, 0xBF, 0xE6, 0x42, 0x68, 0x41, 0x99, 0x2D, 0x0F, 0xB0, 0x54, 0xBB, 0x16
+};
+
+unsigned char inv_sbox[256] = {
+0x52, 0x09, 0x6A, 0xD5, 0x30, 0x36, 0xA5, 0x38, 0xBF, 0x40, 0xA3, 0x9E, 0x81, 0xF3, 0xD7, 0xFB,
+0x7C, 0xE3, 0x39, 0x82, 0x9B, 0x2F, 0xFF, 0x87, 0x34, 0x8E, 0x43, 0x44, 0xC4, 0xDE, 0xE9, 0xCB,
+0x54, 0x7B, 0x94, 0x32, 0xA6, 0xC2, 0x23, 0x3D, 0xEE, 0x4C, 0x95, 0x0B, 0x42, 0xFA, 0xC3, 0x4E,
+0x08, 0x2E, 0xA1, 0x66, 0x28, 0xD9, 0x24, 0xB2, 0x76, 0x5B, 0xA2, 0x49, 0x6D, 0x8B, 0xD1, 0x25,
+0x72, 0xF8, 0xF6, 0x64, 0x86, 0x68, 0x98, 0x16, 0xD4, 0xA4, 0x5C, 0xCC, 0x5D, 0x65, 0xB6, 0x92,
+0x6C, 0x70, 0x48, 0x50, 0xFD, 0xED, 0xB9, 0xDA, 0x5E, 0x15, 0x46, 0x57, 0xA7, 0x8D, 0x9D, 0x84,
+0x90, 0xD8, 0xAB, 0x00, 0x8C, 0xBC, 0xD3, 0x0A, 0xF7, 0xE4, 0x58, 0x05, 0xB8, 0xB3, 0x45, 0x06,
+0xD0, 0x2C, 0x1E, 0x8F, 0xCA, 0x3F, 0x0F, 0x02, 0xC1, 0xAF, 0xBD, 0x03, 0x01, 0x13, 0x8A, 0x6B,
+0x3A, 0x91, 0x11, 0x41, 0x4F, 0x67, 0xDC, 0xEA, 0x97, 0xF2, 0xCF, 0xCE, 0xF0, 0xB4, 0xE6, 0x73,
+0x96, 0xAC, 0x74, 0x22, 0xE7, 0xAD, 0x35, 0x85, 0xE2, 0xF9, 0x37, 0xE8, 0x1C, 0x75, 0xDF, 0x6E,
+0x47, 0xF1, 0x1A, 0x71, 0x1D, 0x29, 0xC5, 0x89, 0x6F, 0xB7, 0x62, 0x0E, 0xAA, 0x18, 0xBE, 0x1B,
+0xFC, 0x56, 0x3E, 0x4B, 0xC6, 0xD2, 0x79, 0x20, 0x9A, 0xDB, 0xC0, 0xFE, 0x78, 0xCD, 0x5A, 0xF4,
+0x1F, 0xDD, 0xA8, 0x33, 0x88, 0x07, 0xC7, 0x31, 0xB1, 0x12, 0x10, 0x59, 0x27, 0x80, 0xEC, 0x5F,
+0x60, 0x51, 0x7F, 0xA9, 0x19, 0xB5, 0x4A, 0x0D, 0x2D, 0xE5, 0x7A, 0x9F, 0x93, 0xC9, 0x9C, 0xEF,
+0xA0, 0xE0, 0x3B, 0x4D, 0xAE, 0x2A, 0xF5, 0xB0, 0xC8, 0xEB, 0xBB, 0x3C, 0x83, 0x53, 0x99, 0x61,
+0x17, 0x2B, 0x04, 0x7E, 0xBA, 0x77, 0xD6, 0x26, 0xE1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0C, 0x7D
+};
+
+unsigned int T_func(unsigned int num)
+{
+    num = (num >> 24) + (num << 8);
+    return sbox[num & 0xff] + (sbox[num >> 8 & 0xff] << 8) + (sbox[num >> 16 & 0xff] << 16) + (sbox[num >> 24 & 0xff] << 24);
+}
+
+void storedata(unsigned char* state, unsigned char* data)
+{
+    for (int i = 0;i < 4;i++)
+        for (int j = 0;j < 4;j++)
+            state[j * 4 + i] = data[i * 4 + j];
+}
+
+void expandkey(unsigned int* expkey, unsigned char* key)
+{
+    for (int i = 0;i < 4;i++)
+        for (int j = 0;j < 4;j++)
+            expkey[i] = (expkey[i] << 8) + key[i * 4 + j];
+    unsigned int rcon[10] = { 0x01000000, 0x02000000, 0x04000000, 0x08000000, 0x10000000,
+                           0x20000000, 0x40000000, 0x80000000, 0x1B000000, 0x36000000 };
+
+    for (int i = 1;i < 11;i++)
+    {
+        expkey[4 * i] = expkey[4 * i - 4] ^ T_func(expkey[4 * i - 1]) ^ rcon[i - 1];
+        expkey[4 * i + 1] = expkey[4 * i + 1 - 4] ^ expkey[4 * i];
+        expkey[4 * i + 2] = expkey[4 * i + 2 - 4] ^ expkey[4 * i + 1];
+        expkey[4 * i + 3] = expkey[4 * i + 3 - 4] ^ expkey[4 * i + 2];
+    }
+}
+
+void addroundkey(unsigned char* state, unsigned int* expkey)
+{
+    for (int i = 0;i < 16;i++)
+        state[i] ^= expkey[i % 4] >> (24 - i / 4 * 8) & 0xff;
+}
+
+void inv_subbyte(unsigned char* state)
+{
+    for (int i = 0;i < 16;i++)
+        state[i] = inv_sbox[(unsigned char)state[i]];
+}
+
+void inv_shiftrows(unsigned char* state)
+{
+    for (int i = 0;i < 4;i++)
+    {
+        int cnt = i;
+        while (cnt--)
+        {
+            int tmp = state[4 * i + 3];
+            state[4 * i + 3] = state[4 * i + 2];
+            state[4 * i + 2] = state[4 * i + 1];
+            state[4 * i + 1] = state[4 * i];
+            state[4 * i] = tmp;
+        }
+    }
+}
+
+unsigned char GMul(unsigned char u, unsigned char v) {
+    unsigned char p = 0;
+
+    for (int i = 0; i < 8; ++i) {
+        if (u & 0x01) {    //
+            p ^= v;
+        }
+
+        int flag = (v & 0x80);
+        v <<= 1;
+        if (flag) {
+            v ^= 0x1B; /* x^8 + x^4 + x^3 + x + 1 */
+        }
+
+        u >>= 1;
+    }
+
+    return p;
+}
+
+void inv_mixcolumns(unsigned char* state)
+{
+    unsigned char matrix[4][4] = { {0x0E,0x0B,0x0D,0x09},
+                       {0x09,0x0E,0x0B,0x0D},
+                       {0x0D,0x09,0x0E,0x0B},
+                       {0x0B,0x0D,0x09,0x0E} };
+    unsigned char tmp[4][4];
+
+    for (int i = 0;i < 4;i++)
+        for (int j = 0;j < 4;j++)
+            tmp[i][j] = state[i * 4 + j];
+
+    for (int i = 0;i < 4;i++)
+        for (int j = 0;j < 4;j++)
+            state[i * 4 + j] = GMul(matrix[i][0], tmp[0][j]) ^ GMul(matrix[i][1], tmp[1][j]) ^
+            GMul(matrix[i][2], tmp[2][j]) ^ GMul(matrix[i][3], tmp[3][j]) ^ 0x55;
+}
+
+void print(unsigned char* data)
+{
+    for (int i = 0;i < 16;i++)
+        printf("%02x ", (unsigned char)data[i]);
+    printf("\n");
+}
+
+void aesDecrypt(unsigned char* data, unsigned char* key)
+{
+    unsigned int expkey[44] = { 0 };
+    unsigned char state[16];
+
+    storedata(state, data);
+    expandkey(expkey, key);
+    addroundkey(state, expkey + 40);
+    for (int i = 1;i < 10;i++)
+    {
+        inv_shiftrows(state);
+        inv_subbyte(state);
+        addroundkey(state, expkey + 40 - 4 * i);
+        inv_mixcolumns(state);
+    }
+    inv_subbyte(state);
+    inv_shiftrows(state);
+    addroundkey(state, expkey);
+    storedata(data, state);
+}
+
+void hexstr_to_bytes(const char* hexstr, char* out, size_t maxlen) {
+    size_t len = strlen(hexstr);
+    if (len % 2 != 0) {
+        printf("Hex string length must be even.\n");
+        return;
+    }
+
+    size_t i;
+    for (i = 0; i < len / 2 && i < maxlen; i++) {
+        char byte_str[3] = { hexstr[2 * i], hexstr[2 * i + 1], '\0' };
+        out[i] = strtol(byte_str, NULL, 16);
+    }
+}
+
+int main()
+{
+    char key[16] = { 0 };
+    char data[16] = { 0 };
+    char hexkey[33] = { 0 };
+    char hexdata[33] = { 0 };
+    while (1)
+    {
+        printf("Enter key (hex): ");
+        scanf("%s", hexkey);
+        printf("Enter data (hex): ");
+        scanf("%s", hexdata);
+        int datalen = 16, keylen = 16;
+        hexstr_to_bytes(hexkey, key, sizeof(key));
+        hexstr_to_bytes(hexdata, data, sizeof(data));
+
+        for (int i = 0;i < datalen;i += 16)
+            aesDecrypt((unsigned char*)data + i, (unsigned char*)key);
+
+        printf("serial number:\n");
+        for (int i = 0;i < datalen;i++)
+            printf("%02x", (unsigned char)data[i]);
+        printf("\n\n");
+    }
+
+    return 0;
+}
+
+```
+
+什么，你问我有100个用户怎么动调获得每一个用户的密文密钥，但我真的是一个个的调出来的。。。（累趴）分析完aes之后已经完全不想再看那个哈希了，写了个条件断点来获得密钥密文然后手动输了100次。。。。。
+
+
+
+### QRS
+
+搜qrs能直接定位到加密函数
+
+<img src="/media/posts/nepctf-2025-reverse-misc/02bafdca1c0c1da8.png" alt="image-20250727201743026" style="zoom: 80%;" />
+
+魔改的xtea，TickCount是固定值
+
+```c++
+#include <stdio.h>
+#include <string.h>
+#define DELTA 0x9e3779b9
+
+unsigned int TickCount = 0x68547369;
+
+void xtea_decrypt(unsigned int* text, unsigned int* key)
+{
+    unsigned int v0 = text[0];
+    unsigned int v1 = text[1];
+    unsigned int sum = TickCount * 48;
+    for (int i = 0;i < 48;i++)
+    {
+        sum -= TickCount;
+        v1 -= (((v0 << 4) ^ (v0 >> 5)) + v0) ^ (sum + TickCount + *(unsigned int*)((char*)key + (((sum + TickCount) >> 9) & 0xC)));
+        v0 -= (((v1 << 4) ^ (v1 >> 5)) + v1) ^ (sum + key[sum & 3]);
+    }
+    text[0] = v0;
+    text[1] = v1;
+}
+
+int main()
+{
+    unsigned char text_byte[] =
+    {
+      0x21, 0xA6, 0x3E, 0x08, 0x3C, 0x97, 0x45, 0xC7, 0xE8, 0x7A,
+      0xB7, 0xE3, 0x46, 0x81, 0xEE, 0xCD, 0x96, 0x6B, 0xC8, 0x7D,
+      0x3B, 0x9D, 0x8C, 0x6B, 0x42, 0x43, 0xB1, 0x79, 0x0D, 0x0F,
+      0xCF, 0x2E, 0x0
+    };
+    char key_byte[] = { 0x67, 0x45, 0x23, 0x01, 0xEF, 0xCD, 0xAB, 0x89, 0x98, 0xBA,
+        0xDC, 0xFE, 0x10, 0x32, 0x54, 0x76 };
+    unsigned int* text = (unsigned int*)text_byte;
+    unsigned int* key = (unsigned int*)key_byte;
+    int n = 8;
+
+    for (int i = 0;i < n;i += 2)
+        xtea_decrypt(&text[i], key);
+
+    char* byte = (char*)text;
+    for (int i = 0;i < n * 4;i++)
+        printf("%c", (unsigned char)byte[i]);
+
+    return 0;
+}//NepCTF{a4747f82be106d3f8c4d747c744d7ee5}
+
+```
+
+
+
+## misc
+
+### SpeedMino
+
+解压exe之后得到lua源码，发现超过2600会自动打印flag
+
+![image-20250727202338170](/media/posts/nepctf-2025-reverse-misc/26fe27da14834dc4.png)
+
+修改源码后直接将文件夹拖到love.exe即可获得flag：NepCTF{You_ARE_SpeedMino_GRAND-MASTER_ROUNDS!_TGLKZ}
+
+![image-20250727202608724](/media/posts/nepctf-2025-reverse-misc/f715d0eddfaef751.png)

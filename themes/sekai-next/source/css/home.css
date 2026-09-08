@@ -1,0 +1,65 @@
+@font-face{font-family:SekaiHomeLabel;src:url('../game-assets/FOT-RodinNTLGPro-EB.otf') format('opentype');font-weight:700 900;font-display:swap;unicode-range:U+0000-007F,U+968F,U+673A,U+4E00,U+7BC7,U+5168,U+90E8,U+6587,U+7AE0}
+.home-social{position:absolute;right:3%;top:28%;display:grid;gap:24px;justify-items:center}
+.page-type-index .menu-toggle span{display:block}
+.home-social a{position:static;display:grid;justify-items:center;gap:3px;color:white;text-decoration:none;text-shadow:0 2px 3px #45445f}
+.home-social small{font-size:13px;font-weight:700}
+.home-github img{width:56px;height:56px;background:white;border-radius:50%;padding:10px}
+.home-social .home-friends{gap:0}
+.home-social .home-friends img{margin:0 0 -8px;width:76px;height:76px}
+.home-social .home-friends small{margin-top:0}
+.home-bottom{--home-menu-height:clamp(64px,5.4vw,104px);left:1.4%;gap:1.4%}
+.home-featured{width:22%;min-width:0}
+.home-featured-window{aspect-ratio:484/204;overflow:hidden;position:relative;border:3px solid white;border-radius:12px;background:#444466;box-shadow:0 2px 4px #44446680;touch-action:pan-y}
+.home-featured-track{height:100%;display:flex;transition:transform .2s linear}
+.home-featured-slide{position:relative;flex:0 0 100%;min-width:0;height:100%;color:white;overflow:hidden;text-decoration:none}
+.home-featured-slide>img{width:100%;height:100%;object-fit:cover;display:block}
+.home-featured-slide>span{position:absolute;inset:auto 0 0;padding:10px 12px;background:#22243dd9;display:grid;gap:3px}
+.home-featured-slide small{font-size:11px;color:#77eedd}
+.home-featured-slide strong{font-size:clamp(14px,1.2vw,20px);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.home-carousel-controls{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px}
+.home-carousel-dots{display:flex;gap:7px;position:relative;padding:7px 10px;isolation:isolate}
+/* Original sprite: 24px left/right borders, scaled with the 0.7x carousel. */
+.home-carousel-dots:before{content:'';position:absolute;inset:0;z-index:-1;border-style:solid;border-width:0 16.8px;border-image:url('../game-assets/home/bg_base_round_h40_wh.png') 0 24 fill / 0 16.8px / 0 stretch;opacity:.55;pointer-events:none}
+.home-carousel-dots button{width:14px;height:14px;padding:0;border:0;background:url('../game-assets/home/carousel_h16_dbl.png') center/contain no-repeat;cursor:pointer}
+.home-carousel-dots button[aria-pressed=true]{background-image:url('../game-assets/home/carousel_h16_pk.png')}
+.home-bottom-bar{gap:20px;height:var(--home-menu-height);min-height:0;padding:0 3.2vw;margin-bottom:36px;border-radius:calc(var(--home-menu-height)/2) 0 0 calc(var(--home-menu-height)/2)}
+.home-gacha{display:flex;align-items:center;gap:4px;background:none;border:0;color:white;font-family:SekaiHomeLabel,SekaiHan,sans-serif;font-size:clamp(18px,1.7vw,32px);font-weight:800;cursor:pointer;padding:0;white-space:nowrap;line-height:1.25}
+/* btn_home_gacha 208x104: icon ends at x92, lettering starts at x104.
+   Clip at x96 in the transparent gap; retain the original pixels, no redraw. */
+.home-gacha-icon{display:block;flex:none;width:calc(var(--home-menu-height)*96/104);height:var(--home-menu-height);background:url('../game-assets/home/btn_home_gacha.png') left center / auto 100% no-repeat}
+.home-gacha small{display:block;font-family:SekaiRodin,sans-serif;font-size:clamp(11px,.95vw,18px);letter-spacing:0;text-align:center;color:rgb(255 255 255 / 60%);text-shadow:none}
+.home-bottom-bar .home-live{font-size:clamp(20px,1.9vw,36px);gap:8px;line-height:1.1}
+.home-bottom-bar .home-live>span{display:flex;flex-direction:column;gap:calc(var(--home-menu-height)*6/104);line-height:1}
+.home-bottom-bar .home-live small{margin:0;line-height:1;font-size:clamp(11px,.95vw,18px);letter-spacing:0;color:rgb(119 255 227 / 60%);text-shadow:none}
+.home-bottom-bar .home-live img{width:calc(var(--home-menu-height)*.64)}
+.home-gacha:disabled{opacity:.5;cursor:default}
+.home-featured :focus-visible,.home-social :focus-visible,.home-gacha:focus-visible{outline:3px solid #77eedd;outline-offset:3px}
+@media(max-width:700px){.home-featured{width:70%;max-width:360px}.home-social{right:4%;top:31%;gap:14px}.home-social .home-friends img{width:56px;height:56px}.home-github img{width:42px;height:42px;padding:8px}.home-bottom-bar{gap:12px;padding:12px 16px}.home-gacha img{width:64px;height:32px}.home-gacha{gap:2px;font-size:18px}.home-live{font-size:20px}.home-featured-slide>span{padding:6px 9px}}
+@media(prefers-reduced-motion:reduce){.home-featured-track{transition:none}}
+@media(max-width:700px){.home-bottom{left:5%;gap:15px}.home-bottom-bar{padding:0 16px;margin-bottom:0}.home-gacha{font-size:18px}.home-gacha-icon{width:48px;background-size:auto 52px}.home-bottom-bar .home-live{font-size:20px}.home-bottom-bar .home-live img{width:34px}}
+/* Both menu labels share the same font metrics, including narrow screens. */
+.home-bottom-bar :is(.home-gacha,.home-live){font-family:SekaiHomeLabel,SekaiHan,sans-serif;font-size:clamp(18px,1.7vw,32px);font-weight:800;line-height:1}
+.home-bottom-bar :is(.home-gacha,.home-live)>span{display:flex;flex-direction:column;gap:calc(var(--home-menu-height)*6/104);line-height:1}
+.home-bottom-bar :is(.home-gacha,.home-live) small{font-family:SekaiHomeLabel,sans-serif;font-size:clamp(11px,.95vw,18px);font-weight:800;line-height:1;margin:0;letter-spacing:0}
+/* Original GraphicButtonTapEffect: base_wh -> tap_gn_1 (#a1f4eb).
+   Original SwapGraphicButtonTapEffect: btn_home_live -> btn_home_live_on.
+   Press feedback is also exposed on hover/focus for desktop navigation. */
+.home-bottom-bar :is(.home-gacha,.home-live){--feedback-duration:.4s;transition:color var(--feedback-duration) linear;transform:none;filter:none}
+.home-bottom-bar .home-live{color:#77ffe3;text-shadow:none}
+.home-bottom-bar :is(.home-gacha,.home-live) small{color:inherit;opacity:.6}
+.home-gacha-icon{background:currentColor;mask:url('../game-assets/home/btn_home_gacha.png') left center / auto 100% no-repeat}
+.home-live-icon{position:relative;display:block;flex:none;width:calc(var(--home-menu-height)*96/104);height:var(--home-menu-height)}
+.home-live-icon:before,.home-live-icon:after{content:'';position:absolute;inset:0;background:url('../game-assets/home/btn_home_live.png') left center / auto 100% no-repeat;transition:opacity var(--feedback-duration) linear}
+.home-live-icon:after{background-image:url('../game-assets/home/btn_home_live_on.png');opacity:0}
+.home-bottom-bar .home-gacha:is(:focus-visible,:active):not(:disabled){--feedback-duration:.1s;color:#a1f4eb}
+.home-bottom-bar .home-live:is(:focus-visible,:active){--feedback-duration:.1s;color:#d0fff4}
+.home-live:is(:focus-visible,:active) .home-live-icon:before{opacity:0}
+.home-live:is(:focus-visible,:active) .home-live-icon:after{opacity:1}
+@media(hover:hover){
+ .home-bottom-bar .home-gacha:hover:not(:disabled){--feedback-duration:.1s;color:#a1f4eb}
+ .home-bottom-bar .home-live:hover{--feedback-duration:.1s;color:#d0fff4}
+ .home-live:hover .home-live-icon:before{opacity:0}
+ .home-live:hover .home-live-icon:after{opacity:1}
+}
+@media(max-width:700px){.home-gacha-icon,.home-live-icon{width:48px;height:52px}.home-gacha-icon{mask-size:auto 52px}}
+@media(prefers-reduced-motion:reduce){.home-bottom-bar :is(.home-gacha,.home-live){--feedback-duration:0s!important}}

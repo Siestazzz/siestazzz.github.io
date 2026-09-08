@@ -1,0 +1,106 @@
+{
+  "bundle": "ui/smartphone",
+  "sha256": "3e10276909398c6d0c19a3ad9e38dc0d23b36bbdeff4787b33b8186a84aed803",
+  "objects": [
+    {
+      "name": "mask_smartphone",
+      "type": "Sprite",
+      "path_id": -6677964270752502662,
+      "filename": "mask_smartphone--6677964270752502662.png",
+      "size": [
+        964,
+        1854
+      ]
+    },
+    {
+      "name": "mask_smartphone_jacket",
+      "type": "Sprite",
+      "path_id": -2127673573126283108,
+      "filename": "mask_smartphone_jacket--2127673573126283108.png",
+      "size": [
+        960,
+        960
+      ]
+    },
+    {
+      "name": "img_smartphone",
+      "type": "Texture2D",
+      "path_id": -1135503550601847999,
+      "filename": "img_smartphone--1135503550601847999.png",
+      "size": [
+        1034,
+        1942
+      ]
+    },
+    {
+      "name": "img_smartphone_you",
+      "type": "Sprite",
+      "path_id": 2105879165065612923,
+      "filename": "img_smartphone_you-2105879165065612923.png",
+      "size": [
+        1034,
+        1942
+      ]
+    },
+    {
+      "name": "mask_smartphone_jacket",
+      "type": "Texture2D",
+      "path_id": 2199746376538349402,
+      "filename": "mask_smartphone_jacket-2199746376538349402.png",
+      "size": [
+        960,
+        960
+      ]
+    },
+    {
+      "name": "img_smartphone",
+      "type": "Sprite",
+      "path_id": 2686608430696343173,
+      "filename": "img_smartphone-2686608430696343173.png",
+      "size": [
+        1034,
+        1942
+      ]
+    },
+    {
+      "name": "img_smartphone_rival",
+      "type": "Sprite",
+      "path_id": 5617488368110135722,
+      "filename": "img_smartphone_rival-5617488368110135722.png",
+      "size": [
+        1034,
+        1942
+      ]
+    },
+    {
+      "name": "mask_smartphone",
+      "type": "Texture2D",
+      "path_id": 6844000393019547269,
+      "filename": "mask_smartphone-6844000393019547269.png",
+      "size": [
+        964,
+        1854
+      ]
+    },
+    {
+      "name": "img_smartphone_you",
+      "type": "Texture2D",
+      "path_id": 7737723506848284135,
+      "filename": "img_smartphone_you-7737723506848284135.png",
+      "size": [
+        1034,
+        1942
+      ]
+    },
+    {
+      "name": "img_smartphone_rival",
+      "type": "Texture2D",
+      "path_id": 8704763601703586870,
+      "filename": "img_smartphone_rival-8704763601703586870.png",
+      "size": [
+        1034,
+        1942
+      ]
+    }
+  ]
+}

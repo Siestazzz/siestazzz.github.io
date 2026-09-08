@@ -1,0 +1,82 @@
+.page-type-sekai-map{overflow:hidden}
+.unknown-scene{position:absolute;inset:0;overflow:hidden}
+/* Live world layers share the selected SEKAI; CSS blur is a composited-scene web adaptation. */
+body:not(.page-type-index) .unknown-scene{filter:blur(4px);pointer-events:none}
+body:is(.page-type-search,.page-type-post) .unknown-scene{filter:blur(8px)}
+.page-type-sekai-map .world-backdrop{display:none}
+.page-type-sekai-map .site-main{margin:0;padding:0;max-width:none}
+.page-type-sekai-map .topbar{z-index:60}
+.page-type-sekai-map .menu-toggle{display:none}
+.page-type-sekai-map .map-globe{display:none}
+.page-type-sekai-map.in-unknown-world .map-globe{display:flex}
+.page-type-sekai-map.in-unknown-world .game-back{visibility:hidden}
+.sekai-map{position:fixed;inset:0;background:#d1eafa url('../game-assets/map/bg_sekai.png') center/cover;overflow:hidden;--map-scale:1}
+.sekai-selection,.sekai-inside{position:absolute;inset:0;touch-action:none}
+.sekai-map [hidden]{display:none!important}
+.world-orbit{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--map-scale));transform-origin:center}
+.sekai-world{position:absolute;border:0;padding:0;width:430px;height:365px;background:none;color:#fff;cursor:pointer;transform:translate(-50%,-50%) scale(var(--depth,1));transition:left .35s ease,top .35s ease,transform .35s ease;overflow:visible}
+.sekai-world img{position:absolute;width:100%;height:100%;inset:0;object-fit:contain;pointer-events:none}
+.sekai-world img{translate:0 var(--world-bob,0px)}
+.sekai-world{transition:none}
+.sekai-world .world-glow{animation:world-glow 2s linear infinite alternate}
+.map-ambient-particles{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.world-here{animation:here-sway 1s ease-in-out infinite alternate;transform-origin:50% 100%}
+.orbit-arrow{width:clamp(40px,6vw,105px);height:clamp(60px,8vw,140px);font-size:0;filter:none}
+.orbit-arrow img{width:100%;height:100%;object-fit:contain;animation:arrow-nudge .75s ease-in-out infinite alternate;--arrow-start:calc(-10px * var(--map-scale));--arrow-end:calc(10px * var(--map-scale))}
+.orbit-prev img{--arrow-start:calc(10px * var(--map-scale));--arrow-end:calc(-10px * var(--map-scale))}
+.orbit-next img{rotate:180deg}
+@keyframes arrow-nudge{from{translate:var(--arrow-start) 0}to{translate:var(--arrow-end) 0}}
+@keyframes world-float{0%,50%,100%{translate:0 0}25%{translate:0 -15px}75%{translate:0 15px}}
+@keyframes world-glow{from{opacity:0}to{opacity:.75}}
+@keyframes here-sway{from{rotate:0deg}to{rotate:5deg}}
+.world-name{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);padding:2px 20px;white-space:nowrap;border-radius:9px;background:#454363;font:25px/1.35 SekaiHan,sans-serif}
+.world-unavailable{position:absolute;top:100%;left:50%;transform:translateX(-50%);color:#565577;font-size:15px;white-space:nowrap}
+.center-world{left:50%;top:45%;width:345px;height:290px;z-index:10}
+.center-world:hover img,.center-world:focus-visible img{filter:brightness(1.12)}
+.sekai-world:focus-visible{outline:3px solid #35d7cd;outline-offset:8px;border-radius:50%}
+.world-here{position:absolute;right:60px;top:5px;padding:0 13px;border-radius:20px;background:#ff70a9;color:#fff;font:bold italic 28px/1.3 sans-serif;box-shadow:0 1px 5px #5555}
+.world-here:after{content:'';position:absolute;bottom:-8px;left:35px;border:8px solid transparent;border-top-color:#ff70a9;border-bottom:0}
+.orbit-arrow{position:absolute;top:49%;border:0;background:none;color:white;font-size:clamp(35px,5vw,80px);filter:drop-shadow(0 1px 3px #68748f);cursor:pointer;padding:10px;transform:translateY(-50%)}
+.orbit-prev{left:4%}.orbit-next{right:4%}
+.map-instruction{position:absolute;bottom:2%;left:0;width:100%;text-align:center;font-size:clamp(11px,1.2vw,17px);color:#565977;pointer-events:none}
+.unknown-landscape{position:absolute;inset:0;overflow:hidden;cursor:grab;touch-action:none;background:#addef7}
+.unknown-landscape.dragging{cursor:grabbing}
+.unknown-ground{position:absolute;height:110%;width:auto;min-width:0;max-width:none;left:50%;top:-5%;object-fit:cover;transform:translateX(calc(-50% + var(--pan,0px)));user-select:none}
+.unknown-clouds,.unknown-effects{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.classroom-furniture{position:absolute;inset:0;pointer-events:none;display:none}.classroom-furniture img{position:absolute;max-width:none}
+.scene-back-layers{position:absolute;inset:0;pointer-events:none}.scene-back-layers img{position:absolute;max-width:none}
+html[data-home-world="7"] .unknown-tree{display:none}
+html[data-home-world="7"] .classroom-furniture{display:block}
+html[data-home-world="7"] .unknown-ground{content:url('../game-assets/map/area7/background.png')}
+html:is([data-home-world="8"],[data-home-world="9"],[data-home-world="10"]) .unknown-tree{display:none}
+html:is([data-home-world="8"],[data-home-world="9"],[data-home-world="10"]) .classroom-furniture{display:block}
+html[data-home-world="8"] .unknown-ground{content:url('../game-assets/map/area8/bg.png')}
+html[data-home-world="9"] .unknown-ground{content:url('../game-assets/map/area9/sky-base.png');z-index:0}
+html[data-home-world="10"] .unknown-ground{content:url('../game-assets/map/area10/bg.png')}
+html[data-home-world="9"] .unknown-clouds{z-index:1}
+html[data-home-world="9"] .scene-back-layers{z-index:2}
+html[data-home-world="9"] .unknown-effects{z-index:3}
+html[data-home-world="9"] .classroom-furniture{z-index:4}
+html[data-home-world="5"] .unknown-tree{display:none}
+html[data-home-world="5"] .classroom-furniture{display:block}
+html[data-home-world="5"] .unknown-ground{content:url('../game-assets/map/area5/background.png')}
+.page-type-index .ambient-field{display:none}
+.unknown-tree{position:absolute;left:calc(5% + var(--pan,0px));top:-9%;width:66%;height:85%;pointer-events:none}
+.world-caption{position:absolute;bottom:5%;left:3%;color:white;text-shadow:0 2px 5px #454363;font-size:clamp(17px,2vw,30px);pointer-events:none}
+.world-caption small{display:block;font-size:13px;opacity:.85}
+.world-shortcuts{position:absolute;right:3%;bottom:5%;display:flex;gap:25px;padding:14px 25px;border-radius:32px;background:#4543639c;color:#fff}
+.world-shortcuts a{color:inherit;font-size:clamp(14px,1.6vw,25px);font-weight:700;text-decoration:none}
+.world-motes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.world-motes i{position:absolute;width:var(--size);height:var(--size);left:var(--x);top:110%;background:linear-gradient(130deg,#fff,#9bf8fb);clip-path:polygon(50% 0,100% 100%,0 100%);opacity:0;animation:map-mote var(--duration) linear var(--delay) infinite}
+.world-load-status{position:absolute;top:110px;left:30px;color:#454363;background:#fffc;border-radius:4px}
+.world-arriving:after{content:'';position:fixed;inset:0;background:white;z-index:10000}
+.world-transfer{position:fixed;inset:0;z-index:10000;overflow:hidden;background:#fff;opacity:0;pointer-events:all}
+.world-transfer-play{position:absolute;width:90px;height:90px;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;animation:transfer-play 1s ease-in-out infinite alternate}
+.world-transfer-shard{position:absolute;left:var(--x);top:var(--y);width:19vmin;max-width:none;filter:hue-rotate(var(--hue)) saturate(2);animation:transfer-shard 1.4s var(--delay) linear infinite;opacity:.65}
+@keyframes transfer-play{to{transform:translate(-50%,-50%) scale(1.12)}}
+@keyframes transfer-shard{from{transform:scale(.2) rotate3d(1,1,1,var(--turn));opacity:0}50%{opacity:.7}to{transform:translate(20vw,-20vh) scale(1.8) rotate3d(1,1,1,220deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.world-transfer-play,.world-transfer-shard{animation:none}}
+@keyframes map-clouds{to{background-position:1600px 0}}
+@keyframes map-mote{10%{opacity:.65}90%{opacity:.25}to{transform:translate(110px,-125vh) rotate3d(1,1,1,220deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.sekai-world{transition:none}.unknown-clouds,.world-motes i{animation:none}}
+@media(max-aspect-ratio:1/1){.world-name{font-size:43px}.world-unavailable{font-size:30px}.center-world{width:380px;height:330px}.unknown-tree{left:calc(-25% + var(--pan,0px));width:125%;height:72%;top:0}.world-shortcuts{bottom:4%;gap:14px}.world-caption{bottom:15%}}

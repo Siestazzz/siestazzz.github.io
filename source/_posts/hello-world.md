@@ -1,5 +1,13 @@
 ---
 title: 你好，世界
+date: 2026-09-04 09:30:00
+categories:
+  - "其他"
+tags:
+  - Hexo
+  - 开始
+accent: cyan
+excerpt: 这是博客的第一条记录，也是进入这个小小 SEKAI 的起点。
 ---
 欢迎来到我的博客！这是使用 [Hexo](https://hexo.io/) 创建的第一篇文章。
 

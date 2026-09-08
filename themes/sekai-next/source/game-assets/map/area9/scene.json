@@ -1,0 +1,364 @@
+{
+  "source": "area/area9",
+  "sha256": "e1783986d6663d163be625673356a312f41e10c58b2df031eb5b87e6fd1c84e4",
+  "sprites": [
+    {
+      "path": "area9/Background/bg_parts/bg_bolloon/bg_bolloon",
+      "renderer": "-8721573327487347781",
+      "sprite": "-860125498685832401",
+      "file": "balloon.png",
+      "position": [
+        185.0,
+        -108.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        2216.7912095172037,
+        591.0000001935514
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 14,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/View/flower_bed/sprite",
+      "renderer": "-7907746815046001171",
+      "sprite": "3020108908223394854",
+      "file": "flower_bed.png",
+      "position": [
+        1393.4998779296875,
+        -1408.199951171875
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        892.0,
+        392.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 1408,
+      "webLayer": "front",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/rail",
+      "renderer": "-4944959996267606281",
+      "sprite": "4807154974290449887",
+      "file": "rail.png",
+      "position": [
+        0.0,
+        -99.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3379.4036337914217,
+        830.0000135727955
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 12,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/ferris_wheel",
+      "renderer": "-3712231333928541301",
+      "sprite": "-877457520180702906",
+      "file": "ferris_wheel.png",
+      "position": [
+        1209.0,
+        -864.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        578.0,
+        698.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 11,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/MultiScrolls/background2/bg_far",
+      "renderer": "-593377209023790674",
+      "sprite": "5998300718319459040",
+      "file": "background.png",
+      "position": [
+        307.0,
+        -508.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3070.000051643584,
+        476.68946114387677
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 3,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/sky",
+      "renderer": "1746001821669465501",
+      "sprite": "-8418733995194387670",
+      "file": "sky-base.png",
+      "position": [
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        3378,
+        1600
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "order": 0,
+      "webAdaptation": "Original sky rasterized at authored scale; hidden last-row extension below y1388; source geometry in source-scene.json.",
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/aurora/aurora",
+      "renderer": "4469350337383804323",
+      "sprite": "824292277892802931",
+      "file": "aurora.png",
+      "position": [
+        3378.0,
+        -0.10000000149011612
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        1531.0,
+        676.0
+      ],
+      "pivot": [
+        1.0,
+        1.0
+      ],
+      "order": 11,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/bg_house",
+      "renderer": "5533987345191473659",
+      "sprite": "6898109451988910400",
+      "file": "background_house.png",
+      "position": [
+        0.0,
+        -543.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        2723.1647638183435,
+        362.99999048945693
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 13,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/ground",
+      "renderer": "6068266110396609117",
+      "sprite": "-7243493471446519863",
+      "file": "ground.png",
+      "position": [
+        0.0,
+        -574.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3377.999926462073,
+        1027.58493856732
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 11,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/merrygoround/merrygoround",
+      "renderer": "7320631189125552639",
+      "sprite": "-8821147411573779467",
+      "file": "merrygoround.png",
+      "position": [
+        2685.60009765625,
+        -711.0999755859375
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        525.0,
+        388.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 16,
+      "webLayer": "back",
+      "opacity": 1.0
+    },
+    {
+      "path": "area9/Background/bg_parts/jetcoaster",
+      "renderer": "9148365579429180452",
+      "sprite": "5007727553536443799",
+      "file": "jetcoaster.png",
+      "position": [
+        1802.9000244140625,
+        -696.4000244140625
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        454.0,
+        212.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 15,
+      "webLayer": "back",
+      "opacity": 1.0
+    }
+  ],
+  "groundFile": "sky-base.png",
+  "coordinateSize": [
+    3378,
+    1600
+  ],
+  "motion": [
+    {
+      "id": "-7857966887954826161",
+      "path": "area9/Background/bg_parts/bg_bolloon/bg_bolloon",
+      "type": "TweenPosition",
+      "duration": 4.0,
+      "loopType": 2,
+      "from": {
+        "x": 0.0,
+        "y": -8.0,
+        "z": 0.0
+      },
+      "to": {
+        "x": 0.0,
+        "y": 8.0,
+        "z": 0.0
+      },
+      "curve": [
+        {
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.3333333432674408,
+          "outWeight": 0.3333333432674408
+        },
+        {
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.3333333432674408,
+          "outWeight": 0.3333333432674408
+        }
+      ]
+    },
+    {
+      "id": "4364250680418753231",
+      "path": "area9/Background/bg_parts/merrygoround/merrygoround",
+      "type": "TweenPosition",
+      "duration": 3.0,
+      "loopType": 2,
+      "from": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "to": {
+        "x": 0.0,
+        "y": 15.0,
+        "z": 0.0
+      },
+      "curve": [
+        {
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.3333333432674408,
+          "outWeight": 0.3333333432674408
+        },
+        {
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.3333333432674408,
+          "outWeight": 0.3333333432674408
+        }
+      ]
+    }
+  ],
+  "motionScript": "area9-motion.js"
+}

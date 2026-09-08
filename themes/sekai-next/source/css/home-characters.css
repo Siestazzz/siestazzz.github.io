@@ -1,0 +1,10 @@
+.home-characters{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.home-characters canvas{position:absolute;width:100%;height:100%;inset:0}
+.character-balloon{position:absolute;transform:translate(-50%,-100%);padding:.2em .45em;border:18px solid transparent;color:#44435b;font-weight:600;line-height:1.3;text-align:center;white-space:pre-line;overflow-wrap:anywhere}
+.character-surface{position:absolute;left:-18px;top:-18px;width:calc(100% + 36px);height:calc(100% + 36px);z-index:-1;overflow:visible}
+.character-balloon::after{content:"";position:absolute;bottom:-29px;left:calc(50% - 12px);width:24px;height:16px;background:url('../game-assets/characters/balloon_talk_direction.png') center/100% 100% no-repeat;transform:rotate(180deg)}
+.character-balloon[hidden]{display:none}
+.character-text-measure{visibility:hidden}
+.character-words{position:absolute;inset:.2em .45em}
+/* AreaTalkBalloon CustomImage ids 23/26: Graphic.m_Color.a = 230/255; text alpha stays 1. */
+.character-surface,.character-balloon::after{opacity:.9019607901573181}

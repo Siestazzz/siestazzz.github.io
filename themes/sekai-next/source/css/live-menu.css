@@ -1,0 +1,32 @@
+/* SekaiCTF 2026 menu-card styles and SVGs. See game-assets/sekai-ctf/SOURCE.md.
+   Phone-relative lengths preserve the existing page's scaling and side gutters. */
+.page-type-live .live-phone{padding:0;overflow:hidden;container-type:inline-size;aspect-ratio:auto}
+/* Width and height intentionally vary independently, as requested. */
+@media(min-width:701px){
+ .page-type-live .live-phone{width:54vw;height:150svh}
+ .page-type-live .live-phone .phone-watermark{font-size:26cqw}
+}
+.page-type-live .live-phone .phone-watermark{right:9%}
+.page-type-live .live-phone .live-content{position:absolute;top:12%;left:50%;right:auto;width:var(--menu-width,800px);height:720px;max-height:none;overflow:visible;transform-origin:50% 0;transform:translateX(-50%) scale(var(--menu-scale,1))}
+.page-type-live .live-phone .live-content h1{font-family:SekaiRodin,sans-serif;font-weight:800;font-size:30.4px;line-height:1;margin:0 0 24px;gap:9.6px;letter-spacing:.03em}
+.live-phone .live-spectrum{width:48px;height:32px;gap:2.8px}
+.live-phone .live-spectrum i{width:3.6px}
+.page-type-live .live-phone .live-tiles{display:flex;flex-direction:column;gap:17.6px;margin:0}
+.live-menu-card{--accent:#66ddff;position:relative;display:flex;flex-direction:column;box-sizing:border-box;width:100%;height:320px;padding:26.4px 24px;overflow:hidden;border-radius:23.2px;background:linear-gradient(38.12deg,#72c7e2 20.26%,#7dbbe6 79.74%);box-shadow:0 0 6.64px #00000080;text-decoration:none;color:#fff;transition:filter .12s ease,transform .12s ease}
+.live-menu-solo{--accent:#ff7799;background:linear-gradient(38.12deg,#d2788f 20.26%,#d26b8f 79.74%);cursor:not-allowed}
+.live-menu-corner{position:absolute;top:0;left:0;width:104px;height:104px;background:var(--accent);clip-path:polygon(0 0,100% 0,0 100%)}
+.live-menu-ghost{position:absolute;top:50%;left:3.2px;width:99%;transform:translateY(-58%);pointer-events:none;font-family:SekaiRodin,sans-serif;font-size:112px;font-weight:800;line-height:1;letter-spacing:2px;white-space:nowrap;text-align:center;color:transparent;-webkit-text-stroke:2px #444466;opacity:.15}
+.live-menu-reading .live-menu-ghost{opacity:.12}
+.live-menu-body{position:relative;display:flex;flex:1;align-items:center;gap:26.4px;padding-left:16px}
+.live-menu-icon-slot{width:200px;flex:none;display:flex;align-items:center;justify-content:center}
+.live-menu-icon{display:block;flex:none;width:152.8px;height:144px;object-fit:contain}
+.live-menu-solo .live-menu-icon{width:214.4px;height:104px}
+.live-menu-titles{display:flex;flex-direction:column;gap:5.36px;min-width:0}
+.live-menu-titles strong{font-family:SekaiHan,sans-serif;font-size:56px;font-weight:800;line-height:1.3;color:#ffffffcc;letter-spacing:.03em;white-space:nowrap}
+.live-menu-titles small{font-family:SekaiRodin,sans-serif;font-size:24px;font-weight:800;line-height:1.3;letter-spacing:.03em;color:#444466}
+.live-menu-desc{position:relative;display:flex;align-items:center;justify-content:center;flex:none;padding:13.36px;border-radius:10.64px;background:#4e5c7f;color:var(--accent);font-family:SekaiRodin,SekaiHan,sans-serif;font-size:24px;line-height:1;text-align:center}
+.live-menu-reading:focus-visible{outline:4.8px solid #fff;outline-offset:-6.4px;filter:brightness(1.05)}
+@media(hover:hover){.live-menu-reading:hover{filter:brightness(1.05)}}
+.live-menu-reading:active{transform:scale(.985)}
+@media(max-width:700px){.page-type-live .live-phone{position:relative;height:110svh}}
+@media(prefers-reduced-motion:reduce){.live-menu-card{transition:none}.live-menu-reading:active{transform:none}}

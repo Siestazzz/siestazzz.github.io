@@ -1,0 +1,98 @@
+{
+  "source": "area/area7",
+  "sha256": "4d889dd6781e78c19afb1221204219a11f4d065ca82c269dec3167985e27320d",
+  "sprites": [
+    {
+      "path": "area7/Background/light1",
+      "renderer": "-928967113964503584",
+      "sprite": "6122516466210486151",
+      "file": "stage_light.png",
+      "position": [
+        1689.0,
+        -1600.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3378.144396322671,
+        1600.0000314614213
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 11
+    },
+    {
+      "path": "area7/View/foreground_view/sprite",
+      "renderer": "-505878144265272300",
+      "sprite": "3372704947525107921",
+      "file": "foreground.png",
+      "position": [
+        1715.0,
+        -1600.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3318.9999966191535,
+        656.3452141751744
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 1600
+    },
+    {
+      "path": "area7/Background/background",
+      "renderer": "2147568351751022300",
+      "sprite": "-8800204469732464852",
+      "file": "background.png",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3378.144396322671,
+        1600.0000314614213
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 10
+    },
+    {
+      "path": "area7/Background/light2",
+      "renderer": "5001529475888340205",
+      "sprite": "4264866789653004789",
+      "file": "stage_light2.png",
+      "position": [
+        2886.0,
+        -737.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        641.0,
+        300.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 11
+    }
+  ]
+}

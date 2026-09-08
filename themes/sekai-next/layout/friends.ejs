@@ -1,0 +1,65 @@
+<%
+const friends = (theme.friends || []).filter(f => /^https?:\/\//i.test(f.url || ''));
+const own = theme.friend_exchange || {};
+const ownCard = ['名称：' + (own.name || config.title), '网址：' + (own.url || config.url), '头像：' + (own.avatar || '暂未设置'), '简介：' + (own.description || config.description)].join('\n');
+const contact = /^(https?:\/\/|mailto:)/i.test(own.contact || '') ? own.contact : '';
+%>
+<section class="friends-screen" aria-label="友情链接">
+  <svg class="friends-tint-defs" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>
+    <filter id="friend-ink-tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .26666667 0 0 0 0 .26666667 0 0 0 0 .4 0 0 0 1 0"/></filter>
+    <filter id="friend-selected-tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .46666667 0 0 0 0 .93333333 0 0 0 0 .86666667 0 0 0 1 0"/></filter>
+    <filter id="friend-comment-tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .8745098 0 0 0 0 .8745098 0 0 0 0 .9176471 0 0 0 1 0"/></filter>
+    <filter id="friend-online-tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 .8 0 0 0 0 .7333333 0 0 0 1 0"/></filter>
+    <filter id="friend-panel-tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .9215686 0 0 0 0 .9215686 0 0 0 0 .9490196 0 0 0 .2980392 0"/></filter>
+  </defs></svg>
+  <nav class="friends-tabs" aria-label="友链栏目">
+    <button type="button" class="is-active" data-friends-tab="list" aria-pressed="true" aria-controls="friends-list-panel">友链<br>列表</button>
+    <button type="button" data-friends-tab="exchange" aria-pressed="false" aria-controls="friends-exchange-panel">交换<br>友链</button>
+  </nav>
+  <div class="friends-workspace">
+    <div class="friends-toolbar" data-friends-toolbar>
+      <span class="friends-count" aria-label="共 <%= friends.length %> 个好友"><img src="<%- url_for('/game-assets/friends/icon_friend_s.png') %>" alt=""><b><%= friends.length %></b><small>个好友</small></span>
+      <button type="button" class="friends-sort" data-friends-sort aria-label="切换排序，目前为名称顺序">名称顺序</button>
+      <button type="button" class="friends-order" data-friends-order aria-label="当前升序，点击切换降序"><img src="<%- url_for('/game-assets/friends/icon_triangle_wh.png') %>" alt=""></button>
+    </div>
+    <section class="friends-panel" id="friends-list-panel" aria-label="友链列表">
+      <div class="friends-scroll" tabindex="0" aria-label="滚动友链列表">
+        <div class="friends-rows" data-friends-rows>
+          <% friends.forEach(function(friend, i) { const avatar = friend.avatar || ''; %>
+          <div class="friends-row" data-friend-name="<%= friend.name %>" data-friend-index="<%= i %>" data-friend-added="<%= friend.added || '' %>">
+            <span class="friends-avatar <%= avatar ? '' : 'is-placeholder' %>"><img src="<%- url_for(avatar || '/game-assets/friends/icon_tofu_line_wh.png') %>" alt="" loading="lazy"></span>
+            <span class="friends-identity"><strong><%= friend.name %></strong>
+              <% const honors = Array.isArray(friend.honors) ? friend.honors.filter(h => h && typeof h.text === 'string' && h.text.trim()).slice(0,3) : []; if (honors.length) { %>
+              <span class="friend-honors" aria-label="自定义博客称号">
+                <% honors.forEach(function(honor, slot) { const size = slot === 0 ? 'm' : 's'; const frame = [1,2,3,4].includes(Number(honor.frame)) ? Number(honor.frame) : 1; %>
+                <span class="friend-honor <%= slot === 0 ? 'is-main' : 'is-sub' %>" title="<%= honor.text %>（自定义博客称号）">
+                  <span class="friend-honor-fill" aria-hidden="true"></span>
+                  <img class="friend-honor-frame" src="<%- url_for('/game-assets/honors/frame_degree_' + size + '_' + frame + '.png') %>" alt="">
+                  <span class="friend-honor-text"><%= honor.text %></span>
+                </span>
+                <% }) %>
+              </span>
+              <% } %>
+            </span>
+            <span class="friends-comment"><%= friend.description || friend.url.replace(/^https?:\/\//, '').replace(/\/$/, '') %></span>
+            <a class="friends-online" href="<%= friend.url %>" target="_blank" rel="noopener noreferrer" aria-label="前往 <%= friend.name %>（新标签页）">前往</a>
+          </div>
+          <% }) %>
+        </div>
+        <% if (!friends.length) { %><p class="friends-empty">暂时还没有友链。</p><% } %>
+      </div>
+    </section>
+    <section class="friends-panel friends-exchange" id="friends-exchange-panel" aria-labelledby="friends-exchange-title" hidden>
+      <h1 id="friends-exchange-title">交换友链</h1>
+      <div class="friends-exchange-scroll">
+        <p>欢迎交换友链。请准备站点名称、网址、头像地址和一句话介绍。</p>
+        <h2>本站信息</h2>
+        <textarea id="friends-own-card" readonly aria-label="本站友链信息" rows="5"><%= ownCard %></textarea>
+        <div class="friends-exchange-actions"><button class="friends-copy" type="button" data-friends-copy>复制本站信息</button><% if (contact) { %><a class="friends-contact" href="<%= contact %>" target="_blank" rel="noopener noreferrer">联系博主</a><% } %></div>
+        <p role="status" class="friends-copy-feedback" data-friends-feedback aria-live="polite"></p>
+        <% if (!contact) { %><p class="friends-config-note">联系入口尚未配置，暂不接收在线申请。</p><% } %>
+      </div>
+    </section>
+    <p class="friends-footnote">尚未确认互链关系。点击「前往」访问网站。</p>
+  </div>
+</section>

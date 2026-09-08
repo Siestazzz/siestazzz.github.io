@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/sd_11akito_unit",
+  "cache": "474e905b6dea72dfdcfd919a2b6a2eb0",
+  "sha256": "66bb969093e331fb397c2fcd31a862f0885c0e125a923531c7b4557bb8deaae1",
+  "objects": [
+    {
+      "id": "-7605499560503148214",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": 6542427135511634486
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": -4301616387616796934
+          }
+        ]
+      }
+    },
+    {
+      "id": "976126559718212123",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "3576874565484959782",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    },
+    {
+      "id": "6542427135511634486",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    }
+  ]
+}

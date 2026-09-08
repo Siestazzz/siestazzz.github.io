@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/sd_25meiko_street",
+  "cache": "476a50b19914c4cb12aceaf921643107",
+  "sha256": "fdaebd997245cf4fb46317b70193e06b2010cc206fbe7733ed6d1240db75509d",
+  "objects": [
+    {
+      "id": "-8618124558713650336",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    },
+    {
+      "id": "-7293899744406682976",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "1437983387433186406",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": -8618124558713650336
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": -2575372113458072890
+          }
+        ]
+      }
+    },
+    {
+      "id": "2413806458055977061",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    }
+  ]
+}

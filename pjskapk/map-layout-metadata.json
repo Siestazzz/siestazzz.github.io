@@ -1,0 +1,19 @@
+{
+  "source": "1a97dd8c82a0a42729f6cf3ba44aeb0b",
+  "sha256": "814315520128be94c512691736d6d3b4314914dd79557642935d915ae7bf9346",
+  "component_path_id": 1146,
+  "class": "PlayListWorldsController",
+  "serialized_field_offset": 44,
+  "RADIUS": 345.0,
+  "X_RADIUS_RATE": 1.850000023841858,
+  "Y_RADIUS_RATE": 0.8500000238418579,
+  "raw_hex": "000000002c0100000000000001000000010000006f22000000000000000000000000000079050000000000000080ac43cdccec3f9a99593f000000005604000000000000000000004903000000000000000000001f04000000000000",
+  "il2cpp": {
+    "PlayListWorldsController.Setup": "0x4D558C8",
+    "CalcWorldPositions": "0x4D59324",
+    "Next": "0x4D58500",
+    "Prev": "0x4D588D4",
+    "SelectByIndexAsync": "0x4D577E4"
+  },
+  "note": "RVA values identify methods in dump.cs, not decompiled implementation. Browser scaling/depth/timing is separately adapted."
+}

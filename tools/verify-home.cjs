@@ -1,0 +1,21 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const {parseHTML}=require('../pjskapk/analysis-tools/dom/node_modules/linkedom');
+const {document,window}=parseHTML(fs.readFileSync('public/index.html','utf8'));
+const paths=JSON.parse(document.querySelector('#home-post-paths').textContent);
+assert.ok(paths.length>0);assert.equal(document.querySelector('.home-friends').textContent.trim(),'FRIENDS');
+assert.match(document.querySelector('.home-github').getAttribute('href'),/^https:\/\/github.com\//);
+for(const img of document.querySelectorAll('.game-home img')){const src=img.getAttribute('src');if(src.startsWith('/'))assert.ok(fs.existsSync(path.join('public',decodeURIComponent(src))),src);}
+let tid=0,timers=new Map(),dest=[],saved=new Map();
+vm.runInNewContext(fs.readFileSync('themes/sekai-next/source/js/home.js','utf8'),{document,window,location:{assign:p=>dest.push(p)},sessionStorage:{getItem:k=>saved.get(k),setItem:(k,v)=>saved.set(k,v)},matchMedia:()=>({matches:false,addEventListener(){}}),setTimeout:(fn,ms)=>{assert.equal(ms,3000);timers.set(++tid,fn);return tid;},clearTimeout:id=>timers.delete(id),queueMicrotask:fn=>fn(),requestAnimationFrame:fn=>fn(),Math});
+const click=s=>document.querySelector(s).dispatchEvent(new window.Event('click',{bubbles:true}));
+assert.equal(timers.size,1);const tick=()=>{const [id,fn]=[...timers][0];timers.delete(id);fn();};tick();
+assert.equal(document.querySelector('[data-slide="1"]').getAttribute('aria-pressed'),'true');
+assert.equal(document.querySelector('.home-carousel-pause'),null);
+const carousel=document.querySelector('.home-featured');
+carousel.dispatchEvent(new window.Event('mouseenter'));assert.equal(timers.size,0);
+click('[data-slide="2"]');assert.equal(document.querySelector('[data-slide="2"]').getAttribute('aria-pressed'),'true');
+carousel.dispatchEvent(new window.Event('mouseleave'));assert.equal(timers.size,1);
+click('.home-gacha');assert.ok(paths.includes(dest[0]));
+window.dispatchEvent(new window.Event('pageshow'));click('.home-gacha');if(paths.length>1)assert.notEqual(dest[0],dest[1]);
+for(const p of dest)assert.ok(fs.existsSync(path.join('public',decodeURIComponent(p),'index.html')));
+console.log('PASS: assets, English Friends, GitHub, 3s rotation, hover/dots, no pause button, valid random articles and no immediate repeat.');

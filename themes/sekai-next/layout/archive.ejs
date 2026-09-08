@@ -1,0 +1,10 @@
+<% const archiveTitle = page.category || page.tag || page.title || '记录档案'; %>
+<section class="panel-page">
+  <header class="panel-page__head"><p><%= page.category ? 'CATEGORY RECORDS' : page.tag ? 'TAGGED RECORDS' : 'STORY LOG' %></p><h1><%= archiveTitle %></h1><span>按时间回看全部记录</span></header>
+  <div class="timeline">
+    <% let currentYear = ''; page.posts.each(function(post) { const year = date(post.date, 'YYYY'); %>
+      <% if (year !== currentYear) { currentYear = year; %><div class="timeline__year"><%= year %></div><% } %>
+      <a class="timeline__item" href="<%- url_for(post.path) %>"><time><%= date(post.date, 'MM.DD') %></time><span><small><%= post.categories.length ? post.categories.first().name : '未分类' %></small><b><%= post.title %></b></span><i>›</i></a>
+    <% }) %>
+  </div>
+</section>

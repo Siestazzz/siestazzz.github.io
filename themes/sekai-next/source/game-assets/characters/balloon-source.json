@@ -1,0 +1,67 @@
+[
+  {
+    "file": "0dc323102e63fd84e9976e0a07463cd0",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "bg_base_r30_wh",
+    "border": {
+      "x": 34.0,
+      "y": 34.0,
+      "z": 34.0,
+      "w": 34.0
+    }
+  },
+  {
+    "file": "9e690f734dceb4a669533a8338a41ff1",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "balloon_talk",
+    "border": {
+      "x": 32.0,
+      "y": 32.0,
+      "z": 32.0,
+      "w": 32.0
+    }
+  },
+  {
+    "file": "146d3866bfb6942dc9f6d0053f0b05a7",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "balloon_talk_direction",
+    "border": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    }
+  },
+  {
+    "file": "518644b5170682947b613c7d8bf175df",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "balloon_areaTalkChr",
+    "border": {
+      "x": 64.0,
+      "y": 0.0,
+      "z": 64.0,
+      "w": 0.0
+    }
+  },
+  {
+    "file": "61b58784d84b8e5499efb81e08a805e8",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "balloon_areaTalkChr_direction",
+    "border": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    }
+  }
+]

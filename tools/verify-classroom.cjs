@@ -1,0 +1,41 @@
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const base='public/game-assets/map/area5/';
+const scene=JSON.parse(fs.readFileSync(base+'scene.json'));
+const fx=JSON.parse(fs.readFileSync(base+'effects.json'));
+assert.equal(scene.source,'area/area5');
+assert.deepEqual(scene.sprites.map(s=>s.file).sort(),['background.png','desk1.png','desk2.png','desk3.png']);
+assert.equal(fx.groups.length,17);
+assert.equal(fx.sources[0].sha256,scene.sha256);
+assert(fx.groups.every(g=>g.path.startsWith('area5/Background/')&&typeof g.id==='string'));
+const top=fx.groups.find(g=>g.path.endsWith('tri_01/root/pt'));
+assert.equal(top.shaderId,'6228555572980372533');assert.equal(top.additive,true);
+const large=fx.groups.find(g=>g.id==='-4484558035598598364');
+assert(large.sizeLife&&large.sizeLife.keys[0].value<.5);
+const meteor=fx.groups.find(g=>g.id==='3795898463928772856');
+assert.equal(meteor.trail.enabled,true);assert.equal(meteor.trail.width.max,.5);
+assert(Math.abs(meteor.shape.arc.value-214.04)<.001);
+assert(Math.abs(meteor.shape.m_Rotation.z+19.23)<.001);
+const star=fx.groups.find(g=>g.id==='1515076418617680885');
+assert(Math.abs(star.shape.arc.value-200.4)<.001);
+assert.deepEqual([top.rateCurve.mode,top.rateCurve.min,top.rateCurve.max],[3,1,2]);
+assert(fx.groups.filter(g=>g.mesh).every(g=>g.cullBack));
+// At most ~109 area units below the emitter near the fan's edges, not a full downward ray (330).
+let lowest=0;
+for(let i=0;i<=1000;i++){
+ const a=(meteor.shape.arc.value*i/1000+meteor.shape.m_Rotation.z)*Math.PI/180;
+ lowest=Math.max(lowest,-Math.sin(a)*(meteor.shape.radius.value+Math.max(meteor.speed.min,meteor.speed.max))*600);
+}
+assert(lowest<110);
+assert(fs.existsSync('public/game-assets/map/transition/btn_play_h264_gn.png'));
+for(const s of [...scene.sprites,...fx.textures])assert(fs.existsSync(base+s.file),s.file);
+const home=fs.readFileSync('public/index.html','utf8');
+assert(home.includes('classroom-furniture'));
+assert(home.includes('sekai-home-world'));
+const items=JSON.parse(fs.readFileSync(base+'items.json'));
+assert.equal(items.sprites.length,9);
+assert(items.sprites.every(s=>s.source.startsWith('areaitem/areaitem05')&&s.order===4025&&s.webLayer==='front'&&typeof s.spawnTransform==='string'));
+const telescope=items.sprites.find(s=>s.source.endsWith('0507'));
+assert.equal(telescope.sha256,'43ab17192c123731e9916594ca41715babd58efe7b7812e552f80baa9c7c30bb');
+assert.deepEqual(telescope.size,[119,143]);assert.equal(telescope.spawnTransform,'-1581527794336647225');
+for(const s of items.sprites)assert(fs.existsSync(base+s.file));
+console.log('PASS: classroom layers, 17 particle groups, shader-based additive, size-over-lifetime, meteor trail, original transition PlayMark.');

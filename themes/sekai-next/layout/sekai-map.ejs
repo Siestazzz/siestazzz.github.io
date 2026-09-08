@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="<%- url_for('/css/sekai-map.css') %>">
+<section class="sekai-map" data-map-root="<%- url_for('/map/') %>" aria-label="SEKAI 地图">
+  <canvas class="map-ambient-particles" aria-hidden="true"></canvas>
+  <div class="sekai-selection">
+    <div class="world-orbit" aria-label="世界选择">
+      <% const worlds = [[5,'教室のセカイ'],[7,'ステージのセカイ'],[8,'ストリートのセカイ'],[9,'ワンダーランドのセカイ'],[10,'誰もいないセカイ']]; worlds.forEach(([id,name],i)=> { %>
+      <button class="sekai-world orbit-world" type="button" data-world="<%= id %>" data-orbit="<%= i %>" data-enter-world="<%= id %>" aria-disabled="false" aria-label="<%= name %>，进入世界">
+        <img src="<%- url_for('/game-assets/map/img_worldMap_areaS'+String(id).padStart(2,'0')+'.png') %>" alt="" draggable="false">
+        <img class="world-glow" src="<%- url_for('/game-assets/map/img_worldMap_areaS'+String(id).padStart(2,'0')+'_eff.png') %>" alt="" draggable="false">
+        <span class="world-here" hidden>HERE!</span><span class="world-name"><%= name %></span>
+      </button>
+      <% }) %>
+      <button class="sekai-world center-world" type="button" data-world="27" data-enter-world="27" aria-label="进入？？？的世界">
+        <img src="<%- url_for('/game-assets/map/img_worldMap_areaS27.png') %>" alt="" draggable="false">
+        <img class="world-glow" src="<%- url_for('/game-assets/map/img_worldMap_areaS27_eff.png') %>" alt="" draggable="false">
+        <span class="world-here" hidden>HERE!</span><span class="world-name">？？？のセカイ</span>
+      </button>
+    </div>
+    <button class="orbit-arrow orbit-prev" type="button" aria-label="向左旋转地图"><img src="<%- url_for('/game-assets/map/btn_arrow_switching_wh.png') %>" alt=""></button>
+    <button class="orbit-arrow orbit-next" type="button" aria-label="向右旋转地图"><img src="<%- url_for('/game-assets/map/btn_arrow_switching_wh.png') %>" alt=""></button>
+    <p class="map-instruction" role="status">点击世界转到前方 · 再次点击进入</p>
+  </div>
+</section>
+<script src="<%- url_for('/js/sekai-map.js') %>" defer></script>
+<script src="<%- url_for('/js/map-particles.js') %>" defer></script>

@@ -1,0 +1,23 @@
+[
+  {
+    "file": "78039deea37184ff79e673d22484fcf0",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_playerRank"
+  },
+  {
+    "file": "a7bcb27827c234c7bb68e7c8d99ec8d9",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_exp_player"
+  },
+  {
+    "file": "b7712fa7bceb6f943b1433cd3d6a4042",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_playerrankexp"
+  }
+]

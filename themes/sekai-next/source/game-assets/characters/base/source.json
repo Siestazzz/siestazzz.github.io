@@ -1,0 +1,117 @@
+{
+  "key": "area_sd/base_model",
+  "cache": "29756d6f0e99315daf6b3e6fc671f7d4",
+  "sha256": "526f85671a3e9c8252516cf1e457d02d45b4422087a4e48613b780f578b17bfb",
+  "objects": [
+    {
+      "id": "-1175478418207605141",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "sd_main_SkeletonData.asset",
+        "skinName": "",
+        "textures": [
+          "sd_main_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "-807466017182211006",
+      "type": "TextAsset",
+      "name": "sd_main.atlas"
+    },
+    {
+      "id": "885893945313043629",
+      "type": "Texture2D",
+      "name": "sd_main"
+    },
+    {
+      "id": "2649553002027659004",
+      "type": "TextAsset",
+      "name": "sd_main.skel"
+    },
+    {
+      "id": "3450148420557674355",
+      "type": "MonoBehaviour",
+      "name": "sd_main_SkeletonData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 8302033850027404168
+        },
+        "m_Name": "sd_main_SkeletonData",
+        "atlasAssets": [
+          {
+            "m_FileID": 0,
+            "m_PathID": 8177763216745068157
+          }
+        ],
+        "scale": 1.0,
+        "skeletonJSON": {
+          "m_FileID": 0,
+          "m_PathID": 2649553002027659004
+        },
+        "isUpgradingBlendModeMaterials": 0,
+        "blendModeMaterials": {
+          "requiresBlendModeMaterials": 0,
+          "applyAdditiveMaterial": 0,
+          "additiveMaterials": [],
+          "multiplyMaterials": [],
+          "screenMaterials": []
+        },
+        "skeletonDataModifiers": [],
+        "fromAnimation": [],
+        "toAnimation": [],
+        "duration": [],
+        "defaultMix": 0.20000000298023224,
+        "controller": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        }
+      }
+    },
+    {
+      "id": "8177763216745068157",
+      "type": "MonoBehaviour",
+      "name": "sd_main_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sd_main_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": -807466017182211006
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": -9058707363619288518
+          }
+        ]
+      }
+    }
+  ]
+}

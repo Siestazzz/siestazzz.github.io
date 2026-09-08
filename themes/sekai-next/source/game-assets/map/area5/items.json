@@ -1,0 +1,294 @@
+{
+  "sources": [
+    {
+      "key": "areaitem/areaitem0501",
+      "sha256": "3970827bbf38f57d00d0464e9b628fad00e063c564075fc74425bf613d3b1831"
+    },
+    {
+      "key": "areaitem/areaitem0502",
+      "sha256": "0d65c07c4337d9ccea8371c1fb29b6183d729e9f8715278a0dcd979541d65f53"
+    },
+    {
+      "key": "areaitem/areaitem0503",
+      "sha256": "e0c2e851a0f195581cdb3dae7bb09c596ebf8dc1770d934488ebb61fe430cea7"
+    },
+    {
+      "key": "areaitem/areaitem0504",
+      "sha256": "b8502f77389a2e06548b96fbc4f7777b1e40e670aa29b45071dc0304b2ed4d30"
+    },
+    {
+      "key": "areaitem/areaitem0505",
+      "sha256": "6935d9d00e5530518bd16691bfcf4581755992fa9a6675e3efe2f218c2b6d43c"
+    },
+    {
+      "key": "areaitem/areaitem0506",
+      "sha256": "3330692c8d3334bf5f78fa90319c02ae4b030e69f503598909561a5d24b87d8f"
+    },
+    {
+      "key": "areaitem/areaitem0507",
+      "sha256": "43ab17192c123731e9916594ca41715babd58efe7b7812e552f80baa9c7c30bb"
+    },
+    {
+      "key": "areaitem/areaitem0508",
+      "sha256": "6d7be0558844ae1c1348dce02dca7f833e43c187c3575ff3af357b2e5109f461"
+    },
+    {
+      "key": "areaitem/areaitem0509",
+      "sha256": "4bbe305b1405e67be876c0013a5e125e0d2461ffd5ae6a81022aa0ff47c2be9d"
+    }
+  ],
+  "sprites": [
+    {
+      "path": "areaitem/areaitem0501/sprite",
+      "renderer": "1666518086482810686",
+      "sprite": "5173997547954596187",
+      "source": "areaitem/areaitem0501",
+      "sha256": "3970827bbf38f57d00d0464e9b628fad00e063c564075fc74425bf613d3b1831",
+      "file": "areaitem0501-areaitem0501.png",
+      "position": [
+        1717.300048828125,
+        -835.7999877929688
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        131.0,
+        94.0
+      ],
+      "pivot": [
+        0.4917900860309601,
+        0.15755580365657806
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point1",
+      "spawnTransform": "3881803546576239245",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0502/sprite",
+      "renderer": "2872043454929730622",
+      "sprite": "3538772242463028307",
+      "source": "areaitem/areaitem0502",
+      "sha256": "0d65c07c4337d9ccea8371c1fb29b6183d729e9f8715278a0dcd979541d65f53",
+      "file": "areaitem0502-areaitem0502.png",
+      "position": [
+        672.0999755859375,
+        -834.2000122070312
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        144.0,
+        80.0
+      ],
+      "pivot": [
+        0.5025233030319214,
+        0.16326004266738892
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point2",
+      "spawnTransform": "1160350850142954815",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0503/sprite",
+      "renderer": "8700504502814634162",
+      "sprite": "-4173298370155992580",
+      "source": "areaitem/areaitem0503",
+      "sha256": "e0c2e851a0f195581cdb3dae7bb09c596ebf8dc1770d934488ebb61fe430cea7",
+      "file": "areaitem0503-areaitem0503.png",
+      "position": [
+        2226.300048828125,
+        -841.2999877929688
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        103.0,
+        104.0
+      ],
+      "pivot": [
+        0.5,
+        0.02327713556587696
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point3",
+      "spawnTransform": "-3130006092783963592",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0504/sprite",
+      "renderer": "-8128396351583266563",
+      "sprite": "2571242388802450361",
+      "source": "areaitem/areaitem0504",
+      "sha256": "b8502f77389a2e06548b96fbc4f7777b1e40e670aa29b45071dc0304b2ed4d30",
+      "file": "areaitem0504-areaitem0504.png",
+      "position": [
+        2674.0,
+        -1065.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        198.0,
+        312.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point4",
+      "spawnTransform": "5053319516070978291",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0505/sprite",
+      "renderer": "4673614092301279246",
+      "sprite": "3934237999321226074",
+      "source": "areaitem/areaitem0505",
+      "sha256": "6935d9d00e5530518bd16691bfcf4581755992fa9a6675e3efe2f218c2b6d43c",
+      "file": "areaitem0505-areaitem0505.png",
+      "position": [
+        2411.800048828125,
+        -1034.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        190.0,
+        273.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point5",
+      "spawnTransform": "4888504328043930403",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0506/sprite",
+      "renderer": "5759880732917306970",
+      "sprite": "-3505366545808321022",
+      "source": "areaitem/areaitem0506",
+      "sha256": "3330692c8d3334bf5f78fa90319c02ae4b030e69f503598909561a5d24b87d8f",
+      "file": "areaitem0506-areaitem0506.png",
+      "position": [
+        2545.0,
+        -1049.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        191.0,
+        301.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point6",
+      "spawnTransform": "-6152235756265071288",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0507/sprite",
+      "renderer": "4516759715176253063",
+      "sprite": "-7837391513762777256",
+      "source": "areaitem/areaitem0507",
+      "sha256": "43ab17192c123731e9916594ca41715babd58efe7b7812e552f80baa9c7c30bb",
+      "file": "areaitem0507-areaitem0507.png",
+      "position": [
+        1986.0,
+        -832.0999755859375
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        119.0,
+        143.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point7",
+      "spawnTransform": "-1581527794336647225",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0508/sprite",
+      "renderer": "-998193875725526457",
+      "sprite": "-5934461530761764521",
+      "source": "areaitem/areaitem0508",
+      "sha256": "6d7be0558844ae1c1348dce02dca7f833e43c187c3575ff3af357b2e5109f461",
+      "file": "areaitem0508-areaitem0508.png",
+      "position": [
+        1378.0,
+        -843.2000122070312
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        98.0,
+        50.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point8",
+      "spawnTransform": "5713371003934451133",
+      "webLayer": "front"
+    },
+    {
+      "path": "areaitem/areaitem0509/sprite",
+      "renderer": "6785622533358499014",
+      "sprite": "1738819322148358021",
+      "source": "areaitem/areaitem0509",
+      "sha256": "4bbe305b1405e67be876c0013a5e125e0d2461ffd5ae6a81022aa0ff47c2be9d",
+      "file": "areaitem0509-areaitem0509.png",
+      "position": [
+        532.2999877929688,
+        -1108.9000244140625
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        267.0,
+        199.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point9",
+      "spawnTransform": "7103044729893405145",
+      "webLayer": "front"
+    }
+  ]
+}

@@ -1,0 +1,1375 @@
+{
+  "5": {
+    "source": {
+      "key": "actionset/group0",
+      "cache": "bb9fa2f9e157d254bf4c792a14cb05b9",
+      "sha256": "4f83b30243f678986fbabdce5ecb0fa302d6f58b4ae977af34a4878432d3fd8b",
+      "path_id": "3667464770222195210"
+    },
+    "master": {
+      "id": 18,
+      "areaId": 5,
+      "actionSetType": "normal",
+      "isNextGrade": false,
+      "scenarioId": "areatalk02_136",
+      "scriptId": "as_2_136",
+      "characterIds": [
+        2,
+        1
+      ],
+      "archivePublishedAt": 1233284400000,
+      "isExtraLottery": false,
+      "releaseConditionId": 1
+    },
+    "script": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 1130236817904871438
+      },
+      "m_Name": "ass_2_136",
+      "AreaId": 0,
+      "ActionSetId": 18,
+      "TimeFrom": {
+        "Hour": 0,
+        "Minute": 30
+      },
+      "TimeTo": {
+        "Hour": 23,
+        "Minute": 59
+      },
+      "Details": [
+        {
+          "AreaCharacterId": 2,
+          "Costume2dGroupId": 0,
+          "InitDirection": 0,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 20.5,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 34.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 4,
+              "MotionName": "w_cute_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 34.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.5,
+              "Direction": 4,
+              "MotionName": "w_cute_talk01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": 0,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [
+            {
+              "Message": "いっちゃんのギターって…",
+              "Emote": 0,
+              "VoiceId": "",
+              "DelayTick": 0.0,
+              "ShowTick": 8.0
+            }
+          ],
+          "Emotes": [],
+          "SyncAreaItems": []
+        },
+        {
+          "AreaCharacterId": 1,
+          "Costume2dGroupId": 0,
+          "InitDirection": 0,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 21.5,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 39.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 3,
+              "MotionName": "w_cool_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 39.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 11.5,
+              "Direction": 3,
+              "MotionName": "w_cool_listen01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [],
+          "Emotes": [],
+          "SyncAreaItems": []
+        }
+      ]
+    },
+    "actors": [
+      {
+        "asset": "sd_02saki_normal",
+        "costume": {
+          "id": 2,
+          "costume2dGroupId": 1,
+          "character2dId": 2,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "02saki_normal",
+          "spineAssetbundleName": "sd_02saki_normal"
+        },
+        "character": {
+          "id": 2,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 2,
+          "unit": "light_sound",
+          "isEnabledFlipDisplay": true,
+          "assetName": "02saki"
+        }
+      },
+      {
+        "asset": "sd_01ichika_normal",
+        "costume": {
+          "id": 1,
+          "costume2dGroupId": 1,
+          "character2dId": 1,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "01ichika_normal",
+          "spineAssetbundleName": "sd_01ichika_normal"
+        },
+        "character": {
+          "id": 1,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 1,
+          "unit": "light_sound",
+          "isEnabledFlipDisplay": true,
+          "assetName": "01ichika"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "id": "-6293164354644105217",
+        "data": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_Enabled": 1,
+          "m_Script": {
+            "m_FileID": 0,
+            "m_PathID": 2283210650491619655
+          },
+          "m_Name": "Area5GridData",
+          "CellRange": {
+            "x": 73,
+            "y": 35
+          },
+          "CellSize": {
+            "x": 46.0,
+            "y": 40.0
+          },
+          "Offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "7": {
+    "source": {
+      "key": "actionset/group2",
+      "cache": "91c1a6002ceffcd513150530370a7c3d",
+      "sha256": "aff5bb11e49a6321197298537b95c710203cb049cdcb9d2b871b8a83f8183dfe",
+      "path_id": "8997218641624731841"
+    },
+    "master": {
+      "id": 294,
+      "areaId": 7,
+      "actionSetType": "normal",
+      "isNextGrade": false,
+      "scenarioId": "areatalk02_280",
+      "scriptId": "as_2_280",
+      "characterIds": [
+        5,
+        25
+      ],
+      "archivePublishedAt": 1233284400000,
+      "isExtraLottery": false,
+      "releaseConditionId": 1
+    },
+    "script": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 1130236817904871438
+      },
+      "m_Name": "as_2_280",
+      "AreaId": 0,
+      "ActionSetId": 294,
+      "TimeFrom": {
+        "Hour": 0,
+        "Minute": 30
+      },
+      "TimeTo": {
+        "Hour": 23,
+        "Minute": 59
+      },
+      "Details": [
+        {
+          "AreaCharacterId": 5,
+          "Costume2dGroupId": 2,
+          "InitDirection": 4,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 21.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 42.0,
+                "y": 26.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 4,
+              "MotionName": "w_cute_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 42.0,
+                "y": 26.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 11.0,
+              "Direction": 4,
+              "MotionName": "w_cute_talk01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": 0,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [
+            {
+              "Message": "ミクちゃんと\nリンちゃんの衣装...",
+              "Emote": 0,
+              "VoiceId": "",
+              "DelayTick": 6.0,
+              "ShowTick": 8.0
+            }
+          ],
+          "Emotes": [],
+          "SyncAreaItems": []
+        },
+        {
+          "AreaCharacterId": 25,
+          "Costume2dGroupId": 3,
+          "InitDirection": 3,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 22.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 46.0,
+                "y": 26.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 3,
+              "MotionName": "w_cute_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 46.0,
+                "y": 26.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 12.0,
+              "Direction": 3,
+              "MotionName": "w_cute_listen01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [],
+          "Emotes": [],
+          "SyncAreaItems": []
+        }
+      ]
+    },
+    "actors": [
+      {
+        "asset": "sd_05minori_cloth001",
+        "costume": {
+          "id": 36,
+          "costume2dGroupId": 2,
+          "character2dId": 5,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "05minori_cloth001",
+          "spineAssetbundleName": "sd_05minori_cloth001"
+        },
+        "character": {
+          "id": 5,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 5,
+          "unit": "idol",
+          "isEnabledFlipDisplay": true,
+          "assetName": "05minori"
+        }
+      },
+      {
+        "asset": "sd_21miku_idol",
+        "costume": {
+          "id": 87,
+          "costume2dGroupId": 3,
+          "character2dId": 25,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "21miku_idol",
+          "spineAssetbundleName": "sd_21miku_idol"
+        },
+        "character": {
+          "id": 25,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 21,
+          "unit": "idol",
+          "isEnabledFlipDisplay": true,
+          "assetName": "21miku"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "id": "8839206764229179684",
+        "data": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_Enabled": 1,
+          "m_Script": {
+            "m_FileID": 0,
+            "m_PathID": 2283210650491619655
+          },
+          "m_Name": "Area7GridData",
+          "CellRange": {
+            "x": 73,
+            "y": 35
+          },
+          "CellSize": {
+            "x": 46.0,
+            "y": 40.0
+          },
+          "Offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "8": {
+    "source": {
+      "key": "actionset/group0",
+      "cache": "bb9fa2f9e157d254bf4c792a14cb05b9",
+      "sha256": "4f83b30243f678986fbabdce5ecb0fa302d6f58b4ae977af34a4878432d3fd8b",
+      "path_id": "-8082630565878291422"
+    },
+    "master": {
+      "id": 46,
+      "areaId": 8,
+      "actionSetType": "normal",
+      "isNextGrade": false,
+      "scenarioId": "areatalk03_134",
+      "scriptId": "as_3_134",
+      "characterIds": [
+        11,
+        9,
+        325
+      ],
+      "archivePublishedAt": 1233284400000,
+      "isExtraLottery": false,
+      "releaseConditionId": 1
+    },
+    "script": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 1130236817904871438
+      },
+      "m_Name": "as_3_134",
+      "AreaId": 0,
+      "ActionSetId": 46,
+      "TimeFrom": {
+        "Hour": 0,
+        "Minute": 30
+      },
+      "TimeTo": {
+        "Hour": 23,
+        "Minute": 59
+      },
+      "Details": [
+        {
+          "AreaCharacterId": 11,
+          "Costume2dGroupId": 3,
+          "InitDirection": 4,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 21.5,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 47.0,
+                "y": 27.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 4,
+              "MotionName": "m_cool_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 47.0,
+                "y": 27.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 11.5,
+              "Direction": 4,
+              "MotionName": "m_cool_talk01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": 0,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [
+            {
+              "Message": "なあ、メイコさん\nちょっといいか？",
+              "Emote": 0,
+              "VoiceId": "",
+              "DelayTick": 4.0,
+              "ShowTick": 8.0
+            }
+          ],
+          "Emotes": [],
+          "SyncAreaItems": []
+        },
+        {
+          "AreaCharacterId": 9,
+          "Costume2dGroupId": 3,
+          "InitDirection": 4,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 22.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 50.0,
+                "y": 26.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 4,
+              "MotionName": "w_pure_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 50.0,
+                "y": 26.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 12.0,
+              "Direction": 4,
+              "MotionName": "w_pure_listen01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [],
+          "Emotes": [],
+          "SyncAreaItems": []
+        },
+        {
+          "AreaCharacterId": 30,
+          "Costume2dGroupId": 3,
+          "InitDirection": 3,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 23.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 54.0,
+                "y": 27.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 3,
+              "MotionName": "w_cool_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 54.0,
+                "y": 27.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 13.0,
+              "Direction": 3,
+              "MotionName": "w_cool_listen01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [],
+          "Emotes": [],
+          "SyncAreaItems": []
+        }
+      ]
+    },
+    "actors": [
+      {
+        "asset": "sd_11akito_unit",
+        "costume": {
+          "id": 73,
+          "costume2dGroupId": 3,
+          "character2dId": 11,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "11akito_unit",
+          "spineAssetbundleName": "sd_11akito_unit"
+        },
+        "character": {
+          "id": 11,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 11,
+          "unit": "street",
+          "isEnabledFlipDisplay": true,
+          "assetName": "11akito"
+        }
+      },
+      {
+        "asset": "sd_09kohane_unit",
+        "costume": {
+          "id": 71,
+          "costume2dGroupId": 3,
+          "character2dId": 9,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "09kohane_unit",
+          "spineAssetbundleName": "sd_09kohane_unit"
+        },
+        "character": {
+          "id": 9,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 9,
+          "unit": "street",
+          "isEnabledFlipDisplay": true,
+          "assetName": "09kohane"
+        }
+      },
+      {
+        "asset": "sd_25meiko_street",
+        "costume": {
+          "id": 92,
+          "costume2dGroupId": 3,
+          "character2dId": 30,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "25meiko_street",
+          "spineAssetbundleName": "sd_25meiko_street"
+        },
+        "character": {
+          "id": 30,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 25,
+          "unit": "piapro",
+          "isEnabledFlipDisplay": true,
+          "assetName": "25meiko"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "id": "3014889308885192964",
+        "data": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_Enabled": 1,
+          "m_Script": {
+            "m_FileID": 0,
+            "m_PathID": 2283210650491619655
+          },
+          "m_Name": "GridData",
+          "CellRange": {
+            "x": 74,
+            "y": 40
+          },
+          "CellSize": {
+            "x": 46.0,
+            "y": 40.0
+          },
+          "Offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "9": {
+    "source": {
+      "key": "actionset/group2",
+      "cache": "91c1a6002ceffcd513150530370a7c3d",
+      "sha256": "aff5bb11e49a6321197298537b95c710203cb049cdcb9d2b871b8a83f8183dfe",
+      "path_id": "1795707601922001694"
+    },
+    "master": {
+      "id": 247,
+      "areaId": 9,
+      "actionSetType": "normal",
+      "isNextGrade": false,
+      "scenarioId": "areatalk02_189",
+      "scriptId": "as_2_189",
+      "characterIds": [
+        13,
+        14
+      ],
+      "archivePublishedAt": 1233284400000,
+      "isExtraLottery": false,
+      "releaseConditionId": 1
+    },
+    "script": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 1130236817904871438
+      },
+      "m_Name": "as_2_189",
+      "AreaId": 0,
+      "ActionSetId": 247,
+      "TimeFrom": {
+        "Hour": 0,
+        "Minute": 30
+      },
+      "TimeTo": {
+        "Hour": 23,
+        "Minute": 59
+      },
+      "Details": [
+        {
+          "AreaCharacterId": 13,
+          "Costume2dGroupId": 2,
+          "InitDirection": 4,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 18.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 30.0,
+                "y": 25.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 4,
+              "MotionName": "m_happy_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 30.0,
+                "y": 25.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 8.0,
+              "Direction": 4,
+              "MotionName": "m_happy_surprise01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": 0,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [
+            {
+              "Message": "うわっ！\nちびっ子用の乗り物...",
+              "Emote": 0,
+              "VoiceId": "",
+              "DelayTick": 0.0,
+              "ShowTick": 8.0
+            }
+          ],
+          "Emotes": [],
+          "SyncAreaItems": []
+        },
+        {
+          "AreaCharacterId": 14,
+          "Costume2dGroupId": 2,
+          "InitDirection": 3,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 20.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 34.0,
+                "y": 25.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 20.0,
+              "Direction": 3,
+              "MotionName": "w_happy_joy01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [],
+          "Emotes": [],
+          "SyncAreaItems": []
+        }
+      ]
+    },
+    "actors": [
+      {
+        "asset": "sd_13tsukasa_cloth001",
+        "costume": {
+          "id": 44,
+          "costume2dGroupId": 2,
+          "character2dId": 13,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "13tsukasa_cloth001",
+          "spineAssetbundleName": "sd_13tsukasa_cloth001"
+        },
+        "character": {
+          "id": 13,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 13,
+          "unit": "theme_park",
+          "isEnabledFlipDisplay": true,
+          "assetName": "13tsukasa"
+        }
+      },
+      {
+        "asset": "sd_14emu_cloth001",
+        "costume": {
+          "id": 45,
+          "costume2dGroupId": 2,
+          "character2dId": 14,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "14emu_cloth001",
+          "spineAssetbundleName": "sd_14emu_cloth001"
+        },
+        "character": {
+          "id": 14,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 14,
+          "unit": "theme_park",
+          "isEnabledFlipDisplay": true,
+          "assetName": "14emu"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "id": "-3744436850662193717",
+        "data": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_Enabled": 1,
+          "m_Script": {
+            "m_FileID": 0,
+            "m_PathID": 2283210650491619655
+          },
+          "m_Name": "GridData",
+          "CellRange": {
+            "x": 74,
+            "y": 40
+          },
+          "CellSize": {
+            "x": 46.0,
+            "y": 40.0
+          },
+          "Offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "10": {
+    "source": {
+      "key": "actionset/group2",
+      "cache": "91c1a6002ceffcd513150530370a7c3d",
+      "sha256": "aff5bb11e49a6321197298537b95c710203cb049cdcb9d2b871b8a83f8183dfe",
+      "path_id": "4151623087171653752"
+    },
+    "master": {
+      "id": 299,
+      "areaId": 10,
+      "actionSetType": "normal",
+      "isNextGrade": false,
+      "scenarioId": "areatalk02_128",
+      "scriptId": "as_2_128",
+      "characterIds": [
+        19,
+        17
+      ],
+      "archivePublishedAt": 1233284400000,
+      "isExtraLottery": false,
+      "releaseConditionId": 1
+    },
+    "script": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 1130236817904871438
+      },
+      "m_Name": "as_2_128",
+      "AreaId": 0,
+      "ActionSetId": 299,
+      "TimeFrom": {
+        "Hour": 0,
+        "Minute": 30
+      },
+      "TimeTo": {
+        "Hour": 23,
+        "Minute": 59
+      },
+      "Details": [
+        {
+          "AreaCharacterId": 19,
+          "Costume2dGroupId": 2,
+          "InitDirection": 4,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 23.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 32.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 4,
+              "MotionName": "w_cute_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 32.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 13.0,
+              "Direction": 4,
+              "MotionName": "w_cute_talk01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": 0,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [
+            {
+              "Message": "あ、奏！\nログインして...",
+              "Emote": 0,
+              "VoiceId": "",
+              "DelayTick": 0.0,
+              "ShowTick": 8.0
+            }
+          ],
+          "Emotes": [],
+          "SyncAreaItems": []
+        },
+        {
+          "AreaCharacterId": 17,
+          "Costume2dGroupId": 1,
+          "InitDirection": 3,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 24.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 37.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 10.0,
+              "Direction": 3,
+              "MotionName": "w_normal_idle01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 37.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 14.0,
+              "Direction": 3,
+              "MotionName": "w_normal_idle01_f",
+              "TickToPlayProgress": 10.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [],
+          "Emotes": [],
+          "SyncAreaItems": []
+        }
+      ]
+    },
+    "actors": [
+      {
+        "asset": "sd_19ena_cloth001",
+        "costume": {
+          "id": 50,
+          "costume2dGroupId": 2,
+          "character2dId": 19,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "19ena_cloth001",
+          "spineAssetbundleName": "sd_19ena_cloth001"
+        },
+        "character": {
+          "id": 19,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 19,
+          "unit": "school_refusal",
+          "isEnabledFlipDisplay": true,
+          "assetName": "19ena"
+        }
+      },
+      {
+        "asset": "sd_17kanade_normal",
+        "costume": {
+          "id": 17,
+          "costume2dGroupId": 1,
+          "character2dId": 17,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "17kanade_normal",
+          "spineAssetbundleName": "sd_17kanade_normal"
+        },
+        "character": {
+          "id": 17,
+          "characterType": "game_character",
+          "isNextGrade": false,
+          "characterId": 17,
+          "unit": "school_refusal",
+          "isEnabledFlipDisplay": true,
+          "assetName": "17kanade"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "id": "-4886737850469058545",
+        "data": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_Enabled": 1,
+          "m_Script": {
+            "m_FileID": 0,
+            "m_PathID": 2283210650491619655
+          },
+          "m_Name": "GridData",
+          "CellRange": {
+            "x": 74,
+            "y": 40
+          },
+          "CellSize": {
+            "x": 46.0,
+            "y": 40.0
+          },
+          "Offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "27": {
+    "source": {
+      "key": "actionset/group27",
+      "cache": "1d6b58f63b15319d99fe6c6f48d413db",
+      "sha256": "653c2d28e3adab245c3da13610fa373340376af18bdcb4296ef82e48bc388b3a",
+      "path_id": "-1644715039948725689"
+    },
+    "master": {
+      "id": 2725,
+      "areaId": 27,
+      "actionSetType": "piapro_unit_not_mixed_in_area",
+      "isNextGrade": true,
+      "scenarioId": "areatalk_wl_finale_02_002",
+      "scriptId": "as_wl_finale_02_002",
+      "characterIds": [
+        304
+      ],
+      "archivePublishedAt": 1759057200000,
+      "isExtraLottery": false,
+      "releaseConditionId": 117902
+    },
+    "script": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 1130236817904871438
+      },
+      "m_Name": "as_wl_finale_02_002",
+      "AreaId": 0,
+      "ActionSetId": 2725,
+      "TimeFrom": {
+        "Hour": 0,
+        "Minute": 30
+      },
+      "TimeTo": {
+        "Hour": 23,
+        "Minute": 59
+      },
+      "Details": [
+        {
+          "AreaCharacterId": 304,
+          "Costume2dGroupId": 3,
+          "InitDirection": 3,
+          "Reaction": 1,
+          "ReactionTypeBelongId": "",
+          "PlayType": 1,
+          "TotalTick": 21.0,
+          "ActionPaths": [
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 46.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 12.0,
+              "Direction": 3,
+              "MotionName": "v2_w_rinpiapro_doubt01_f",
+              "TickToPlayProgress": 0.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": 0,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            },
+            {
+              "Type": 2,
+              "CellPosition": {
+                "x": 46.0,
+                "y": 28.0
+              },
+              "WaitActionSetId": -1,
+              "WaitCharacterId": -1,
+              "WaitPathIndex": -1,
+              "OneCellMoveTick": 5.0,
+              "DurationTick": 9.0,
+              "Direction": 3,
+              "MotionName": "v2_w_sakicasual_idle01_f",
+              "TickToPlayProgress": 12.0,
+              "ActionDataIndex": -1,
+              "BalloonIndex": -1,
+              "EmoteIndex": -1,
+              "AreaItemIndex": -1
+            }
+          ],
+          "Balloons": [
+            {
+              "Message": "このキラキラしている\n実みたいなのが……",
+              "Emote": 0,
+              "VoiceId": "",
+              "DelayTick": 4.0,
+              "ShowTick": 8.0
+            }
+          ],
+          "Emotes": [],
+          "SyncAreaItems": []
+        }
+      ]
+    },
+    "actors": [
+      {
+        "asset": "v2_sd_22rin_school",
+        "costume": {
+          "id": 433,
+          "costume2dGroupId": 3,
+          "character2dId": 304,
+          "fromMmddhh": "010100",
+          "toMmddhh": "123123",
+          "live2dAssetbundleName": "v2_22rin_normal",
+          "spineAssetbundleName": "v2_sd_22rin_school"
+        },
+        "character": {
+          "id": 304,
+          "characterType": "game_character",
+          "isNextGrade": true,
+          "characterId": 22,
+          "unit": "piapro",
+          "isEnabledFlipDisplay": true,
+          "assetName": "v2_22rin"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "id": "5738739718049242738",
+        "data": {
+          "m_GameObject": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "m_Enabled": 1,
+          "m_Script": {
+            "m_FileID": 0,
+            "m_PathID": 2283210650491619655
+          },
+          "m_Name": "Area27GridData",
+          "CellRange": {
+            "x": 73,
+            "y": 35
+          },
+          "CellSize": {
+            "x": 46.0,
+            "y": 40.0
+          },
+          "Offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      }
+    ]
+  }
+}

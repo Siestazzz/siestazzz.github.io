@@ -1,0 +1,455 @@
+[
+  {
+    "file": "21fad03851da55841bfe1057bb41c02f",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_friend_dbl"
+  },
+  {
+    "file": "142f3c3171a9bc04b980a21f75ed0d0b",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_shuffle_jacket_gr"
+  },
+  {
+    "file": "e8e1982e71fb24568b0426583e8e3079",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_crystal"
+  },
+  {
+    "file": "d21d0144fe43ad049bcc8b86702f47b2",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_unit_ln_wh"
+  },
+  {
+    "file": "d7bc7e0114bc02641b272aff758c60c0",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_unit_mj_wh"
+  },
+  {
+    "file": "7c5aad81c3dd86f4fb2addd7207d2675",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_unit_vb_wh"
+  },
+  {
+    "file": "90d7d59ec2e438647a69b9eb0c76aed0",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_unit_ws_wh"
+  },
+  {
+    "file": "5d23280be9fafa1458a638951a3729bb",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_unit_25_wh"
+  },
+  {
+    "file": "09ff887203da42b4d97f9efd95ca4579",
+    "path_id": 1,
+    "type": "Texture2D",
+    "unity_version": "2022.3.62f2",
+    "name": "bg_area_scramble",
+    "width": 2048,
+    "height": 1024
+  },
+  {
+    "file": "11cfcf89a46df2341b6725d61e4bd9e1",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "len"
+  },
+  {
+    "file": "2cddfeb08a6194fd8ab89b42d375a78d",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_Chara_Dummy_01"
+  },
+  {
+    "file": "29a577f4b9a6d436db757f357dc81613",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_Chara_Dummy_02"
+  },
+  {
+    "file": "9710fabd8af894647b92d0c0c7a15b84",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_live_free"
+  },
+  {
+    "file": "a4bb3df6704cdd347bf444c7da0a7977",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_live_multi"
+  },
+  {
+    "file": "a98cafa673f753a48a98a6f985511423",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_live_maker"
+  },
+  {
+    "file": "514fb4e83914b0140ba6664e21fed7b9",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_live_challenge_l"
+  },
+  {
+    "file": "4598eac1d13130442bd65c4f4ea6d9fc",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_live_virtual"
+  },
+  {
+    "file": "3f33048f3a1c622469795c5c3e6e4371",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_live_mv"
+  },
+  {
+    "file": "21f6d3ab7bb3dc74c921ee6b7d44ce17",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "bg_common_ptn_dot_s"
+  },
+  {
+    "file": "a2a7273c51189a74888eabcdfac5a357",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_back_wh"
+  },
+  {
+    "file": "077aace292f80624b964e96e308f0265",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_menu_wh"
+  },
+  {
+    "file": "eb573c8dfbc29e5468f65013282b3eb3",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_search_h34_wh"
+  },
+  {
+    "file": "ef5d900222cbd4b169f9b69fd59b4c65",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_menu_member"
+  },
+  {
+    "file": "f971d796e85aa458b88a30619a1c1c5a",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_menu_collection"
+  },
+  {
+    "file": "93ea666315922b743ba47667619b33f3",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_menu_story_wh"
+  },
+  {
+    "file": "953bcb9caf3ab55499e609423bf101d8",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_common_tri_01"
+  },
+  {
+    "file": "5996c0db0705e2441bc14b6e256ad90a",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_common_tri_02"
+  },
+  {
+    "file": "e4752480727b0914f962d0f918cc2c5f",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_common_tri_03"
+  },
+  {
+    "file": "1996a8f91228ddc42926970154020c9f",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_round_h80_gn"
+  },
+  {
+    "file": "7bcfafdcfaf5a4542a5e49adeac5967c",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_round_h80_wh"
+  },
+  {
+    "file": "805e78c41f7a5f441b313a08ed1948c6",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "bg_common"
+  },
+  {
+    "file": "f60908b480d42445783a2adde564915c",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "bg_sekai"
+  },
+  {
+    "file": "dfefcab555353495ea72116ba9127f28",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "longLoading_bg_leoneed"
+  },
+  {
+    "file": "b921a8d443fbe4eea946cab50e2a3ebc",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "longLoading_bg_vividbadsquad"
+  },
+  {
+    "file": "82d2c828cc88d2b4cb8827108cfcd436",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_friend"
+  },
+  {
+    "file": "285b0de237394fb4183fd70e973f8659",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_friend_s"
+  },
+  {
+    "file": "1d7e80e39110e1f4aa696284ac80b53c",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_live_wh"
+  },
+  {
+    "file": "f26d6ba21f2b7a64f9a7ba2f34582f9d",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_home_live"
+  },
+  {
+    "file": "2e95aa01db022f1439cdbd5ff7b49bc7",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_tap_texturesheet"
+  },
+  {
+    "file": "e3b0045ae2d36244095f2dc9cce7075e",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_tap_texturesheet_1"
+  },
+  {
+    "file": "58e272a728491074b995e9292c5b8903",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_tap_flare"
+  },
+  {
+    "file": "9d3e5635845742b4e86ed9c90ec1b54f",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_anniversary_5th_bg_bg_01"
+  },
+  {
+    "file": "a917a2abb7a46da4098df796f19fa2f1",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_anniversary_5th_bg_bg_02"
+  },
+  {
+    "file": "957845c1491bc3e4eb3cc5b3f636410b",
+    "path_id": 2,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_anniversary_5th_bg_bg_03"
+  },
+  {
+    "file": "929824fe52f935d44a3f596f6da75bd9",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_random_lgr"
+  },
+  {
+    "file": "ac4a29f3802a4894ca46982bdb6ddfff",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "btn_round_line_h80_wh"
+  },
+  {
+    "file": "06ecbc30511d0d540b50603638f2ca4a",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "bg_common_ptn_dot_l"
+  },
+  {
+    "file": "2dbf7d013f50eb347b0f774190034db9",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_vs_on"
+  },
+  {
+    "file": "c5868dd6c2feef5448788736664134fe",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_vs_off"
+  },
+  {
+    "file": "cf8774eb0bad747458d033e161d59a81",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_ln_on"
+  },
+  {
+    "file": "0a18075a5182ae248a0984b5d3784dcb",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_ln_off"
+  },
+  {
+    "file": "823afea1cc47ca54a95200a953023c17",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_mj_on"
+  },
+  {
+    "file": "d63a52bff0d416d49ae65902ce226eb6",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_mj_off"
+  },
+  {
+    "file": "b83dfb6880dabd24aa44beae86d4c4d1",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_vb_on"
+  },
+  {
+    "file": "6e8fde3e76aee2d4aaab73993ae23ba2",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_vb_off"
+  },
+  {
+    "file": "eb434128b2148cd42b80c1735e1a5d23",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_ws_on"
+  },
+  {
+    "file": "0cc81c42d9247aa4696deba0e9a71d3c",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_ws_off"
+  },
+  {
+    "file": "5362d756dd4d77b4cbcdc67da92fb40c",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_25_on"
+  },
+  {
+    "file": "51f0dc0a6e09a6c4aa0dac53ce41e28d",
+    "path_id": 1,
+    "type": "Sprite",
+    "unity_version": "2022.3.62f2",
+    "name": "icon_tab_unit_25_off"
+  },
+  {
+    "file": "2e95aa01db022f1439cdbd5ff7b49bc7",
+    "path_id": 1,
+    "type": "Texture2D",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_tap_texturesheet",
+    "width": 1024,
+    "height": 1024,
+    "output": "tex_tap_texturesheet-atlas.png"
+  },
+  {
+    "file": "e3b0045ae2d36244095f2dc9cce7075e",
+    "path_id": 1,
+    "type": "Texture2D",
+    "unity_version": "2022.3.62f2",
+    "name": "tex_tap_texturesheet_1",
+    "width": 1024,
+    "height": 1024,
+    "output": "tex_tap_texturesheet_1-atlas.png"
+  },
+  {
+    "file": "3e43e5da2e9a7485c839e20b9356b9f2",
+    "path_id": 3,
+    "type": "Font",
+    "unity_version": "2022.3.62f2",
+    "name": "FOT-RodinNTLGPro-DB",
+    "output": "FOT-RodinNTLGPro-DB.otf",
+    "bytes": 3440008
+  },
+  {
+    "file": "547de174b439fb64caf564e1ec0fb36d",
+    "path_id": 3,
+    "type": "Font",
+    "unity_version": "2022.3.62f2",
+    "name": "FOT-RodinNTLGPro-EB",
+    "output": "FOT-RodinNTLGPro-EB.otf",
+    "bytes": 3823332
+  }
+]

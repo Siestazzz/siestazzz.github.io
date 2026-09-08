@@ -1,0 +1,92 @@
+/* Original Sprite bindings and colors: pjskapk/FRIENDS.md. */
+.page-type-friends{--friend-ink:#444466;--friend-online:#00ccbb;--friend-comment:#dfdfea}
+.page-type-friends .topbar .game-stat{display:none}
+.friends-screen{height:100svh;min-height:500px;display:grid;grid-template-columns:clamp(132px,12.5vw,230px) minmax(0,1fr);gap:clamp(20px,2.1vw,40px);padding:clamp(125px,15.6vh,195px) 2vw 5vh 0;color:var(--friend-ink)}
+.friends-screen button{font:inherit;cursor:pointer;color:inherit;border:0}.friends-screen [hidden]{display:none!important}
+.friends-tabs{position:relative;isolation:isolate;align-self:stretch;margin-bottom:7vh;padding:16px 8px 16px 0;background:url('../game-assets/friends/tab_bg_dbl.png') right center/100% 100% no-repeat}
+.friends-tabs:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none}
+.friends-tabs button{position:relative;display:block;width:100%;min-height:100px;padding:15px 10px 15px 24px;background:transparent;color:white;font-size:clamp(18px,1.65vw,28px);font-weight:800;line-height:1.15}
+.friends-tabs button:after{content:'';position:absolute;bottom:-9px;left:20%;right:2%;height:4px;background:url('../game-assets/friends/tab_line_dot_dbl.png') center/auto 100% repeat-x}
+.friends-tabs button+button{margin-top:18px}
+.friends-tabs button.is-active{color:var(--friend-ink);background:url('../game-assets/friends/tab_gn.png') center/100% 100% no-repeat}
+.friends-tabs button.is-active:before{content:'';position:absolute;inset:0 auto 0 0;width:28px;background:#77eedd;mask:url('../game-assets/friends/tab_dot_select_wh.png') left center/100% 100% no-repeat}
+.friends-workspace{position:relative;min-width:0;min-height:0;display:flex;flex-direction:column}
+.friends-toolbar{position:absolute;right:7.5%;bottom:calc(100% + 26px);height:44px;display:flex;gap:clamp(14px,2vw,32px);align-items:center}
+.friends-count{display:flex;align-items:center;gap:10px;white-space:nowrap;padding:5px 14px 5px 8px;color:white;background:#444466;border:6px solid #fff;border-radius:30px;height:48px}
+.friends-count img{width:29px;height:29px;object-fit:contain}.friends-count b{font-size:24px;font-weight:500}.friends-count small{font-size:14px}
+.friends-count{background-image:url('../game-assets/friends/bg_base_round_h48_wh.png');background-size:100% 100%;background-blend-mode:multiply}
+.friends-sort{width:clamp(145px,14.6vw,250px);height:44px;background:url('../game-assets/friends/btn_round_h56_wh.png') center/100% 100% no-repeat;font-size:20px!important;font-weight:800!important;white-space:nowrap}
+.friends-order{width:44px;height:44px;display:grid;place-items:center;background:url('../game-assets/friends/btn_circle_h56_wh.png') center/100% 100% no-repeat}
+.friends-order img{width:22px;height:22px;object-fit:contain;filter:brightness(0) saturate(100%) invert(26%) sepia(12%) saturate(1420%) hue-rotate(201deg);transition:transform .167s}.friends-order.is-desc img{transform:rotate(180deg)}
+.friends-panel{position:relative;flex:1;min-height:0;isolation:isolate;padding:24px 12px 24px 24px}
+.friends-panel:before{content:'';position:absolute;inset:0;z-index:-1;border:12px solid transparent;border-image:url('../game-assets/friends/bg_base_r20_wh.png') 24 fill / 12px;filter:url('#friend-panel-tint');pointer-events:none}
+.friends-scroll{height:100%;overflow-y:auto;overflow-x:hidden;padding:14px 20px 20px 0;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#55557788 transparent;mask-image:linear-gradient(to bottom,transparent,#000 14px,#000 calc(100% - 22px),transparent)}
+.friends-scroll::-webkit-scrollbar{width:6px}.friends-scroll::-webkit-scrollbar-thumb{background:#55557788;border-radius:8px}.friends-scroll::-webkit-scrollbar-track{background:transparent}
+.friends-rows{display:grid;gap:clamp(16px,2.5vh,28px)}
+.friends-row{position:relative;isolation:isolate;display:grid;grid-template-columns:clamp(64px,5.8vw,104px) minmax(100px,1fr) minmax(140px,.72fr) minmax(98px,.42fr);gap:clamp(12px,1.2vw,24px);align-items:center;padding:12px 24px 12px 16px;min-height:clamp(94px,11.6vh,144px);color:var(--friend-ink);text-decoration:none;transition:filter .12s,transform .12s}
+.friends-row:before{content:'';position:absolute;inset:0;z-index:-1;border:10px solid transparent;border-image:url('../game-assets/friends/bg_base_r16_wh.png') 21 fill / 10px;pointer-events:none}
+.friends-online:hover{filter:brightness(1.025)}.friends-online:active{transform:scale(.992)}
+.friends-avatar{width:100%;aspect-ratio:1;overflow:hidden;display:grid;place-items:center;background:#8888aa}.friends-avatar img{display:block;width:100%;height:100%;object-fit:cover}.friends-avatar.is-placeholder img{width:72%;height:72%;object-fit:contain}
+.friends-identity{min-width:0;display:grid;gap:10px}.friends-identity strong{font-size:clamp(20px,2vw,32px);font-weight:500;line-height:1.15;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.friends-badges{display:flex;gap:8px;min-width:0;overflow:hidden}.friends-badges>span{padding:5px 14px;font-size:14px;white-space:nowrap;max-width:100%;text-overflow:ellipsis;overflow:hidden;color:#444466;background:url('../game-assets/friends/btn_round_h56_wh.png') center/100% 100% no-repeat;box-shadow:inset 0 0 0 2px #8888aa;border-radius:20px}
+.friends-comment{position:relative;isolation:isolate;display:flex;align-items:center;min-height:72px;height:100%;padding:12px 18px;font-size:clamp(14px,1.3vw,20px);line-height:1.5;overflow-wrap:anywhere;overflow:hidden}
+.friends-comment:before{content:'';position:absolute;inset:0;z-index:-1;border:10px solid transparent;border-image:url('../game-assets/friends/bg_base_r16_wh.png') 21 fill / 10px;filter:url('#friend-comment-tint');pointer-events:none}
+.friends-online{position:relative;isolation:isolate;text-align:center;color:white;font-size:clamp(16px,1.6vw,26px);font-weight:800;line-height:1.2;padding:5px 8px}
+.friends-online:before{content:'';position:absolute;inset:0;z-index:-1;border:8px solid transparent;border-image:url('../game-assets/friends/bg_base_r12_wh.png') 16 fill / 8px;filter:url('#friend-online-tint');pointer-events:none}
+.friends-footnote{font-size:12px;color:#fff;text-shadow:0 1px 3px #444466;margin:9px 8px 0;line-height:1.5}.friends-empty{text-align:center;margin:18vh 0;font-size:22px}
+.friends-exchange{padding:0;overflow:hidden}.friends-exchange h1{margin:0;padding:14px 26px;background:#ebebf2;font-size:23px}.friends-exchange-scroll{padding:24px 32px;overflow:auto;height:calc(100% - 62px);scrollbar-width:thin;scrollbar-color:#55557788 transparent}
+.friends-exchange-scroll>p{font-size:16px}.friends-exchange h2{font-size:20px;margin-top:24px}
+#friends-own-card{width:100%;max-width:850px;padding:18px;border:0;border-radius:5px;background:#dfdfea;color:#444466;font:inherit;line-height:1.8;resize:vertical;min-height:190px}
+.friends-exchange-actions{display:flex;gap:18px;margin-top:22px;flex-wrap:wrap}.friends-copy,.friends-contact{padding:12px 30px;min-height:48px;font-weight:800!important;text-align:center;background:url('../game-assets/friends/btn_round_h80_gn.png') center/100% 100% no-repeat}
+.friends-contact{background-image:url('../game-assets/friends/btn_round_h56_wh.png')}.friends-copy-feedback{min-height:24px}.friends-config-note{opacity:.8}
+.friends-screen :is(a,button,textarea,[tabindex]):focus-visible{outline:3px solid #00a99b;outline-offset:4px}
+.friends-tint-defs{position:absolute;pointer-events:none}
+/* Preserve Sprite.m_Border end caps; only the middle strip may stretch. */
+.friends-sort,.friends-copy,.friends-contact,.friends-badges>span{position:relative;isolation:isolate;background:none}
+.friends-sort:before,.friends-contact:before,.friends-badges>span:before{content:'';position:absolute;inset:0;z-index:-1;border:0 solid transparent;border-image:url('../game-assets/friends/btn_round_h56_wh.png') 0 39 fill / 0 24px;pointer-events:none}
+.friends-copy:before{content:'';position:absolute;inset:0;z-index:-1;border:0 solid transparent;border-image:url('../game-assets/friends/btn_round_h80_gn.png') 0 51 fill / 0 28px;pointer-events:none}
+.friends-badges>span:before{border-image-width:0 17px}
+.page-type-friends .menu-toggle span{display:block}
+@media(max-width:900px){.friends-screen{grid-template-columns:112px minmax(0,1fr);gap:16px;padding-top:125px}.friends-toolbar{right:0;gap:12px;bottom:calc(100% + 22px)}.friends-row{grid-template-columns:62px minmax(0,1fr) 82px;gap:12px;padding:12px}.friends-comment{grid-column:2/4;grid-row:2;min-height:36px;padding:7px 10px;font-size:14px}.friends-avatar{grid-row:1/3}.friends-online{grid-column:3;grid-row:1}.friends-panel{padding:14px 8px 14px 14px}.friends-scroll{padding-right:12px}.friends-tabs button{font-size:20px;min-height:100px}.friends-identity strong{font-size:22px}}
+@media(max-width:600px){.friends-screen{padding:86px 12px 12px;display:flex;flex-direction:column;gap:14px;min-height:520px}.friends-tabs{display:flex;flex:none;margin:0;padding:0;background:none;gap:8px}.friends-tabs button{width:auto;flex:1;min-height:46px;padding:8px;font-size:18px;background:#444466b3;border-radius:4px}.friends-tabs br{display:none}.friends-tabs button:after{display:none}.friends-workspace{flex:1;padding-top:56px}.friends-toolbar{top:0;bottom:auto;right:0;left:0;justify-content:flex-end;gap:10px;height:40px}.friends-sort{width:140px;height:38px;font-size:16px!important}.friends-count{height:38px;padding:2px 8px;gap:5px;border-width:3px}.friends-count img{width:24px;height:24px}.friends-count b{font-size:20px}.friends-count small{font-size:12px}.friends-order{height:38px;width:38px}.friends-row{grid-template-columns:48px minmax(0,1fr) 60px;gap:8px}.friends-identity strong{font-size:18px}.friends-badges{gap:4px}.friends-badges>span{font-size:12px;padding:3px 8px}.friends-panel{padding:8px}.friends-scroll{padding:10px 8px 16px 0}.friends-rows{gap:14px}.friends-footnote{font-size:11px}.friends-exchange{padding:0}.friends-exchange-scroll{padding:18px}.friends-exchange h1{font-size:20px}.friends-screen:has(#friends-exchange-panel:not([hidden])) .friends-workspace{padding-top:0}}
+@media(max-width:600px){.friends-tabs:before{display:none}.friends-tabs button+button{margin-top:0}.friends-count{border-width:5px}}
+/* APK layout: see pjskapk/friend-layout-metadata.json. Unit is a web viewport scale,
+   while all multipliers below are original RectTransform/Sprite values. */
+.friends-count{--count-unit:.774193548px;position:relative;isolation:isolate;width:calc(220 * var(--count-unit));height:calc(62 * var(--count-unit));border:0;border-radius:0;background:none;padding:0 calc(24 * var(--count-unit));gap:6px;justify-content:center}
+.friends-count:before,.friends-count:after{content:'';position:absolute;z-index:-1;pointer-events:none;border:0 solid transparent}
+.friends-count:before{inset:0;border-image:url('../game-assets/friends/bg_base_round_h56_wh.png') 0 32 fill / 0 calc(33 * var(--count-unit));opacity:.8}
+.friends-count:after{inset:calc(7 * var(--count-unit)) calc(8 * var(--count-unit));border-image:url('../game-assets/friends/bg_base_round_h48_wh.png') 0 25 fill / 0 calc(25 * var(--count-unit));filter:url('#friend-ink-tint')}
+.friends-count img{width:calc(40 * var(--count-unit));height:calc(32 * var(--count-unit));transform:translateY(calc(-2.4 * var(--count-unit)))}
+@media(min-width:601px){
+ .friends-tabs{--tab-unit:clamp(.55px,.052083333vw,.958333333px);background:none;padding:calc(20 * var(--tab-unit)) 0 0}
+ .friends-tabs:before{left:auto;right:calc(-8 * var(--tab-unit));width:calc(360 * var(--tab-unit));background:none;border:0 solid transparent;border-image:url('../game-assets/friends/tab_bg_dbl.png') 0 31 0 175 fill / 0 calc(32 * var(--tab-unit)) 0 calc(176 * var(--tab-unit))}
+ .friends-tabs button{height:calc(132 * var(--tab-unit));min-height:0;padding:0 10px 0 24px;background:none}
+ .friends-tabs button+button{margin-top:0}
+ .friends-tabs button.is-active{background:none}
+ .friends-tabs button.is-active:before{inset:calc(10 * var(--tab-unit)) 0;width:auto;height:calc(112 * var(--tab-unit));background:none;mask:none;z-index:-1;border:0 solid transparent;border-image:url('../game-assets/friends/tab_dot_select_wh.png') 0 0 0 54 fill / 0 0 0 calc(54 * var(--tab-unit));filter:url('#friend-selected-tint')}
+ .friends-tabs button:after{left:auto;right:0;bottom:0;width:calc(192 * var(--tab-unit));height:calc(4 * var(--tab-unit));background:url('../game-assets/friends/line_dot_h4_wh.png') left center/auto 100% repeat-x;filter:url('#friend-ink-tint')}
+}
+@media(min-width:601px) and (max-width:900px){.friends-tabs{--tab-unit:.466666667px}}
+@media(max-width:600px){.friends-count{--count-unit:.612903226px}}
+/* Header prefab centers -207.49652 / 89.50354 / 281.50354,
+   widths 220 / 296 / 72 => edge gaps 39 / 8. One shared web scale. */
+.friends-toolbar{--header-unit:.7px;gap:0}
+.friends-toolbar .friends-count{--count-unit:var(--header-unit);flex:none;margin-right:calc(39 * var(--header-unit));gap:4px;padding:0 calc(16 * var(--header-unit))}
+.friends-toolbar .friends-count b{font-size:calc(32 * var(--header-unit))}
+.friends-toolbar .friends-count small{font-size:calc(20 * var(--header-unit))}
+.friends-toolbar .friends-sort{width:calc(296 * var(--header-unit));height:calc(72 * var(--header-unit));margin-right:calc(8 * var(--header-unit))}
+.friends-toolbar .friends-order{width:calc(72 * var(--header-unit));height:calc(72 * var(--header-unit))}
+.friends-online{text-decoration:none;cursor:pointer;transition:filter .12s,transform .12s}
+/* Static blog adaptation: original PNG aspect ratios (380/80 and 180/80),
+   custom text replaces the unavailable degree_main/sub artwork. No fake levels. */
+.friend-honors{display:flex;gap:4px;align-items:center;width:100%;max-width:360px;container-type:inline-size}
+.friend-honor{position:relative;display:block;flex:0 1 24.324%;min-width:0;aspect-ratio:180/80;overflow:hidden}
+.friend-honor.is-main{flex-basis:51.351%;aspect-ratio:380/80}
+.friend-honor img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.friend-honor-fill{position:absolute;inset:8% 2%;border-radius:999px;background:#77eedd;pointer-events:none}
+.friend-honor-text{position:absolute;inset:25% 15%;display:flex;align-items:center;justify-content:center;color:#444466;font-size:clamp(7px,3.5cqi,12px);line-height:1;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.friend-honor.is-main .friend-honor-text{inset-inline:20%}
+/* Keep web tab content within the base's inner right cap (32 - offset 8). */
+@media(min-width:601px){.friends-tabs{padding-right:calc(24 * var(--tab-unit))}}
+@media(max-width:600px){.friends-toolbar{--header-unit:.54px}}
+@media(prefers-reduced-motion:reduce){.friends-row,.friends-order img{transition:none}}

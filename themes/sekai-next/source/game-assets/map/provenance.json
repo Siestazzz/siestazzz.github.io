@@ -1,0 +1,212 @@
+[
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -8925055554600575160,
+    "name": "img_worldMap_areaS05_eff",
+    "file": "img_worldMap_areaS05_eff.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -8751638593738225997,
+    "name": "img_worldMap_areaS05",
+    "file": "img_worldMap_areaS05.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -7667586189277528289,
+    "name": "img_worldMap_areaS05_dsb",
+    "file": "img_worldMap_areaS05_dsb.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -7461818125120691045,
+    "name": "img_worldMap_areaS07_eff",
+    "file": "img_worldMap_areaS07_eff.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -6410674339509521443,
+    "name": "img_worldMap_areaS10",
+    "file": "img_worldMap_areaS10.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -3978137880451641791,
+    "name": "img_worldMap_areaS07",
+    "file": "img_worldMap_areaS07.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": -1474633057448919406,
+    "name": "img_worldMap_areaS10_dsb",
+    "file": "img_worldMap_areaS10_dsb.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 280133308023826326,
+    "name": "img_worldMap_areaS09_eff",
+    "file": "img_worldMap_areaS09_eff.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 1083765836436170375,
+    "name": "img_worldMap_areaS08_eff",
+    "file": "img_worldMap_areaS08_eff.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 1131665543293916225,
+    "name": "img_worldMap_areaS07_dsb",
+    "file": "img_worldMap_areaS07_dsb.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 1474852474264127858,
+    "name": "img_worldMap_areaS27_dsb",
+    "file": "img_worldMap_areaS27_dsb.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 2726611646861189805,
+    "name": "img_worldMap_areaS09",
+    "file": "img_worldMap_areaS09.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 3738847510384173482,
+    "name": "img_worldMap_areaS10_eff",
+    "file": "img_worldMap_areaS10_eff.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 6587949090091464711,
+    "name": "img_worldMap_areaS27",
+    "file": "img_worldMap_areaS27.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 6717698370889953070,
+    "name": "img_worldMap_areaS09_dsb",
+    "file": "img_worldMap_areaS09_dsb.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 7173544312697136983,
+    "name": "img_worldMap_areaS08",
+    "file": "img_worldMap_areaS08.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 7846041140064033854,
+    "name": "img_worldMap_areaS27_eff",
+    "file": "img_worldMap_areaS27_eff.png"
+  },
+  {
+    "source": "worldmap/contents/normal",
+    "bundle_sha256": "5ce2910ed39462a07ba878f74f2f6eb1eea408f4e19478211f6becf794c16590",
+    "path_id": 8032783312756821982,
+    "name": "img_worldMap_areaS08_dsb",
+    "file": "img_worldMap_areaS08_dsb.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": -8759424789706323407,
+    "name": "tex_sekai_02",
+    "file": "tex_sekai_02.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": -6414816545807044746,
+    "name": "tex_ui_common_03",
+    "file": "tex_ui_common_03.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": -4261781249212373031,
+    "name": "bg",
+    "file": "bg.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": -1638938682403456156,
+    "name": "tex_sekai_01",
+    "file": "tex_sekai_01.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": -643235407162512651,
+    "name": "tex_sekai_aura_01",
+    "file": "tex_sekai_aura_01.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": 256855733443257351,
+    "name": "tex_cloud_02",
+    "file": "tex_cloud_02.png"
+  },
+  {
+    "source": "area/area27",
+    "bundle_sha256": "4f7454b40e2ff3e3a3d6463d036bd918df74fb7a2e2670a2a7fd184fedc187bb",
+    "path_id": 1481072494591002004,
+    "name": "tex_cloud_01",
+    "file": "tex_cloud_01.png"
+  },
+  {
+    "source": "area_sd/wish_tree_ppr",
+    "bundle_sha256": "8667ba6509940e1c46e8bdbe1a252ea7f2858959c407db27681066b417d60f5e",
+    "path_id": -6459703145735291223,
+    "name": "sd_world_link_wish_tree",
+    "file": "sd_world_link_wish_tree.png"
+  },
+  {
+    "source": "area_sd/wish_tree_ppr",
+    "bundle_sha256": "8667ba6509940e1c46e8bdbe1a252ea7f2858959c407db27681066b417d60f5e",
+    "path_id": 4186909613229210758,
+    "name": "sd_world_link_wish_tree.atlas",
+    "file": "sd_world_link_wish_tree.atlas"
+  },
+  {
+    "source": "area_sd/wish_tree_ppr",
+    "bundle_sha256": "8667ba6509940e1c46e8bdbe1a252ea7f2858959c407db27681066b417d60f5e",
+    "path_id": 5373719116876520293,
+    "name": "sd_world_link_wish_tree.skel",
+    "file": "sd_world_link_wish_tree.skel"
+  },
+  {
+    "source": "APK/bg_sekai",
+    "bundle_sha256": "f5e6623b7c1fefd2da3c0e5fbd2ac2d7b696521c2f75f291deb5a0f4666338e1",
+    "path_id": 1,
+    "name": "bg_sekai",
+    "file": "bg_sekai.png"
+  },
+  {
+    "source": "APK/icon_worldMap_wh",
+    "bundle_sha256": "9e1c6d05706c43acd7ecbd4e0b18c36bb0b43732943e31bd90bb3516cdb985fb",
+    "path_id": 1,
+    "name": "icon_worldMap_wh",
+    "file": "icon_worldMap_wh.png"
+  }
+]

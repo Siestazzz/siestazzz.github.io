@@ -1,0 +1,98 @@
+{
+  "source": "area/area5",
+  "sha256": "44af2c7486f40fcde060b8e58b2b407f60760d235c944a2e2df000b5fc5add52",
+  "sprites": [
+    {
+      "path": "area5/View/desk1_view/sprite",
+      "renderer": "-541974967047912130",
+      "sprite": "927691973224204001",
+      "file": "desk1.png",
+      "position": [
+        159.0,
+        -1536.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        318.0,
+        787.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 1536
+    },
+    {
+      "path": "area5/View/desk3_view/sprite",
+      "renderer": "-265684633956365251",
+      "sprite": "-7612517872347735907",
+      "file": "desk3.png",
+      "position": [
+        3223.699951171875,
+        -1600.199999988079
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        311.0,
+        314.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 1601
+    },
+    {
+      "path": "area5/View/desk2_view/sprite",
+      "renderer": "928205672004214791",
+      "sprite": "-8026471203645697685",
+      "file": "desk2.png",
+      "position": [
+        2779.39990234375,
+        -1233.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        629.0,
+        469.0
+      ],
+      "pivot": [
+        0.0443895049393177,
+        0.0026715178973972797
+      ],
+      "order": 1233
+    },
+    {
+      "path": "area5/Background/background",
+      "renderer": "8272486853535881450",
+      "sprite": "7603141331213466008",
+      "file": "background.png",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3378.144396322671,
+        1600.0000314614213
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 10
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+home:
+  github: 'https://github.com/siestazzz'
+# Post front matter: featured: true (up to 5); otherwise latest 3.
+menu:
+  home: /
+  archive: /archives/
+  categories: /categories/
+  tags: /tags/
+  search: /search/
+  about: /about/
+
+profile:
+  status: ONLINE
+  role: Developer / Recorder
+  message: 把技术、生活与想法收进同一个 SEKAI。
+
+friends:
+  # Optional per-site fields: avatar (local URL), description, tags, added (YYYY-MM-DD).
+  - { name: xiaoeryu, url: 'https://xiaoeeyu.github.io/' }
+  - { name: 云之君, url: 'https://www.yunzh1jun.com/' }
+  - { name: zsk, url: 'https://www.zskkk.cn/' }
+  - { name: Xeldax, url: 'https://xeldax.top/' }
+  - { name: arttnba3, url: 'https://arttnba3.cn/about/' }
+  - name: Siestazzz
+    url: 'https://www.cnblogs.com/Siestazzz'
+    # Custom blog text with original game frames, not an earned game honor.
+    # Up to three slots: main, sub, sub. frame: 1..4; omit honors to hide.
+    honors:
+      - { text: '记录与分享', frame: 3 }
+      - { text: '笔记', frame: 2 }
+      - { text: '博客', frame: 1 }
+  - { name: WLLM, url: 'https://wllm1013.github.io/' }
+
+# Blank values inherit the Hexo site configuration. No application backend is implied.
+friend_exchange:
+  name: ''
+  url: ''
+  avatar: ''
+  description: ''
+  contact: ''

@@ -1,0 +1,35 @@
+{
+  "groundFile": "bg.png",
+  "coordinateSize": [
+    3378.144396322671,
+    1600.0000314614213
+  ],
+  "source": "area/area8",
+  "sha256": "198263e7827cc629c299c14b1a10256079ff8ec0251609e81e3cd79ac0e75c8f",
+  "sprites": [
+    {
+      "path": "area8/Background/background",
+      "renderer": "-886002802204957162",
+      "sprite": "-6128862185610540869",
+      "file": "bg.png",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "size": [
+        3378.144396322671,
+        1600.0000314614213
+      ],
+      "pivot": [
+        0.0,
+        1.0
+      ],
+      "order": 0,
+      "webLayer": "ground"
+    }
+  ]
+}

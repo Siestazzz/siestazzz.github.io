@@ -1,0 +1,318 @@
+{
+  "sources": [
+    {
+      "key": "areaitem/areaitem1001",
+      "sha256": "d2bc05eb924f4a3ec2a1ffe773e84992fb1f3118838997db428fa2e2138dde5c"
+    },
+    {
+      "key": "areaitem/areaitem1002",
+      "sha256": "d95cb5ef3f35c034b1533297df81a9727876c077b810a2a91e63b530781f365a"
+    },
+    {
+      "key": "areaitem/areaitem1003",
+      "sha256": "22714a318d854e0211f259a3a92a13560070cbbfb6f679e64699230ee94e4e01"
+    },
+    {
+      "key": "areaitem/areaitem1004",
+      "sha256": "3525a1d1666ceffad6c9c5763d9506d3f77d7f7863a66e354b22f029183dcb34"
+    },
+    {
+      "key": "areaitem/areaitem1005",
+      "sha256": "61212a318c016bc52951e102ee0405e645026a0a7ae832a38fa30da449f3960e"
+    },
+    {
+      "key": "areaitem/areaitem1006",
+      "sha256": "ddeb44f38f899b72ab8bcbb3f2d17980f5a9a1fa279c55fd6d3be695c64725b4"
+    },
+    {
+      "key": "areaitem/areaitem1007",
+      "sha256": "3538cc85b180a8abcbe03d483bf766896a8cf5c3df2657a6e6809b3a2bcd8471"
+    },
+    {
+      "key": "areaitem/areaitem1008",
+      "sha256": "472462ca90863d98a3db3d2c484e624908bae806cdcacb32c241540096675b4c"
+    }
+  ],
+  "sprites": [
+    {
+      "path": "areaitem1001/root/sprite",
+      "renderer": "-1559928731433699752",
+      "sprite": "5546506127909550709",
+      "source": "areaitem/areaitem1001",
+      "sha256": "d2bc05eb924f4a3ec2a1ffe773e84992fb1f3118838997db428fa2e2138dde5c",
+      "file": "areaitem1001-areaitem1001.png",
+      "position": [
+        2764.60009765625,
+        -839.7999877929688
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        140.0,
+        71.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point1",
+      "spawnTransform": "2398863192730594336",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1002/root/sprite",
+      "renderer": "-1018858368602548470",
+      "sprite": "-8713371354074537822",
+      "source": "areaitem/areaitem1002",
+      "sha256": "d95cb5ef3f35c034b1533297df81a9727876c077b810a2a91e63b530781f365a",
+      "file": "areaitem1002-areaitem1002.png",
+      "position": [
+        1863.0,
+        -876.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        183.0,
+        132.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point2",
+      "spawnTransform": "1121995812817337790",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1003/root/sprite",
+      "renderer": "6270973694970508629",
+      "sprite": "8131009523123228248",
+      "source": "areaitem/areaitem1003",
+      "sha256": "22714a318d854e0211f259a3a92a13560070cbbfb6f679e64699230ee94e4e01",
+      "file": "areaitem1003-areaitem1003.png",
+      "position": [
+        2919.0,
+        -830.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        159.0,
+        222.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point3",
+      "spawnTransform": "-5150565504376348734",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1004/root/sprite",
+      "renderer": "2367899536366587883",
+      "sprite": "4820080532287425247",
+      "source": "areaitem/areaitem1004",
+      "sha256": "3525a1d1666ceffad6c9c5763d9506d3f77d7f7863a66e354b22f029183dcb34",
+      "file": "areaitem1004-areaitem1004.png",
+      "position": [
+        2005.0,
+        -928.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        152.0,
+        208.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point4",
+      "spawnTransform": "9067430736905780293",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1005/root/sprite",
+      "renderer": "4948876725182056176",
+      "sprite": "-4007720555218601956",
+      "source": "areaitem/areaitem1005",
+      "sha256": "61212a318c016bc52951e102ee0405e645026a0a7ae832a38fa30da449f3960e",
+      "file": "areaitem1005-areaitem1005.png",
+      "position": [
+        2443.10009765625,
+        -902.0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        110.0,
+        63.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point5",
+      "spawnTransform": "-8633903846227227933",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1006/root/sprite",
+      "renderer": "-1608432571316434226",
+      "sprite": "-8092775468829529994",
+      "source": "areaitem/areaitem1006",
+      "sha256": "ddeb44f38f899b72ab8bcbb3f2d17980f5a9a1fa279c55fd6d3be695c64725b4",
+      "file": "areaitem1006-areaitem1006.png",
+      "position": [
+        3100.10009765625,
+        -946.0999755859375
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        226.0,
+        141.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point6",
+      "spawnTransform": "-2554455043352304542",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1007/root/sprite",
+      "renderer": "8471501904033030544",
+      "sprite": "234328108078638041",
+      "source": "areaitem/areaitem1007",
+      "sha256": "3538cc85b180a8abcbe03d483bf766896a8cf5c3df2657a6e6809b3a2bcd8471",
+      "file": "areaitem1007-areaitem1007.png",
+      "position": [
+        2369.10009765625,
+        -841.9000244140625
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        184.0,
+        174.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point7",
+      "spawnTransform": "-265803093816533939",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    },
+    {
+      "path": "areaitem1008/root/sprite",
+      "renderer": "4417077023398398733",
+      "sprite": "-6772309187434568941",
+      "source": "areaitem/areaitem1008",
+      "sha256": "472462ca90863d98a3db3d2c484e624908bae806cdcacb32c241540096675b4c",
+      "file": "areaitem1008-areaitem1008.png",
+      "position": [
+        2611.39990234375,
+        -846.0999755859375
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "size": [
+        201.0,
+        114.0
+      ],
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "order": 4025,
+      "spawnPoint": "spawn-point8",
+      "spawnTransform": "5346709704856644256",
+      "webLayer": "front",
+      "opacity": 1.0,
+      "sourceColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    }
+  ]
+}

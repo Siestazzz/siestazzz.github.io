@@ -1,0 +1,67 @@
+{
+  "key": "area_sd/sd_05minori_cloth001",
+  "cache": "877c4e1a824c5c47609795f0e243f25b",
+  "sha256": "3b25ca9f14ce36b1f440e320bc2340bb26f236420fd5ccc8cea2aa1f14bbbcd0",
+  "objects": [
+    {
+      "id": "-6417019662232023269",
+      "type": "MonoBehaviour",
+      "name": "BuildData",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": -192302440937063023
+        },
+        "m_Name": "BuildData",
+        "skeletonName": "",
+        "skinName": "",
+        "textures": [
+          "sekai_atlas_Atlas.asset"
+        ],
+        "additionalMotions": []
+      }
+    },
+    {
+      "id": "925560682825064966",
+      "type": "MonoBehaviour",
+      "name": "sekai_atlas_Atlas",
+      "data": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 0,
+          "m_PathID": 1008803689438726606
+        },
+        "m_Name": "sekai_atlas_Atlas",
+        "atlasFile": {
+          "m_FileID": 0,
+          "m_PathID": 1148415554427832958
+        },
+        "materials": [
+          {
+            "m_FileID": 0,
+            "m_PathID": -2647624925106267272
+          }
+        ]
+      }
+    },
+    {
+      "id": "1148415554427832958",
+      "type": "TextAsset",
+      "name": "sekai_atlas.atlas"
+    },
+    {
+      "id": "8126005859530380715",
+      "type": "Texture2D",
+      "name": "sekai_atlas"
+    }
+  ]
+}
