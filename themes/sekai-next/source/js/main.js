@@ -64,7 +64,7 @@ function remember() {
   if (input.value.trim()) p.set('q',input.value.trim());
   if (category) p.set('category',category);
   if (selected) p.set('post',selected);
-  history.replaceState(null,'',location.pathname + (p.size ? '?' + p.toString() : ''));
+  history.replaceState(history.state,'',location.pathname + (p.size ? '?' + p.toString() : ''));
   try { sessionStorage.setItem('sekai-select-return', location.pathname + location.search); } catch {}
 }
 function select(post) {

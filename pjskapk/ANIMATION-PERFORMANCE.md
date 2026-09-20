@@ -4,6 +4,8 @@
 
 ## 用户补充与归因限制
 
+后续发现一项测试限制：本地Playwright默认带--disable-back-forward-cache。此前报告中persisted=false不是普通Chrome无法复用历史页的证据。新verify-fixed-parent-history排除该测试参数后，固定父级traverseTo已实测persisted=true且window旧标记保留。历史恢复与指定URL重新导航确实是不同路径；这一验证不证明已完全解释旧版本静置掉帧，但修正了此前遗漏的缓存条件。粒子CPU采样仍是当时隔离运行的结果，不等于用户历史文档状态。
+
 用户明确正常基准是“history.back改为固定上级之前”，普通Chrome全新刷新/静置也卡，而不是仅软导航多次后卡。此前“查清楚”措辞过度：粒子热点证据只说明当前稳态瓶颈，不能证明它解释了历史回归。
 
 `tools/profile-router-ab.cjs`同设备/viewport/DPR进行了当前直接加载、当前软切换、在隔离请求响应中撤销router及恢复旧事件宿主的重建对照。3秒窗口分别227/204/209帧，ScriptDuration2.670/2.677/2.671秒，P95约20.6/20.8/20.8ms；移除router并未消除该CPU热点。此对照不是用户当时正常版本的完整快照，未恢复当时缓存/浏览器文档状态，不能据此否认用户回归观察。

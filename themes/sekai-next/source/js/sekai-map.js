@@ -2,12 +2,11 @@
  'use strict';
  const map=document.querySelector('.sekai-map');if(!map)return;
  const worlds=[...map.querySelectorAll('.orbit-world')],selection=map.querySelector('.sekai-selection');
- let rotation=0,gesture=null,moved=false,busy=false,focused=null,rotating=false;
+ let rotation=0,gesture=null,moved=false,busy=false,rotating=false;
  const instruction=map.querySelector('.map-instruction');
  function focusWorld(button){
-  focused=button;
   map.querySelectorAll('[data-enter-world]').forEach(w=>w.setAttribute('aria-pressed',String(w===button)));
-  instruction.textContent=button?'已选择「'+button.querySelector('.world-name').textContent+'」· 再次点击进入':'点击世界转到前方 · 再次点击进入';
+  instruction.textContent=button?'正在进入「'+button.querySelector('.world-name').textContent+'」':'点击世界进入';
  }
  function paint(){
   const scale=Math.min(innerWidth/1920,innerHeight/1080);
@@ -62,13 +61,8 @@
  markCurrent();
  map.querySelectorAll('[data-enter-world]').forEach(button=>button.onclick=()=>{
   if(busy||rotating)return;
-  if(focused!==button){
-   focusWorld(button);
-   const index=worlds.indexOf(button);
-   if(index>=0){const delta=((-index*72-rotation+180)%360+360)%360-180;rotateTo(rotation+delta);}
-   return;
-  }
   busy=true;
+  focusWorld(button);
   const world=button.dataset.enterWorld;try{localStorage.setItem('sekai-home-world',world);}catch{}
   window.sekaiWorldTransfer(button,world);
  });

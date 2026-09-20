@@ -64,7 +64,9 @@ body{font-family:SekaiRodin,SekaiHan,"Microsoft YaHei",sans-serif;font-weight:50
 .street-scene img{position:absolute;display:block;max-width:none;pointer-events:none}
 .street-scene .street-sky{inset:0;width:100%;height:100%}
 .world-backdrop:after{z-index:10;mix-blend-mode:normal;background-image:url('../game-assets/bg_common_ptn_dot_s.png');background-size:5px 5px;opacity:0}
-body.page-type-index .world-backdrop:after,body.page-type-index .world-backdrop:before,body.page-type-index .scene-dim{display:none}
+body.page-type-index .world-backdrop:after,body.page-type-index .world-backdrop:before,body.page-type-index .scene-dim{opacity:0!important;pointer-events:none}
+.world-backdrop:after,.world-backdrop:before,.scene-dim{transition:opacity .18s ease-out}
+@media(prefers-reduced-motion:reduce){.world-backdrop:after,.world-backdrop:before,.scene-dim{transition:none}}
 .page-type-live .world-backdrop:after,.page-type-search .world-backdrop:after{opacity:.6;background-color:#5656752b}
 .page-type-live .street-scene,.page-type-search .street-scene{filter:none}
 .street-blur{position:absolute;inset:0;width:100%;height:100%;display:none;pointer-events:none;z-index:9}
@@ -109,7 +111,7 @@ body.page-type-index .world-backdrop:after,body.page-type-index .world-backdrop:
 .phone-jacket-wash.has-blur canvas{display:block}
 .song-preview{position:relative;z-index:1}
 .song-preview .preview-excerpt{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
-.song-preview .read-start{position:relative;background:transparent;border:0;box-shadow:none;border-radius:0;color:#77eedd;min-width:0;width:215px;height:80px;padding:0;isolation:isolate}
+.song-preview .read-start{position:relative;background:transparent;border:0;box-shadow:none;border-radius:0;color:#77eedd;min-width:0;width:215px;height:80px;flex-shrink:0;padding:0;isolation:isolate}
 .song-preview .read-start:before{content:'';position:absolute;inset:0;z-index:-1;border-style:solid;border-width:0 43px;border-image:url('../game-assets/btn_round_line_h80_wh.png') 0 52 fill stretch;filter:brightness(0) saturate(100%) invert(89%) sepia(44%) saturate(560%) hue-rotate(101deg)}
 .random-post img{width:48px;height:48px;object-fit:contain;filter:none}
 .unit-tabs button img{width:48px;height:48px}

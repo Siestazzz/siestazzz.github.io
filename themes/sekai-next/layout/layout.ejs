@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#454774">
-  <script src="<%- url_for('/js/page-router.js') %>"></script>
+  <script src="<%- url_for('/js/page-router.js') %>?v=same-world-parent-2"></script>
   <% const documentTitle = page.title || page.category || page.tag; %>
   <title><%= documentTitle ? documentTitle + ' · ' : '' %><%= config.title %></title>
   <meta name="description" content="<%= page.excerpt ? strip_html(page.excerpt).replace(/\n/g, ' ') : config.description %>">
@@ -66,6 +66,6 @@
   <script src="<%- url_for('/js/live-menu.js') %>" defer></script>
   <script src="<%- url_for('/js/home.js') %>" defer></script>
   <script src="<%- url_for('/js/friends.js') %>" defer></script>
-  <% if (isHome || page.layout === 'sekai-map') { %><script src="<%- url_for('/js/world-transfer.js') %>" defer></script><% } %>
+  <% if (isHome || page.layout === 'sekai-map') { %><script src="<%- url_for('/js/transition-particles.js') %>" defer></script><script src="<%- url_for('/js/world-transfer.js') %>" defer></script><% } %>
 </body>
 </html>

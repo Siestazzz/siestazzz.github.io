@@ -11,7 +11,11 @@
   window.SekaiPages={register(name,init){if(modules.has(name))return;modules.set(name,init);mount(name,init);}};
   const documents=new Map();
   let shown=location.pathname+location.search;
-  const eligible=url=>url.origin===location.origin&&url.pathname.startsWith(document.body.dataset.root||'/')&&!/\/map\/?$/.test(url.pathname)&&!url.searchParams.has('world')&&!!document.querySelector('.unknown-scene');
+  const eligible=url=>{
+    const root=document.body.dataset.root||'/';
+    const sameWorldHome=url.pathname===root&&url.searchParams.get('world')===document.documentElement.dataset.homeWorld;
+    return url.origin===location.origin&&url.pathname.startsWith(root)&&!/\/map\/?$/.test(url.pathname)&&(!url.searchParams.has('world')||sameWorldHome)&&!!document.querySelector('.unknown-scene');
+  };
   async function navigate(value,{pop=false}={}){
     const url=new URL(value,location.href);
     if(!eligible(url)){location.assign(url.href);return;}
@@ -50,10 +54,46 @@
     finally{if(ticket===serial)document.documentElement.classList.remove('route-loading');}
   }
   window.sekaiNavigate=navigate;
+  // Fixed parent is a destination, not a requirement to reload its document.
+  // Restore an earlier matching parent when Chrome exposes a safe history entry.
+  function restoreParent(url){
+    if(url.origin!==location.origin||!window.navigation?.entries)return false;
+    const current=window.navigation.currentEntry;
+    if(!current)return false;
+    const world=document.documentElement.dataset.homeWorld;
+    const entry=window.navigation.entries().filter(entry=>{
+      if(entry.index>=current.index||!entry.url)return false;
+      const previous=new URL(entry.url);
+      if(previous.origin!==url.origin||previous.pathname!==url.pathname)return false;
+      if(url.search&&previous.search!==url.search)return false;
+      // Never restore another world's homepage just because its pathname matches.
+      if(previous.searchParams.has('world')&&previous.searchParams.get('world')!==world)return false;
+      const saved=entry.getState?.()?.sekaiWorld;
+      return !saved||saved===world;
+    }).at(-1);
+    if(!entry)return false;
+    ++serial;active?.abort();document.documentElement.classList.remove('route-loading');
+    window.navigation.traverseTo(entry.key).finished.catch(()=>navigate(url.href));
+    return true;
+  }
+  const rememberWorld=()=>{
+    const state=history.state;
+    history.replaceState({...((state&&typeof state==='object')?state:{}),sekaiWorld:document.documentElement.dataset.homeWorld},'',location.href);
+    if(window.navigation?.updateCurrentEntry){
+      const state=window.navigation.currentEntry?.getState();
+      window.navigation.updateCurrentEntry({state:{...((state&&typeof state==='object')?state:{}),sekaiWorld:document.documentElement.dataset.homeWorld}});
+    }
+  };
+  addEventListener('DOMContentLoaded',rememberWorld,{once:true});
+  addEventListener('sekai-page-ready',rememberWorld);
   document.addEventListener('click',event=>{
     const link=event.target.closest('a[href]');
     if(!link||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||link.target||link.hasAttribute('download'))return;
-    const url=new URL(link.href);if(!eligible(url))return;
+    const url=new URL(link.href);
+    if(link.matches('.game-back,.back-link')&&url.origin===location.origin){
+      event.preventDefault();if(!restoreParent(url))navigate(url.href);return;
+    }
+    if(!eligible(url))return;
     if(url.pathname===location.pathname&&url.search===location.search&&url.hash)return;
     event.preventDefault();navigate(url.href);
   });

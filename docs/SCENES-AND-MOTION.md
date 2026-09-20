@@ -23,6 +23,26 @@
 
 ## 2. 场景与入口
 
+### 2026-09-09 · MAP-ENTER 单击进入
+
+按用户要求，sekai-map.js删除首次旋前/再次确认分支；点击开放世界立即busy锁定并调用原world-transfer。箭头和拖动旋转、拖动抑制误点保留，提示仍视觉隐藏但无障碍文字同步为点击进入。覆盖此前所有两次点击的历史记录。属于博客交互适配，原素材/粒子/转场参数不变；见WORLD-TRANSITION.md和E12同日补充。
+
+### 2026-09-09 · NAV-VEIL 连续显隐
+
+用户仍报告live→首页闪烁；整页请求回归为0，但此前首页filter:none且遮罩display:none，与内页保留滤镜的切换不同。sekai-map.css保持blur(0px)终态，refinements.css首页遮罩opacity0替代display:none；滤镜和遮罩均180ms ease-out，减少动画禁用。首页最终无模糊/点阵/暗色，不动原粒子。此为网页合成适配，不能冒充原过场时长；E22/PAGE-ROUTER.md记录验证与限制。
+
+### 2026-09-09 · SELECT-READ / FX-BACK
+
+第三页read-start增加flex-shrink:0，恢复已有215×80px，超高内容继续滚动；原按钮图/52切片不变。导航放行当前世界首页的world查询：此前popstate恢复此地址会误触整页加载，现保留文档/场景/人物canvas。真实换世界仍独立转场。原证据边界及验证见E08、E22和PAGE-ROUTER.md同日记录。
+
+### 2026-09-08 · MAP-LAYOUT / MAP-ENTER 原过场粒子
+
+选择容器整体上移3svh，底部“点击世界转到前方”提示视觉隐藏，双击确认流程不变。MAP-ENTER删除旧CSS教室贴图碎片，改为原AreaTransitioner粒子21/24的渐变图集与出生/大小/透明曲线，配套20/22/25/26闪光。transition-particles.js有限时canvas，跨文档时钟延续、结束/离页清理；白场导航时间由1200改1500ms，其余950ms拉近/1000ms显现/8s加载保护不变。原算法与网页投影差异、原包完整节点、方法体调用及本轮设备/浏览器截图见[WORLD-TRANSITION.md](../pjskapk/WORLD-TRANSITION.md)和E12。覆盖下方旧“CSS近似碎片”的历史描述。
+
+### 2026-09-08 · FX-BACK 历史上级恢复
+
+固定目标不变：正文→选文→阅读入口→首页。page-router.js优先从同源Navigation历史中查找最近的匹配父级路径并traverseTo，不盲目退上一页；带显式查询须匹配，世界标记不同的条目跳过。没有匹配或不支持API时仍软导航。跨文档允许浏览器BFCache复用，同文档仍保留当前场景画布。未改任何动画参数。测试工具此前默认关闭BFCache，本轮移除该测试开关后实际验证persisted=true；细节见PAGE-ROUTER.md / E22。路由脚本增加版本查询便于刷新更新。
+
 ### 2026-09-08 · HOME-PAN 原生选择冲突
 
 主页范围user-select:none、图片/链接-webkit-user-drag:none；home-world.js持久body监听只在page-type-index取消dragstart，背景pointerdown排除按钮/链接后preventDefault。避免拖动生成文字选区或图片拖拽影子，保留普通鼠标、平移阈值5px与按钮点击；内页正文仍可选中文字。属于浏览器输入适配，非游戏字段。专题见PAGE-ROUTER.md，证据E22补充。
@@ -122,7 +142,7 @@ HOME-PROJECTION：背景统一`s=max(1.25W/Cw,1.1H/Ch)`，纵向居中，消除�
 | FX-AMBIENT | 共用环境漂浮装饰 | `effects.js` 创建 24 个 CSS 图形；周期 12–20s、错开延迟；尺寸部分为 65px，其余 8–26px | 网页自制，区别于地图 Mesh 粒子；实际可见性还受页面遮挡影响 |
 | FX-MENU | 菜单开关、遮罩、焦点切换 | `main.js` + 基础 CSS；支持 Escape、焦点管理、aria/inert | 博客适配菜单，不应称为完整原游戏菜单 |
 | FX-NAV | 同站链接退出反馈 | `main.js`：添加 `page-leaving`，167ms 后 `location.assign`；pageshow 清除状态 | **仍是整页导航，不是 SPA/PJAX**，不能保证不存在空白；修饰键、锚点、外链等另行处理 |
-| FX-BACK | 返回按钮 | 正文→选文→阅读入口→首页；地图/友链等回首页；分类/标签详情回总览 | layout.ejs固定href，main.js移除history.back；按用户要求恢复层级，不依赖来路；博客层级为网页适配 |
+| FX-BACK | 返回按钮 | 正文→选文→阅读入口→首页；地图/友链等回首页；分类/标签详情回总览 | 固定href；最近匹配历史父级优先traverseTo恢复，否则软导航；不退到无关来路。网页适配 |
 
 点击证据与完整路径见 [TAP-EFFECT.md](../pjskapk/TAP-EFFECT.md)：Prefab `e5cd519baaf464685bf5e0a5bcc4d162` / `fx_Tap_single`，提取脚本 `pjskapk/inspect_tap_effect.py`。不要把普通 CSS 环境三角形当成点击碎片来调。
 

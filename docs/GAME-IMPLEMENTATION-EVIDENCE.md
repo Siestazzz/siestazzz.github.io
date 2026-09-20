@@ -140,6 +140,10 @@
 
 ## E08：文章选择几何、频谱、按钮
 
+2026-09-09 NAV-VEIL（关联E02/E22）：首页原有网页display:none/filter:none切换改opacity0/blur(0px)，180ms ease-out为浏览器显隐适配，**无对应游戏时长字段证据**。不改变原点阵资源和内页最终暗度/模糊值。源码、帧采样与未验证边界见PAGE-ROUTER.md同日NAV-VEIL条目。
+
+2026-09-09 SELECT-READ：read-start增加flex-shrink:0防止flex压扁，保留215×80 CSS px及下述原贴图/切片。属于浏览器修复，无新游戏字段。FX-BACK（关联E22）同日修复同世界首页world参数被误判为换世界：不改变任何原素材/动画，仅导航资格判断。实测与边界见PAGE-ROUTER.md同日记录。
+
 对应：`SEARCH-SELECT`、`SEARCH-FILTER`、`LIVE-SPECTRUM`。
 
 - `MusicSelectSingleListCell` 频谱RectTransform：六柱8×72，中心x=-35,-21,-7,7,21,35。网页保留六柱排列。
@@ -189,6 +193,10 @@
 - 本次实际进入设备教室截图对照，浏览器检查背景/桌椅同步拖动及粒子画布；构建和四项回归脚本通过。无人物；地图开放 area5/27。
 
 ## E12 · 世界切换（MAP-ENTER）
+
+2026-09-09：用户指定单击世界立即进入，删除sekai-map.js首次点击rotateTo分支；不是新恢复的游戏点击规则。原PlayMark、ParticleSystem来源及转场时间保持下述证据/适配边界。拖动与箭头依旧可旋转，busy阻止重复启动。
+
+2026-09-08新增实际FadeOut方法体证据：0x60a2178内0x60a23a4→PlayMark.Setup，0x60a23c4→StandByCore，this+0x20加载sekaiEffect后0x60a23dc→ParticleSystem.Play(0xabd5918)。原c790a5c99b4fd4f80a2e34152b8f6fe7 → AreaTransitioner/sekai/fx_live_transition_v2_03_b/root/pt_outside的20/21/22/24/25/26粒子 → particles-raw.json含原字段/纹理引用/源SHA → transition-particles.js画布。使用原tex_sekai_v2_02渐变atlas和生命周期曲线，移除旧CSS教室碎片；VelocityModule/完整shader未复刻，投影min(viewport)/20、分层径向角和混合为网页适配。覆盖时间1500ms替代旧1200ms。录屏、节点逐项字段、数值边界和浏览器真实验证见[WORLD-TRANSITION.md](../pjskapk/WORLD-TRANSITION.md)。地图上移3svh、隐藏提示属用户要求的网页布局，无原常量背书。
 
 E11/HOME-PAN覆盖追加：原area5组件 `-7246673203354479985` 给出scrollMax=(3378,1600)，说明原区域有界；网页不把此值直接当屏幕px。`home-world.js/panLimit` 按背景实际显示宽度，取min(视口12%, 半宽余量−1px)，resize/load/ResizeObserver重新夹紧已有偏移。12%与1px是网页操作/舍入适配，不是原游戏常量。双端实际拖动与多尺寸数学检查见CLASSROOM.md/verify-home-pan.cjs。
 
@@ -286,6 +294,8 @@ POST-CATEGORY-ACCENT素材链：`game-assets/icon_tab_unit_{vs,ln,mj,vb,ws,25}_o
 原返回图标`game-assets/icon_back_wh.png`继续挂载；正文/选文/阅读入口映射固定父级，地图/好友回首页，属于用户要求的博客适配，不宣称这些路由来自Unity方法体。layout.ejs计算backPath，post.ejs正文侧栏回search，main.js删除history.back事件拦截。无新的游戏数据结论，完整跳转表及验证记录见NAVIGATION.md。
 
 ### E22 · NAV-SHELL
+
+FX-BACK最新实现：原icon_back_wh.png不变，固定父级映射不变；Navigation.entries/currentEntry筛选最近同源父级，traverseTo允许浏览器恢复历史文档。不存在匹配时保留sekaiNavigate。世界信息同时存History和Navigation state，main.js检索状态replace保留已有state。API与缓存策略为网页适配，不是Unity算法。Playwright coreBundle默认含--disable-back-forward-cache，原诊断不能代表普通Chrome缓存能力；此次去掉该测试参数，实测跨文档persisted=true、原window标记仍在，见verify-fixed-parent-history.cjs。
 
 HOME-PAN选择冲突补充：原图/场景投影不变；浏览器默认文字选择、原生图片拖拽没有对应Unity操作。refinements.css仅主页禁用user-select/user-drag，home-world.js主页dragstart取消、背景pointerdown preventDefault（先排除可点击入口）。这是网页输入适配，不冒充原游戏数据；验证见PAGE-ROUTER.md。
 
