@@ -16,11 +16,12 @@ hexo.extend.generator.register('sekai-search-index', function (locals) {
 
     return {
       title: post.title,
-      cover: post.cover || '',
+      statsId: post.stats_id || post.slug,
       path: post.path,
       date: post.date.format('YYYY-MM-DD'),
       categories: post.categories.map(function (item) { return item.name; }),
       tags: post.tags.map(function (item) { return item.name; }),
+      tagLinks: post.tags.map(function (item) { return {name:item.name,path:item.path}; }),
       excerpt: text ? Array.from(text).slice(0, 150).join('') + '…' : '',
       text: text
     };

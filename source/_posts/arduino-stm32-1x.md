@@ -1,4 +1,5 @@
 ---
+stats_id: arduino-stm32-1x
 title: "Arduino下载1.x版本stm32方法"
 date: 2025-09-14 15:53:35
 updated: 2025-09-14 15:53:35

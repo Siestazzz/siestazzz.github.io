@@ -1,0 +1,46 @@
+{
+  "source": "https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/systemLive2ds.json",
+  "provenance": "community master snapshot; not extracted from this device",
+  "selection": "first three compatible original pairs; original seasonal availability is not applied in this preview",
+  "items": [
+    {
+      "id": 1,
+      "characterId": 1,
+      "unit": "light_sound",
+      "serif": "あ……サボテンの花が咲いてる。\nふふ。小さいけど、可愛い",
+      "assetbundleName": "voicepack_1",
+      "voice": "system_summer_001_001",
+      "motion": "w-normal-tilthead06",
+      "expression": "face_smile_01",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 2,
+      "characterId": 1,
+      "unit": "light_sound",
+      "serif": "宿題、結構多いな。\nバンドの練習とバイトもあって、\n今年の夏は忙しくなりそう",
+      "assetbundleName": "voicepack_1",
+      "voice": "system_summer_001_002",
+      "motion": "w-cool-tilthead01",
+      "expression": "face_smile_04",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 3,
+      "characterId": 1,
+      "unit": "light_sound",
+      "serif": "咲希の家で勉強会なんて\nいつ以来だろう。\nあ、ギターも持って行こうかな",
+      "assetbundleName": "voicepack_1",
+      "voice": "system_summer_001_003",
+      "motion": "w-happy-nod01",
+      "expression": "face_smile_02",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    }
+  ]
+}

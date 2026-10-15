@@ -1,0 +1,3717 @@
+[
+  {
+    "path_id": "-9207062017161009311",
+    "type": "AnimationClip",
+    "name": "w-cute-glad01"
+  },
+  {
+    "path_id": "-9180698914915620913",
+    "type": "AnimationClip",
+    "name": "face_idol_trouble_01"
+  },
+  {
+    "path_id": "-9173871766051541837",
+    "type": "AnimationClip",
+    "name": "w-adult-glad02"
+  },
+  {
+    "path_id": "-9161593729680210672",
+    "type": "AnimationClip",
+    "name": "w-cool-tiltheadnod0201"
+  },
+  {
+    "path_id": "-9156984727532009104",
+    "type": "MonoBehaviour",
+    "name": "face_band_cry_01"
+  },
+  {
+    "path_id": "-9126739836877280911",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0305"
+  },
+  {
+    "path_id": "-9124705605774891047",
+    "type": "AnimationClip",
+    "name": "w-happy-glad02"
+  },
+  {
+    "path_id": "-9117688478183606548",
+    "type": "MonoBehaviour",
+    "name": "w-animal-nod01"
+  },
+  {
+    "path_id": "-9103237347885586963",
+    "type": "AnimationClip",
+    "name": "face_street_angry_01"
+  },
+  {
+    "path_id": "-9032721215066732313",
+    "type": "AnimationClip",
+    "name": "w-adult-tilthead03"
+  },
+  {
+    "path_id": "-9008118254190559619",
+    "type": "AnimationClip",
+    "name": "face_idol_closeeye_03"
+  },
+  {
+    "path_id": "-8930570944280243749",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_trouble_01"
+  },
+  {
+    "path_id": "-8928833502938094591",
+    "type": "AnimationClip",
+    "name": "face_smile_02"
+  },
+  {
+    "path_id": "-8900533838334684151",
+    "type": "AnimationClip",
+    "name": "w-normalanimal-tiltheadnod0101"
+  },
+  {
+    "path_id": "-8873518315297039835",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0207"
+  },
+  {
+    "path_id": "-8851843205953650347",
+    "type": "MonoBehaviour",
+    "name": "w-normal-glad02"
+  },
+  {
+    "path_id": "-8807117384939899266",
+    "type": "AnimationClip",
+    "name": "face_street_e_01"
+  },
+  {
+    "path_id": "-8784465957395844410",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0207"
+  },
+  {
+    "path_id": "-8782763556713275376",
+    "type": "AnimationClip",
+    "name": "w-happy-nod01"
+  },
+  {
+    "path_id": "-8770335183063197858",
+    "type": "AnimationClip",
+    "name": "w-cool-shakehead02"
+  },
+  {
+    "path_id": "-8751743313581893903",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tiltheadnod0201"
+  },
+  {
+    "path_id": "-8703305934020115486",
+    "type": "MonoBehaviour",
+    "name": "face_closeeye_03"
+  },
+  {
+    "path_id": "-8599699439460446699",
+    "type": "MonoBehaviour",
+    "name": "w-adult-posenod02"
+  },
+  {
+    "path_id": "-8596239610812070066",
+    "type": "MonoBehaviour",
+    "name": "face_night_eat_01"
+  },
+  {
+    "path_id": "-8594995008110578923",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smallmouth_01"
+  },
+  {
+    "path_id": "-8571021604468122426",
+    "type": "AnimationClip",
+    "name": "w-adult-nod02"
+  },
+  {
+    "path_id": "-8513707994688759809",
+    "type": "MonoBehaviour",
+    "name": "face_smile_06"
+  },
+  {
+    "path_id": "-8482511068195941300",
+    "type": "AnimationClip",
+    "name": "face_band_surprise_01"
+  },
+  {
+    "path_id": "-8468293406698696711",
+    "type": "MonoBehaviour",
+    "name": "face_cry_01"
+  },
+  {
+    "path_id": "-8452255400446184788",
+    "type": "AnimationClip",
+    "name": "w-normal-sad01"
+  },
+  {
+    "path_id": "-8442201010157188016",
+    "type": "AnimationClip",
+    "name": "w-adult-nod05"
+  },
+  {
+    "path_id": "-8409946866833669866",
+    "type": "MonoBehaviour",
+    "name": "w-animalnormal-nodtilthead0101"
+  },
+  {
+    "path_id": "-8353343397215619328",
+    "type": "AnimationClip",
+    "name": "w-cool-shakehead01"
+  },
+  {
+    "path_id": "-8246409273513800221",
+    "type": "MonoBehaviour",
+    "name": "w-animal-tilthead01"
+  },
+  {
+    "path_id": "-8238218538041313742",
+    "type": "MonoBehaviour",
+    "name": "face_night_sad_03"
+  },
+  {
+    "path_id": "-8214989661194694087",
+    "type": "AnimationClip",
+    "name": "face_scared_01"
+  },
+  {
+    "path_id": "-8213880587927399746",
+    "type": "AnimationClip",
+    "name": "w-cute-glad02"
+  },
+  {
+    "path_id": "-8206120538953146246",
+    "type": "MonoBehaviour",
+    "name": "face_band_angry_01"
+  },
+  {
+    "path_id": "-8172585822060134698",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead01r"
+  },
+  {
+    "path_id": "-8166284375434943395",
+    "type": "AnimationClip",
+    "name": "face_smile_04"
+  },
+  {
+    "path_id": "-8119004058453803384",
+    "type": "MonoBehaviour",
+    "name": "w-adult-tilthead02"
+  },
+  {
+    "path_id": "-8105178965010458455",
+    "type": "MonoBehaviour",
+    "name": "w-normal-pose02"
+  },
+  {
+    "path_id": "-8083697814702228639",
+    "type": "MonoBehaviour",
+    "name": "face_idol_normal_01"
+  },
+  {
+    "path_id": "-8073864828380850135",
+    "type": "AnimationClip",
+    "name": "w-adult-glad03"
+  },
+  {
+    "path_id": "-8033551089630613664",
+    "type": "AnimationClip",
+    "name": "face_night_trouble_01"
+  },
+  {
+    "path_id": "-8002831976896527483",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0203"
+  },
+  {
+    "path_id": "-7979440283116693860",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0602"
+  },
+  {
+    "path_id": "-7965435537103701550",
+    "type": "AnimationClip",
+    "name": "w-cool-nod01"
+  },
+  {
+    "path_id": "-7946133879865388712",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_surprise_01"
+  },
+  {
+    "path_id": "-7934653266722765224",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_smile_02"
+  },
+  {
+    "path_id": "-7871737237023893435",
+    "type": "MonoBehaviour",
+    "name": "w-cool-sad01"
+  },
+  {
+    "path_id": "-7832120605922826329",
+    "type": "MonoBehaviour",
+    "name": "face_surprise_01"
+  },
+  {
+    "path_id": "-7817023024044143565",
+    "type": "MonoBehaviour",
+    "name": "face_band_blushed_02"
+  },
+  {
+    "path_id": "-7770391453626867223",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead01"
+  },
+  {
+    "path_id": "-7729248612631990437",
+    "type": "MonoBehaviour",
+    "name": "w-normal-pose05"
+  },
+  {
+    "path_id": "-7718411568745337381",
+    "type": "AnimationClip",
+    "name": "face_wonder_hawawa_01"
+  },
+  {
+    "path_id": "-7694129944839125203",
+    "type": "MonoBehaviour",
+    "name": "w-adult-think02"
+  },
+  {
+    "path_id": "-7674612260417677726",
+    "type": "MonoBehaviour",
+    "name": "face_trouble_01"
+  },
+  {
+    "path_id": "-7671883964810280417",
+    "type": "AnimationClip",
+    "name": "face_band_smile_05"
+  },
+  {
+    "path_id": "-7670075073468456742",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead08"
+  },
+  {
+    "path_id": "-7650146524307474032",
+    "type": "AnimationClip",
+    "name": "w-cool-nod02"
+  },
+  {
+    "path_id": "-7636414471259459752",
+    "type": "MonoBehaviour",
+    "name": "face_idol_closeeye_02"
+  },
+  {
+    "path_id": "-7631181730793144295",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead05"
+  },
+  {
+    "path_id": "-7621939867875413786",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0406"
+  },
+  {
+    "path_id": "-7594377989786421792",
+    "type": "AnimationClip",
+    "name": "w-happy-nod04"
+  },
+  {
+    "path_id": "-7541301591219562586",
+    "type": "MonoBehaviour",
+    "name": "w-cool-glad01"
+  },
+  {
+    "path_id": "-7536156856451761890",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_smile_01"
+  },
+  {
+    "path_id": "-7525800605253780149",
+    "type": "AnimationClip",
+    "name": "face_e_01"
+  },
+  {
+    "path_id": "-7484444783522068767",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0206"
+  },
+  {
+    "path_id": "-7479969919492004380",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead02"
+  },
+  {
+    "path_id": "-7452900954349193556",
+    "type": "AnimationClip",
+    "name": "w-adult-delicious01"
+  },
+  {
+    "path_id": "-7451337085848648231",
+    "type": "MonoBehaviour",
+    "name": "w-happy-glad02_nb"
+  },
+  {
+    "path_id": "-7443777321522273073",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod03"
+  },
+  {
+    "path_id": "-7419243909410827821",
+    "type": "MonoBehaviour",
+    "name": "face_street_surprise_01"
+  },
+  {
+    "path_id": "-7400697247396497206",
+    "type": "AnimationClip",
+    "name": "face_band_disgust_01"
+  },
+  {
+    "path_id": "-7385772106240183730",
+    "type": "AnimationClip",
+    "name": "w-cute-forward01"
+  },
+  {
+    "path_id": "-7363885092570296454",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead01r"
+  },
+  {
+    "path_id": "-7337183181648044568",
+    "type": "AnimationClip",
+    "name": "face_band_eat_01"
+  },
+  {
+    "path_id": "-7288221439547892194",
+    "type": "AnimationClip",
+    "name": "w-happy-angry02"
+  },
+  {
+    "path_id": "-7277745702113956424",
+    "type": "MonoBehaviour",
+    "name": "w-adult-posetilthead03"
+  },
+  {
+    "path_id": "-7277021400079885980",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead0102"
+  },
+  {
+    "path_id": "-7268497955197993713",
+    "type": "MonoBehaviour",
+    "name": "face_street_smile_01"
+  },
+  {
+    "path_id": "-7248465301290861210",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0601"
+  },
+  {
+    "path_id": "-7194720037536311310",
+    "type": "AnimationClip",
+    "name": "face_band_smile_07"
+  },
+  {
+    "path_id": "-7193370333190508207",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0807"
+  },
+  {
+    "path_id": "-7156008125626214537",
+    "type": "MonoBehaviour",
+    "name": "face_night_smallmouth_01"
+  },
+  {
+    "path_id": "-7107335830779891959",
+    "type": "AnimationClip",
+    "name": "w-cool-forward02"
+  },
+  {
+    "path_id": "-7103181751826015244",
+    "type": "MonoBehaviour",
+    "name": "w-animal-posenod01"
+  },
+  {
+    "path_id": "-7099081241382616688",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead07_nb"
+  },
+  {
+    "path_id": "-7057526402815411356",
+    "type": "AnimationClip",
+    "name": "w-normal-nod05"
+  },
+  {
+    "path_id": "-7038183596278142270",
+    "type": "AnimationClip",
+    "name": "face_idol_smile_01"
+  },
+  {
+    "path_id": "-6981562114855855260",
+    "type": "AnimationClip",
+    "name": "w-normal-shy01"
+  },
+  {
+    "path_id": "-6929050249404991204",
+    "type": "AnimationClip",
+    "name": "w-normal-fidget01"
+  },
+  {
+    "path_id": "-6923902991477366572",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_02"
+  },
+  {
+    "path_id": "-6912276747308172646",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_bothered_03"
+  },
+  {
+    "path_id": "-6904687031887680079",
+    "type": "MonoBehaviour",
+    "name": "face_night_sad_01"
+  },
+  {
+    "path_id": "-6902907411271832109",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smile_05"
+  },
+  {
+    "path_id": "-6893636982867925299",
+    "type": "AnimationClip",
+    "name": "w-normal-posetrouble02"
+  },
+  {
+    "path_id": "-6880532153176135704",
+    "type": "AnimationClip",
+    "name": "w-adult-posetilthead03"
+  },
+  {
+    "path_id": "-6869593429116597260",
+    "type": "AnimationClip",
+    "name": "w-adult-trouble01"
+  },
+  {
+    "path_id": "-6851375266330517542",
+    "type": "AnimationClip",
+    "name": "face_sad_02"
+  },
+  {
+    "path_id": "-6850545577747895227",
+    "type": "MonoBehaviour",
+    "name": "w-happy-tilthead02"
+  },
+  {
+    "path_id": "-6843358098073084674",
+    "type": "AnimationClip",
+    "name": "w-adult-shakehand01"
+  },
+  {
+    "path_id": "-6789015916022011247",
+    "type": "AnimationClip",
+    "name": "face_band_closeeye_03"
+  },
+  {
+    "path_id": "-6779592174875413057",
+    "type": "AnimationClip",
+    "name": "face_street_smile_05"
+  },
+  {
+    "path_id": "-6770551766518782660",
+    "type": "MonoBehaviour",
+    "name": "w-happy-sad02"
+  },
+  {
+    "path_id": "-6695189705297326224",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead01"
+  },
+  {
+    "path_id": "-6693729092141917150",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead01r"
+  },
+  {
+    "path_id": "-6670297846975254851",
+    "type": "AnimationClip",
+    "name": "w-normal-pose03"
+  },
+  {
+    "path_id": "-6648366757494291614",
+    "type": "AnimationClip",
+    "name": "w-animal-nod02"
+  },
+  {
+    "path_id": "-6617321902233607922",
+    "type": "AnimationClip",
+    "name": "w-special12-catchB"
+  },
+  {
+    "path_id": "-6473965952293851816",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_01"
+  },
+  {
+    "path_id": "-6421241208334882705",
+    "type": "AnimationClip",
+    "name": "face_wonder_doya_01"
+  },
+  {
+    "path_id": "-6351857430478232621",
+    "type": "AnimationClip",
+    "name": "w-happy-tilthead01"
+  },
+  {
+    "path_id": "-6332773499510610334",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smile_06"
+  },
+  {
+    "path_id": "-6297678400159190538",
+    "type": "AnimationClip",
+    "name": "w-happy-sad01"
+  },
+  {
+    "path_id": "-6207114095936734028",
+    "type": "MonoBehaviour",
+    "name": "face_street_smallmouth_01"
+  },
+  {
+    "path_id": "-6187803671630575441",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead06"
+  },
+  {
+    "path_id": "-6168229050641232440",
+    "type": "MonoBehaviour",
+    "name": "face_street_smile_05"
+  },
+  {
+    "path_id": "-6089136647121962310",
+    "type": "AnimationClip",
+    "name": "face_idol_hawawa_01"
+  },
+  {
+    "path_id": "-6067218651234596645",
+    "type": "MonoBehaviour",
+    "name": "w-adult-posetilthead01"
+  },
+  {
+    "path_id": "-6060346916876970231",
+    "type": "AnimationClip",
+    "name": "w-cute-wink02"
+  },
+  {
+    "path_id": "-6058918980360931812",
+    "type": "MonoBehaviour",
+    "name": "w-cool-nod03"
+  },
+  {
+    "path_id": "-6015623547562324294",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead02"
+  },
+  {
+    "path_id": "-5941613374593226167",
+    "type": "MonoBehaviour",
+    "name": "face_sad_03"
+  },
+  {
+    "path_id": "-5939528689820759468",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad02"
+  },
+  {
+    "path_id": "-5931195574517199042",
+    "type": "AnimationClip",
+    "name": "w-cute-glad06"
+  },
+  {
+    "path_id": "-5843204452616701725",
+    "type": "AnimationClip",
+    "name": "face_street_beamazed_01"
+  },
+  {
+    "path_id": "-5843177609144669227",
+    "type": "AnimationClip",
+    "name": "face_band_wanawana_01"
+  },
+  {
+    "path_id": "-5825485665618787370",
+    "type": "AnimationClip",
+    "name": "face_idol_smile_05"
+  },
+  {
+    "path_id": "-5818990997533466160",
+    "type": "AnimationClip",
+    "name": "face_night_sad_01"
+  },
+  {
+    "path_id": "-5806819226993342707",
+    "type": "AnimationClip",
+    "name": "w-happy-wandahoi01"
+  },
+  {
+    "path_id": "-5806299665379236267",
+    "type": "MonoBehaviour",
+    "name": "w-cute-forward02_nb"
+  },
+  {
+    "path_id": "-5781326833560669073",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_closeeye_02"
+  },
+  {
+    "path_id": "-5758542173981546208",
+    "type": "AnimationClip",
+    "name": "face_cry_01"
+  },
+  {
+    "path_id": "-5753238019206581879",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_angry_01"
+  },
+  {
+    "path_id": "-5736970411557533460",
+    "type": "AnimationClip",
+    "name": "w-cute-sleep01"
+  },
+  {
+    "path_id": "-5724062348743938752",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead01"
+  },
+  {
+    "path_id": "-5717113906171264896",
+    "type": "MonoBehaviour",
+    "name": "face_night_normal_01"
+  },
+  {
+    "path_id": "-5715239607616872043",
+    "type": "AnimationClip",
+    "name": "face_wonder_cat_01"
+  },
+  {
+    "path_id": "-5689585414550809634",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shy01"
+  },
+  {
+    "path_id": "-5676649094614824690",
+    "type": "MonoBehaviour",
+    "name": "w-cute-forward02"
+  },
+  {
+    "path_id": "-5589167131680877472",
+    "type": "MonoBehaviour",
+    "name": "w-adult-glad02"
+  },
+  {
+    "path_id": "-5572448569607823603",
+    "type": "MonoBehaviour",
+    "name": "w-happy-nod02"
+  },
+  {
+    "path_id": "-5567604537288115645",
+    "type": "MonoBehaviour",
+    "name": "face_shy_02"
+  },
+  {
+    "path_id": "-5538199245299371174",
+    "type": "AnimationClip",
+    "name": "face_wonder_angry_02"
+  },
+  {
+    "path_id": "-5506191901798555744",
+    "type": "AnimationClip",
+    "name": "face_idol_blushed_01"
+  },
+  {
+    "path_id": "-5501701151404436048",
+    "type": "AnimationClip",
+    "name": "face_wonder_e_01"
+  },
+  {
+    "path_id": "-5422022084812106829",
+    "type": "AnimationClip",
+    "name": "w-animal-shy01"
+  },
+  {
+    "path_id": "-5418967772777046385",
+    "type": "AnimationClip",
+    "name": "w-cute-forward03r"
+  },
+  {
+    "path_id": "-5407423183526209633",
+    "type": "MonoBehaviour",
+    "name": "w-cute-nod02"
+  },
+  {
+    "path_id": "-5407084941115864203",
+    "type": "AnimationClip",
+    "name": "face_band_normal_01"
+  },
+  {
+    "path_id": "-5393208981102877542",
+    "type": "MonoBehaviour",
+    "name": "face_band_normal_01"
+  },
+  {
+    "path_id": "-5392744323225822734",
+    "type": "AnimationClip",
+    "name": "w-happy-tilthead04"
+  },
+  {
+    "path_id": "-5392461154707940915",
+    "type": "MonoBehaviour",
+    "name": "w-cool-posesad01"
+  },
+  {
+    "path_id": "-5328496249562325530",
+    "type": "AnimationClip",
+    "name": "face_night_smile_02"
+  },
+  {
+    "path_id": "-5285283945194556103",
+    "type": "AnimationClip",
+    "name": "w-happy-glad02_nb"
+  },
+  {
+    "path_id": "-5263122568300987913",
+    "type": "MonoBehaviour",
+    "name": "face_night_sad_02"
+  },
+  {
+    "path_id": "-5184005913137939068",
+    "type": "MonoBehaviour",
+    "name": "face_street_smile_06"
+  },
+  {
+    "path_id": "-5155660514038101756",
+    "type": "AnimationClip",
+    "name": "face_street_smile_04"
+  },
+  {
+    "path_id": "-5116907446824566903",
+    "type": "AnimationClip",
+    "name": "w-adult-delicious02"
+  },
+  {
+    "path_id": "-5106524475026537181",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_bothered_01"
+  },
+  {
+    "path_id": "-5053278009684619484",
+    "type": "AnimationClip",
+    "name": "w-adult-nod04"
+  },
+  {
+    "path_id": "-5035668539938405567",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead03"
+  },
+  {
+    "path_id": "-4996515369431203390",
+    "type": "AnimationClip",
+    "name": "face_idol_smile_06"
+  },
+  {
+    "path_id": "-4995611243116075325",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0308"
+  },
+  {
+    "path_id": "-4946861398498147519",
+    "type": "AnimationClip",
+    "name": "face_street_normal_01"
+  },
+  {
+    "path_id": "-4935608936082372477",
+    "type": "MonoBehaviour",
+    "name": "w-normal-posenod02"
+  },
+  {
+    "path_id": "-4915041959004171924",
+    "type": "MonoBehaviour",
+    "name": "w-normal-trouble01"
+  },
+  {
+    "path_id": "-4893364611140153890",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_blushed_01"
+  },
+  {
+    "path_id": "-4853581162429126882",
+    "type": "MonoBehaviour",
+    "name": "face_scared_01"
+  },
+  {
+    "path_id": "-4836019033858727834",
+    "type": "AnimationClip",
+    "name": "w-cool-glad01"
+  },
+  {
+    "path_id": "-4822968060239526621",
+    "type": "AnimationClip",
+    "name": "face_smile_05"
+  },
+  {
+    "path_id": "-4803276240896725791",
+    "type": "AnimationClip",
+    "name": "face_sad_03"
+  },
+  {
+    "path_id": "-4759373414400095133",
+    "type": "MonoBehaviour",
+    "name": "w-happy-tilthead03"
+  },
+  {
+    "path_id": "-4734295332913450881",
+    "type": "AnimationClip",
+    "name": "w-cute-shy01"
+  },
+  {
+    "path_id": "-4725428891462666882",
+    "type": "AnimationClip",
+    "name": "w-normal-nod01r"
+  },
+  {
+    "path_id": "-4714622174614535796",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0406"
+  },
+  {
+    "path_id": "-4690161025494969102",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead03"
+  },
+  {
+    "path_id": "-4667506228915811594",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0103"
+  },
+  {
+    "path_id": "-4605082229789261067",
+    "type": "MonoBehaviour",
+    "name": "face_smile_02"
+  },
+  {
+    "path_id": "-4598692501847378014",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead03"
+  },
+  {
+    "path_id": "-4578597245505818731",
+    "type": "AnimationClip",
+    "name": "face_idol_sad_01"
+  },
+  {
+    "path_id": "-4568496579760977092",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead03"
+  },
+  {
+    "path_id": "-4553884426469240213",
+    "type": "MonoBehaviour",
+    "name": "w-adult-shakehand01"
+  },
+  {
+    "path_id": "-4547264391576168996",
+    "type": "AnimationClip",
+    "name": "face_street_closeeye_02"
+  },
+  {
+    "path_id": "-4544286905697278409",
+    "type": "MonoBehaviour",
+    "name": "face_street_trouble_01"
+  },
+  {
+    "path_id": "-4520566323385769989",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead06"
+  },
+  {
+    "path_id": "-4491201416391740270",
+    "type": "MonoBehaviour",
+    "name": "w-adult-nod03"
+  },
+  {
+    "path_id": "-4468362297613463206",
+    "type": "AnimationClip",
+    "name": "w-cool-nodtilthead0102"
+  },
+  {
+    "path_id": "-4450633340422956479",
+    "type": "AnimationClip",
+    "name": "w-normal-trouble01"
+  },
+  {
+    "path_id": "-4419349072487473506",
+    "type": "AnimationClip",
+    "name": "w-happy-forward01"
+  },
+  {
+    "path_id": "-4376367192751610919",
+    "type": "AnimationClip",
+    "name": "face_street_smallmouth_01"
+  },
+  {
+    "path_id": "-4356881467031021241",
+    "type": "MonoBehaviour",
+    "name": "face_street_disgust_01"
+  },
+  {
+    "path_id": "-4333424658692551221",
+    "type": "AnimationClip",
+    "name": "face_wonder_cry_02"
+  },
+  {
+    "path_id": "-4296392135837627319",
+    "type": "MonoBehaviour",
+    "name": "face_night_kirakira_01"
+  },
+  {
+    "path_id": "-4292725476544036697",
+    "type": "MonoBehaviour",
+    "name": "w-adult-delicious02"
+  },
+  {
+    "path_id": "-4255830964532114932",
+    "type": "AnimationClip",
+    "name": "w-adult-delicious03"
+  },
+  {
+    "path_id": "-4246806765898391568",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead01"
+  },
+  {
+    "path_id": "-4205428971954442298",
+    "type": "AnimationClip",
+    "name": "face_idol_angry_01"
+  },
+  {
+    "path_id": "-4190437942722853063",
+    "type": "MonoBehaviour",
+    "name": "w-happy-lookaway01"
+  },
+  {
+    "path_id": "-4158559258032642853",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead0201"
+  },
+  {
+    "path_id": "-4114507496256451842",
+    "type": "MonoBehaviour",
+    "name": "BuildMotionData"
+  },
+  {
+    "path_id": "-4110610085288136152",
+    "type": "MonoBehaviour",
+    "name": "w-normal-forward03"
+  },
+  {
+    "path_id": "-4085675340175338331",
+    "type": "AnimationClip",
+    "name": "w-happy-posenod03"
+  },
+  {
+    "path_id": "-4080046659894119640",
+    "type": "AnimationClip",
+    "name": "face_idol_smile_02"
+  },
+  {
+    "path_id": "-4038586433987638244",
+    "type": "MonoBehaviour",
+    "name": "w-adult-nod04"
+  },
+  {
+    "path_id": "-4034842544226111869",
+    "type": "MonoBehaviour",
+    "name": "w-normalcute-nodshakehead0302"
+  },
+  {
+    "path_id": "-4013418537216941228",
+    "type": "AnimationClip",
+    "name": "face_idol_sleepy_01"
+  },
+  {
+    "path_id": "-4000129611022438286",
+    "type": "MonoBehaviour",
+    "name": "face_street_e_01"
+  },
+  {
+    "path_id": "-3997163679077392050",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead02"
+  },
+  {
+    "path_id": "-3989932459094914428",
+    "type": "AnimationClip",
+    "name": "w-adult-blushed04"
+  },
+  {
+    "path_id": "-3986412974919892605",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_05"
+  },
+  {
+    "path_id": "-3977574787864439477",
+    "type": "MonoBehaviour",
+    "name": "face_idol_angry_01"
+  },
+  {
+    "path_id": "-3947071601932029375",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead0102"
+  },
+  {
+    "path_id": "-3921136618409716293",
+    "type": "AnimationClip",
+    "name": "w-cool-shakehand01"
+  },
+  {
+    "path_id": "-3824976265652131483",
+    "type": "AnimationClip",
+    "name": "w-cool-angry01"
+  },
+  {
+    "path_id": "-3804269367203973468",
+    "type": "MonoBehaviour",
+    "name": "w-cute-sleep01"
+  },
+  {
+    "path_id": "-3751782262765144212",
+    "type": "MonoBehaviour",
+    "name": "face_angry_01"
+  },
+  {
+    "path_id": "-3750623242111964348",
+    "type": "AnimationClip",
+    "name": "face_idol_wink_01"
+  },
+  {
+    "path_id": "-3628206402058631150",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead04"
+  },
+  {
+    "path_id": "-3564713762199944572",
+    "type": "AnimationClip",
+    "name": "w-adult-posenod02"
+  },
+  {
+    "path_id": "-3561911629544728315",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod06"
+  },
+  {
+    "path_id": "-3515422578577896502",
+    "type": "MonoBehaviour",
+    "name": "w-cute-forward01"
+  },
+  {
+    "path_id": "-3512132052363396166",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_doya_01"
+  },
+  {
+    "path_id": "-3509956604828368743",
+    "type": "MonoBehaviour",
+    "name": "w-adult-tilthead03"
+  },
+  {
+    "path_id": "-3458501651009279565",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead0402"
+  },
+  {
+    "path_id": "-3454491089104269129",
+    "type": "MonoBehaviour",
+    "name": "face_band_wink_01"
+  },
+  {
+    "path_id": "-3448009297309765662",
+    "type": "MonoBehaviour",
+    "name": "face_band_blushed_01"
+  },
+  {
+    "path_id": "-3425969035910115754",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_cry_02"
+  },
+  {
+    "path_id": "-3420932641158791673",
+    "type": "MonoBehaviour",
+    "name": "w-normal-sad01"
+  },
+  {
+    "path_id": "-3374990552581790374",
+    "type": "AnimationClip",
+    "name": "face_smile_03"
+  },
+  {
+    "path_id": "-3374930574211895419",
+    "type": "MonoBehaviour",
+    "name": "w-adult-tilthead01"
+  },
+  {
+    "path_id": "-3360153708239728583",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_cry_05"
+  },
+  {
+    "path_id": "-3356827857362601326",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead0201"
+  },
+  {
+    "path_id": "-3348488198906149237",
+    "type": "AnimationClip",
+    "name": "w-cute-glad04"
+  },
+  {
+    "path_id": "-3343481924043793575",
+    "type": "AnimationClip",
+    "name": "face_closeeye_03"
+  },
+  {
+    "path_id": "-3298347419203127441",
+    "type": "MonoBehaviour",
+    "name": "w-adult-glad01"
+  },
+  {
+    "path_id": "-3289904845813222759",
+    "type": "AnimationClip",
+    "name": "face_band_blushed_01"
+  },
+  {
+    "path_id": "-3263955768989359481",
+    "type": "MonoBehaviour",
+    "name": "face_band_trouble_01"
+  },
+  {
+    "path_id": "-3259102529172842603",
+    "type": "MonoBehaviour",
+    "name": "w-cute-wink01"
+  },
+  {
+    "path_id": "-3204991541247209616",
+    "type": "MonoBehaviour",
+    "name": "face_idol_wink_03"
+  },
+  {
+    "path_id": "-3143386291681367966",
+    "type": "AnimationClip",
+    "name": "face_trouble_01"
+  },
+  {
+    "path_id": "-3108901197201517075",
+    "type": "AnimationClip",
+    "name": "w-cute-glad06r"
+  },
+  {
+    "path_id": "-3073290355196736015",
+    "type": "MonoBehaviour",
+    "name": "face_street_beamazed_01"
+  },
+  {
+    "path_id": "-3007941643428460992",
+    "type": "MonoBehaviour",
+    "name": "w-adult-trouble02"
+  },
+  {
+    "path_id": "-2938387287332817869",
+    "type": "AnimationClip",
+    "name": "w-happy-sad02"
+  },
+  {
+    "path_id": "-2890051976954142862",
+    "type": "MonoBehaviour",
+    "name": "w-animal-fidget01"
+  },
+  {
+    "path_id": "-2886840840646139694",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead08"
+  },
+  {
+    "path_id": "-2886538218501831315",
+    "type": "AnimationClip",
+    "name": "w-normal-relief01"
+  },
+  {
+    "path_id": "-2838014227310570025",
+    "type": "AnimationClip",
+    "name": "face_wonder_blushed_01"
+  },
+  {
+    "path_id": "-2809638721928017954",
+    "type": "MonoBehaviour",
+    "name": "w-cute-shakehead03"
+  },
+  {
+    "path_id": "-2774077263767352607",
+    "type": "MonoBehaviour",
+    "name": "w-normal-greeting01"
+  },
+  {
+    "path_id": "-2740157370441626013",
+    "type": "AnimationClip",
+    "name": "face_street_surprise_01"
+  },
+  {
+    "path_id": "-2691868733062153436",
+    "type": "MonoBehaviour",
+    "name": "w-cute-nod05"
+  },
+  {
+    "path_id": "-2680227055091987754",
+    "type": "AnimationClip",
+    "name": "face_closeeye_01"
+  },
+  {
+    "path_id": "-2616205023982218232",
+    "type": "MonoBehaviour",
+    "name": "face_night_surprise_01"
+  },
+  {
+    "path_id": "-2613102046618561307",
+    "type": "AnimationClip",
+    "name": "w-cute-poseforward02"
+  },
+  {
+    "path_id": "-2595136855853354080",
+    "type": "AnimationClip",
+    "name": "w-cute-posetilthead07"
+  },
+  {
+    "path_id": "-2568543191146050972",
+    "type": "AnimationClip",
+    "name": "w-cute-glad03"
+  },
+  {
+    "path_id": "-2561813470937263028",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_smallmouth_01"
+  },
+  {
+    "path_id": "-2560217467808923082",
+    "type": "MonoBehaviour",
+    "name": "w-happy-forward01"
+  },
+  {
+    "path_id": "-2558260479252274502",
+    "type": "MonoBehaviour",
+    "name": "face_night_closeeye_01"
+  },
+  {
+    "path_id": "-2502048393797803948",
+    "type": "MonoBehaviour",
+    "name": "w-normal-angry01"
+  },
+  {
+    "path_id": "-2490049277350343918",
+    "type": "AnimationClip",
+    "name": "face_street_closeeye_01"
+  },
+  {
+    "path_id": "-2468401890670141369",
+    "type": "MonoBehaviour",
+    "name": "w-cool-posenod02"
+  },
+  {
+    "path_id": "-2445016057511878715",
+    "type": "MonoBehaviour",
+    "name": "w-cutenormal-tilthead0705"
+  },
+  {
+    "path_id": "-2438618332991368333",
+    "type": "AnimationClip",
+    "name": "w-happy-sigh01"
+  },
+  {
+    "path_id": "-2420629961614416168",
+    "type": "MonoBehaviour",
+    "name": "face_idol_surprise_01"
+  },
+  {
+    "path_id": "-2412326219247128651",
+    "type": "AnimationClip",
+    "name": "w-cutehappy-shakeheadsad0201"
+  },
+  {
+    "path_id": "-2350651707850223536",
+    "type": "AnimationClip",
+    "name": "face_wonder_closeeye_02"
+  },
+  {
+    "path_id": "-2348147484454370834",
+    "type": "AnimationClip",
+    "name": "face_wonder_bothered_01"
+  },
+  {
+    "path_id": "-2319254470499623899",
+    "type": "AnimationClip",
+    "name": "w-cool-forward01"
+  },
+  {
+    "path_id": "-2270258105993995873",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0302"
+  },
+  {
+    "path_id": "-2256759840463245631",
+    "type": "AnimationClip",
+    "name": "w-cool-blushed01"
+  },
+  {
+    "path_id": "-2242162697182302692",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead0402"
+  },
+  {
+    "path_id": "-2225177895516345005",
+    "type": "AnimationClip",
+    "name": "face_wonder_trouble_01"
+  },
+  {
+    "path_id": "-2199755397219184168",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0106"
+  },
+  {
+    "path_id": "-2199451659936288669",
+    "type": "MonoBehaviour",
+    "name": "face_band_eat_01"
+  },
+  {
+    "path_id": "-2149703346023229155",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0605"
+  },
+  {
+    "path_id": "-2134363692264461601",
+    "type": "MonoBehaviour",
+    "name": "w-cute-nod06"
+  },
+  {
+    "path_id": "-2027210744323535569",
+    "type": "MonoBehaviour",
+    "name": "w-cute-delicious01"
+  },
+  {
+    "path_id": "-2011405247222532652",
+    "type": "MonoBehaviour",
+    "name": "w-normal-glad01"
+  },
+  {
+    "path_id": "-1989967765669905793",
+    "type": "MonoBehaviour",
+    "name": "face_normal_01"
+  },
+  {
+    "path_id": "-1980645014159331386",
+    "type": "AnimationClip",
+    "name": "w-adult-think02"
+  },
+  {
+    "path_id": "-1969486484466257907",
+    "type": "AnimationClip",
+    "name": "w-cool-sigh01"
+  },
+  {
+    "path_id": "-1952053712520721117",
+    "type": "MonoBehaviour",
+    "name": "w-special12-catchB"
+  },
+  {
+    "path_id": "-1946735922107425512",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0503"
+  },
+  {
+    "path_id": "-1871519457179009412",
+    "type": "AnimationClip",
+    "name": "w-normal-nod06"
+  },
+  {
+    "path_id": "-1833354162312006009",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0308"
+  },
+  {
+    "path_id": "-1798420427477039404",
+    "type": "AnimationClip",
+    "name": "face_night_sad_03"
+  },
+  {
+    "path_id": "-1797670157121381529",
+    "type": "AnimationClip",
+    "name": "w-cute-shakehead01"
+  },
+  {
+    "path_id": "-1749831910038620461",
+    "type": "AnimationClip",
+    "name": "face_angry_01"
+  },
+  {
+    "path_id": "-1746188349414222284",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0702"
+  },
+  {
+    "path_id": "-1712272425261954976",
+    "type": "MonoBehaviour",
+    "name": "face_sad_02"
+  },
+  {
+    "path_id": "-1710626638921473402",
+    "type": "MonoBehaviour",
+    "name": "w-cool-sigh02"
+  },
+  {
+    "path_id": "-1705628881143257443",
+    "type": "MonoBehaviour",
+    "name": "w-adult-tilthead04"
+  },
+  {
+    "path_id": "-1682029371622020682",
+    "type": "MonoBehaviour",
+    "name": "w-cool-posenod01"
+  },
+  {
+    "path_id": "-1679005546080544530",
+    "type": "AnimationClip",
+    "name": "w-normal-posenod02"
+  },
+  {
+    "path_id": "-1660056898125034250",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead05"
+  },
+  {
+    "path_id": "-1610504291196791785",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_04"
+  },
+  {
+    "path_id": "-1595048698936130862",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0203"
+  },
+  {
+    "path_id": "-1593607715691243550",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead01"
+  },
+  {
+    "path_id": "-1542379269045865616",
+    "type": "AnimationClip",
+    "name": "w-cute-shakehead02"
+  },
+  {
+    "path_id": "-1505497870921101151",
+    "type": "AnimationClip",
+    "name": "face_wonder_cry_01"
+  },
+  {
+    "path_id": "-1494364011607293046",
+    "type": "AnimationClip",
+    "name": "w-adult-tilthead05"
+  },
+  {
+    "path_id": "-1473790108163119805",
+    "type": "AnimationClip",
+    "name": "face_wonder_smallmouth_01"
+  },
+  {
+    "path_id": "-1435870198995366648",
+    "type": "AnimationClip",
+    "name": "face_idol_sparkling_02"
+  },
+  {
+    "path_id": "-1433083282142283336",
+    "type": "AnimationClip",
+    "name": "face_night_kirakira_01"
+  },
+  {
+    "path_id": "-1386288719770037595",
+    "type": "AnimationClip",
+    "name": "w-normal-sigh01"
+  },
+  {
+    "path_id": "-1366724807205512953",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0305"
+  },
+  {
+    "path_id": "-1363228469978382624",
+    "type": "AnimationClip",
+    "name": "face_idol_surprise_01"
+  },
+  {
+    "path_id": "-1358729119301083688",
+    "type": "AnimationClip",
+    "name": "face_idol_smallmouth_01"
+  },
+  {
+    "path_id": "-1310078988558337172",
+    "type": "MonoBehaviour",
+    "name": "w-cutehappy-shakeheadsad0201"
+  },
+  {
+    "path_id": "-1304319433250364154",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_01"
+  },
+  {
+    "path_id": "-1298727061892939592",
+    "type": "AnimationClip",
+    "name": "w-animal-fidget02"
+  },
+  {
+    "path_id": "-1294503802925732325",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod04"
+  },
+  {
+    "path_id": "-1285359756020518183",
+    "type": "MonoBehaviour",
+    "name": "face_idol_blushed_01"
+  },
+  {
+    "path_id": "-1268052892375264038",
+    "type": "MonoBehaviour",
+    "name": "w-cute-posetilthead07"
+  },
+  {
+    "path_id": "-1233413348047450901",
+    "type": "AnimationClip",
+    "name": "face_shy_02"
+  },
+  {
+    "path_id": "-1219436970158644972",
+    "type": "AnimationClip",
+    "name": "face_wonder_train_01"
+  },
+  {
+    "path_id": "-1209358429648633221",
+    "type": "MonoBehaviour",
+    "name": "w-animal-fidget02"
+  },
+  {
+    "path_id": "-1163847998476490582",
+    "type": "MonoBehaviour",
+    "name": "w-cute-delicious02"
+  },
+  {
+    "path_id": "-1162664686410039451",
+    "type": "AnimationClip",
+    "name": "face_night_sad_02"
+  },
+  {
+    "path_id": "-1161825692134990596",
+    "type": "AnimationClip",
+    "name": "w-adult-blushed02"
+  },
+  {
+    "path_id": "-1122886061006112626",
+    "type": "AnimationClip",
+    "name": "w-normal-lookaway01"
+  },
+  {
+    "path_id": "-1105592703798893094",
+    "type": "MonoBehaviour",
+    "name": "w-cool-blushed01"
+  },
+  {
+    "path_id": "-1096094861062389464",
+    "type": "MonoBehaviour",
+    "name": "w-happy-nod04"
+  },
+  {
+    "path_id": "-1086613600753749613",
+    "type": "AnimationClip",
+    "name": "w-normal-forward02"
+  },
+  {
+    "path_id": "-999846107581589524",
+    "type": "AnimationClip",
+    "name": "face_night_trouble_02"
+  },
+  {
+    "path_id": "-947363338151553735",
+    "type": "AnimationClip",
+    "name": "w-adult-posetrouble02"
+  },
+  {
+    "path_id": "-942245289401222126",
+    "type": "MonoBehaviour",
+    "name": "face_smile_04"
+  },
+  {
+    "path_id": "-935806512173221415",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0803"
+  },
+  {
+    "path_id": "-868191259977957517",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad01"
+  },
+  {
+    "path_id": "-859527826315169272",
+    "type": "AnimationClip",
+    "name": "w-happy-posetilthead02"
+  },
+  {
+    "path_id": "-836540733346385490",
+    "type": "AnimationClip",
+    "name": "w-animal-fidget01"
+  },
+  {
+    "path_id": "-833305119806674037",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead01"
+  },
+  {
+    "path_id": "-735126778679319409",
+    "type": "MonoBehaviour",
+    "name": "w-happy-shakehead03"
+  },
+  {
+    "path_id": "-734481936380686806",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_06"
+  },
+  {
+    "path_id": "-711897601446677518",
+    "type": "MonoBehaviour",
+    "name": "w-cute-forward03"
+  },
+  {
+    "path_id": "-700496613387917226",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead01"
+  },
+  {
+    "path_id": "-697477808757679919",
+    "type": "MonoBehaviour",
+    "name": "face_street_smile_03"
+  },
+  {
+    "path_id": "-696059944107283159",
+    "type": "AnimationClip",
+    "name": "face_band_trouble_01"
+  },
+  {
+    "path_id": "-692831871192799519",
+    "type": "AnimationClip",
+    "name": "w-adult-tilthead01"
+  },
+  {
+    "path_id": "-680502418625294118",
+    "type": "AnimationClip",
+    "name": "face_band_e_01"
+  },
+  {
+    "path_id": "-669712754326242769",
+    "type": "AnimationClip",
+    "name": "w-cute-shy02"
+  },
+  {
+    "path_id": "-639659298226663109",
+    "type": "MonoBehaviour",
+    "name": "w-adult-blushed03"
+  },
+  {
+    "path_id": "-631212333555573396",
+    "type": "AnimationClip",
+    "name": "face_wonder_normal_01"
+  },
+  {
+    "path_id": "-618564118691659489",
+    "type": "AnimationClip",
+    "name": "face_idol_sparkling_01"
+  },
+  {
+    "path_id": "-563640182006164227",
+    "type": "AnimationClip",
+    "name": "w-cute-nod03"
+  },
+  {
+    "path_id": "-559313941636547747",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod05"
+  },
+  {
+    "path_id": "-552367839369906103",
+    "type": "AnimationClip",
+    "name": "face_band_smile_02"
+  },
+  {
+    "path_id": "-497906142542304374",
+    "type": "AnimationClip",
+    "name": "w-happy-angry01"
+  },
+  {
+    "path_id": "-496232243723628920",
+    "type": "MonoBehaviour",
+    "name": "w-cool-posetilthead03"
+  },
+  {
+    "path_id": "-425175327273338450",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0302"
+  },
+  {
+    "path_id": "-417467748052516129",
+    "type": "AnimationClip",
+    "name": "w-adult-tilthead04"
+  },
+  {
+    "path_id": "-335447166754398813",
+    "type": "MonoBehaviour",
+    "name": "w-animal-lookaway01"
+  },
+  {
+    "path_id": "-329634218080190648",
+    "type": "MonoBehaviour",
+    "name": "w-cool-nod02"
+  },
+  {
+    "path_id": "-307182265875674932",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_normal_01"
+  },
+  {
+    "path_id": "-293415612536862800",
+    "type": "AnimationClip",
+    "name": "face_night_surprise_02"
+  },
+  {
+    "path_id": "-290892410703691983",
+    "type": "AnimationClip",
+    "name": "w-adult-nod01"
+  },
+  {
+    "path_id": "-280514550423352144",
+    "type": "MonoBehaviour",
+    "name": "face_smile_07"
+  },
+  {
+    "path_id": "-269547278077532983",
+    "type": "MonoBehaviour",
+    "name": "face_band_closeeye_01"
+  },
+  {
+    "path_id": "-261936542473222905",
+    "type": "AnimationClip",
+    "name": "face_wonder_tired_01"
+  },
+  {
+    "path_id": "-255134201629176689",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smile_02"
+  },
+  {
+    "path_id": "-249465688193043662",
+    "type": "MonoBehaviour",
+    "name": "w-cool-sigh01"
+  },
+  {
+    "path_id": "-240065597199773636",
+    "type": "AnimationClip",
+    "name": "face_trouble_02"
+  },
+  {
+    "path_id": "-232211118976181582",
+    "type": "AnimationClip",
+    "name": "w-normal-glad01"
+  },
+  {
+    "path_id": "-227299173307305108",
+    "type": "AnimationClip",
+    "name": "face_idol_closeeye_01"
+  },
+  {
+    "path_id": "-141102806154158445",
+    "type": "AnimationClip",
+    "name": "face_idol_smile_03"
+  },
+  {
+    "path_id": "-126357115941490636",
+    "type": "MonoBehaviour",
+    "name": "w-happy-tilthead04"
+  },
+  {
+    "path_id": "-116196626474989509",
+    "type": "AnimationClip",
+    "name": "w-normal-pose01"
+  },
+  {
+    "path_id": "-94262686280158159",
+    "type": "AnimationClip",
+    "name": "w-cool-posetilthead03"
+  },
+  {
+    "path_id": "-94195687693217668",
+    "type": "AnimationClip",
+    "name": "w-cool-posenod03"
+  },
+  {
+    "path_id": "4872411150354099",
+    "type": "MonoBehaviour",
+    "name": "w-cute-posenod01"
+  },
+  {
+    "path_id": "18211318478811374",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead05"
+  },
+  {
+    "path_id": "31185008223872912",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad06r"
+  },
+  {
+    "path_id": "43918399417477401",
+    "type": "AnimationClip",
+    "name": "face_street_sad_01"
+  },
+  {
+    "path_id": "95877076748176793",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad05"
+  },
+  {
+    "path_id": "107156519773064947",
+    "type": "MonoBehaviour",
+    "name": "w-cute-smug01"
+  },
+  {
+    "path_id": "117758641722464542",
+    "type": "MonoBehaviour",
+    "name": "w-cute-shy01"
+  },
+  {
+    "path_id": "163478316926676302",
+    "type": "AnimationClip",
+    "name": "w-animal-posenod01"
+  },
+  {
+    "path_id": "249740999580256722",
+    "type": "MonoBehaviour",
+    "name": "face_street_blushed_01"
+  },
+  {
+    "path_id": "282593013776279336",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead04"
+  },
+  {
+    "path_id": "284607603986790618",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead02"
+  },
+  {
+    "path_id": "293557536405897398",
+    "type": "AnimationClip",
+    "name": "w-cutenormal-tilthead0705"
+  },
+  {
+    "path_id": "303990738907535875",
+    "type": "AnimationClip",
+    "name": "face_band_smallmouth_01"
+  },
+  {
+    "path_id": "328386972536664866",
+    "type": "AnimationClip",
+    "name": "face_night_angry_01"
+  },
+  {
+    "path_id": "344181824317635052",
+    "type": "AnimationClip",
+    "name": "face_blushed_01"
+  },
+  {
+    "path_id": "393542582568070072",
+    "type": "MonoBehaviour",
+    "name": "w-adult-glad03"
+  },
+  {
+    "path_id": "461477854990844421",
+    "type": "MonoBehaviour",
+    "name": "w-cool-angry01"
+  },
+  {
+    "path_id": "470267831710656030",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead06"
+  },
+  {
+    "path_id": "623777791964971938",
+    "type": "AnimationClip",
+    "name": "w-normal-purpose01"
+  },
+  {
+    "path_id": "628260027092649637",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_e_01"
+  },
+  {
+    "path_id": "639937636849019254",
+    "type": "MonoBehaviour",
+    "name": "face_smile_01"
+  },
+  {
+    "path_id": "658760375836578907",
+    "type": "MonoBehaviour",
+    "name": "face_idol_sleepy_01"
+  },
+  {
+    "path_id": "674947170316643487",
+    "type": "AnimationClip",
+    "name": "w-cute-forward02_nb"
+  },
+  {
+    "path_id": "680429114379245055",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_angry_02"
+  },
+  {
+    "path_id": "707845967144972633",
+    "type": "MonoBehaviour",
+    "name": "face_idol_sad_01"
+  },
+  {
+    "path_id": "750630676183262713",
+    "type": "MonoBehaviour",
+    "name": "face_idol_wink_01"
+  },
+  {
+    "path_id": "773093067698342024",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead02"
+  },
+  {
+    "path_id": "778998593871542902",
+    "type": "MonoBehaviour",
+    "name": "face_night_surprise_02"
+  },
+  {
+    "path_id": "819053984412322368",
+    "type": "MonoBehaviour",
+    "name": "w-cute-shy03"
+  },
+  {
+    "path_id": "850057750388008447",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0605"
+  },
+  {
+    "path_id": "857808112810877074",
+    "type": "AnimationClip",
+    "name": "w-normal-nod02"
+  },
+  {
+    "path_id": "876561101053643242",
+    "type": "MonoBehaviour",
+    "name": "w-normal-lookright01"
+  },
+  {
+    "path_id": "897298065797007094",
+    "type": "AnimationClip",
+    "name": "w-happy-poseglad02"
+  },
+  {
+    "path_id": "998339459173557037",
+    "type": "AnimationClip",
+    "name": "w-normal-pose06"
+  },
+  {
+    "path_id": "1010244639538874099",
+    "type": "AnimationClip",
+    "name": "face_night_e_01"
+  },
+  {
+    "path_id": "1013583241161101979",
+    "type": "MonoBehaviour",
+    "name": "face_band_wanawana_01"
+  },
+  {
+    "path_id": "1017002536308375316",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead06"
+  },
+  {
+    "path_id": "1022626752936798924",
+    "type": "MonoBehaviour",
+    "name": "w-cool-posetilthead04"
+  },
+  {
+    "path_id": "1047606469976073872",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_cry_04"
+  },
+  {
+    "path_id": "1079334243260201017",
+    "type": "AnimationClip",
+    "name": "w-cute-nod05"
+  },
+  {
+    "path_id": "1083024399443134861",
+    "type": "AnimationClip",
+    "name": "w-adult-relief01"
+  },
+  {
+    "path_id": "1098209012635818841",
+    "type": "MonoBehaviour",
+    "name": "face_smile_05"
+  },
+  {
+    "path_id": "1109861361695779209",
+    "type": "MonoBehaviour",
+    "name": "face_idol_blushed_02"
+  },
+  {
+    "path_id": "1147939263454537529",
+    "type": "AnimationClip",
+    "name": "face_wonder_closeeye_03"
+  },
+  {
+    "path_id": "1150107901454421467",
+    "type": "MonoBehaviour",
+    "name": "w-happy-sigh01"
+  },
+  {
+    "path_id": "1192575788364924226",
+    "type": "AnimationClip",
+    "name": "face_closeeye_02"
+  },
+  {
+    "path_id": "1234948212764773527",
+    "type": "AnimationClip",
+    "name": "w-happy-purpose01"
+  },
+  {
+    "path_id": "1238000155559637386",
+    "type": "AnimationClip",
+    "name": "w-happy-shakehead01"
+  },
+  {
+    "path_id": "1244627547277941352",
+    "type": "MonoBehaviour",
+    "name": "face_idol_trouble_01"
+  },
+  {
+    "path_id": "1256142753893007270",
+    "type": "AnimationClip",
+    "name": "face_wonder_bothered_02"
+  },
+  {
+    "path_id": "1319945895853359341",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smile_04"
+  },
+  {
+    "path_id": "1382023621121812912",
+    "type": "MonoBehaviour",
+    "name": "face_band_smallmouth_01"
+  },
+  {
+    "path_id": "1396766681597262642",
+    "type": "AnimationClip",
+    "name": "w-normal-nod04"
+  },
+  {
+    "path_id": "1408796812965013255",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0301"
+  },
+  {
+    "path_id": "1411010339487025129",
+    "type": "MonoBehaviour",
+    "name": "w-adult-blushed04"
+  },
+  {
+    "path_id": "1425056770096670439",
+    "type": "AnimationClip",
+    "name": "face_surprise_01"
+  },
+  {
+    "path_id": "1487853583251402150",
+    "type": "MonoBehaviour",
+    "name": "face_street_smile_04"
+  },
+  {
+    "path_id": "1488109792413721534",
+    "type": "AnimationClip",
+    "name": "face_wonder_smile_01"
+  },
+  {
+    "path_id": "1490006979113257715",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0503"
+  },
+  {
+    "path_id": "1497201374116233600",
+    "type": "AnimationClip",
+    "name": "face_smile_07"
+  },
+  {
+    "path_id": "1513466746275168922",
+    "type": "AnimationClip",
+    "name": "face_night_eat_01"
+  },
+  {
+    "path_id": "1516740779870674836",
+    "type": "AnimationClip",
+    "name": "w-happy-tilthead02"
+  },
+  {
+    "path_id": "1523358893885388836",
+    "type": "AnimationClip",
+    "name": "w-cute-posenod01"
+  },
+  {
+    "path_id": "1557729238762912534",
+    "type": "MonoBehaviour",
+    "name": "w-happy-nod01"
+  },
+  {
+    "path_id": "1587719121042581166",
+    "type": "AnimationClip",
+    "name": "w-normal-glad02"
+  },
+  {
+    "path_id": "1599116876143087581",
+    "type": "AnimationClip",
+    "name": "face_street_angry_02"
+  },
+  {
+    "path_id": "1603200274306973841",
+    "type": "MonoBehaviour",
+    "name": "w-adult-relief01"
+  },
+  {
+    "path_id": "1606725753532615269",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead07"
+  },
+  {
+    "path_id": "1623170600300510773",
+    "type": "AnimationClip",
+    "name": "w-happy-tilthead03"
+  },
+  {
+    "path_id": "1674099152433479656",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad04"
+  },
+  {
+    "path_id": "1721881755181416662",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad06"
+  },
+  {
+    "path_id": "1743457130185737130",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0506"
+  },
+  {
+    "path_id": "1755279001088234063",
+    "type": "MonoBehaviour",
+    "name": "w-cute-nod04"
+  },
+  {
+    "path_id": "1823362722999843238",
+    "type": "MonoBehaviour",
+    "name": "face_e_01"
+  },
+  {
+    "path_id": "1827963442024741414",
+    "type": "MonoBehaviour",
+    "name": "w-normal-fidget01"
+  },
+  {
+    "path_id": "1829692140900128031",
+    "type": "AnimationClip",
+    "name": "face_street_smile_03"
+  },
+  {
+    "path_id": "1838703179766824040",
+    "type": "AnimationClip",
+    "name": "w-cute-nod06"
+  },
+  {
+    "path_id": "1854655693727535769",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod01"
+  },
+  {
+    "path_id": "1877563080879812946",
+    "type": "AnimationClip",
+    "name": "face_idol_normal_01"
+  },
+  {
+    "path_id": "1951429740758135719",
+    "type": "AnimationClip",
+    "name": "face_idol_wink_03"
+  },
+  {
+    "path_id": "1962066279173915295",
+    "type": "AnimationClip",
+    "name": "face_smile_06"
+  },
+  {
+    "path_id": "1983541893616986462",
+    "type": "MonoBehaviour",
+    "name": "w-adult-blushed01"
+  },
+  {
+    "path_id": "1992324775004302369",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0302"
+  },
+  {
+    "path_id": "2011186408086851896",
+    "type": "AnimationClip",
+    "name": "face_night_angry_02"
+  },
+  {
+    "path_id": "2026851377867927137",
+    "type": "MonoBehaviour",
+    "name": "w-cool-forward02"
+  },
+  {
+    "path_id": "2049475828541029706",
+    "type": "MonoBehaviour",
+    "name": "w-cool-nod01"
+  },
+  {
+    "path_id": "2093662173057302954",
+    "type": "AnimationClip",
+    "name": "w-happy-shakehand01"
+  },
+  {
+    "path_id": "2112005261094796986",
+    "type": "MonoBehaviour",
+    "name": "face_street_angry_01"
+  },
+  {
+    "path_id": "2130466501823821870",
+    "type": "MonoBehaviour",
+    "name": "face_idol_sparkling_02"
+  },
+  {
+    "path_id": "2134641039535000157",
+    "type": "AnimationClip",
+    "name": "w-animal-tiltheadnod0101"
+  },
+  {
+    "path_id": "2163848898938020161",
+    "type": "MonoBehaviour",
+    "name": "face_night_trouble_01"
+  },
+  {
+    "path_id": "2174851270548306194",
+    "type": "MonoBehaviour",
+    "name": "w-cool-shakehead02"
+  },
+  {
+    "path_id": "2179308412768507653",
+    "type": "AnimationClip",
+    "name": "w-cool-sad01"
+  },
+  {
+    "path_id": "2234811703868765202",
+    "type": "MonoBehaviour",
+    "name": "w-normal-pose06"
+  },
+  {
+    "path_id": "2242258498680005356",
+    "type": "MonoBehaviour",
+    "name": "face_night_smile_01"
+  },
+  {
+    "path_id": "2325724632720512001",
+    "type": "AnimationClip",
+    "name": "face_wonder_guruguru_01"
+  },
+  {
+    "path_id": "2334964397522804861",
+    "type": "AnimationClip",
+    "name": "face_wonder_sad_01"
+  },
+  {
+    "path_id": "2350697821541530998",
+    "type": "MonoBehaviour",
+    "name": "w-cute-poseforward02"
+  },
+  {
+    "path_id": "2393122640180474303",
+    "type": "MonoBehaviour",
+    "name": "w-happy-glad02"
+  },
+  {
+    "path_id": "2436504439226378207",
+    "type": "MonoBehaviour",
+    "name": "face_idol_hawawa_01"
+  },
+  {
+    "path_id": "2458398757237687862",
+    "type": "AnimationClip",
+    "name": "w-animal-nod01"
+  },
+  {
+    "path_id": "2481387612342838482",
+    "type": "AnimationClip",
+    "name": "w-adult-trouble02"
+  },
+  {
+    "path_id": "2488598075370953205",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead05"
+  },
+  {
+    "path_id": "2489383330568760443",
+    "type": "MonoBehaviour",
+    "name": "w-normal-purpose01"
+  },
+  {
+    "path_id": "2501846607280734376",
+    "type": "MonoBehaviour",
+    "name": "w-cute-posetilthead04"
+  },
+  {
+    "path_id": "2529009067575325347",
+    "type": "MonoBehaviour",
+    "name": "w-adult-shakehead01"
+  },
+  {
+    "path_id": "2546501324825828714",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_kirakira_01"
+  },
+  {
+    "path_id": "2554093164285695466",
+    "type": "MonoBehaviour",
+    "name": "w-adult-nod05"
+  },
+  {
+    "path_id": "2589663821847838776",
+    "type": "AnimationClip",
+    "name": "face_idol_e_01"
+  },
+  {
+    "path_id": "2647351010658472993",
+    "type": "MonoBehaviour",
+    "name": "w-animal-shy01"
+  },
+  {
+    "path_id": "2697425067989045276",
+    "type": "MonoBehaviour",
+    "name": "face_sad_01"
+  },
+  {
+    "path_id": "2700429150810191434",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smile_01"
+  },
+  {
+    "path_id": "2725650836304246484",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead05"
+  },
+  {
+    "path_id": "2743896104583270627",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead0204"
+  },
+  {
+    "path_id": "2747370669873193213",
+    "type": "MonoBehaviour",
+    "name": "face_idol_sparkling_01"
+  },
+  {
+    "path_id": "2776109018709129011",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead06r"
+  },
+  {
+    "path_id": "2836283713042554373",
+    "type": "AnimationClip",
+    "name": "face_shy_01"
+  },
+  {
+    "path_id": "2862915039068171395",
+    "type": "AnimationClip",
+    "name": "w-cool-posenod02"
+  },
+  {
+    "path_id": "2878761368995436518",
+    "type": "MonoBehaviour",
+    "name": "w-cute-posenod02"
+  },
+  {
+    "path_id": "2911007703072228841",
+    "type": "AnimationClip",
+    "name": "w-normal-pose04"
+  },
+  {
+    "path_id": "2945733876126180608",
+    "type": "AnimationClip",
+    "name": "w-cute-glad05"
+  },
+  {
+    "path_id": "2956222780386193413",
+    "type": "MonoBehaviour",
+    "name": "w-cute-shakehead02"
+  },
+  {
+    "path_id": "2960952883821769857",
+    "type": "AnimationClip",
+    "name": "face_night_smallmouth_01"
+  },
+  {
+    "path_id": "3005829536915389921",
+    "type": "AnimationClip",
+    "name": "w-normal-lookright01"
+  },
+  {
+    "path_id": "3011696790294986103",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_closeeye_03"
+  },
+  {
+    "path_id": "3116360772308026321",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod01r"
+  },
+  {
+    "path_id": "3154771482068139922",
+    "type": "AnimationClip",
+    "name": "w-cute-nod04"
+  },
+  {
+    "path_id": "3177834829290915073",
+    "type": "AnimationClip",
+    "name": "face_wonder_cry_03"
+  },
+  {
+    "path_id": "3269044617750445610",
+    "type": "AnimationClip",
+    "name": "w-cute-forward03"
+  },
+  {
+    "path_id": "3284458905124890613",
+    "type": "AnimationClip",
+    "name": "w-happy-nod03"
+  },
+  {
+    "path_id": "3363865449848977129",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_cat_01"
+  },
+  {
+    "path_id": "3368379121164201626",
+    "type": "AnimationClip",
+    "name": "face_street_blushed_01"
+  },
+  {
+    "path_id": "3392549267132989746",
+    "type": "MonoBehaviour",
+    "name": "w-normal-sigh01"
+  },
+  {
+    "path_id": "3445289196339130279",
+    "type": "AnimationClip",
+    "name": "w-normal-blushed01"
+  },
+  {
+    "path_id": "3463233274848087475",
+    "type": "MonoBehaviour",
+    "name": "w-normal-pose04"
+  },
+  {
+    "path_id": "3487952032514764232",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0807"
+  },
+  {
+    "path_id": "3490806892461024086",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0302"
+  },
+  {
+    "path_id": "3509405475836042864",
+    "type": "AnimationClip",
+    "name": "face_band_closeeye_01"
+  },
+  {
+    "path_id": "3522869549299306020",
+    "type": "MonoBehaviour",
+    "name": "w-special12-catch"
+  },
+  {
+    "path_id": "3579200097681838804",
+    "type": "AnimationClip",
+    "name": "w-adult-shakehead01"
+  },
+  {
+    "path_id": "3594118612220252563",
+    "type": "AnimationClip",
+    "name": "w-cute-nod01"
+  },
+  {
+    "path_id": "3603790897722759915",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead04"
+  },
+  {
+    "path_id": "3643395437199349120",
+    "type": "AnimationClip",
+    "name": "w-cute-wink01"
+  },
+  {
+    "path_id": "3666585217026584679",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0206"
+  },
+  {
+    "path_id": "3758860215053067790",
+    "type": "MonoBehaviour",
+    "name": "w-happy-angry01"
+  },
+  {
+    "path_id": "3781232556870004626",
+    "type": "AnimationClip",
+    "name": "w-cute-delicious02"
+  },
+  {
+    "path_id": "3792691658898451452",
+    "type": "MonoBehaviour",
+    "name": "face_idol_closeeye_03"
+  },
+  {
+    "path_id": "3834083170872389173",
+    "type": "AnimationClip",
+    "name": "face_band_blushed_02"
+  },
+  {
+    "path_id": "3872102990532961746",
+    "type": "AnimationClip",
+    "name": "face_sad_01"
+  },
+  {
+    "path_id": "3875815914758516048",
+    "type": "AnimationClip",
+    "name": "w-cute-forward02"
+  },
+  {
+    "path_id": "3883342196562274336",
+    "type": "AnimationClip",
+    "name": "face_normal_01"
+  },
+  {
+    "path_id": "3985436127194119499",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0803"
+  },
+  {
+    "path_id": "4000643665234900619",
+    "type": "MonoBehaviour",
+    "name": "face_night_angry_01"
+  },
+  {
+    "path_id": "4030306220205087356",
+    "type": "MonoBehaviour",
+    "name": "face_street_angry_02"
+  },
+  {
+    "path_id": "4034578120822441687",
+    "type": "AnimationClip",
+    "name": "face_band_angry_01"
+  },
+  {
+    "path_id": "4057026678063197897",
+    "type": "MonoBehaviour",
+    "name": "w-adult-nod02"
+  },
+  {
+    "path_id": "4061338204498755609",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0301"
+  },
+  {
+    "path_id": "4080152727079831340",
+    "type": "MonoBehaviour",
+    "name": "w-normal-pose03"
+  },
+  {
+    "path_id": "4086436448323466923",
+    "type": "MonoBehaviour",
+    "name": "w-cute-shy02"
+  },
+  {
+    "path_id": "4090329155797618382",
+    "type": "AnimationClip",
+    "name": "w-animal-lookaway01"
+  },
+  {
+    "path_id": "4149852935135212062",
+    "type": "MonoBehaviour",
+    "name": "w-normal-lookaway01"
+  },
+  {
+    "path_id": "4160663636550009536",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead04"
+  },
+  {
+    "path_id": "4167998746786709668",
+    "type": "MonoBehaviour",
+    "name": "w-happy-shakehand01"
+  },
+  {
+    "path_id": "4248256912455804251",
+    "type": "MonoBehaviour",
+    "name": "w-cute-fidget01"
+  },
+  {
+    "path_id": "4256568675411425957",
+    "type": "AnimationClip",
+    "name": "w-happy-shakehead03"
+  },
+  {
+    "path_id": "4298655815185121899",
+    "type": "MonoBehaviour",
+    "name": "face_trouble_02"
+  },
+  {
+    "path_id": "4304452840506347139",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead06r"
+  },
+  {
+    "path_id": "4312662409364385524",
+    "type": "MonoBehaviour",
+    "name": "w-adult-nod01"
+  },
+  {
+    "path_id": "4324625672700127336",
+    "type": "AnimationClip",
+    "name": "face_smile_01"
+  },
+  {
+    "path_id": "4391966473524733601",
+    "type": "AnimationClip",
+    "name": "face_wonder_bothered_03"
+  },
+  {
+    "path_id": "4470603510099641429",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead09"
+  },
+  {
+    "path_id": "4494201036734938383",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead0708"
+  },
+  {
+    "path_id": "4516139192619558681",
+    "type": "MonoBehaviour",
+    "name": "w-animal-tiltheadnod0101"
+  },
+  {
+    "path_id": "4520527911632807742",
+    "type": "AnimationClip",
+    "name": "w-happy-nod05"
+  },
+  {
+    "path_id": "4520667079453252883",
+    "type": "MonoBehaviour",
+    "name": "face_band_closeeye_03"
+  },
+  {
+    "path_id": "4558811504030386654",
+    "type": "AnimationClip",
+    "name": "w-normal-pose02"
+  },
+  {
+    "path_id": "4559514482930349051",
+    "type": "AnimationClip",
+    "name": "w-happy-forward02"
+  },
+  {
+    "path_id": "4650846627873069341",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead01r"
+  },
+  {
+    "path_id": "4662733049995340577",
+    "type": "MonoBehaviour",
+    "name": "w-cute-nod03"
+  },
+  {
+    "path_id": "4715464186300825680",
+    "type": "MonoBehaviour",
+    "name": "w-cool-trouble01"
+  },
+  {
+    "path_id": "4734467324328094898",
+    "type": "MonoBehaviour",
+    "name": "w-normal-trouble02"
+  },
+  {
+    "path_id": "4755420760412033837",
+    "type": "AnimationClip",
+    "name": "w-cool-posesad01"
+  },
+  {
+    "path_id": "4773471385348260817",
+    "type": "AnimationClip",
+    "name": "face_wonder_01"
+  },
+  {
+    "path_id": "4784198591304232576",
+    "type": "MonoBehaviour",
+    "name": "w-happy-posenod03"
+  },
+  {
+    "path_id": "4820516969771024073",
+    "type": "AnimationClip",
+    "name": "w-adult-glad01"
+  },
+  {
+    "path_id": "4846648403456946668",
+    "type": "MonoBehaviour",
+    "name": "face_street_smile_02"
+  },
+  {
+    "path_id": "4872848097074018456",
+    "type": "AnimationClip",
+    "name": "face_wonder_cry_04"
+  },
+  {
+    "path_id": "4881970094692377587",
+    "type": "AnimationClip",
+    "name": "w-normal-yurayura01"
+  },
+  {
+    "path_id": "4954739976038497817",
+    "type": "MonoBehaviour",
+    "name": "w-happy-nod05"
+  },
+  {
+    "path_id": "4981907533291994299",
+    "type": "AnimationClip",
+    "name": "face_band_smile_04"
+  },
+  {
+    "path_id": "4994020416196136037",
+    "type": "MonoBehaviour",
+    "name": "w-happy-sad01"
+  },
+  {
+    "path_id": "4995598270601676320",
+    "type": "AnimationClip",
+    "name": "w-normal-forward01"
+  },
+  {
+    "path_id": "5021624393332626549",
+    "type": "MonoBehaviour",
+    "name": "face_street_sad_01"
+  },
+  {
+    "path_id": "5032601437051488409",
+    "type": "MonoBehaviour",
+    "name": "face_band_disgust_01"
+  },
+  {
+    "path_id": "5055709712036083982",
+    "type": "AnimationClip",
+    "name": "w-animal-nodtilthead0101"
+  },
+  {
+    "path_id": "5100549689590417618",
+    "type": "MonoBehaviour",
+    "name": "w-happy-purpose01"
+  },
+  {
+    "path_id": "5115808948468269558",
+    "type": "AnimationClip",
+    "name": "w-cute-shakehead03"
+  },
+  {
+    "path_id": "5142070313927742607",
+    "type": "AnimationClip",
+    "name": "face_band_closeeye_02"
+  },
+  {
+    "path_id": "5156700284326616234",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_serious_01"
+  },
+  {
+    "path_id": "5160917411909517014",
+    "type": "MonoBehaviour",
+    "name": "w-cool-nodtilthead0102"
+  },
+  {
+    "path_id": "5169427044167356573",
+    "type": "MonoBehaviour",
+    "name": "face_street_closeeye_02"
+  },
+  {
+    "path_id": "5226308351304525275",
+    "type": "AnimationClip",
+    "name": "face_band_smile_03"
+  },
+  {
+    "path_id": "5231974908385082033",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead03"
+  },
+  {
+    "path_id": "5262538781005818066",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0103"
+  },
+  {
+    "path_id": "5280131841776270386",
+    "type": "MonoBehaviour",
+    "name": "face_night_smile_02"
+  },
+  {
+    "path_id": "5287230094360733483",
+    "type": "MonoBehaviour",
+    "name": "face_night_angry_02"
+  },
+  {
+    "path_id": "5337054393216611394",
+    "type": "AnimationClip",
+    "name": "w-adult-tilthead02"
+  },
+  {
+    "path_id": "5367614748662573191",
+    "type": "AnimationClip",
+    "name": "face_wonder_angry_01"
+  },
+  {
+    "path_id": "5380150106578158697",
+    "type": "AnimationClip",
+    "name": "w-normal-trouble02"
+  },
+  {
+    "path_id": "5435036020495537916",
+    "type": "AnimationClip",
+    "name": "w-cute-nod02"
+  },
+  {
+    "path_id": "5442984848956921089",
+    "type": "AnimationClip",
+    "name": "face_wonder_cry_05"
+  },
+  {
+    "path_id": "5481865090214969359",
+    "type": "MonoBehaviour",
+    "name": "w-normal-forward02"
+  },
+  {
+    "path_id": "5678140882826279745",
+    "type": "MonoBehaviour",
+    "name": "w-happy-shakehead01"
+  },
+  {
+    "path_id": "5682858385829474334",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead06"
+  },
+  {
+    "path_id": "5711885086653647660",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead09"
+  },
+  {
+    "path_id": "5718997771464493489",
+    "type": "MonoBehaviour",
+    "name": "w-adult-delicious03"
+  },
+  {
+    "path_id": "5736591398970992357",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_cry_03"
+  },
+  {
+    "path_id": "5761254042265465964",
+    "type": "AnimationClip",
+    "name": "w-adult-shakehand01"
+  },
+  {
+    "path_id": "5769766993133693983",
+    "type": "MonoBehaviour",
+    "name": "face_closeeye_02"
+  },
+  {
+    "path_id": "5799423347110155846",
+    "type": "MonoBehaviour",
+    "name": "face_band_sad_01"
+  },
+  {
+    "path_id": "5803363742003506306",
+    "type": "MonoBehaviour",
+    "name": "w-normal-relief01"
+  },
+  {
+    "path_id": "5805319956309533785",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0506"
+  },
+  {
+    "path_id": "5818485691646571273",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead03"
+  },
+  {
+    "path_id": "5829701911798716365",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead07_nb"
+  },
+  {
+    "path_id": "5861865387597307562",
+    "type": "AnimationClip",
+    "name": "w-cool-posenod01"
+  },
+  {
+    "path_id": "5883487699003463617",
+    "type": "AnimationClip",
+    "name": "w-happy-nod02"
+  },
+  {
+    "path_id": "5894290043490196030",
+    "type": "MonoBehaviour",
+    "name": "w-normal-blushed01"
+  },
+  {
+    "path_id": "5904595738691740821",
+    "type": "MonoBehaviour",
+    "name": "w-normal-pose01"
+  },
+  {
+    "path_id": "5962806042715386756",
+    "type": "AnimationClip",
+    "name": "face_smallmouth_01"
+  },
+  {
+    "path_id": "5978846452130569388",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead02"
+  },
+  {
+    "path_id": "6008522898354203427",
+    "type": "AnimationClip",
+    "name": "face_band_smile_06"
+  },
+  {
+    "path_id": "6039021426515791958",
+    "type": "MonoBehaviour",
+    "name": "w-normal-nod02"
+  },
+  {
+    "path_id": "6057332106467268195",
+    "type": "MonoBehaviour",
+    "name": "w-cool-shakehead01"
+  },
+  {
+    "path_id": "6065233547253595152",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead0601"
+  },
+  {
+    "path_id": "6135264779180463416",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead07"
+  },
+  {
+    "path_id": "6137943619434010213",
+    "type": "AnimationClip",
+    "name": "face_wonder_closeeye_01"
+  },
+  {
+    "path_id": "6206296441248892489",
+    "type": "AnimationClip",
+    "name": "w-normalcute-nodshakehead0302"
+  },
+  {
+    "path_id": "6227585386159546246",
+    "type": "MonoBehaviour",
+    "name": "face_idol_smile_03"
+  },
+  {
+    "path_id": "6251002797214249188",
+    "type": "AnimationClip",
+    "name": "face_night_smile_01"
+  },
+  {
+    "path_id": "6251577411772611869",
+    "type": "AnimationClip",
+    "name": "face_night_surprise_01"
+  },
+  {
+    "path_id": "6272418209673052730",
+    "type": "AnimationClip",
+    "name": "face_street_smile_06"
+  },
+  {
+    "path_id": "6290086004740817105",
+    "type": "AnimationClip",
+    "name": "w-animalnormal-nodtilthead0101"
+  },
+  {
+    "path_id": "6328796758714075825",
+    "type": "MonoBehaviour",
+    "name": "face_band_closeeye_02"
+  },
+  {
+    "path_id": "6399899091560253173",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_sad_01"
+  },
+  {
+    "path_id": "6488088957852399897",
+    "type": "AnimationClip",
+    "name": "w-happy-glad01"
+  },
+  {
+    "path_id": "6501654183461378593",
+    "type": "MonoBehaviour",
+    "name": "w-cute-sleep02"
+  },
+  {
+    "path_id": "6533004531600895405",
+    "type": "MonoBehaviour",
+    "name": "w-happy-nod03"
+  },
+  {
+    "path_id": "6536728317584427977",
+    "type": "AnimationClip",
+    "name": "w-adult-blushed01"
+  },
+  {
+    "path_id": "6540239074537598680",
+    "type": "MonoBehaviour",
+    "name": "face_shy_01"
+  },
+  {
+    "path_id": "6568603125760817138",
+    "type": "AnimationClip",
+    "name": "face_idol_closeeye_02"
+  },
+  {
+    "path_id": "6592444009208610215",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_cry_01"
+  },
+  {
+    "path_id": "6617651368778411120",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0602"
+  },
+  {
+    "path_id": "6617658722447645568",
+    "type": "AnimationClip",
+    "name": "w-happy-lookaway01"
+  },
+  {
+    "path_id": "6624949999541225296",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_tired_01"
+  },
+  {
+    "path_id": "6649557016958305543",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_guruguru_01"
+  },
+  {
+    "path_id": "6713199499317460582",
+    "type": "MonoBehaviour",
+    "name": "face_street_closeeye_01"
+  },
+  {
+    "path_id": "6713745411347972975",
+    "type": "AnimationClip",
+    "name": "w-cute-sleep02"
+  },
+  {
+    "path_id": "6752164338383277420",
+    "type": "AnimationClip",
+    "name": "face_idol_smile_04"
+  },
+  {
+    "path_id": "6769290856811421707",
+    "type": "AnimationClip",
+    "name": "w-cute-smug01"
+  },
+  {
+    "path_id": "6815625280747685814",
+    "type": "MonoBehaviour",
+    "name": "w-happy-posetilthead02"
+  },
+  {
+    "path_id": "6820964702070144238",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead01"
+  },
+  {
+    "path_id": "6874323168616986015",
+    "type": "AnimationClip",
+    "name": "w-adult-posetilthead01"
+  },
+  {
+    "path_id": "6938928034619349630",
+    "type": "AnimationClip",
+    "name": "face_band_sad_01"
+  },
+  {
+    "path_id": "6959673737471680022",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead04"
+  },
+  {
+    "path_id": "6980156301476246093",
+    "type": "MonoBehaviour",
+    "name": "w-cool-shakehand01"
+  },
+  {
+    "path_id": "6989430265310355782",
+    "type": "AnimationClip",
+    "name": "face_street_smile_01"
+  },
+  {
+    "path_id": "7015093602751691431",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead03"
+  },
+  {
+    "path_id": "7018815177714508127",
+    "type": "MonoBehaviour",
+    "name": "face_street_normal_01"
+  },
+  {
+    "path_id": "7044891653350538737",
+    "type": "AnimationClip",
+    "name": "w-normal-greeting01"
+  },
+  {
+    "path_id": "7057781199345651237",
+    "type": "MonoBehaviour",
+    "name": "w-happy-angry02"
+  },
+  {
+    "path_id": "7058705430481910235",
+    "type": "MonoBehaviour",
+    "name": "face_night_trouble_02"
+  },
+  {
+    "path_id": "7066314250524653103",
+    "type": "MonoBehaviour",
+    "name": "w-cute-posetilthead08"
+  },
+  {
+    "path_id": "7093137983802286172",
+    "type": "AnimationClip",
+    "name": "w-normal-lookleft01"
+  },
+  {
+    "path_id": "7106346942867001915",
+    "type": "MonoBehaviour",
+    "name": "w-adult-trouble01"
+  },
+  {
+    "path_id": "7144438635310875462",
+    "type": "MonoBehaviour",
+    "name": "w-cute-angry01"
+  },
+  {
+    "path_id": "7214288813671568148",
+    "type": "MonoBehaviour",
+    "name": "w-animal-nod02"
+  },
+  {
+    "path_id": "7269890648208445104",
+    "type": "AnimationClip",
+    "name": "w-cool-sigh02"
+  },
+  {
+    "path_id": "7278476816551536384",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_hawawa_01"
+  },
+  {
+    "path_id": "7301606252703976349",
+    "type": "AnimationClip",
+    "name": "face_idol_wink_02"
+  },
+  {
+    "path_id": "7316958321574028297",
+    "type": "AnimationClip",
+    "name": "face_band_wink_01"
+  },
+  {
+    "path_id": "7341271524271444025",
+    "type": "AnimationClip",
+    "name": "face_band_smile_01"
+  },
+  {
+    "path_id": "7365650693030786556",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead04"
+  },
+  {
+    "path_id": "7395867006769975402",
+    "type": "AnimationClip",
+    "name": "face_night_closeeye_01"
+  },
+  {
+    "path_id": "7409886503848082919",
+    "type": "MonoBehaviour",
+    "name": "w-adult-delicious01"
+  },
+  {
+    "path_id": "7478628444700770666",
+    "type": "MonoBehaviour",
+    "name": "face_smallmouth_01"
+  },
+  {
+    "path_id": "7498743724494668744",
+    "type": "AnimationClip",
+    "name": "w-special12-catch"
+  },
+  {
+    "path_id": "7556305854494592827",
+    "type": "AnimationClip",
+    "name": "face_street_trouble_01"
+  },
+  {
+    "path_id": "7569219248303925658",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_train_01"
+  },
+  {
+    "path_id": "7597920199998262620",
+    "type": "MonoBehaviour",
+    "name": "w-adult-posetrouble02"
+  },
+  {
+    "path_id": "7618698847081602504",
+    "type": "MonoBehaviour",
+    "name": "face_closeeye_01"
+  },
+  {
+    "path_id": "7672023714420486554",
+    "type": "MonoBehaviour",
+    "name": "w-happy-forward02"
+  },
+  {
+    "path_id": "7691134546997924904",
+    "type": "MonoBehaviour",
+    "name": "face_idol_wink_02"
+  },
+  {
+    "path_id": "7724009268348727285",
+    "type": "MonoBehaviour",
+    "name": "w-happy-glad01"
+  },
+  {
+    "path_id": "7747205193807873863",
+    "type": "MonoBehaviour",
+    "name": "w-happy-poseglad02"
+  },
+  {
+    "path_id": "7758244691720633539",
+    "type": "AnimationClip",
+    "name": "w-normal-nod01"
+  },
+  {
+    "path_id": "7760972647770065237",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_03"
+  },
+  {
+    "path_id": "7766290865634110774",
+    "type": "MonoBehaviour",
+    "name": "w-cute-glad03"
+  },
+  {
+    "path_id": "7815861077760477365",
+    "type": "MonoBehaviour",
+    "name": "w-happy-shakehead02"
+  },
+  {
+    "path_id": "7830253090449958704",
+    "type": "MonoBehaviour",
+    "name": "w-normal-forward01"
+  },
+  {
+    "path_id": "7839617895062082936",
+    "type": "AnimationClip",
+    "name": "w-normal-nod03"
+  },
+  {
+    "path_id": "7867423394002269391",
+    "type": "MonoBehaviour",
+    "name": "face_idol_e_01"
+  },
+  {
+    "path_id": "7870022091409648702",
+    "type": "AnimationClip",
+    "name": "w-cute-posenod02"
+  },
+  {
+    "path_id": "7877172149525973760",
+    "type": "MonoBehaviour",
+    "name": "w-adult-think01"
+  },
+  {
+    "path_id": "7877971929141947206",
+    "type": "MonoBehaviour",
+    "name": "w-adult-blushed02"
+  },
+  {
+    "path_id": "7879108772509189133",
+    "type": "AnimationClip",
+    "name": "face_wonder_serious_01"
+  },
+  {
+    "path_id": "7950941291825145953",
+    "type": "AnimationClip",
+    "name": "w-cute-delicious01"
+  },
+  {
+    "path_id": "7970396042190237398",
+    "type": "MonoBehaviour",
+    "name": "w-cute-tilthead02"
+  },
+  {
+    "path_id": "7994463378643150821",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0702"
+  },
+  {
+    "path_id": "8010127508076545526",
+    "type": "MonoBehaviour",
+    "name": "w-normal-lookleft01"
+  },
+  {
+    "path_id": "8010782430184980309",
+    "type": "AnimationClip",
+    "name": "face_night_normal_01"
+  },
+  {
+    "path_id": "8023617289034164761",
+    "type": "AnimationClip",
+    "name": "face_serious_01"
+  },
+  {
+    "path_id": "8037666559351846612",
+    "type": "MonoBehaviour",
+    "name": "w-cool-posenod03"
+  },
+  {
+    "path_id": "8076326187961721906",
+    "type": "AnimationClip",
+    "name": "face_wonder_angry_03"
+  },
+  {
+    "path_id": "8084158665812758078",
+    "type": "AnimationClip",
+    "name": "face_street_smile_02"
+  },
+  {
+    "path_id": "8100779481360974525",
+    "type": "AnimationClip",
+    "name": "face_street_disgust_01"
+  },
+  {
+    "path_id": "8117989475385265387",
+    "type": "AnimationClip",
+    "name": "w-cool-nod03"
+  },
+  {
+    "path_id": "8185063453015045455",
+    "type": "AnimationClip",
+    "name": "w-cool-tilthead0204"
+  },
+  {
+    "path_id": "8250173936438625234",
+    "type": "AnimationClip",
+    "name": "face_wonder_surprise_01"
+  },
+  {
+    "path_id": "8258494936436982837",
+    "type": "AnimationClip",
+    "name": "w-adult-nod03"
+  },
+  {
+    "path_id": "8293351053167882358",
+    "type": "AnimationClip",
+    "name": "w-cute-posetilthead08"
+  },
+  {
+    "path_id": "8306554088280669146",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead02"
+  },
+  {
+    "path_id": "8337392079122034911",
+    "type": "MonoBehaviour",
+    "name": "w-adult-tilthead05"
+  },
+  {
+    "path_id": "8357185313062038060",
+    "type": "AnimationClip",
+    "name": "w-happy-shakehead02"
+  },
+  {
+    "path_id": "8383873278840173525",
+    "type": "AnimationClip",
+    "name": "w-normal-tilthead0106"
+  },
+  {
+    "path_id": "8400607770327891349",
+    "type": "MonoBehaviour",
+    "name": "w-normal-shakehead03"
+  },
+  {
+    "path_id": "8443095719040476390",
+    "type": "MonoBehaviour",
+    "name": "w-happy-tilthead01"
+  },
+  {
+    "path_id": "8469763952007454683",
+    "type": "AnimationClip",
+    "name": "w-cute-angry01"
+  },
+  {
+    "path_id": "8471879356923876746",
+    "type": "MonoBehaviour",
+    "name": "w-normal-yurayura01"
+  },
+  {
+    "path_id": "8476965376766629756",
+    "type": "AnimationClip",
+    "name": "face_band_cry_01"
+  },
+  {
+    "path_id": "8491773321504100275",
+    "type": "AnimationClip",
+    "name": "w-animal-tilthead01"
+  },
+  {
+    "path_id": "8516543028024185610",
+    "type": "AnimationClip",
+    "name": "face_wonder_kirakira_01"
+  },
+  {
+    "path_id": "8534366307634131909",
+    "type": "AnimationClip",
+    "name": "w-cute-posetilthead04"
+  },
+  {
+    "path_id": "8554313540277646617",
+    "type": "AnimationClip",
+    "name": "w-normal-shakehead04"
+  },
+  {
+    "path_id": "8579763711511033172",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_angry_03"
+  },
+  {
+    "path_id": "8600635600681930912",
+    "type": "MonoBehaviour",
+    "name": "w-cute-forward03r"
+  },
+  {
+    "path_id": "8644645843907088260",
+    "type": "MonoBehaviour",
+    "name": "w-normalanimal-tiltheadnod0101"
+  },
+  {
+    "path_id": "8671630902349853297",
+    "type": "MonoBehaviour",
+    "name": "w-animal-nodtilthead0101"
+  },
+  {
+    "path_id": "8682586779714520706",
+    "type": "MonoBehaviour",
+    "name": "face_smile_03"
+  },
+  {
+    "path_id": "8688718665564848644",
+    "type": "MonoBehaviour",
+    "name": "w-cute-wink02"
+  },
+  {
+    "path_id": "8744289336536844040",
+    "type": "MonoBehaviour",
+    "name": "face_band_e_01"
+  },
+  {
+    "path_id": "8752725538107151161",
+    "type": "AnimationClip",
+    "name": "face_idol_blushed_02"
+  },
+  {
+    "path_id": "8779061275080124005",
+    "type": "AnimationClip",
+    "name": "w-normal-angry01"
+  },
+  {
+    "path_id": "8793351757842332457",
+    "type": "AnimationClip",
+    "name": "w-cute-tilthead0708"
+  },
+  {
+    "path_id": "8844458959092998526",
+    "type": "MonoBehaviour",
+    "name": "w-cute-shakehead01"
+  },
+  {
+    "path_id": "8853763198080034340",
+    "type": "MonoBehaviour",
+    "name": "face_idol_closeeye_01"
+  },
+  {
+    "path_id": "8864783207753167193",
+    "type": "MonoBehaviour",
+    "name": "w-cool-forward01"
+  },
+  {
+    "path_id": "8872031689000072386",
+    "type": "MonoBehaviour",
+    "name": "face_blushed_01"
+  },
+  {
+    "path_id": "8886326857193752625",
+    "type": "MonoBehaviour",
+    "name": "face_night_e_01"
+  },
+  {
+    "path_id": "8914559040405257626",
+    "type": "AnimationClip",
+    "name": "w-adult-think01"
+  },
+  {
+    "path_id": "8916920496602037266",
+    "type": "AnimationClip",
+    "name": "face_wonder_smile_02"
+  },
+  {
+    "path_id": "8920276001216247132",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead06"
+  },
+  {
+    "path_id": "8922722454233741921",
+    "type": "AnimationClip",
+    "name": "w-cool-trouble01"
+  },
+  {
+    "path_id": "8960027165550925053",
+    "type": "MonoBehaviour",
+    "name": "w-adult-shakehand01"
+  },
+  {
+    "path_id": "8971631853381209168",
+    "type": "MonoBehaviour",
+    "name": "face_band_surprise_01"
+  },
+  {
+    "path_id": "8976795409373876437",
+    "type": "MonoBehaviour",
+    "name": "w-normal-posetrouble02"
+  },
+  {
+    "path_id": "8994840987203424158",
+    "type": "AnimationClip",
+    "name": "w-cute-shy03"
+  },
+  {
+    "path_id": "8996798308505278173",
+    "type": "MonoBehaviour",
+    "name": "face_serious_01"
+  },
+  {
+    "path_id": "9041339031072143898",
+    "type": "AnimationClip",
+    "name": "w-adult-blushed03"
+  },
+  {
+    "path_id": "9059263683810648986",
+    "type": "MonoBehaviour",
+    "name": "w-normal-tilthead05"
+  },
+  {
+    "path_id": "9092704186172763670",
+    "type": "MonoBehaviour",
+    "name": "w-cute-nod01"
+  },
+  {
+    "path_id": "9097852578107665739",
+    "type": "AnimationClip",
+    "name": "w-cool-posetilthead04"
+  },
+  {
+    "path_id": "9126524423951385375",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_bothered_02"
+  },
+  {
+    "path_id": "9136514285784251556",
+    "type": "MonoBehaviour",
+    "name": "w-happy-wandahoi01"
+  },
+  {
+    "path_id": "9137745292840748992",
+    "type": "AnimationClip",
+    "name": "w-normal-forward03"
+  },
+  {
+    "path_id": "9144431863779352986",
+    "type": "MonoBehaviour",
+    "name": "w-cool-tilthead04"
+  },
+  {
+    "path_id": "9151156503231376091",
+    "type": "MonoBehaviour",
+    "name": "face_band_smile_07"
+  },
+  {
+    "path_id": "9170915865962848609",
+    "type": "MonoBehaviour",
+    "name": "face_wonder_closeeye_01"
+  },
+  {
+    "path_id": "9211751201932965582",
+    "type": "AnimationClip",
+    "name": "w-normal-pose05"
+  },
+  {
+    "path_id": "9217215774241607806",
+    "type": "AnimationClip",
+    "name": "w-cute-fidget01"
+  }
+]

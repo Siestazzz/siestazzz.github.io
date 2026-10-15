@@ -1,0 +1,43 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 6413543072410442539
+  },
+  "m_Name": "BuildModelData",
+  "Moc3FileName": "21miku_normal_3.0_f_t06.moc3.bytes",
+  "TextureNames": [
+    "21miku_normal_3.0_f_t06.2048/texture_00.png"
+  ],
+  "PhysicsFileName": "21miku_normal_3.0_f_t06.physics3.json",
+  "UserDataFileName": "",
+  "AdditionalMotionData": [
+    {
+      "Clip": {
+        "m_FileID": 0,
+        "m_PathID": -6148784756384184015
+      },
+      "Meta": {
+        "m_FileID": 0,
+        "m_PathID": -3028677511167119071
+      },
+      "ClipAssetName": "w-adult-shakehand01"
+    },
+    {
+      "Clip": {
+        "m_FileID": 0,
+        "m_PathID": 1106795218587820011
+      },
+      "Meta": {
+        "m_FileID": 0,
+        "m_PathID": 6920798006109528683
+      },
+      "ClipAssetName": "w-adult01-shakehand"
+    }
+  ],
+  "CategoryRules": []
+}

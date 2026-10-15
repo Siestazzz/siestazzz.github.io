@@ -1,0 +1,12 @@
+{
+  "source": "title_screen/anniversary_5th_bg",
+  "packet_count": 527,
+  "usm_bytes": 49286912,
+  "usm_sha256": "41042545620cc75e15add93bf2cca6b744f62be77bbd9227aead8b45c92b1bda",
+  "loop_point_frame": 226,
+  "fps": 30,
+  "loop_start_seconds": 7.533333333333333,
+  "file": "title-background.mp4",
+  "bytes": 10710066,
+  "sha256": "687febf8dc010014f2d8619e9569befb99a73d1cbb9d6d9b701f05bec9a88f3a"
+}

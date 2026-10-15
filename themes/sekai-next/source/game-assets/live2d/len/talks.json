@@ -1,0 +1,46 @@
+{
+  "source": "https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/systemLive2ds.json",
+  "provenance": "community master snapshot; not extracted from this device",
+  "selection": "first three compatible original pairs; original seasonal availability is not applied in this preview",
+  "items": [
+    {
+      "id": 82,
+      "characterId": 23,
+      "unit": "piapro",
+      "serif": "お祭りに花火に、海や川に\nキャンプ！　夏って楽しいことが\nいっぱいできちゃうね！",
+      "assetbundleName": "voicepack_23",
+      "voice": "partvoice_20_023",
+      "motion": "n-normal-nod02",
+      "expression": "face_closeeye_02",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 83,
+      "characterId": 23,
+      "unit": "piapro",
+      "serif": "夏休みの宿題かぁ……歌とか\n遊びを宿題にしてくれたら、\nみんな楽しくできるのにね～",
+      "assetbundleName": "voicepack_23",
+      "voice": "partvoice_10_023",
+      "motion": "n-normal-tilthead03",
+      "expression": "face_smile_04",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 84,
+      "characterId": 23,
+      "unit": "piapro",
+      "serif": "リンが花火やりたいっていうから\nみんなで準備してるんだ！",
+      "assetbundleName": "voicepack_23",
+      "voice": "partvoice_04_023",
+      "motion": "n-len-nod04",
+      "expression": "face_smile_03",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    }
+  ]
+}

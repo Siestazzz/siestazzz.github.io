@@ -1,0 +1,20 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 6413543072410442539
+  },
+  "m_Name": "BuildModelData",
+  "Moc3FileName": "01ichika_normal_3.0_f_t04.moc3.bytes",
+  "TextureNames": [
+    "01ichika_normal_3.0_f_t04.2048/texture_00.png"
+  ],
+  "PhysicsFileName": "01ichika_normal_3.0_f_t04.physics3.json",
+  "UserDataFileName": "",
+  "AdditionalMotionData": [],
+  "CategoryRules": []
+}

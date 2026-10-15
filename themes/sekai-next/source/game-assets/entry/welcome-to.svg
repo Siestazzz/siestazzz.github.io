@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258 44" role="img" aria-label="WELCOME TO">
+  <!-- Web-drawn replacement lettering; plaque references original logo Sprite 2. -->
+  <path fill="#fff" d="M5 8 118 1 258 6 252 41 1 38Z"/>
+  <g fill="#005b85" transform="translate(15 13) skewX(-4)">
+    <path d="M0 0h5v14h4V5h5v9h4V0h5v16l-4 4h-6l-2-4-2 4H4l-4-4Z"/>
+    <path transform="translate(27)" d="M0 0h18v5H5v3h11v4H5v3h13v5H0Z"/>
+    <path transform="translate(49)" d="M0 0h5v15h13v5H0Z"/>
+    <path transform="translate(71)" d="M4 0h15v5H6l-1 1v8l1 1h13v5H4l-4-4V4Z"/>
+    <path transform="translate(94)" fill-rule="evenodd" d="M4 0h13l4 4v12l-4 4H4l-4-4V4Zm2 5-1 1v8l1 1h9l1-1V6l-1-1Z"/>
+    <path transform="translate(119)" d="M0 20V0h6l6 8 6-8h6v20h-5V7l-7 9-7-9v13Z"/>
+    <path transform="translate(147)" d="M0 0h18v5H5v3h11v4H5v3h13v5H0Z"/>
+    <path transform="translate(177)" d="M0 0h21v5h-8v15H8V5H0Z"/>
+    <path transform="translate(202)" fill-rule="evenodd" d="M4 0h13l4 4v12l-4 4H4l-4-4V4Zm2 5-1 1v8l1 1h9l1-1V6l-1-1Z"/>
+  </g>
+</svg>

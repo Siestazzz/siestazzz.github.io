@@ -1,0 +1,32 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 6413543072410442539
+  },
+  "m_Name": "BuildModelData",
+  "Moc3FileName": "22rin_normal_3.0_f_t04.moc3.bytes",
+  "TextureNames": [
+    "22rin_normal_3.0_f_t04.2048/texture_00.png"
+  ],
+  "PhysicsFileName": "22rin_normal_3.0_f_t04.physics3.json",
+  "UserDataFileName": "",
+  "AdditionalMotionData": [
+    {
+      "Clip": {
+        "m_FileID": 0,
+        "m_PathID": -8067997943648200816
+      },
+      "Meta": {
+        "m_FileID": 0,
+        "m_PathID": -7258520268259005836
+      },
+      "ClipAssetName": "w-cute-glad06r"
+    }
+  ],
+  "CategoryRules": []
+}

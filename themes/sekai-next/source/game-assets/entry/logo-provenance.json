@@ -1,0 +1,155 @@
+[
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 94,
+    "node": "o_03_star",
+    "source": "1582a1f54acbb4b47b0f86fd64e5aa9f",
+    "path_id": 11,
+    "file": "logo-o_03_star.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 95,
+    "node": "o_06_star",
+    "source": "1582a1f54acbb4b47b0f86fd64e5aa9f",
+    "path_id": 4,
+    "file": "logo-o_06_star.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 106,
+    "node": "logo_back",
+    "source": "6be32414f5e695f47bc3321c8b20b8be",
+    "path_id": 2,
+    "file": "logo-logo_back.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 107,
+    "node": "o_05_star",
+    "source": "1582a1f54acbb4b47b0f86fd64e5aa9f",
+    "path_id": 5,
+    "file": "logo-o_05_star.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 108,
+    "node": "o_01_star",
+    "source": "1582a1f54acbb4b47b0f86fd64e5aa9f",
+    "path_id": 14,
+    "file": "logo-o_01_star.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 116,
+    "node": "colorobi",
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 8,
+    "file": "logo-colorobi.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 122,
+    "node": "o_04_star",
+    "source": "1582a1f54acbb4b47b0f86fd64e5aa9f",
+    "path_id": 3,
+    "file": "logo-o_04_star.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 124,
+    "node": "o_02_star",
+    "source": "1582a1f54acbb4b47b0f86fd64e5aa9f",
+    "path_id": 2,
+    "file": "logo-o_02_star.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 125,
+    "node": "white_obi_gosenfu",
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 2,
+    "file": "logo-white_obi_gosenfu.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 81,
+    "node": "note_mdl",
+    "material": "mat_title_note5th_alb_01",
+    "source": "2ab02ec221c474a46883747ec49967d8",
+    "path_id": 1,
+    "file": "logo-note_mdl-texture.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 82,
+    "node": "circle_mdl",
+    "material": "mat_title_circle5th_alb_01",
+    "source": "2ab02ec221c474a46883747ec49967d8",
+    "path_id": 1,
+    "file": "logo-circle_mdl-texture.png"
+  },
+  {
+    "prefab": "188c6d7b97278b04d85321e2ae62cb9d",
+    "renderer": 83,
+    "node": "circle_mdl_02",
+    "material": "mat_title_circle5th_alb_02",
+    "source": "2ab02ec221c474a46883747ec49967d8",
+    "path_id": 1,
+    "file": "logo-circle_mdl_02-texture.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 1,
+    "node": "tex_anniversary_5th_logo_subtitle_parts",
+    "file": "logo-subtitle-1.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 2,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_1",
+    "file": "logo-subtitle-2.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 3,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_2",
+    "file": "logo-subtitle-3.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 4,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_4",
+    "file": "logo-subtitle-4.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 5,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_6",
+    "file": "logo-subtitle-5.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 6,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_3",
+    "file": "logo-subtitle-6.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 7,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_5",
+    "file": "logo-subtitle-7.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 8,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_0",
+    "file": "logo-subtitle-8.png"
+  },
+  {
+    "source": "2db94450cae9c364498878acb6b5244d",
+    "path_id": 9,
+    "node": "tex_anniversary_5th_logo_subtitle_parts_7",
+    "file": "logo-subtitle-9.png"
+  }
+]

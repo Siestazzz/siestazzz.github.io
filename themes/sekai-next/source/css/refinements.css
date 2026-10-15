@@ -60,6 +60,8 @@ body{font-family:SekaiRodin,SekaiHan,"Microsoft YaHei",sans-serif;font-weight:50
 
 /* Clear extracted scenery; the screen-door veil belongs to interior screens only. */
 .world-backdrop{background:#4ac5eb}
+.topbar__right{margin-left:auto}
+.menu-toggle span{display:block}
 .street-scene{position:absolute;left:50%;top:50%;width:max(100vw,160svh);height:max(62.5vw,100svh);transform:translate(-50%,-50%)}
 .street-scene img{position:absolute;display:block;max-width:none;pointer-events:none}
 .street-scene .street-sky{inset:0;width:100%;height:100%}
@@ -102,7 +104,10 @@ body.page-type-index .world-backdrop:after,body.page-type-index .world-backdrop:
 .street-scene .street-sky{left:-100%;width:300%}
 .row-spectrum{display:none;width:64px;height:59px;align-items:flex-end;gap:7.6923%;color:#45445f}
 .song-row.selected .song-thumb{display:none}
-.song-row.selected .row-spectrum{display:flex}
+.song-row .row-spectrum{display:flex;opacity:.45}
+.song-row:not(.selected) .row-spectrum i{animation:none;transform:scaleY(.35)}
+.song-row.selected .row-spectrum{display:flex;opacity:1}
+.preview-category{align-self:stretch;color:#77eedd;font-size:14px;margin:8px 0 0}
 .row-spectrum i{width:10.2564%;height:100%;background:currentColor;transform-origin:bottom;animation:spectrum-bounce calc(.45s + var(--bar)*.07s) calc(var(--bar)*-.13s) ease-in-out infinite alternate}
 .phone-jacket-wash{display:block;position:absolute;left:3.58%;right:3.58%;top:3%;aspect-ratio:700/574;pointer-events:none;opacity:.298039228;overflow:hidden;mask-image:linear-gradient(to bottom,transparent,#000 33.885%,#000 66.115%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 33.885%,#000 66.115%,transparent)}
 .phone-jacket-wash img,.phone-jacket-wash canvas{width:100%;height:100%;object-fit:fill;display:block}
@@ -309,3 +314,34 @@ body.page-type-index img,body.page-type-index a{-webkit-user-drag:none}
 #codex-agent-overlay-root{display:none!important}
 /* Keep the user's normal arrow on every surface, including links and dragging. */
 html,html *,html *::before,html *::after{cursor:default!important}
+.collection-card > .category-unit-icon{display:block;width:64px;height:64px;max-width:none;justify-self:center;object-fit:contain;border-radius:0;background:none}
+/* Blog taxonomy feedback: web adaptation, not recovered game hover values. */
+.preview-tags a{border:2px solid #77eedd;border-radius:4px;color:#77eedd;font-size:12px;padding:3px 10px;transition:background-color .15s ease,color .15s ease}
+.preview-tags a:hover,.preview-tags a:focus-visible{background:#77eedd;color:#45445f}
+.song-search button{transition:background-color .15s ease}
+.page-type-search .song-search button:hover,.page-type-search .song-search button:focus-visible{background:#33ccbb;color:#20223b}
+.preview-tags a:focus-visible,.song-search button:focus-visible{outline:2px solid #33ccbb;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.preview-tags a,.song-search,.song-search button{transition:none}}
+.tag-cloud a,.tag-stack a,.collection-card,.reader-category-link{transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.tag-cloud a:hover,.tag-cloud a:focus-visible,.tag-stack a:hover,.tag-stack a:focus-visible{background:#33ccbb;color:#20223b;border-color:#33ccbb}
+.tag-cloud a:hover>span,.tag-cloud a:focus-visible>span{color:inherit}
+.collection-card:hover,.collection-card:focus-visible{background:color-mix(in srgb,var(--accent) 25%,#f8f8fc);color:#20223b}
+.reader-category-link{display:inline-block;padding:2px 5px;border-radius:4px;color:inherit}
+.reader-category-link:hover,.reader-category-link:focus-visible{background:#33ccbb;color:#20223b}
+.tag-cloud a:focus-visible,.tag-stack a:focus-visible,.collection-card:focus-visible,.reader-category-link:focus-visible{outline:2px solid #33ccbb;outline-offset:3px}
+.profile-avatar:has(img){aspect-ratio:1;min-height:0;background:none}
+.profile-avatar:has(img)::after{display:none}
+.profile-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.profile-copy>p{font-size:clamp(15px,1.4vw,19px);letter-spacing:.12em}
+.profile-message p{font-size:clamp(19px,1.8vw,24px);letter-spacing:.035em;line-height:1.7}
+.profile-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+/* Keep the search shell quiet; only the submit button changes on hover. */
+.page-type-search .song-search{border:2px solid #fff;border-radius:14px;padding:4px 5px 4px 14px;gap:10px;background:#f7f7fb;box-shadow:0 3px 0 #44446633}
+.page-type-search .song-search label{width:28px;height:28px}
+.page-type-search .song-search label img{width:25px;height:25px;opacity:.85}
+.page-type-search .song-search input{min-width:0;font-size:15px;color:#444466;background:transparent;outline:none}
+.page-type-search .song-search input::placeholder{color:#88889d;font-size:14px}
+.page-type-search .song-search button{align-self:stretch;min-width:76px;padding:0 18px;border:1px solid #44446622;border-radius:10px;background:#e4e5ef;color:#444466;font-size:15px;font-weight:700;box-shadow:0 2px 0 #44446620}
+.page-type-search .song-search button:hover,.page-type-search .song-search button:focus-visible{background:#33ccbb;color:#20223b}
+@media(max-width:700px){.page-type-search .song-search{gap:7px;padding-left:10px}.page-type-search .song-search button{min-width:64px;padding:0 12px}}
+@media(prefers-reduced-motion:reduce){.tag-cloud a,.tag-stack a,.collection-card,.reader-category-link{transition:none}}

@@ -1,10 +1,114 @@
 # 游戏实现 → 网页实现：证据对照
 
+## 2026-10-16 · POST-COVER-OFF / BLOG-STATS-30S
+
+用户明确要求停用文章封面以降低加载开销，移除列表/手机预览/旧大厅精选图片与封面模糊模块挂载，移除所有封面fallback，不影响正文图片和游戏背景。原封面文件保留本地供恢复，Hexo exclude和Git ignore防止生成/发布。列表继续已有CSS频谱：未选中animation:none/scaleY(.35)/opacity .45，选中原动画/opacity1；这是网页适配，不是新恢复的游戏字段。文件/生命周期见总索引同日条目。
+statistics.js阅读前台累计5000→30000ms，其他去重和Worker不变，本次无需重新部署Worker。verify-statistics-browser.cjs用浏览器虚拟时钟验证29s不计数、30s计数及软导航清理。未在正式统计中写测试记录。
+
+验证已完成：Hexo clean/build通过；verify-statistics-browser通过29s/30s、卸载、去重、本机禁用；verify-statistics本地SQLite回归通过；verify-no-covers确认search.json无cover字段、生成目录无封面文件、选文DOM和网络均不请求封面、切换文章正常。已实际查看1440×900和390×844截图，原列表/手机结构保留且无封面空图片；截图在忽略目录backups/verification。git diff --check通过。提交目标当前codex/game-menu，不合并main，因此不触发仅监听main的Pages工作流。
+
+## 2026-10-15 · BLOG-STATS：博客统计，不属于游戏复刻
+
+### 防护升级（本日后续，覆盖下方早期安装/验证状态）
+
+交付结果：正式Worker版本`7983fbde-44aa-4845-a696-36505747f72d`已部署；保留原compatibility_date=2026-10-13、preview_urls=false、原observability日志设置以及全部原绑定/密钥。新增Cron `17 3 * * *`。正式接口实际验证10篇文章、cache HIT（含任意query）、CORS拒绝、未知文章404；只发无效写请求，无正式计数写入，D1复查visits=0/reads=0/receipts=0。真实接受事件、去重和两种429均在独立测试库验证，停写开关也已云端验证。测试Worker当前STATS_WRITES_ENABLED=false，库保留visits=1/reads=1用于复测。正式未做压力测试、未模拟真实浏览器新版本博客上报，未部署博客/提交GitHub。数据库schema未迁移；本轮只更新后端和文档，无需Hexo重建。
+
+首次正式部署因读取Cloudflare metadata超时失败，使用本机代理重试成功；Wrangler报告服务分组tags未应用（不影响接口/绑定）。中间部署默认日志/preview设置与原云端不同，随即在最终配置显式恢复，以上最终版本为准。回滚可用 `wrangler rollback ad5e8a8d-f7f0-4012-8909-9dc286e95bbb --config workers/statistics/wrangler.jsonc`（只在确有需要时执行，旧版无本轮防护）；Cron等独立设置需对照备份单独核对。
+
+- `worker.mjs`在D1前调用READ_LIMITER/WRITE_LIMITER；正式120/60次每60秒，测试30/12次每60秒。IP经日粒度HMAC生成限流key，不写数据库；共享IP可能误限，分布式/IP轮换仍能绕过。绑定限流仅节点级近似限制，不作为计费硬上限，也不能消除Worker请求用量。
+- GET `/stats`在Cache API缓存60s；固定内部路径`/__statistics_snapshot_v2`不含任意query；缓存不含CORS头、错误不缓存。先验证Origin/限流，命中后按请求重新加CORS。允许数字延迟，不在写事件后删除缓存，避免恶意写请求击穿缓存。
+- `STATS_WRITES_ENABLED`仅字符串`true`开启；`false`返回503 `writes_disabled`，数据库不写、查询照常。没有READ/WRITE绑定或密钥时fail-closed 503。SQL去重/触发器不变；保留旧KV `VIEWS`、全部正式数据与旧rate_limits表。
+- 正式配置`workers/statistics/wrangler.jsonc`已填真实DB、KV绑定；ALLOWED_ORIGINS和STATS_SECRET沿用现有云端Secrets，不读取/打印或更换。新增开关为普通变量，keep_vars=true保留控制台变量。Cron每日UTC03:17；此前云端schedules为空，需要本次部署补齐。
+- 独立测试配置`wrangler.test.jsonc`，Worker和D1均名`siestablog-stats-test`，不绑定正式库；测试用独立随机Secret。生产前备份`backups/cloudflare/20261015-235452`含Worker multipart、绑定、部署版本、Cron、表结构及总数/文章快照；目录被Git忽略，无OAuth token入库。升级前版本`ad5e8a8d-f7f0-4012-8909-9dc286e95bbb`。
+- 验证工具：`verify-statistics.mjs`新增限流/停写零DB访问、cache-buster无法绕缓存、CORS不串用；本地SQLite全部通过。`verify-statistics-remote.mjs`默认仅写测试Worker，`--production`只查询和发送被拒绝的无效事件，不新增正式阅读；`--disabled`验证停写。已在真实测试D1确认visits=1/reads=1、重复事件去重、查询/上报429和cache HIT，旧限流表行数0。
+- 运行远程HTTP测试时本机Node直连workers.dev超时，改为本机系统代理127.0.0.1:7890与Node `--use-env-proxy`，没有改变全局代理设置。
+- 官方依据：[Rate Limiting binding](https://developers.cloudflare.com/workers/runtime-apis/bindings/rate-limit/)、[Cache API](https://developers.cloudflare.com/workers/runtime-apis/cache/)。全部属于博客后端工程，无新增游戏实现来源。
+
+停写操作：Worker Settings → Variables → STATS_WRITES_ENABLED改false并部署；恢复true。CLI等价：`wrangler deploy --config workers/statistics/wrangler.jsonc --var STATS_WRITES_ENABLED:false`。注意以后普通CLI部署会按配置文件true恢复，长期暂停时也需修改配置。未实施Turnstile、WAF或预算告警，不宣称完全防刷。
+
+阅读/访问计数是网页自制业务，无游戏Prefab、path_id或RVA对应。5000ms阅读阈值、1800s去重窗口、请求限额是博客策略，不冒称游戏字段。视图仍使用原统计框，不改其素材/动画。实际实现和状态边界见总索引 BLOG-STATS。
+
+### Cloudflare Dashboard 安装（现有 Worker，不需要换网址）
+
+1. 已创建 D1 `siestablog`，在 Worker 绑定中确认变量名是 `DB`；旧KV `VIEWS`保留，代码不会读写它。
+2. 在该D1数据库的Console执行 `workers/statistics/setup.sql` 的完整内容。文件由 `node tools/statistics-seed.cjs` 从构建后的10篇文章生成；所有CREATE IF NOT EXISTS/INSERT OR IGNORE可重跑，不会清零现有数据。
+3. 将 `workers/statistics/worker.mjs` 全文粘贴到 Worker 编辑器替换旧代码。
+4. Worker设置 → Variables and Secrets：添加文本 `ALLOWED_ORIGINS` = `https://siestazzz.github.io`；添加Secret `STATS_SECRET`，值用密码管理器生成至少32字节随机值，不放主题配置、不发到聊天。多个域名用英文逗号分隔。更换Secret会让旧去重记录失效，但不清零统计。
+5. 设置Cron Trigger `17 3 * * *`（UTC每天03:17）用于清理临时记录，保存并部署Worker。Dashboard部署不需要本地wrangler文件中的database_id；CLI部署才需填真实ID，不能直接部署占位配置。
+6. 浏览器打开 `https://siestablog.2259670306-11c.workers.dev/stats`，应返回JSON visits、reads、articles。新库为0；503请核查DB绑定/建表。然后从正式博客验证POST请求；本机localhost故意不计数。GET成功不代表POST/Secret/CORS已经验证。
+7. 发布新文章：固定front matter `stats_id`（英文小写/数字/连字符，≤120字符）；运行 `npm.cmd run build`、`node tools/statistics-seed.cjs`，在D1执行更新后的 `articles.sql`。改标题/日期不得改ID。当前快照最多500篇，达到上限前改分页方案。删除文章不自动删除历史统计。
+
+维护文件：`worker.mjs`接口、`schema.sql`结构、`articles.sql`白名单、`setup.sql`合并安装SQL；后两者是生成文件。主题配置 `statistics.endpoint/origin` 对应正式域名。不导入旧KV或本地mock值。免费额度包括索引/触发器/限流的行写入，并非一次访问只写一行；公开接口需要上线后观察用量、防刷规则。
+
+验证边界：`tools/verify-statistics.mjs` 使用本地SQLite和D1形状适配器验证SQL/接口，并非远程D1测试；`tools/verify-statistics-browser.cjs` 使用Chromium隔离fixture与模拟接口验证前端计时/卸载/去重，本机预览不发送统计。远程绑定与正式域名联调仍待用户部署后执行。
+
+2026-10-13 PROFILE/SEARCH/POST-COVER：资料文案/字号/统计项与搜索圆角、浅底属用户要求的博客UI适配，非恢复游戏参数；放大镜继续原icon_search_h34_wh.png。#139d91取当前网页ONLINE颜色，不冒称游戏原色。封面WebP为用户壁纸的体积优化，不属于游戏资源证据，原图与来源保留。
+
+2026-10-13复制提示/文章封面：移除复制成功文字、3篇demo，10篇封面改用用户本地壁纸，来源映射source/images/post-covers/sources.json。属于博客内容配置，无新游戏数据来源；不以这些壁纸作为游戏原素材证据。原渲染/动画逻辑不变，本轮依用户要求只构建不截图。
+
+2026-10-13友链文案精简：原NoneInfo白字/半透明Outline材质的网页适配移用于“友链示意”h2；删除用户指定说明文字。原path_id/颜色证据不变，标题字号与3px描边仍为网页值。验证与文件见FRIENDS.md最新记录。
+
+2026-10-13 FRIENDS-EMPTY-TEXT：e826a636f6cfb4d87bec3fbd81243737 CustomTextMesh245 / NoneInfo（WORD_MISSING_ADD_FRIEND）→字体a3006a04bcc9ee4499918d8b6e934230 MonoBehaviour3、材质f462a70057e82454c82159c935ac584b Material1→_FaceColor白、_OutlineColor#44446680、SDF _OutlineWidth=.5→friends.css白字/同色描边。3px网页描边不是SDF .5直接换算；中文回退与680px卡片均博客适配。详见FRIENDS.md。
+
+## 2026-10-13 · FRIENDS-EXCHANGE 圆角证据
+
+e826a636f6cfb4d87bec3fbd81243737 / ScreenLayerFriend/ComponentRoot/ComponentRoot/ApprovalPendingFriendList/UIPartsGroupVerticalListView/Background → CustomImage → 09ce39af28da6034fbd6cbc9707b80b8 Sprite1 bg_base_r20_wh → friends/provenance.json及设备friend-add-20261013.png → friends.css `.friends-exchange`12px裁切。原圆角底板仍复用九宫格，12px是网页适配，不宣称游戏方法参数。pointer、description和隐藏称号为博客业务变更，无新增游戏实现断言。构建及verify-friends-update.cjs通过；详见FRIENDS.md。
+
+2026-09-20 WELCOME TO对齐微调：left4%桌面/6%手机，按用户E对齐S要求适配博客文字；非游戏坐标。原Sprite设计证据与其他参数不变。
+
+2026-09-20 WELCOME TO左移：.title-logo-kicker left19%→16%，为用户要求的网页偏移，原logo_all/Sprite2设计证据不变；无新增游戏字段或动画结论。
+
+## ENTRY-TITLE-LOGO：WELCOME TO · 2026-09-20 重绘
+
+Prefab188c6d7b97278b04d85321e2ae62cb9d SpriteRenderer96 / logo_all → a7728392fc4670f48a36f2c83876ca7b Sprite2（525×210）→本地title-original-logo.png → welcome-to.svg及.title-logo-kicker。原图证明几何字/白底片的设计结构，不证明网页字形、颜色和百分比为游戏参数；新英文手绘矢量属于网页自制。细节与验证见TITLE-ENTRY.md最新条目。
+
+2026-09-20 ENTRY-TITLE-EXIT / SEARCH-HOVER：按用户要求删除网页自制“正在进入…”状态文字及搜索外框hover色；保留原入口动画资源和搜索按钮变色。无新增游戏字段结论。verify-entry-search-feedback.cjs通过，改动仅entry-screen.js及refinements.css。
+
+## LIVE2D-VOICE / 标签反馈 / WELCOME TO · 2026-09-20
+
+SYSTEM_LIVE2D_VOICE_BUNDLE_NAME路径常量→既有systemLive2ds台词的assetbundleName/voice→设备ACB TextAsset→vgmstream同名Cue→本地ogg→live2d-character.js同条台词调用site-audio.js播放。完整节点path_id、包hash、子流与采样信息见[LIVE2D-VOICE.md](../pjskapk/LIVE2D-VOICE.md)及voice-sources.json。不把常量当方法体，不把partvoice当全字幕配音。Gain .4、预载/取消竞争为网页适配。WELCOME TO和选文hover属于博客文案/交互适配，无新增游戏字段证据。
+
+## ROOT-ENTRY · 2026-09-20
+
+根入口→`/live/`是用户要求的网页URL映射，无对应Unity路径或新游戏字段。ENTRY-TITLE视频/Logo/退出粒子及E26音频证据不变；仅layout.ejs入口条件及默认上级、entry-screen.js目标、page-router.js入口排除列表变化。不声称网页地址来自游戏。验证及状态见TITLE-ENTRY.md最新补充。
+
+## TAXONOMY-HOVER / PROFILE-AVATAR · 2026-09-20
+
+本轮无新增游戏字段/方法结论。分类队标沿用既有原Sprite；hover的150ms、青色及分类25%混白为网页反馈，不是Unity参数。post.ejs分类链接读取Hexo category.path，使用既有软路由。头像来自用户指定GitHub URL，与游戏资源无关。文件、数值、来源及验证详见[TAXONOMY-UI.md](../pjskapk/TAXONOMY-UI.md)。
+
 更新：2026-09-08。与 [场景/效果总索引](SCENES-AND-MOTION.md) 配套。
 
 本文回答的是“为什么这样写”，而不仅是“现在有什么”。路径均相对仓库根目录。记录中的游戏 RVA 针对已分析的本地 6.8.1 ARM64 库；设备缓存资源单独按包哈希追踪，不据此推定缓存版本。完整哈希与元数据还原信息见 [IL2CPP.md](../pjskapk/IL2CPP.md)。
 
 ## 证据要求
+
+### E26 · BGM与交互音效
+
+静音/专用入口音最新证据：设备split_UnityDataAssetPack.apk/assets/MenuCommon_Built_in.acb → vgmstream子流20 SE_TITLE_ENTER → audio/SE_TITLE_ENTER.ogg与manifest.json → site-audio.js入口click分支；SoundDefine.SE_TITLE_START常量作名称交叉定位，不当原触发方法体。BGM静音改GainNode=0、源持续，恢复.112；页面初始化尝试播放，自动播放限制保留。增益/浏览器生命周期为网页适配，完整原文件hash及验证见BLOG-AUDIO.md。
+
+用户位置/音量覆盖：按钮改右下、增益均为前版40%（BGM .112、普通SE .12、滚动 .064），非原游戏音量字段；原素材、采样循环点、提取证据不变。site-audio.css/js与BLOG-AUDIO.md记录。
+
+musicSoundTracks社区master id101/103 → 设备mysekai/sound/bgm/music0001/0002 TextAsset → ACB/HCA采样循环点 → audio-audit/sources.json、game-assets/audio/manifest.json → site-audio.js AudioBufferSource循环。MenuCommon TextAsset6456530718845575496 → 子流130/128/30 → 确认/返回/选文滚动；SoundDefine常量仅名称定位，不当方法体或完整Cue解码证据。按钮原vs_on Sprite2dbf7d013f50eb347b0f774190034db9/path_id1复用。完整源缓存/hash/参数、old2返回音效边界、网页时序与真实验证见[BLOG-AUDIO.md](../pjskapk/BLOG-AUDIO.md)。
+
+分类队标尺寸补充：`.category-unit-icon`52→64px、原列内居中；仍复用下文六张原Sprite。按用户要求放大约23%，不是原游戏尺寸变更；来源链不变，验证见SYSTEM-MENU.md。
+
+分类队标更新：game-assets/provenance.json记录六张icon_tab_unit_*_on原Sprite path_id1 → categories.ejs按CTF/Android/漏洞挖掘/逆向工程/AI/其他映射vs/ln/mj/vb/ws/25 → refinements.css `.category-unit-icon`52px contain。原素材直接复用，分类业务映射/尺寸为网页适配；完整源文件哈希见SYSTEM-MENU.md。不再显示之前的编号圆底。
+
+2026-09-20 E23/分类配色适配更新：原MenuDialog 904宽RectTransform证据保持（SYSTEM-MENU.md），网页按用户要求进一步改39vw/max750/min380、手机86vw，不视为原游戏尺寸。categories.ejs编号底色改选文六个unit图标对应的既有配色，与post.ejs categoryPalette一致；分类名称与颜色映射为博客业务适配，非游戏原分类。原图标/菜单动画没有改动，详见SYSTEM-MENU.md最新记录。
+
+### 2026-09-20 · E24补充：实际标题电影
+
+最终循环媒体兼容修复：浏览器自然播放结束后的事件日志确认HTTP媒体定位7.533秒却回到0，仅seeked等待未解决；entry-screen.js改fetch一次MP4并创建Blob ObjectURL，循环在同一数据内定位226帧，退出abort/revoke。浏览器兼容策略和约10.7MB首播缓冲成本明确区分原游戏实现，详见TITLE-MOVIE-AUDIT.md最新记录。
+
+最新循环时序：原loopPointFrame226及Seek→PrepareForRendering方法证据不变；网页entry-screen.js改ended→设置currentTime→seeked→play，标签恢复也避免在seeking时play。该事件门控属于浏览器异步定位适配，不声称是新增恢复的原游戏方法；不重新加载背景资源，避免回零播放入场。验证记录见TITLE-MOVIE-AUDIT.md。
+
+最新用户排版覆盖：撤销本节下文textPath适配，layout.ejs恢复水平em，entry-screen.css将主标题字号约增8%、字距-.06→-.02em，副标题略增大并设.025em字距。原谱线Sprite3/谱号Sprite9和行星六星素材、2/3组缩放不变；无新增游戏数据结论，曲线SVG已移除，不再是运行功能。精确断点/验证记录见TITLE-ENTRY.md。
+
+同日字标适配：原logo_back与六星（Prefab188c6d7b97278b04d85321e2ae62cb9d，来源详见TITLE-ENTRY.md）→ `.title-logo-ornaments`中心缩放2/3，内部原相对坐标保留；谱线Sprite来自2db94450cae9c364498878acb6b5244d/Sprite3 → 原logo-subtitle-3.png背景 → 新SVG textPath贴合其弯曲排版。贝塞尔控制点/30单位字号/275文本长度是按原谱线图形作的网页适配，不是提取出的游戏曲线或原文字字体；实际使用文件layout.ejs、entry-screen.css。生命周期与导航未变。
+
+**现已接入（覆盖本节旧未接入结论）**：原TitleContent与Seek方法证据 → export_title_movie.py按CRI chunk过滤@SFV type0负载 → title-background.mp4 → layout.ejs `.title-entry-movie` / entry-screen.js movieReady、movieTick、ended、stopMovie。网页保留226帧循环起点；2倍开场、压至1920宽/H264 CRF21、cover裁切、6秒失败回退为适配。原图分层与intro粒子仅失败回退挂载，不与视频重复叠加。UI副标题增大/下移6px/合成粗体是博客文案适配，不是原游戏字号。视频全量解码无报错、桌面/手机截图已查；构建和入口回归覆盖动态像素、循环定位、资源释放、提前退出、失败/减少动画回退。尾部旧USM警告由容器元数据/EOS直读路径引起，显式抽取视频包后不再出现；无损像素级同游戏逐帧验收未做。
+
+设备`title_screen/anniversary_5th_bg` → TitleContent path_id5656993926448481586（movies=1/live2ds=0/loopPointFrame=226）→ MovieBundleBuildData path_id2767517214885464949（24分块顺序）→ `title-movie-audit/inventory.json`、原USM与预览。OnFinishMovie.MoveNext RVA0x4AF3EBC在0x4AF41CC读取element+0x28，0x4AF41D4调用Seek，证明循环字段实际使用。详见[专题](../pjskapk/TITLE-MOVIE-AUDIT.md)。网页entry-screen.js尚未引用视频，built_in Clip不能证明原游戏无持续动作。本轮仅审计，未构建/浏览器回归。
 
 每项应形成：**游戏包/节点/组件或方法 → 原字段/算法 → 本地证据文件 → 网页映射 → 保留或偏离的理由**。
 
@@ -14,6 +118,7 @@
 - 没找到游戏实现的效果，明确列入末尾“无原始实现依据”，不为了凑齐证据填入无关方法。
 
 ## E01：点击圆环与三维碎片
+
 
 对应：`FX-TAP-RING`、`FX-TAP-MESH`。
 
@@ -138,7 +243,61 @@
 - 原始对象审计保存在`analysis-6.8.1/area27-audit/`，脚本`audit_area27.py` / `export_area27_effects.py`可复用；包SHA256和path_id保存在effects.json。
 - 当前云/树米制到网页投影仍有明确校准，曲线与速度只实现子集，不能宣称整套Unity场景逐帧移植。
 
+## E25 · LIVE2D-CHARACTER / LIVE2D-TALK（2026-09-20）
+
+最新网页偏离更正：移除没有游戏证据支持的5秒returnAt→idle分支；原motion3曲线/Loop字段不改，播完不再主动切Idle/normal，点击才启动下一组。idle只用于初始化。台词框桌面64%/left18%为用户要求的收窄适配，非Unity精确坐标；移动端48%保留。覆盖下文旧5秒调度与72%宽描述。
+
+**最新证据覆盖**：6.8.1 libil2cpp.so `ShowCharacter`0x4C484D0，在0x4C48520/524设置target1/duration0.25，调用FadeOpacity0x8A2A684；协程MoveNext0x9A1695C在0x9A16A40–64执行clamped linear lerp，Time.deltaTime推进 → 本地il2cpp-audit对应地址.asm → CSS live2d-ready-in **250ms linear**，替换180ms ease-out。台词框同步与入口遮罩等待仍是网页适配。mulmotion.update只积时间，旧预演无效；warmPose改直接求解内部模型90步，不是原游戏算法。详见[LIVE2D-REVEAL-AUDIT.md](../pjskapk/LIVE2D-REVEAL-AUDIT.md)，包含实际录屏未成功的限制，不能再把下文“未取得淡入方法证据/已消除展开姿势”当成最新结论。
+
+LIVE2D-REVEAL补充：用户要求加载完成短暂淡入，CSS `live2d-ready-in` 在ready=true后对viewport/talk执行180ms ease-out，opacity0→1；减少动画禁用。这是网页自制显隐时长，暂无对应Unity加载淡入组件/Clip证据，不能标为游戏原值。原模型/动作证据链不变。
+
+首屏台词后续修正：保留以下原bundle/path_id证据。一歌原基础pose01含身体参数，tilthead06为台词动作；社区systemLive2ds.json配对 → 各角色talks.json第一条motion/expression/serif → `select/playTalk`。先隐藏预演Idle45帧补齐身体，再隐藏预演首条Motion/Expression45帧并同帧揭示台词；每段0.75秒模拟时间。`live2d-character.css` 的ready门控同时控制画布和台词。两阶段初始化、第一条固定开场、可见后5秒回待机均为网页适配，未恢复原游戏加载状态机。通道stopAllMotions用于解除相同表情的预约拒绝，避免动作启动而台词不更新。原fade/曲线文件不修改。
+
+同日首帧修正：上述原Idle/Expression曲线与0.5/0.25秒fade不改，live2d-character.js/select等待parallelMotion后隐藏步进45帧×16.667ms，fit绘制后ready才可见，解决默认模型先于动作显示的问题。0.75秒模拟预热是Web初始化适配，不是游戏RVA恢复。使用既有设备阅读页截图对照角色高度，y由-30%改-38%（手机1.5%改-6.5%）；去名字/三角、框72%宽、READING标题、每次挂载随机均为用户要求的网页适配。原素材与来源链不变。
+
+本地设备缓存 live2d/model/01ichika_normal → TextAsset MOC -4584627221076030796、Physics -4809675227882425917、model3 3565766830816995838、Texture2D351714437228227777 → export_ichika_live2d.py → game-assets/live2d/ichika（原MOC二进制、PNG、physics3、model3）。另外三人MOC：21miku_normal/-3588211499420891378、22rin_normal/6732125377404294541、23len_normal/7464630159336609291；完整SHA256/BuildModelData/纹理/动作path_id都保存在各自source.json/build-source.json。
+
+live2d/motion/01ichika_motion_base 的 w-normal-tilthead06 Clip1439103488540952285 → sssekai 0.8.0 AnimationHelper三次曲线转换与参数CRC表（用原MOC名字补充）→ .motion3.json → live2d-character.js/talk → parallelMotion身体/表情两个通道。原Fade MonoBehaviour身体0.5秒、表情0.25秒原样记录并引用；Loop从原m_MuscleClip.m_LoopTime恢复，不沿用转换器固定true。未映射曲线直接失败；一歌旧default01有两个未映射CRC，运行配置已换成完整可解析pose01，草稿不挂载。
+
+台词配对单独证据等级：社区master systemLive2ds.json（原包未核实）→ characterId/unit/serif/motion/expression → 各角色talks.json → 同时更新DOM和动画。选存档前三组且忽略季节时间/weight、5秒返回姿势为网页适配；无语音。实际设备阅读选择页截图确认交互结构，不等同四人原动作逐帧验证。
+
+运行库Pixi7.4.3、MIT mulmotion0.5.1、官方Core05（本次版本83951616）→ vendor/live2d/provenance.json → live2d-character.js/prepare。原physics3直接求解；原EyeBlink组为空，网页用真实ParamEyeLOpen/ROpen做4.5秒周期、闭开各150ms，ParamBreath周期3.2秒/peak.5/weight.5，都是网页自定。模型等比取景×2.6桌面/×1.55窄屏、独立Ticker/DPR1.5/60fps上限、离页停/返页复用为Web管理，不对应游戏RVA。验证与限制详见[LIVE2D-CHARACTERS.md](../pjskapk/LIVE2D-CHARACTERS.md)。
+
+## E24 · ENTRY-TITLE（2026-09-20）
+
+最新坐标证据：原188c6…/Star_mult位置(.219,.195) + o_01–06_star局部位置、scale.36、各Sprite rect/PPU100 → .title-logo-stars nth-child绝对定位，4.5×2.6统一坐标窗 → 原六星错落关系；logo_back原(.819,.225)、scale1.5、212×140/108 PPU同窗映射。全部字段/换算详见TITLE-ENTRY.md。组挂载网页48%宽及位置、加厚8/5px描边、Allura字体为网页适配；不冒充原游戏字体。原bg Prefab SpriteRenderer28–31的Sprites/Default及Clip bg_before scale0/bg scale3/bg_after alpha14 → entry-screen.js分层入场，修正base索引。已解析数据没有独立人物动作，未凭观感添加持续摆动。
+
+最新标题素材补齐：Prefab188c6d7b97278b04d85321e2ae62cb9d / logo_back Renderer106 → 6be32414f5e695f47bc3321c8b20b8be Sprite2 → logo-logo_back.png → .title-logo-planet。星星Renderer122/107/95 → 1582a1f54acbb4b47b0f86fd64e5aa9f Sprite3/5/4补齐第4–6颗。五线谱2db94450cae9c364498878acb6b5244d Sprite3（parts_2，含金色尾饰）、Sprite9（parts_7，高音谱号）→ logo-subtitle-3/9.png → em背景及.title-logo-clef。均由export_title_logo.py从原Sprite解码，source/path_id见logo-provenance.json。32%宽行星、谱线contain排版、六星间隔延展是网页适配，不冒充原Transform数值。Mesh贴图仅导出证据未挂载。TAP原79d6…/Sprite2自带灰底，去掉CSS重复底色。标题/测试用语清理为博客文案，计数范围仍在tooltip说明，不改变统计实现。
+
+ENTRY-TITLE-LOGO 最新链：Prefab188c6d7b97278b04d85321e2ae62cb9d（anniversary_5th_logo，GO38）→ Clip fe9600cac223bf6479c00229834f9efc/AnimationClip1 clip_title_5th_logo_in_03 → decode_title_clip.py → entry/title-logo-timeline.json → entry-screen.js binding/sample/logoFrames → .title-logo-letter/wordmark/flash。Logo/Logo_mult scale index90：3.216667s=6、4.05s=1；其 01_C Euler index60：Y90°→0（3.216667–3.616667s），alpha index118：0→1；Logo/Logo_add alpha index133：3.683333s=0、4.05s=1.083107、4.216667s=0。Euler 属性4按3通道解码，四元数属性2按4通道，不能混用。网页将14个原字母的时序按博客标题字数映射，alpha夹至0–1，终态不执行原后续合成切换，所有时间除2。
+
+原 Renderer108/124/94 → 1582a1f54acbb4b47b0f86fd64e5aa9f Sprite14/2/11（三星）；Renderer116 → 2db94450cae9c364498878acb6b5244d Sprite8（colorobi）→ export_title_logo.py → entry/logo-provenance.json 与 logo-*.png → layout.ejs/entry-screen.css。星星原开始3.8/3.85/3.9s、缩放0→.36，用网页0→1及75ms适配显示尺寸；字幕450ms平移为自制。字体/描边/配色排版是参考原截图的 CSS 适配，原字样是图片而非可替换字体；未挂载 white_obi_gosenfu 和 circle_mdl MeshRenderer82/83。构建/入口回归与截图检查通过；详细复查命令和验证见 TITLE-ENTRY.md。
+
+用户速度覆盖：原Clip6.4333334s及原曲线不变→entry-screen.js introRate=2将WAAPI时长/延迟除2，title-fx.js遮挡粒子时钟乘2→网页3.216667s。属于用户要求的网页适配；不宣称游戏原速。持续光点与点击退出仍用原网页时钟。layout.ejs preload与head提前fetch仅网络调度优化，无新的游戏实现结论。
+
+本轮粒子证据链：7560a2da64ae7764ebc7aff8487a7787/anniversary_5th_bg_built_in/root/white_moya ParticleSystem18、white_moya_sml20、white21→ShapeModule.mesh 外部26164c16c48ac0f4094f89bb1c8d581d/Mesh2（20顶点24面）、c668210bb67ac5a45a35953ffc6e7bd3/Texture2D1 tex_5th_anv_ver→export_title_particles.py→title-particles.json→build_title_fx.py→title-fx.json→title-fx.js meshPoint/sprite。原20+20发射、寿命2–5s、尺寸1–3/1–1.36、alpha1→.930588→0，white单粒子4s；网页使用同图集/随机范围/曲线，mesh归一化到cover背景为适配。circle_eff ParticleSystem16原rate3/s、life3–4.5s替代旧CSS14光点。
+
+开始效果：21812d99e497bd249b7b677175a9bb3c/fx_title_start_effect/root/fx_live_transition_v2_03_b/root/pt_outside/tri_02 PS24、tri_03 PS31、flare_white_out27/first28/flash32/circle33→title-start-particles.json；tex_sekai_v2_02来自cd1fa9418c0c2d1428572302a6612b32/Texture2D1，tex_transition_01来自43ec8beda1d49499ba7a564838ca54cd/1，tex_transition_03的完整引用见导出JSON。e1e202e24129e8846ac2a18ad3185935/AnimationClip1 clip_title_start_effect_emit：pathCRC1733383287=fx_live_transition_v2_03_b，.25s激活；保存title-start-activation.json。网页保留burst/size/life/alpha/atlas，径向屏幕投影及1500ms白场为适配；原renderer序列化enabled=false/pt_outside scale0，未恢复完整UI粒子桥接、控制器与原投影，不将网页可见性当作原字段已还原。
+
+实机title-detail.mp4及8.4s起50ms采样确认标题开始有碎片/渐白；网页双Canvas避免additive黑底，screen近似混合不等于完整GLES shader。未移植原logo拼合、两组空材质环境碎片。构建、verify-entry-screen、截图视觉检查完成；详见TITLE-ENTRY.md。
+
+独立路由补充：source/entry/index.md的title_entry标记→layout.ejs只在/entry/挂载原入口→entry-screen.js取消接受存储、盖白后sekaiNavigate('/')→page-router保留场景。进入/entry/例外使用原生加载以重播文档级片头。URL/历史/访问策略是博客适配，不来自游戏；三张原图、Clip/path_id、数值及下列证据不变。
+
+原957845c1491bc3e4eb3cc5b3f636410b/Texture2D1 bg03→entry/provenance.json源SHA→layout.ejs标题背景；79d6e129c2f0fe24e9b3af3b6ba39cd9/Sprite2→txt_tapToStart.png。
+
+ENTRY-TITLE-INTRO：原背景Prefab7560a2da64ae7764ebc7aff8487a7787的bg/GameObject1/Renderer30→bg01，bg_before/GO4/Renderer29→bg02，bg_after/GO7/Renderer28→bg03（外部Sprite2引用分别9/8/7）。原cfe864a549e85814fba9d168b785fec6/AnimationClip1 m_MuscleClip.m_Clip.data.m_StreamedClip→decode_title_clip.py解码4系数三次曲线及层级CRC32→entry/title-timeline.json→entry-screen.js value/frames→.title-entry-base/tree/characters/flash。原缩放.88到.8除终态.8适配cover；alpha曲线直接使用；白光3.8s=.7、3.9667s=.7217。原长6.4333334s、60Hz采样，非dump.cs签名推测。white_moya粒子、原logo拼合未实现，网页标题显示时序自定。
+
+ENTRY-TITLE-EXIT：设备title-start.mp4确认点击后渐白→网络等待，未解出原退出Tween。网页650ms盖白+就绪后350ms揭白、14光点及访问门禁为适配，无原算法背书。title-intro-clean.mp4验证树→白闪→人物顺序；build与verify-entry-screen.cjs通过，截图已查看。完整参数、原数据路径、真实验证与缺口见pjskapk/TITLE-ENTRY.md。
+
+## E23 · FX-MENU（2026-09-20新增）
+
+用户后续要求略缩小：面板改43.3vw/max832/min414px，手机90vw；不是原904字段变更，系网页显示缩小约8%。原资源证据不变，参数及验证见SYSTEM-MENU.md最新记录。
+
+原dead2c85644b14045bcd265cf80918c6/GameObject9 MenuDialog→RightSubWindowComponent/Window/ContentRoot RectTransform106宽904、Bg122宽904；btn_menu_profile源8623af728d8a6cb4e8de1871f8be6e9a/Sprite1为392×184 → menu/provenance.json与实机menu-open.png → system-menu.css右侧面板/卡片比例。独立原图标映射中文五项，GitHub为非游戏图标。200ms缓动、五项布局、alpha.8/.92为明确网页适配，没有解码到原菜单动画方法体。完整证据/映射/验证见pjskapk/SYSTEM-MENU.md。
+
 ## E08：文章选择几何、频谱、按钮
+
+2026-09-20 ENTRY-READING/WORLD-VISIT：场景仍沿用E07/E11–E18原始数据；地图选择和转场不挂载。30分钟访问随机、15秒本地心跳是网页规则，无原游戏字段/算法依据。visit-world.js仅决定场景ID；原素材与效果参数不变。实现文件/状态/验证见pjskapk/RANDOM-VISIT-WORLD.md。隐藏地图入口不等于素材获得授权。
 
 2026-09-09 NAV-VEIL（关联E02/E22）：首页原有网页display:none/filter:none切换改opacity0/blur(0px)，180ms ease-out为浏览器显隐适配，**无对应游戏时长字段证据**。不改变原点阵资源和内页最终暗度/模糊值。源码、帧采样与未验证边界见PAGE-ROUTER.md同日NAV-VEIL条目。
 

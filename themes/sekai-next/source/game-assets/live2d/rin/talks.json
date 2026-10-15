@@ -1,0 +1,46 @@
+{
+  "source": "https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/systemLive2ds.json",
+  "provenance": "community master snapshot; not extracted from this device",
+  "selection": "first three compatible original pairs; original seasonal availability is not applied in this preview",
+  "items": [
+    {
+      "id": 79,
+      "characterId": 22,
+      "unit": "piapro",
+      "serif": "夏と言ったら花火だよね！\nドーンって上がるのも見たいし\n手に持つのもやりたいな！",
+      "assetbundleName": "voicepack_22",
+      "voice": "partvoice_13_022",
+      "motion": "w-happy-angry02",
+      "expression": "face_smile_02",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 80,
+      "characterId": 22,
+      "unit": "piapro",
+      "serif": "かき氷を食べるとキーンって\nなるみたいなんだけど、\nどんな感じなんだろう？",
+      "assetbundleName": "voicepack_22",
+      "voice": "partvoice_10_022",
+      "motion": "w-happy-tilthead04",
+      "expression": "face_smallmouth_01",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 81,
+      "characterId": 22,
+      "unit": "piapro",
+      "serif": "ねえ、レン見て！\nわたあめみたいな雲だよ。\n甘くて美味しそう！",
+      "assetbundleName": "voicepack_22",
+      "voice": "partvoice_01_022",
+      "motion": "w-happy-nod03",
+      "expression": "face_smile_03",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    }
+  ]
+}

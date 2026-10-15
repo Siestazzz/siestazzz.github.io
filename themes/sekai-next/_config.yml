@@ -10,8 +10,9 @@ menu:
   about: /about/
 
 profile:
+  avatar: /images/profile-avatar.png
   status: ONLINE
-  role: Developer / Recorder
+  role: Reverse/Mobile/Agent
   message: 把技术、生活与想法收进同一个 SEKAI。
 
 friends:
@@ -32,6 +33,10 @@ friends:
   - { name: WLLM, url: 'https://wllm1013.github.io/' }
 
 # Blank values inherit the Hexo site configuration. No application backend is implied.
+statistics:
+  endpoint: https://siestablog.2259670306-11c.workers.dev
+  origin: https://siestazzz.github.io
+
 friend_exchange:
   name: ''
   url: ''

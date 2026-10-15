@@ -1,4 +1,4 @@
 ---
-title: SEKAI 地图
-layout: sekai-map
+title: 阅读入口
+layout: live
 ---

@@ -1,0 +1,78 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "23len_normal_3.0_f_t04.moc3",
+    "Textures": [
+      "23len_normal_3.0_f_t04.2048/texture_00.png"
+    ],
+    "Physics": "23len_normal_3.0_f_t04.physics3.json",
+    "Motions": {
+      "Idle": [
+        {
+          "Name": "n-normal-nod01",
+          "File": "motions/n-normal-nod01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Motion": [
+        {
+          "Name": "n-normal-nod02",
+          "File": "motions/n-normal-nod02.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "n-normal-tilthead03",
+          "File": "motions/n-normal-tilthead03.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "n-len-nod04",
+          "File": "motions/n-len-nod04.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Expression": [
+        {
+          "Name": "face_normal_01",
+          "File": "motions/face_normal_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_closeeye_02",
+          "File": "motions/face_closeeye_02.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_04",
+          "File": "motions/face_smile_04.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_03",
+          "File": "motions/face_smile_03.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": []
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": []
+    }
+  ]
+}

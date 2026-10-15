@@ -1,0 +1,28 @@
+[
+  {
+    "file": "pixi-7.4.3.min.js",
+    "source": "pixi.js/dist/pixi.min.js",
+    "sha256": "712a3e1943b062a907d86c5bb56b67c7b32a3f03b3654768b00b7016d30a24c6"
+  },
+  {
+    "file": "PIXI-LICENSE.txt",
+    "source": "pixi.js/LICENSE",
+    "sha256": "5ce7447bc57f7349ffc48338782fbcabe613696e00712b20d66bc58e780f9473"
+  },
+  {
+    "file": "mulmotion-0.5.1.min.js",
+    "source": "@sekai-world/pixi-live2d-display-mulmotion/dist/cubism4.min.js",
+    "sha256": "ef9c78a9c54699b79a08b6b5891b76799845eaf82c420dc017acdc402ab27b86"
+  },
+  {
+    "file": "MULMOTION-LICENSE.txt",
+    "source": "@sekai-world/pixi-live2d-display-mulmotion/LICENSE",
+    "sha256": "8ccace668a041e78ed525d091b0b5daf8b623ff447f912616de535415e4f302f"
+  },
+  {
+    "file": "cubismcore-05.min.js",
+    "source": "https://cubism.live2d.com/sdk-web/core/05/live2dcubismcore.min.js",
+    "sha256": "25ae938cb4fe282ce189b357bcc97e603d1e1f7ec78bf04150d401c23cdc792f",
+    "license": "Live2D Proprietary Software License Agreement; not MIT"
+  }
+]

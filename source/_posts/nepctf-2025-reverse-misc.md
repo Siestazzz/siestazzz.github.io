@@ -1,4 +1,5 @@
 ---
+stats_id: nepctf-2025-reverse-misc
 title: "Nepctf2025 部分reverse misc题解"
 date: 2025-09-14 15:53:35
 updated: 2025-09-14 15:53:35

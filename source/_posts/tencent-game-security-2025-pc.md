@@ -1,4 +1,5 @@
 ---
+stats_id: tencent-game-security-2025-pc
 title: "2025腾讯游戏安全技术竞赛PC端初赛"
 date: 2025-09-14 15:53:34
 updated: 2025-09-14 15:53:34

@@ -6,3 +6,8 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+.wrangler/
+.dev.vars
+backups/cloudflare/
+backups/
+source/images/post-covers/

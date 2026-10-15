@@ -1,0 +1,78 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "22rin_normal_3.0_f_t04.moc3",
+    "Textures": [
+      "22rin_normal_3.0_f_t04.2048/texture_00.png"
+    ],
+    "Physics": "22rin_normal_3.0_f_t04.physics3.json",
+    "Motions": {
+      "Idle": [
+        {
+          "Name": "w-normal-pose01",
+          "File": "motions/w-normal-pose01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Motion": [
+        {
+          "Name": "w-happy-angry02",
+          "File": "motions/w-happy-angry02.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "w-happy-tilthead04",
+          "File": "motions/w-happy-tilthead04.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "w-happy-nod03",
+          "File": "motions/w-happy-nod03.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Expression": [
+        {
+          "Name": "face_normal_01",
+          "File": "motions/face_normal_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_02",
+          "File": "motions/face_smile_02.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smallmouth_01",
+          "File": "motions/face_smallmouth_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_03",
+          "File": "motions/face_smile_03.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": []
+    },
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": []
+    }
+  ]
+}

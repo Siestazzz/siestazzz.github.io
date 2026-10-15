@@ -1,5 +1,27 @@
 # 好友界面 → 友链页
 
+2026-10-13复制反馈：friends.js复制成功后仅清空feedback，不显示“已复制本站友链信息。”；失败仍保留手动复制提示。用户要求只重新编译，本轮不截图或执行浏览器验证。
+
+最新精简（2026-10-13）：移除欢迎语、提交信息说明、未配置联系入口说明及底部互链提示；h2“本站信息”改“友链示意”，该标题承接白字/#44446680半透明描边（3px，23–32px），不再附带标题底板。信息卡四角均12px圆角，复制按钮/反馈保留。原NoneInfo材质证据不变，仅网页文案和布局。旧lead/help/config-note/footnote样式残留不挂载。构建及友链专项通过，已查看桌面截图。
+
+## 2026-10-13 FRIENDS-EMPTY-TEXT / EXCHANGE排版
+
+原好友页包e826a636f6cfb4d87bec3fbd81243737，CustomTextMesh path_id245 / GameObject NoneInfo，原文フレンド申請がありません，键WORD_MISSING_ADD_FRIEND。引用a3006a04bcc9ee4499918d8b6e934230 MonoBehaviour3（FOT-RodinNTLGPro-DB SDF_Base），以及f462a70057e82454c82159c935ac584b Material1（同字体Empty材质）。实读材质：_FaceColor=(1,1,1,1)，_OutlineColor=(.26666668,.26666668,.4,.5019608)，_OutlineWidth=.5，_FaceDilate=.5，_GradientScale=6。SDF单位不直接等于CSS像素。
+
+网页friends.css主提示/空状态用SekaiRodin+SekaiHan中文回退、600字重、白字、#44446680描边；主提示23–32px、3px描边，联系配置提示15–17px、2.5px描边，均网页适配非原字号。保留原未配置状态真实性，不伪造申请列表。说明小字保持深色以避免所有文字都描边。
+
+交换内容改为居中说明、最大680px本站卡、居中复制按钮；卡片12px圆角，正文浅色底，textarea只读/可滚动、禁止拖拽改变版面。保留既有复制代码和字段，未添加后台。friends.ejs文案调整为“让我们成为朋友吧。”；原底板、栏目、前往链接不变。构建/verify-friends-update.cjs通过；桌面手机截图已查看。未做听觉或动画变化。
+
+## 2026-10-13 FRIENDS-EXCHANGE / FRIENDS-LINK 修正
+
+- 设备19bd96b8当前「フレンド追加」只读截图：`analysis-6.8.1/friend-add-20261013.png`。观察到浅色标题条和四角圆角半透明底板；不把空好友申请列表等同于博客申请后台。
+- 原包e826a636f6cfb4d87bec3fbd81243737完整节点`ScreenLayerFriend/ComponentRoot/ComponentRoot/ApprovalPendingFriendList/UIPartsGroupVerticalListView/Background`，CustomImage引用09ce39af28da6034fbd6cbc9707b80b8 / Sprite path_id1，bg_base_r20_wh。证据在`themes/sekai-next/source/game-assets/friends/provenance.json`，该条raw颜色仍为#EBEBF2/alpha .298039；原Sprite50×50、border24四边见既有提取。
+- 网页继续复用上述底板九宫格，不换成整张拉伸。`friends.css`给`.friends-exchange`加12px圆角裁切，修复h1不透明背景盖住圆角；flex纵排、scroll flex:1/min-height:0替代固定减62px，避免实际标题高度不匹配。12px为网页切片尺度，不冒称Unity原20单位在浏览器等于12px。
+- `.page-type-friends .friends-online`及子节点cursor:pointer!important，限定覆盖refinements.css全站default!important；只改前往按钮，其他原鼠标策略不变。
+- `layout/friends.ejs`描述只读friend.description，缺省“暂未填写个人描述”，不再显示网址，也不编造第三方个人简介。URL保留在前往链接。
+- 称号DOM暂时移除，原honors配置、图片、CSS保留但不挂载，方便恢复；不记为当前显示功能。
+- 构建、tools/verify-friends-update.cjs通过：前往pointer、7条缺省描述、无称号DOM、12px圆角、交换内容可见；桌面1280×800和手机390×844交换页截图已人工查看。未对第三方站点执行跳转或提交好友申请。4100服务已启动。
+
 ## 核对记录
 
 已在连接设备上查看好友列表、滚动、排序切换、添加好友、ID 搜索弹窗。列表参考 `friends-list-ready.png`、`friend-sort.png`、`friend-back.png`。本次观察的列表可见行均为离线；在线样式由 APK 的 **Online** 节点确认，不把离线截图换个文字充当在线。

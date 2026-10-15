@@ -1,0 +1,221 @@
+{
+  "sources": [
+    {
+      "bundle": "live2d/model/23len_normal",
+      "cache": "31314cc362b85db6526fbb0033edef92",
+      "sha256": "3edfbaa8e636af9625683788d09d005ea52701347f4d41ffa5041708dd7ca838",
+      "objects": [
+        {
+          "path_id": "-6054518466529146956",
+          "type": "TextAsset",
+          "name": "23len_normal_3.0_f_t04.physics3"
+        },
+        {
+          "path_id": "123037663946477359",
+          "type": "TextAsset",
+          "name": "23len_normal_3.0_f_t04.model3"
+        },
+        {
+          "path_id": "7464630159336609291",
+          "type": "TextAsset",
+          "name": "23len_normal_3.0_f_t04.moc3"
+        },
+        {
+          "path_id": "7560334592320262356",
+          "type": "Texture2D",
+          "name": "texture_00"
+        },
+        {
+          "path_id": "7615489642554763152",
+          "type": "MonoBehaviour",
+          "name": "BuildModelData"
+        }
+      ]
+    },
+    {
+      "bundle": "live2d/motion/23len_motion_base",
+      "cache": "d885c5a4daba13ae5d03e30292695a80",
+      "sha256": "34ece1972bcad042e4206a842acc1dae3a371579e4126eb8d8588b7c1689e147",
+      "objects": [
+        {
+          "path_id": "334329165376765764",
+          "name": "n-normal-nod01",
+          "fade": {
+            "path_id": "-3408311316574966261",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "n-normal-nod01",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 2.3329999446868896,
+          "loop": false,
+          "curves": 61
+        },
+        {
+          "path_id": "-2889803819256919329",
+          "name": "n-normal-nod02",
+          "fade": {
+            "path_id": "2718272917284389959",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "n-normal-nod02",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 2.4670000076293945,
+          "loop": false,
+          "curves": 61
+        },
+        {
+          "path_id": "8555652035448465996",
+          "name": "n-normal-tilthead03",
+          "fade": {
+            "path_id": "493201541527114538",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "n-normal-tilthead03",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 2.6670000553131104,
+          "loop": false,
+          "curves": 60
+        },
+        {
+          "path_id": "-4865332021619851901",
+          "name": "n-len-nod04",
+          "fade": {
+            "path_id": "-4118179517568132851",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "n-len-nod04",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 2.200000047683716,
+          "loop": false,
+          "curves": 61
+        },
+        {
+          "path_id": "3337691723113347827",
+          "name": "face_normal_01",
+          "fade": {
+            "path_id": "7582058847229765640",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_normal_01",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 33
+        },
+        {
+          "path_id": "8076914252268759084",
+          "name": "face_closeeye_02",
+          "fade": {
+            "path_id": "-3766794129234551191",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_closeeye_02",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 33
+        },
+        {
+          "path_id": "6150780020766126794",
+          "name": "face_smile_04",
+          "fade": {
+            "path_id": "6237722061818206765",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_smile_04",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 33
+        },
+        {
+          "path_id": "3564950932340906669",
+          "name": "face_smile_03",
+          "fade": {
+            "path_id": "425746911779239108",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_smile_03",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 33
+        }
+      ]
+    }
+  ],
+  "converter": "sssekai 0.8.0 AnimationHelper/to_motion3",
+  "adaptation": "Idle group selection and scheduling are web choices, not recovered game state machine."
+}

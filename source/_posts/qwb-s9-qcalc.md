@@ -1,4 +1,5 @@
 ---
+stats_id: qwb-s9-qcalc
 title: "强网杯s9初赛 Qcalc wp"
 date: 2025-11-10 11:29:30
 updated: 2025-11-10 11:29:30

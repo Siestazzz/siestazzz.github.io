@@ -1,0 +1,208 @@
+{
+  "music0001": {
+    "file": "music0001.ogg",
+    "source": "music0001.acb",
+    "subsong": 1,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": {
+        "start": 1394592,
+        "end": 3999840
+      },
+      "numberOfSamples": 4000128,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 117543,
+      "streamInfo": {
+        "index": 1,
+        "name": "music0001",
+        "total": 1
+      },
+      "playSamples": 7046088
+    },
+    "sha256": "1e19241b05d4ff9f1a0f22e4ae9663ae376f1216e7b6c1b50209e811f917c7dc",
+    "title": "一緒に歌おう！"
+  },
+  "music0002": {
+    "file": "music0002.ogg",
+    "source": "music0002.acb",
+    "subsong": 1,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": {
+        "start": 55360,
+        "end": 2878041
+      },
+      "numberOfSamples": 2878336,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 117743,
+      "streamInfo": {
+        "index": 1,
+        "name": "music0002",
+        "total": 1
+      },
+      "playSamples": 6141722
+    },
+    "sha256": "01fbed288db4314853a0fad053693d140c12e201fd000d2e28565608a2826305",
+    "title": "Our Town, Our Life"
+  },
+  "SE_DECIDE1_MUSIC": {
+    "file": "SE_DECIDE1_MUSIC.ogg",
+    "source": "MenuCommon.acb",
+    "subsong": 130,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": null,
+      "numberOfSamples": 26553,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 123725,
+      "streamInfo": {
+        "index": 130,
+        "name": "SE_DECIDE1_MUSIC",
+        "total": 188
+      },
+      "playSamples": 26553
+    },
+    "sha256": "6d2eba5f650818ce51f57b09645f01fd364ed2db40c1c8a3c7080d97bbd034ff"
+  },
+  "SE_CANCEL_old2": {
+    "file": "SE_CANCEL_old2.ogg",
+    "source": "MenuCommon.acb",
+    "subsong": 128,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": null,
+      "numberOfSamples": 12535,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 127891,
+      "streamInfo": {
+        "index": 128,
+        "name": "SE_CANCEL_old2",
+        "total": 188
+      },
+      "playSamples": 12535
+    },
+    "sha256": "4679e00a2f0334c8b455705f70aaada56a37666ff07d2ebae6e4757bc3a6fbdf"
+  },
+  "SE_MUSIC_SCROLL": {
+    "file": "SE_MUSIC_SCROLL.ogg",
+    "source": "MenuCommon.acb",
+    "subsong": 30,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": null,
+      "numberOfSamples": 4590,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 140197,
+      "streamInfo": {
+        "index": 30,
+        "name": "SE_MUSIC_SCROLL",
+        "total": 188
+      },
+      "playSamples": 4590
+    },
+    "sha256": "c2b93869dc05e85ec611bcc366a4b79cd169f811f83d80611b49745913b90fe3"
+  },
+  "SE_UI_SCROLL": {
+    "file": "SE_UI_SCROLL.ogg",
+    "source": "MenuCommon.acb",
+    "subsong": 176,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": null,
+      "numberOfSamples": 70909,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 119250,
+      "streamInfo": {
+        "index": 176,
+        "name": "SE_UI_SCROLL",
+        "total": 188
+      },
+      "playSamples": 70909
+    },
+    "sha256": "18b409b8406dcf557ff91cf11dbc4acaddd444ebd1c042f70de1ba6361f8ed6e"
+  },
+  "SE_TITLE_ENTER": {
+    "file": "SE_TITLE_ENTER.ogg",
+    "source": "MenuCommon_Built_in.acb",
+    "subsong": 20,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 2,
+      "mixingInfo": {
+        "inputChannels": 2,
+        "outputChannels": 2
+      },
+      "channelLayout": 3,
+      "loopingInfo": null,
+      "numberOfSamples": 296941,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 118013,
+      "streamInfo": {
+        "index": 20,
+        "name": "SE_TITLE_ENTER",
+        "total": 23
+      },
+      "playSamples": 296941
+    },
+    "sha256": "0ffa9d0d4f6817b48de131d1ca90790214854a73170319eb882e65636baf8977",
+    "sourceArchive": "installed_UnityDataAssetPack.apk/assets/MenuCommon_Built_in.acb",
+    "sourceSha256": "468ec7f7774aa2a8144599a65f296a736000d769db6e8c65d9a96eb0ffda7ca1"
+  }
+}

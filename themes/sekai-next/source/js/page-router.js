@@ -13,8 +13,10 @@
   let shown=location.pathname+location.search;
   const eligible=url=>{
     const root=document.body.dataset.root||'/';
-    const sameWorldHome=url.pathname===root&&url.searchParams.get('world')===document.documentElement.dataset.homeWorld;
-    return url.origin===location.origin&&url.pathname.startsWith(root)&&!/\/map\/?$/.test(url.pathname)&&(!url.searchParams.has('world')||sameWorldHome)&&!!document.querySelector('.unknown-scene');
+    // Entry owns a document-level intro: explicit visits (including browser Back) replay it.
+    const entryPath=new URL(root+'entry/',location.origin).pathname;
+    const path=url.pathname.replace(/\/$/,'');
+    return url.origin===location.origin&&url.pathname.startsWith(root)&&![root.replace(/\/$/,''),root+'index.html',entryPath.replace(/\/$/,'')].includes(path)&&!!document.querySelector('.unknown-scene');
   };
   async function navigate(value,{pop=false}={}){
     const url=new URL(value,location.href);
@@ -33,6 +35,7 @@
         link=document.createElement('link');link.rel='stylesheet';link.href=href;link.onload=resolve;link.onerror=reject;document.head.append(link);
       })));
       if(ticket!==serial)return;
+      window.sekaiDismissEntry?.();
       unmount();
       if(!pop)history.pushState(null,'',url.href);
       shown=url.pathname+url.search;
@@ -67,7 +70,7 @@
       if(previous.origin!==url.origin||previous.pathname!==url.pathname)return false;
       if(url.search&&previous.search!==url.search)return false;
       // Never restore another world's homepage just because its pathname matches.
-      if(previous.searchParams.has('world')&&previous.searchParams.get('world')!==world)return false;
+      // Legacy world query strings no longer select scenes; visit state owns the world.
       const saved=entry.getState?.()?.sekaiWorld;
       return !saved||saved===world;
     }).at(-1);

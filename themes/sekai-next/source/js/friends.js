@@ -41,7 +41,7 @@ window.SekaiPages.register('friends', (scope) => {
   order.addEventListener('click',()=>{descending=!descending;reorder();});
   screen.querySelector('[data-friends-copy]').addEventListener('click',async()=>{
     const field=screen.querySelector('#friends-own-card'), feedback=screen.querySelector('[data-friends-feedback]');
-    try {await navigator.clipboard.writeText(field.value);feedback.textContent='已复制本站友链信息。';}
+    try {await navigator.clipboard.writeText(field.value);feedback.textContent='';}
     catch {field.focus();field.select();feedback.textContent='未能自动复制，信息已选中，请手动复制。';}
   });
 });

@@ -1,0 +1,77 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "21miku_normal_3.0_f_t06.moc3",
+    "Textures": [
+      "21miku_normal_3.0_f_t06.2048/texture_00.png"
+    ],
+    "Physics": "21miku_normal_3.0_f_t06.physics3.json",
+    "Motions": {
+      "Idle": [
+        {
+          "Name": "w-normal-pose01",
+          "File": "motions/w-normal-pose01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Motion": [
+        {
+          "Name": "w-normal-nod05",
+          "File": "motions/w-normal-nod05.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "w-normal-tilthead05",
+          "File": "motions/w-normal-tilthead05.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "w-normal-nod01",
+          "File": "motions/w-normal-nod01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Expression": [
+        {
+          "Name": "face_normal_01",
+          "File": "motions/face_normal_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_03",
+          "File": "motions/face_smile_03.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_01",
+          "File": "motions/face_smile_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": [
+        "ParamMouthOpenY"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeROpen",
+        "ParamEyeLOpen"
+      ]
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   <div class="collection-grid">
     <% ['CTF', 'Android', '漏洞挖掘', '逆向工程', 'AI', '其他'].forEach(function(name, index) {
       const category = site.categories.findOne({name: name}) || {name: name, length: 0, path: '/search/?category=' + encodeURIComponent(name)}; %>
-      <a class="collection-card accent-<%= ['cyan','pink','yellow'][index % 3] %>" href="<%- url_for(category.path) %>">
-        <span><%= String(index + 1).padStart(2, '0') %></span><div><small>CATEGORY</small><strong><%= category.name %></strong><em><%= category.length %> 条记录</em></div><i>›</i>
+      <a class="collection-card" style="--accent:<%= ['#33ccbb','#4455dd','#88dd44','#ee1166','#ff9900','#884499'][index] %>" href="<%- url_for(category.path) %>">
+        <img class="category-unit-icon" src="<%- url_for('/game-assets/icon_tab_unit_' + ['vs','ln','mj','vb','ws','25'][index] + '_on.png') %>" alt=""><div><small>CATEGORY</small><strong><%= category.name %></strong><em><%= category.length %> 条记录</em></div><i>›</i>
       </a>
     <% }) %>
   </div>

@@ -1,0 +1,46 @@
+{
+  "source": "https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/systemLive2ds.json",
+  "provenance": "community master snapshot; not extracted from this device",
+  "selection": "first three compatible original pairs; original seasonal availability is not applied in this preview",
+  "items": [
+    {
+      "id": 61,
+      "characterId": 21,
+      "unit": "piapro",
+      "serif": "雨の日は、雨にちなんだ歌を\n歌うのも楽しそうだね",
+      "assetbundleName": "voicepack_21_piapro",
+      "voice": "partvoice_02_021_piapro",
+      "motion": "w-normal-nod05",
+      "expression": "face_smile_03",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 62,
+      "characterId": 21,
+      "unit": "piapro",
+      "serif": "楽しいとつい時間を\n忘れちゃうけど、水分補給は\n忘れないようにしないとね",
+      "assetbundleName": "voicepack_21_piapro",
+      "voice": "partvoice_03_021_piapro",
+      "motion": "w-normal-tilthead05",
+      "expression": "face_smile_03",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    },
+    {
+      "id": 63,
+      "characterId": 21,
+      "unit": "piapro",
+      "serif": "夏休みだね！　みんなは\nどんな風に過ごしてる？",
+      "assetbundleName": "voicepack_21_piapro",
+      "voice": "partvoice_20_021_piapro",
+      "motion": "w-normal-nod01",
+      "expression": "face_smile_01",
+      "publishedAt": 1590904800000,
+      "closedAt": 1598853600000,
+      "weight": 1
+    }
+  ]
+}

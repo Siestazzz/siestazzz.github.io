@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict');
+const {chromium}=require('C:/Users/22596/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({channel:'chrome',headless:true});try{
+ const p=await b.newPage({viewport:{width:1280,height:720}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto('http://localhost:4100/');await p.waitForSelector('.live-menu-reading');
+ await p.locator('.menu-toggle').click();await p.waitForTimeout(300);
+ assert.equal(await p.locator('.menu-panel nav a').count(),5);
+ assert.equal(await p.locator('.menu-panel a').nth(1).getAttribute('href'),'https://github.com/siestazzz');
+ assert(await p.locator('.site-main').evaluate(e=>e.inert));
+ await p.screenshot({path:'pjskapk/analysis-6.8.1/blog-menu-review.png'});
+ await p.keyboard.press('Escape');assert(await p.locator('.menu-panel').evaluate(e=>e.inert));
+ await p.locator('.menu-toggle').click();await p.locator('.menu-panel a').nth(2).click();await p.waitForURL('**/categories/');
+ assert(!await p.locator('.site-main').evaluate(e=>e.inert));
+ assert.deepEqual(await p.locator('.collection-card').evaluateAll(els=>els.map(e=>getComputedStyle(e).getPropertyValue('--accent').trim())),['#33ccbb','#4455dd','#88dd44','#ee1166','#ff9900','#884499']);
+ await p.locator('.category-unit-icon').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
+ assert.deepEqual(await p.locator('.category-unit-icon').evaluateAll(imgs=>imgs.map(i=>i.src.split('/').pop())),['vs','ln','mj','vb','ws','25'].map(u=>'icon_tab_unit_'+u+'_on.png'));
+ assert.equal(await p.locator('.collection-card > span').count(),0);
+ await p.screenshot({path:'pjskapk/analysis-6.8.1/blog-categories-review.png'});
+ await p.setViewportSize({width:390,height:844});await p.locator('.menu-toggle').click();await p.waitForTimeout(300);
+ await p.screenshot({path:'pjskapk/analysis-6.8.1/blog-menu-mobile.png'});
+ assert.deepEqual(errors,[]);console.log('PASS five links, GitHub URL, Escape, inert, category soft navigation, mobile');
+ }finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

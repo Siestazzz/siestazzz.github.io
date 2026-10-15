@@ -1,0 +1,1069 @@
+{
+  "source": "cfe864a549e85814fba9d168b785fec6",
+  "path_id": 1,
+  "duration": 6.433333396911621,
+  "bindings": [
+    {
+      "path": 4074140029,
+      "attribute": 3,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 4,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_before",
+      "index": 0,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0037856001872569323,
+              -0.019779762253165245,
+              0.0,
+              0.8799999952316284
+            ]
+          },
+          {
+            "t": 3.4833333492279053,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          }
+        ],
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0037856001872569323,
+              -0.019779762253165245,
+              0.0,
+              0.8799999952316284
+            ]
+          },
+          {
+            "t": 3.4833333492279053,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          }
+        ],
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.4833333492279053,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 3318017825,
+      "attribute": 3,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 4,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg",
+      "index": 3,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0037856001872569323,
+              -0.019779762253165245,
+              0.0,
+              0.8799999952316284
+            ]
+          },
+          {
+            "t": 3.4833333492279053,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          }
+        ],
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0037856001872569323,
+              -0.019779762253165245,
+              0.0,
+              0.8799999952316284
+            ]
+          },
+          {
+            "t": 3.4833333492279053,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.800000011920929
+            ]
+          }
+        ],
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.4833333492279053,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 3318017825,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg",
+      "index": 6,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 0.25,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 2.133333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 1631733488,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "SekaiEffect",
+      "index": 7,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 2.133333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 3783239947,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "SekaiEffect/particle",
+      "index": 8,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 2.133333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 2019425372,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "SekaiEffect/particle/particle01_front",
+      "index": 9,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 2.133333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 4265167744,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "SekaiEffect/particle/particle01_mini_front",
+      "index": 10,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 2.133333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 4074140029,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_before",
+      "index": 11,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 4074140029,
+      "attribute": 304273561,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_before",
+      "index": 12,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              -0.25,
+              0.75,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 2.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 188942778,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_after",
+      "index": 13,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.75,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 188942778,
+      "attribute": 304273561,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_after",
+      "index": 14,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.75,
+            "coeff": [
+              -0.8674087524414062,
+              1.7242610454559326,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 5.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 1236657857,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "SekaiEffect/particle/particle02_front",
+      "index": 15,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 1808952514,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "white_moya",
+      "index": 16,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 0.01666666753590107,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 3.883333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 199777497,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "white_moya/white",
+      "index": 17,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 0.01666666753590107,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 3.883333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 3234368095,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_white",
+      "index": 18,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.5833332538604736,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.5999999046325684,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 6.433333396911621,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 3234368095,
+      "attribute": 304273561,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_white",
+      "index": 19,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.5833332538604736,
+            "coeff": [
+              -103.5396728515625,
+              37.34484100341797,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 3.799999952316284,
+            "coeff": [
+              20.725561141967773,
+              -12.27799129486084,
+              1.6009238958358765,
+              0.699999988079071
+            ]
+          },
+          {
+            "t": 3.9666666984558105,
+            "coeff": [
+              14.204731941223145,
+              -7.581200122833252,
+              -0.7646101117134094,
+              0.7217169404029846
+            ]
+          },
+          {
+            "t": 4.349999904632568,
+            "coeff": [
+              -0.08407659828662872,
+              0.2836221158504486,
+              -0.3149462640285492,
+              0.11473537981510162
+            ]
+          },
+          {
+            "t": 5.599999904632568,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 1151789479,
+      "attribute": 2086281974,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 1,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "white_moya/white_moya_sml",
+      "index": 20,
+      "curves": [
+        [
+          {
+            "t": 0.0,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "t": 0.01666666753590107,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "t": 3.883333444595337,
+            "coeff": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "path": 4074140029,
+      "attribute": 2526845255,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_before",
+      "index": 21,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 4074140029,
+      "attribute": 4215373228,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_before",
+      "index": 22,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 4074140029,
+      "attribute": 2334886179,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_before",
+      "index": 23,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 188942778,
+      "attribute": 2526845255,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_after",
+      "index": 24,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 188942778,
+      "attribute": 4215373228,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_after",
+      "index": 25,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 188942778,
+      "attribute": 2334886179,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_after",
+      "index": 26,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 3234368095,
+      "attribute": 2526845255,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_white",
+      "index": 27,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 3234368095,
+      "attribute": 4215373228,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_white",
+      "index": 28,
+      "curves": [
+        []
+      ]
+    },
+    {
+      "path": 3234368095,
+      "attribute": 2334886179,
+      "script": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "typeID": 212,
+      "customType": 0,
+      "isPPtrCurve": 0,
+      "isIntCurve": 0,
+      "isSerializeReferenceCurve": 0,
+      "node": "bg_white",
+      "index": 29,
+      "curves": [
+        []
+      ]
+    }
+  ],
+  "constant": {
+    "data": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "dense": {
+    "m_FrameCount": 388,
+    "m_CurveCount": 0,
+    "m_SampleRate": 60.0,
+    "m_BeginTime": 0.0,
+    "m_SampleArray": []
+  }
+}

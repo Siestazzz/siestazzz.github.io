@@ -1,6 +1,9 @@
 <section class="live-shell">
-  <div class="len-stage"><img class="len-standing" src="<%- url_for('/game-assets/len-standing.webp') %>" alt="镜音连立绘"><button class="len-talk" type="button" aria-label="换一句话"><small>KAGAMINE LEN</small><span id="len-line">代码先放一边……要不要读点有趣的东西？</span><i>▼</i></button></div>
-  <div class="live-phone"><div class="phone-notch"></div><span class="phone-watermark" aria-hidden="true">LIVE</span><div class="live-content"><h1><span class="live-spectrum" aria-hidden="true"><i style="--bar:0"></i><i style="--bar:1"></i><i style="--bar:2"></i><i style="--bar:3"></i><i style="--bar:4"></i><i style="--bar:5"></i><i style="--bar:6"></i><i style="--bar:7"></i></span> READING LIVE</h1><div class="live-tiles">
+  <div class="len-stage live2d-stage" data-live2d-host>
+    <button class="live2d-tap" type="button" aria-label="点击角色，播放动作和台词"><span class="live2d-viewport"></span><span class="live2d-fallback">正在准备 Live2D…</span></button>
+    <button class="len-talk live2d-talk" type="button" aria-label="切换角色动作和台词"><span class="live2d-line" aria-live="polite">正在准备 Live2D…</span></button>
+  </div>
+  <div class="live-phone"><div class="phone-notch"></div><span class="phone-watermark" aria-hidden="true">LIVE</span><div class="live-content"><h1><span class="live-spectrum" aria-hidden="true"><i style="--bar:0"></i><i style="--bar:1"></i><i style="--bar:2"></i><i style="--bar:3"></i><i style="--bar:4"></i><i style="--bar:5"></i><i style="--bar:6"></i><i style="--bar:7"></i></span> READING</h1><div class="live-tiles">
     <% [{kind:'reading',art:'challenges',title:'开始阅读',label:'READING',desc:'选择一篇文章，开始阅读'}, {kind:'solo',art:'scoreboard',title:'单人演奏',label:'SOLO LIVE',desc:'音游准备中 · 暂未开放'}].forEach(function(item){ %>
     <<%= item.kind==='reading'?'a':'div' %> class="live-menu-card live-menu-<%= item.kind %>" <%- item.kind==='reading'?'href="'+url_for('/search/')+'"':'role="button" aria-disabled="true" aria-label="SOLO LIVE 音游，暂未开放"' %>>
       <span class="live-menu-ghost" aria-hidden="true"><%= item.label %></span>

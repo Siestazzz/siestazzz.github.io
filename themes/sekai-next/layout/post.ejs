@@ -1,10 +1,10 @@
-<article class="reader-shell" data-post-path="<%= page.path %>">
+<article class="reader-shell" data-post-path="<%= page.path %>" data-stats-article="<%= page.stats_id || page.slug %>">
   <aside class="reader-side">
     <a class="back-link" href="<%- url_for('/search/') %>">← 返回文章选择</a>
     <div class="chapter-marker"><span>CHAPTER</span><strong><%= date(page.date, 'MM.DD') %></strong></div>
     <div class="reader-meta">
       <span>发布日期</span><b><%= date(page.date, 'YYYY.MM.DD') %></b>
-      <span>所属分类</span><b><%= page.categories.length ? page.categories.first().name : '未分类' %></b>
+      <span>所属分类</span><b><% if (page.categories.length) { page.categories.each(function(category) { %><a class="reader-category-link" href="<%- url_for(category.path) %>"><%= category.name %></a> <% }); } else { %>未分类<% } %></b>
     </div>
     <% if (page.tags.length) { %>
       <div class="tag-stack"><% page.tags.each(function(tag) { %><a href="<%- url_for(tag.path) %>"># <%= tag.name %></a><% }) %></div>
@@ -16,8 +16,8 @@
      const primaryCategory = Object.keys(categoryPalette).find(c => postCategories.includes(c.toLowerCase())) || '其他'; %>
   <div class="reader-card" style="--accent:<%= categoryPalette[primaryCategory] %>" tabindex="0" aria-label="文章阅读区">
     <header class="article-head" id="article-start">
-      <p><%= page.categories.length ? page.categories.first().name : 'PERSONAL RECORD' %></p>
-      <small class="reading-count">阅读 <span data-post-views="<%= page.path %>">0</span> · 本机演示计数</small>
+      <p><% if (page.categories.length) { page.categories.each(function(category) { %><a class="reader-category-link" href="<%- url_for(category.path) %>"><%= category.name %></a> <% }); } else { %>PERSONAL RECORD<% } %></p>
+      <small class="reading-count" title="全站阅读量，同一浏览器30分钟内去重">阅读 <span data-post-views="<%= page.stats_id || page.slug %>">—</span></small>
       <h1><%= page.title %></h1>
       <% if (page.excerpt) { %><div class="article-lead"><%= strip_html(page.excerpt) %></div><% } %>
     </header>

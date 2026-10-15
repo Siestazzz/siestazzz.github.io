@@ -1,0 +1,78 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "01ichika_normal_3.0_f_t04.moc3",
+    "Textures": [
+      "01ichika_normal_3.0_f_t04.2048/texture_00.png"
+    ],
+    "Physics": "01ichika_normal_3.0_f_t04.physics3.json",
+    "Motions": {
+      "Idle": [
+        {
+          "Name": "w-normal-pose01",
+          "File": "motions/w-normal-pose01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Motion": [
+        {
+          "Name": "w-normal-tilthead06",
+          "File": "motions/w-normal-tilthead06.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "w-cool-tilthead01",
+          "File": "motions/w-cool-tilthead01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        },
+        {
+          "Name": "w-happy-nod01",
+          "File": "motions/w-happy-nod01.motion3.json",
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5
+        }
+      ],
+      "Expression": [
+        {
+          "Name": "face_normal_01",
+          "File": "motions/face_normal_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_01",
+          "File": "motions/face_smile_01.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_04",
+          "File": "motions/face_smile_04.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        },
+        {
+          "Name": "face_smile_02",
+          "File": "motions/face_smile_02.motion3.json",
+          "FadeInTime": 0.25,
+          "FadeOutTime": 0.25
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": []
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": []
+    }
+  ]
+}

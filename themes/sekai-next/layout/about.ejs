@@ -1,8 +1,7 @@
 <section class="profile-page">
   <div class="profile-card">
-    <div class="profile-avatar"><span>S</span><i></i></div>
+    <div class="profile-avatar"><% if (theme.profile.avatar) { %><img src="<%- url_for(theme.profile.avatar) %>" alt="<%= config.author %>的头像" width="400" height="400"><% } else { %><span>S</span><% } %></div>
     <div class="profile-copy"><p>PLAYER PROFILE</p><h1><%= config.author %></h1><strong><%= theme.profile.role %></strong><div class="profile-message"><%- page.content %></div></div>
-    <div class="profile-stats"><span><small>RECORDS</small><b><%= site.posts.length %></b></span><span><small>CATEGORIES</small><b><%= site.categories.length %></b></span><span><small>STATUS</small><b class="online"><%= theme.profile.status %></b></span></div>
+    <div class="profile-stats"><span><small>RECORDS</small><b class="online"><%= site.posts.length %></b></span><span><small>CATEGORIES</small><b class="online"><%= site.categories.length %></b></span></div>
   </div>
 </section>
-

@@ -1,0 +1,14 @@
+{
+  "name": "siestablog-stats-test",
+  "main": "worker.mjs",
+  "account_id": "11c3b70bf1c59eec79ced7e3d7c2a19e",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": true,
+  "vars": { "ALLOWED_ORIGINS": "https://siestazzz.github.io", "STATS_WRITES_ENABLED": "true" },
+  "d1_databases": [{"binding":"DB","database_name":"siestablog-stats-test","database_id":"4d361b3c-8f72-43d6-b21b-a5903e723072"}],
+  "ratelimits": [
+    {"name":"READ_LIMITER","namespace_id":"261015201","simple":{"limit":30,"period":60}},
+    {"name":"WRITE_LIMITER","namespace_id":"261015202","simple":{"limit":12,"period":60}}
+  ],
+  "triggers": {"crons": []}
+}

@@ -1,4 +1,5 @@
 ---
+stats_id: android-binder-calling-identity
 title: "Binder.getCallingPid()和Binder.getCallingUid()漏洞分析"
 date: 2025-10-11 13:15:41
 updated: 2025-10-11 13:15:41

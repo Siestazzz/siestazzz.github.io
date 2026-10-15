@@ -23,6 +23,138 @@
 
 ## 2. 场景与入口
 
+### 2026-10-16 · BLOG-STATS / POST-COVER-OFF
+
+用户要求：阅读门槛由5000ms改为30000ms（statistics.js），前台累计计时、后台暂停和软导航卸载不变；30分钟去重不变。这是前端策略，不代表后端验证真实停留。
+文章封面停用：10篇front matter去掉cover、search-index不输出cover；main.js不创建列表/预览封面或加载fallback；列表保留已有CSS频谱，未选中静态低透明，选中沿用原频谱动画。search.ejs删除phone-jacket-wash，layout不再加载jacket-blur.js；历史代码/样式保留但未挂载。旧大厅精选轮播也移除封面和正文首图fallback。正文内图片、世界背景、Live2D不变。source/images/post-covers原图本地保留，Hexo exclude且Git忽略，不输出/推送；重新clean/build去掉生成目录旧封面。网页自制性能取舍，不冒称游戏本来没有封面。验证结果见本轮交付及证据文档对应条目。
+
+### 2026-10-15 · BLOG-STATS（网页自制）
+
+本日防护升级：Worker原D1限流改为READ_LIMITER 120次/IP/60s、WRITE_LIMITER 60次/IP/60s，在所有数据库操作之前检查；限流是Cloudflare各节点近似窗口，不是全球精确限额。GET快照使用Cache API缓存60s，内部键固定且忽略查询参数，缓存只含JSON数据，响应按Origin重新附加CORS。数字最多延迟约60s，不在每次POST后清缓存。STATS_WRITES_ENABLED必须为字符串true才接受写入，false只停统计不影响阅读和查询；缺少限流绑定/密钥则503拒绝，不静默绕过。旧rate_limits表保留但不再新增记录，清理仍兼容旧数据。详情/云端交付记录见证据文档BLOG-STATS防护升级。
+
+防护交付验证：正式Worker版本7983fbde-44aa-4845-a696-36505747f72d已部署，线上GET缓存/非法写拒绝通过，正式计数和receipts仍0；真实写入/去重/读写429/停写在独立测试D1验证通过。测试环境停写保留，正式原KV/密钥/日志/关闭预览设置保留，新增每日Cron。未部署博客/提交Git；下方“未部署”指早期基础接入阶段，当前以本条为准。
+
+- 文件：`themes/sekai-next/source/js/statistics.js`、`main.js`、`layout/layout.ejs`、`layout/post.ejs`、`scripts/search-index.js`；服务端 `workers/statistics/worker.mjs`、`schema.sql`。
+- 数据：D1 `DB`，数据库 `siestablog`。原 `sekai-demo-views` 不再读写，也不导入。10 篇文章固定 `stats_id`，修改标题/日期不改变 ID；新文章添加唯一 ID 并同步 SQL 白名单。
+- 触发：正式 origin 可见页面计 visit；正文可见累计 5000ms 计 read。同浏览器/同文章 1800s 去重；服务端 receipt 条件 upsert + trigger 原子更新。UUID 存浏览器，服务端仅保存 HMAC；清缓存/跨设备不视为同访客，不宣称独立人数或完全防刷。
+- 生命周期：软导航卸载清理 timer/visibility listener；选文、搜索、切换分类不计阅读。快照最多每 30000ms 拉取一次，事件后刷新；仅改计数字符，不重建场景和列表。请求超时 8000ms，失败保留已确认数字或“—”。本机及非正式 origin 不请求/不写入。
+- 统计接口：GET `/stats` 返回 visits/reads/文章字典（上限500篇），POST `/events`；限流见上方本日升级，1024字节请求体限制、文章白名单、精确 CORS。IP 不落库，限流key为按日HMAC；定时清理24小时以上receipt和过期限流记录。CORS不是身份验证，公开接口仍可能被伪造请求刷量。
+- 当前界面原“阅读量”显示全站 reads，列表和正文显示文章 views；visits 已统计但没有新加界面槽位。旧测试值不再显示。
+- 验证：Hexo构建、Node语法检查及本地SQLite接口测试通过；`tools/verify-statistics-browser.cjs` Chromium隔离fixture通过：计数展示、5秒阅读、软导航卸载、重复进入去重、localhost禁用。`git diff --check`通过（仅已有CRLF提示）。未部署远程Worker、未向云端写计数；无新视觉动画，不需要游戏参数对照。
+- 云端安装步骤见 `docs/GAME-IMPLEMENTATION-EVIDENCE.md` 的 BLOG-STATS 条目。本次没有修改页面路由。
+
+2026-10-13 PROFILE / SEARCH / POST-COVER：资料角色改Reverse/Mobile/Agent、简介“这个人很懒”；移除STATUS项，2个计数用原ONLINE绿#139d91，PLAYER PROFILE字号15–19px、简介19–24px。搜索外框改14px圆角/细白边/浅底，原放大镜缩至25px，按钮10px圆角，仅按钮hover青色；位置与筛选逻辑不变。10张封面保留像素尺寸，tools/compress-post-covers.py按原字节50%预算转换WebP，文章cover与来源映射更新，原图保留，正文不动。上述为网页适配，无新游戏字段；验证记录见TAXONOMY-UI.md。
+
+2026-10-13内容清理/封面：移除hello-world、build-a-small-tool、weekend-city-walk三篇demo源文，本地备份backups/demo-posts-20261013。其余10篇front matter添加固定cover，从用户D:/Pictures/壁纸中取10张不同图片（优先较小文件，排除截图名），原样复制至source/images/post-covers；sources.json保存映射。原壁纸不修改，正文图片不变。选文及手机预览沿用既有cover读取，无新动画。friends.js成功复制无文字提示，失败反馈保留。按要求本轮仅清理生成缓存并构建，不看图。
+
+2026-10-13 FRIENDS-EMPTY-TEXT精简：移除交换欢迎/说明、联系未配置及底部互链提示，白字半透明灰紫描边仅保留在“友链示意”标题（空列表原提示仍可用）；信息卡四角12px。friends.ejs/friends.css，网页适配，无新动画。构建/友链专项通过，桌面已检查；详见FRIENDS.md。
+
+2026-10-13 FRIENDS-EMPTY-TEXT：参考原NoneInfo / CustomTextMesh245与DB SDF Empty材质，交换页提示改白字半透明#44446680描边；中文SekaiHan补齐。居中最大680px信息卡/按钮，12px圆角，字号/3px描边是网页适配。原字段、path_id、CSS及验证见FRIENDS.md最新条目；构建和友链专项通过，桌面手机已检查。
+
+### 2026-10-13 · FRIENDS-LINK / FRIENDS-EXCHANGE
+
+友链前往悬停为pointer（局部!important覆盖全站default）；留言位置改显示description，未配置显示“暂未填写个人描述”，URL仅保留外链。称号DOM移除，素材/配置/CSS暂留不挂载。交换面板加12px圆角裁切及flex滚动区，修复标题盖角和内容高度计算；原bg_base_r20_wh切片与色值不变。已对照设备添加好友页和ApprovalPendingFriendList背景原节点，证据见FRIENDS.md最新记录。构建/专项浏览器验证通过，桌面手机截图已查看。
+
+2026-09-20 ENTRY-TITLE-LOGO再次左移：WELCOME TO桌面left4%、手机≤700px left6%，以末尾E与主标题首个S大致垂直为目标；大小、高度及动画不变，网页排版参数。证据与验证见TITLE-ENTRY.md。
+
+2026-09-20 ENTRY-TITLE-LOGO位置微调：entry-screen.css中WELCOME TO的left由19%→16%，大小/高度/动画不变，网页适配。详见TITLE-ENTRY.md最新记录。
+
+### 2026-09-20 · ENTRY-TITLE-LOGO：WELCOME TO重绘
+
+用welcome-to.svg代替普通small字体：参照原logo_all的几何蓝字/斜切白底片，紧贴标题左上；新字母为网页矢量重绘。left19%、width29%、translateY(-82%)，随heading原动画，没有新RAF。原Prefab96→Sprite2证据、258×44绘制参数、文件与偏离说明见TITLE-ENTRY.md最新条目。构建及入口回归通过，桌面/手机截图检查。
+
+### 2026-09-20 · ENTRY-TITLE-EXIT / SEARCH-HOVER 调整
+
+入口点击后移除“正在进入…”status节点，不改粒子/盖白/等待/揭白流程。搜索移除外层表单hover/focus-within底色，只保留搜索按钮150ms变色。entry-screen.js、refinements.css；网页交互适配，原游戏素材与参数不变。构建及verify-entry-search-feedback.cjs通过：退出无文字、输入框hover/focus背景不变、按钮变色。返回逻辑本次暂未改，等待明确“历史上一页”或“固定上级”。
+
+### 2026-09-20 · ENTRY-TITLE-LOGO / TAXONOMY-HOVER / LIVE2D-VOICE
+
+入口标题上方恢复小字WELCOME TO，沿用现有heading入场、SekaiRodin与原small样式（10–17px桌面clamp）；非原游戏文字。选文手机标签由span改a，Hexo search-index输出tagLinks真实路径，hover/focus青色背景#77eedd；搜索框hover/focus-within底色#dbf7f3，按钮#33ccbb，150ms网页过渡，减少动画关闭。单击标签→标签归档。
+
+四人现有12条台词接入设备原语音，同记录assetbundleName/voice配对；ready揭示/点击播放，切页/换句/静音停止，gain .4。音频/代码/原path_id及网页差异见[LIVE2D-VOICE.md](../pjskapk/LIVE2D-VOICE.md)。构建成功，专项与入口回归结果见专题记录。
+
+### 2026-09-20 · ROOT-ENTRY
+
+根目录挂载ENTRY-TITLE，点击进入`/live/`；`/entry/`兼容保留。普通页面返回阅读主页改为`/live/`，保持常驻场景。layout.ejs按首页第一页或title_entry标记渲染；entry-screen.js更改目标；page-router.js排除根入口的软载入。原动画/素材/音效参数不变，仅网页路由调整。构建及verify-root-entry.cjs通过，已检查根入口截图；详见TITLE-ENTRY.md最新补充。
+
+### 2026-09-20 · TAXONOMY-HOVER / PROFILE-AVATAR
+
+标签索引、正文标签/分类链接新增150ms变色，分类卡按已有分类色25%混白；离开/失焦复原，减少动画模式无过渡。正文侧栏及标题分类改真实链接，单击进入Hexo分类列表。个人资料头像使用用户指定GitHub图片的本地副本。网页业务适配，非游戏悬停参数；详见[TAXONOMY-UI.md](../pjskapk/TAXONOMY-UI.md)。构建及verify-taxonomy.cjs通过，已查看分类悬停和手机头像截图。
+
+### 2026-09-20 · AUDIO-BGM / AUDIO-UI
+
+最新静音/入口声：进页即尝试播放（受浏览器自动播放策略），静音只gain=0，取消静音恢复.112，源和播放时间不重置。AUDIO-TITLE-ENTER由原内置包MenuCommon_Built_in.acb子流20 SE_TITLE_ENTER替代入口普通确认，预载、单次click触发，.12增益，原6.733秒尾声保留。源包hash/路径/网页差异见BLOG-AUDIO.md。
+
+最新覆盖：声音按钮全站移右下（桌面26/20px，手机14/14px并兼顾安全区）；BGM及SE均乘上版音量.4，实际gain分别.112/.12/.064。原曲/图标/触发/循环不变，网页适配；来源及验证见BLOG-AUDIO.md。
+
+验证：构建、声音专项、菜单与入口回归通过；桌面/手机截图检查。包含原循环点、连续导航不重启、选文/滚动SE限频、静音记忆、后台暂停恢复、菜单导航恢复按钮。未做实机听辨/完整游戏混音对齐。
+
+全站左上BGM按钮（原vs音符+网页状态）统一开关BGM/音效；入口一緒に歌おう！、其他Our Town, Our Life。从设备缓存提取为本地Vorbis，按原HCA采样循环点播放；普通软导航同源续播，入口↔其他换曲。真实手势解锁、静音持久化、后台挂起，菜单inert/入口键盘适配。确认/返回/选文/正文滚动复用MenuCommon原波形；滚动64px/160ms、音量和业务映射为网页适配，不声称完整原游戏Cue混音还原。运行文件site-audio.js/css、layout.ejs，证据和边界见[BLOG-AUDIO.md](../pjskapk/BLOG-AUDIO.md)。
+
+### 2026-09-20 · LIVE2D-CHARACTER / LIVE2D-TALK
+
+最新布局/动作调度：台词框桌面宽72%→64%、left14%→18%，中心/字大小不变，窄屏原48%宽保留。删除可见后5秒强制Idle/normal，原台词动作自然结束，不主动换另一姿势；呼吸/眨眼保持，点击继续下一组。初始化隐藏Idle仍用于姿势准备。此为用户要求的网页适配，不是游戏定时规则还原；原动作资源不变。
+
+最新验证：构建、四人首帧原Arm曲线对照、250ms线性淡入、台词点击/返回、减少动画/失败重试、入口遮罩等待及既有入口回归通过；一歌/初音截图已检查。实机本轮未取得有效角色入场录像，淡入依据为反汇编，详见审计文档。
+
+**最新修正（覆盖下文旧预演/180ms结论）**：发现mulmotion.update只累加时间，旧45帧并未逐帧求解。现在warmPose直接步进internalModel.update并清delta，共90步后绘制才ready。LIVE2D-REVEAL改为游戏ShowCharacter方法体中的250ms linear；入口白遮罩结束/标签可见才揭示，避免提前播完。原函数RVA、证据文件、参数与实机录屏限制见[LIVE2D-REVEAL-AUDIT.md](../pjskapk/LIVE2D-REVEAL-AUDIT.md)。旧“任意参数非默认即首帧正确”的验证不足，新增原Arm恒定曲线逐项首帧断言。
+
+LIVE2D-REVEAL：ready后画布及台词一起180ms ease-out从opacity0到1；隐藏预演不变，减少动画直接显示。`live2d-character.css`，纯网页入场适配，非已恢复游戏时长；不对整个stage淡入，避免加载提示参与动画。
+
+本次首屏回归：构建、四角色ready时台词/动作配对、下一条切换（含相同表情）、返回/减少动画/失败重试及入口回归通过；一歌和初音ready截图已查看。没有进行游戏逐帧时间匹配。
+
+首屏台词修正（覆盖下文仅预演Idle的初始化）：`live2d-character.js/select` 隐藏状态先预演基础姿势45×16.667ms，再启动talks.json第一条身体/表情并预演45帧，绘制后同时显示角色与配对台词；不再显示“点击角色”占位台词。CSS加载期间隐藏台词框，失败仍显示重试。后续点击从第二条继续，共用playTalk，清理并行动作通道预约以支持重复表情。两段预演共1.5秒模拟时间，并非等待1.5秒，也非游戏初始化算法。来源及验证见专题文档最新补充和E25。
+
+同日后续：取消角色选择栏，进入阅读页随机一人；台词框移除姓名/三角并缩小；人物上移8%容器高，标题READING。模型在隐藏状态先应用原初始动作并预演0.75秒再显示，避免默认展臂姿势闪现。属于网页布局/初始化策略，不新增游戏字段结论。详见LIVE2D-CHARACTERS.md最新覆盖及E25；旧选择按钮回归不再适用。
+
+最终验证：四人动作参数与台词配对、角色切换竞争、选文往返同模型/renderer复用、模拟后台暂停、手机与减少动画、MOC失败后重试通过；既有入口回归通过。未做游戏逐帧匹配或真实设备GPU帧率验收。
+
+阅读页原镜音连静态图摇摆已替换为一歌/铃/连/初音四个可切换的原Cubism模型；一次一人，点击立绘或文字框按同条记录播放动作+表情并更新原日文台词。入口插画不变，入口遮罩期间不加载Live2D。原MOC/Texture2D/physics/Unity动作来自设备，台词配对来自社区master快照；不宣称网页眨眼/呼吸定时、5秒回待机、角色选择UI和历史季节台词筛选为原游戏算法。框架、数值、path_id、生命周期、实际验证及差异见 [LIVE2D-CHARACTERS.md](../pjskapk/LIVE2D-CHARACTERS.md) 与 E25。当前静态 len-standing CSS及旧台词数组残留但不挂载执行。
+
+### 2026-09-20 · ENTRY-TITLE 新入口层
+
+**最新循环修正**：ENTRY-TITLE-MOVIE的ended仅设置currentTime=226/30，等待seeked才play，避免ended状态下立即play将异步seek覆盖成从零重播。恢复标签页时若仍seeking也等待；循环不换src、不load、不重建人物/树，不重启标题动画。原帧值不变，这是HTML视频状态适配，见TITLE-MOVIE-AUDIT.md。
+
+补充最终修复：事件门控单独不足，实测HTTP媒体seek落回0；改完整fetch一次MP4并用Blob URL确保本地可寻址，循环复用，退出abort/revoke。首播需缓冲约10.7MB，6秒超时回退保持；此加载策略为网页适配。自然循环连续时间采样取代原单点测试。
+
+**最新排版覆盖**：用户要求撤销弧形副标题，现恢复普通em水平文字，移除SVG textPath；谱线素材不变，行星/星星仍2/3。主标题桌面clamp(24px,3.95vw,56px)、手机clamp(22px,5.95vw,39px)，letter-spacing由-.06em放宽到-.02em；副标题桌面clamp(27px,3.6vw,48px)、手机clamp(23px,6.9vw,34px)，字距.025em，保留700粗体与14/2px上下padding。纯网页文案适配，原视频/入场退出不变；详见TITLE-ENTRY.md最新条目。
+
+**最新 ENTRY-TITLE-LOGO 排版**：行星/六星原图及内部坐标不变，ornaments外层以中心scale(.666667)。副标题改SVG textPath，415×65同谱线坐标，30单位Allura合成700、文字长度275，沿浅S曲线排字替代水平直排；谱线和谱号仍原图。仅网页排版适配，不声称该曲线来自游戏。入场JS仍作用外层em，视频和退出不变。见TITLE-ENTRY.md最新条目；构建/入口回归与桌面手机截图验证。
+
+**最新已实现 ENTRY-TITLE-MOVIE（覆盖下面“尚未挂载”）**：layout.ejs的title-entry-movie播放原USM转码`game-assets/entry/title-background.mp4`。entry-screen.js开场2倍速，到原226/30秒切1倍，结束seek至226帧循环；1920×1190、30fps、527帧、约10.7MB。视频已含人物/树景/光粒，正常路径不再播放备用图WAAPI、white_moya/circle_eff，退出原碎片保留。后台暂停、恢复续播，离开释放src；6秒加载超时/播放失败用旧静态方案，减少动画不请求视频。副标题700字重，桌面clamp(25px,3.35vw,45px)、手机clamp(22px,6.4vw,32px)，上下padding14/2px令文字中心下移6px，五线谱本体不动。均为网页适配，非原字体数值。原数据与解码/验证见[TITLE-MOVIE-AUDIT.md](../pjskapk/TITLE-MOVIE-AUDIT.md)。
+
+**最新资源纠正（ENTRY-TITLE-MOVIE，尚未挂载）**：设备实际 `title_screen/anniversary_5th_bg` 已取得，包含一段拆成24个TextAsset的原USM视频；TitleContent为live2ds=0、movies=1、loopPointFrame=226。解码预览确认入场后人物/树景/光粒仍在动。此前静态合成结论仅适用于网页使用的built_in备用包，不能描述原游戏完整入口。本轮仅调查，网页未修复；证据与限制见[TITLE-MOVIE-AUDIT.md](../pjskapk/TITLE-MOVIE-AUDIT.md)。
+
+最新：六星改按原Star_mult子节点位置/尺度/PPU归一化，取消横排；行星同坐标组随字标缩放。白描边8px桌面/5px手机；副标题本地Allura手写体（OFL，替代字体非游戏原字体）。背景base用正确原scale索引3，tree用0；人物仍为原bg_after合成图alpha入场，不添加不存在于已解析Clip的肢体摇摆。详细坐标/映射/边界见TITLE-ENTRY.md最新条目及E24。
+
+最新正式文案/装饰：标题SIESTA'S BLOG，去PERSONAL BLOG；TAP只留原Sprite灰底，移除外层CSS灰渐变。原logo_back行星Sprite、六颗星、完整彩色五线谱尾饰及独立高音谱号已挂载；不使用截图裁图。新尺寸与星星扩展时序属网页适配，原Mesh描画未实现。页面移除“本机演示计数”等字样，阅读量tooltip仍如实注明当前浏览器记录；文章正文技术内容不改。来源及验证见TITLE-ENTRY.md最新条目及E24。
+
+同日标题更新（ENTRY-TITLE-LOGO）：原 logo Clip 的逐字 Y 轴翻转/alpha、整体 6→1 缩放、白闪曲线接入博客标题，仍随 introRate=2 播放。复用原三颗星与 colorobi 饰带；文字改紧凑深青色、白描边和彩色边缘。博客字形、排版与副标题为网页适配，非原游戏字体复刻；原最终合成 logo 与圆环 Mesh 未挂载。覆盖旧“标题仅淡入/原 logo 全未移植”的描述。文件、原节点/Clip、具体数值见 TITLE-ENTRY.md 最新标题条目及 E24。构建和桌面/手机入口回归通过，终态及白闪截图已查看；采样确认 1750ms 翻转、2000ms 白闪、2250ms 消退。
+
+最新速度适配：用户要求开场更快，entry-screen.js introRate=2，原6.433333s压至3.216667s；树景/人物/白闪/标题/TAP及遮挡粒子同步2倍速。持续光点和点击后的退出碎片速度不变。head提前请求背景和粒子JSON；这是网页加载策略，不是原游戏数值变更。原曲线数据不修改。
+
+本轮效果覆盖：ENTRY-TITLE-REVEAL现在挂载原white_moya两组40个遮挡粒子，原网格分布/2–5秒寿命/2×2图集/透明度和缩小曲线，让树景分块显现；不是40张独立树叶贴图。ENTRY-TITLE-AMBIENT改原circle_eff 3个/秒、3–4.5秒寿命，旧14个CSS光点不再挂载。ENTRY-TITLE-EXIT-PARTICLES新增原fx_title_start_effect三角/圆环/闪光，在开始后.25秒起按原burst发射；渐白改1500ms网页适配+350ms揭白。title-fx.js双Canvas分离普通alpha/发光合成，隐藏页停RAF、退出清理、减少动画不创建。投影、随机种子、UI粒子桥接与原shader仍为适配，非完整Unity还原；详见TITLE-ENTRY.md与E24。
+
+最新路由覆盖：入口独立为`/entry/`（source/entry/index.md，layout live + title_entry:true），每次访问/刷新播放；`/`、`/live/`、`/map/`不挂载标题，不再使用sessionStorage接受标记。点击开始盖白→软导航`/`→350ms揭白，同一场景保留。显式进入或浏览器后退到`/entry/`采用完整文档加载，避免路由只替换main而漏挂入口。原素材/动画曲线不变，属于网页路由适配，详见NAVIGATION.md。
+
+根目录首次播放ENTRY-TITLE-INTRO：原bg01/02/03三层，解码6.433s原Clip的缩放（.88/.8→1）、树景/人物alpha和白闪曲线，60Hz采样至WAAPI。博客标题替代游戏logo。ENTRY-TITLE-EXIT点击后650ms盖白、底层就绪后350ms揭白，时长为网页适配；随机场景复用不重建。visit.startedAt/sessionStorage控制同标签同访问不重复，深链不拦截；菜单导航、提前点击均清理动画。circle_eff装饰/呼吸、标题出现为网页近似；原white_moya雾粒子及游戏logo拼合尚未移植，不宣称完整逐帧还原。来源/path_id、参数、生命周期及实际浏览器/设备验证见[TITLE-ENTRY.md](../pjskapk/TITLE-ENTRY.md)和E24。此前“直接显示第二页”更新为“先入口层，接受后第二页”，不恢复旧大厅/地图。
+
+### 2026-09-20 · FX-MENU 五项菜单
+
+分类队标尺寸最新覆盖：52→64px，原网格列内居中，文字/卡片不移动。原队标素材不变，网页尺寸适配；构建/菜单分类回归及截图检查通过。
+
+最新分类图标：categories.ejs删除数字圆标，改选文同映射的icon_tab_unit_{vs,ln,mj,vb,ws,25}_on.png；52×52px contain原图、不额外染色。分类名称/数量/路由不变，菜单宽度不变。来源和验证见SYSTEM-MENU.md最新补充。
+
+最新宽度：桌面39vw/max750/min380px，padding18px–48px（2.5vw）；手机86vw。较上一版43.3vw再次收窄约10%，五项功能/200ms动画/素材不变。SC-OTHER分类页去三色循环，按选文分类及正文已有配色：CTF #33ccbb、Android #4455dd、漏洞挖掘 #88dd44、逆向工程 #ee1166、AI #ff9900、其他 #884499，作用collection-card编号底色。均网页适配；见SYSTEM-MENU.md。
+
+同日缩小：system-menu.css桌面面板43.3vw/max832/min414px（较初版约小8%），内边距/间距/标题同步缩减；窄屏90vw、卡高108px。游戏素材/交互不变，为用户要求的网页适配，见SYSTEM-MENU.md；构建和菜单回归通过，截图查看。
+
+保留友链/GitHub/分类/标签/个人资料，GitHub取配置同标签直达。实机查看原MenuDialog并导出Prefab及Sprite证据，按右侧半透明紫面板、白卡/深底标题/粉色图标/描边英文适配五项布局；main.js保留键盘焦点管理并令背景UI inert。system-menu.css开关200ms、五项重排/中文映射为网页适配，非原游戏算法。资源路径、原节点ID、参数与真实验证见[SYSTEM-MENU.md](../pjskapk/SYSTEM-MENU.md)及E23。本条覆盖旧普通侧栏描述。
+
+### 2026-09-20 · ENTRY-READING / WORLD-VISIT（覆盖旧入口）
+
+当前codex/game-menu首页直接显示原第二页，移除大厅/地球，/map/为阅读页兼容地址。地图选择和转场不挂载；旧文件存在不等于运行。六世界内页原场景/角色/粒子保留。visit-world.js首次随机，离开≥30分钟再次进入换另一个，15秒可见心跳，本次访问固定；正文→选文→首页，入口无返回。规则为博客适配，不是游戏功能；源码、参数、验证及来源边界见[RANDOM-VISIT-WORLD.md](../pjskapk/RANDOM-VISIT-WORLD.md)。下文大厅/地图条目是旧版本历史。
+
 ### 2026-09-09 · MAP-ENTER 单击进入
 
 按用户要求，sekai-map.js删除首次旋前/再次确认分支；点击开放世界立即busy锁定并调用原world-transfer。箭头和拖动旋转、拖动抑制误点保留，提示仍视觉隐藏但无障碍文字同步为点击进入。覆盖此前所有两次点击的历史记录。属于博客交互适配，原素材/粒子/转场参数不变；见WORLD-TRANSITION.md和E12同日补充。
@@ -304,6 +436,10 @@ ID / 场景 / 状态：
 
 | 日期 | 范围 | 变更与验证 |
 | --- | --- | --- |
+| 2026-09-20 | ENTRY-TITLE 开场速度 | 按用户要求统一2倍速，约3.2秒；遮挡与背景时钟同步，原曲线不变；资源预加载，验证见TITLE-ENTRY.md |
+| 2026-09-20 | ENTRY-TITLE-REVEAL / AMBIENT / EXIT-PARTICLES | 原标题遮挡网格/图集与开始特效导出并接入，替换CSS光点；实机title-detail.mp4对照，构建、桌面/手机/提前点击/清理回归通过，截图已查看；仍有投影与shader适配边界 |
+| 2026-09-20 | ENTRY-TITLE 独立路由 | 新增/entry/，首页不再门禁；开始软导航首页，进入入口完整加载重播；原素材曲线不变，浏览器验证见TITLE-ENTRY.md |
+| 2026-09-20 | ENTRY-TITLE-INTRO / EXIT | 解码原streamed曲线并对应三张原图，补入场与渐白退出；实机两段录屏对照，build及Chrome桌面/手机、提前点击、菜单、同场景复用回归通过；截图目视检查；雾粒子/原logo拼合未完成，见E24 |
 | 2026-09-08 | LIVE-SCALE / LIVE-CARDS | 两卡片统一等比放大8%，入口改“开始阅读”，背景英文READING/SOLO LIVE；保留原路由与未开放音游状态 |
 | 2026-09-08 | HOME-PROJECTION / LIVE-SCALE / SCENE-WORLD-SYNC | 修复宽屏人物/物品/手机内容压扁；内页共用当前SEKAI背景，保留模糊层级；六世界四视口、七类页面与手机矩阵回归，详情E19 |
 | 2026-09-08 | HOME-CHARACTER-BALLOON 透明度 | 从原Prefab颜色核对背景/尾部alpha230/255、文字1；合成后整体应用，构建、浏览器样式与截图验证 |

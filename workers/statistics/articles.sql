@@ -1,0 +1,11 @@
+-- Generated from public/search.json; preserves counts.
+INSERT OR IGNORE INTO articles(id) VALUES('android-root-frida-bypass');
+INSERT OR IGNORE INTO articles(id) VALUES('qwb-s9-qcalc');
+INSERT OR IGNORE INTO articles(id) VALUES('qwb-s9-polyencryption');
+INSERT OR IGNORE INTO articles(id) VALUES('android-binder-calling-identity');
+INSERT OR IGNORE INTO articles(id) VALUES('tenda-ac6-vulnerability');
+INSERT OR IGNORE INTO articles(id) VALUES('arduino-stm32-1x');
+INSERT OR IGNORE INTO articles(id) VALUES('ciscn-2024-reverse');
+INSERT OR IGNORE INTO articles(id) VALUES('nepctf-2025-reverse-misc');
+INSERT OR IGNORE INTO articles(id) VALUES('allsafe-android-writeup');
+INSERT OR IGNORE INTO articles(id) VALUES('tencent-game-security-2025-pc');

@@ -34,7 +34,7 @@
 .friends-online{position:relative;isolation:isolate;text-align:center;color:white;font-size:clamp(16px,1.6vw,26px);font-weight:800;line-height:1.2;padding:5px 8px}
 .friends-online:before{content:'';position:absolute;inset:0;z-index:-1;border:8px solid transparent;border-image:url('../game-assets/friends/bg_base_r12_wh.png') 16 fill / 8px;filter:url('#friend-online-tint');pointer-events:none}
 .friends-footnote{font-size:12px;color:#fff;text-shadow:0 1px 3px #444466;margin:9px 8px 0;line-height:1.5}.friends-empty{text-align:center;margin:18vh 0;font-size:22px}
-.friends-exchange{padding:0;overflow:hidden}.friends-exchange h1{margin:0;padding:14px 26px;background:#ebebf2;font-size:23px}.friends-exchange-scroll{padding:24px 32px;overflow:auto;height:calc(100% - 62px);scrollbar-width:thin;scrollbar-color:#55557788 transparent}
+.friends-exchange{padding:0;overflow:hidden;border-radius:12px;display:flex;flex-direction:column}.friends-exchange h1{flex:none;margin:0;padding:14px 26px;background:#ebebf2;font-size:23px}.friends-exchange-scroll{flex:1;min-height:0;padding:24px 32px;overflow:auto;scrollbar-width:thin;scrollbar-color:#55557788 transparent}
 .friends-exchange-scroll>p{font-size:16px}.friends-exchange h2{font-size:20px;margin-top:24px}
 #friends-own-card{width:100%;max-width:850px;padding:18px;border:0;border-radius:5px;background:#dfdfea;color:#444466;font:inherit;line-height:1.8;resize:vertical;min-height:190px}
 .friends-exchange-actions{display:flex;gap:18px;margin-top:22px;flex-wrap:wrap}.friends-copy,.friends-contact{padding:12px 30px;min-height:48px;font-weight:800!important;text-align:center;background:url('../game-assets/friends/btn_round_h80_gn.png') center/100% 100% no-repeat}
@@ -76,7 +76,8 @@
 .friends-toolbar .friends-count small{font-size:calc(20 * var(--header-unit))}
 .friends-toolbar .friends-sort{width:calc(296 * var(--header-unit));height:calc(72 * var(--header-unit));margin-right:calc(8 * var(--header-unit))}
 .friends-toolbar .friends-order{width:calc(72 * var(--header-unit));height:calc(72 * var(--header-unit))}
-.friends-online{text-decoration:none;cursor:pointer;transition:filter .12s,transform .12s}
+.page-type-friends .friends-online,.page-type-friends .friends-online *{cursor:pointer!important}
+.friends-online{text-decoration:none;transition:filter .12s,transform .12s}
 /* Static blog adaptation: original PNG aspect ratios (380/80 and 180/80),
    custom text replaces the unavailable degree_main/sub artwork. No fake levels. */
 .friend-honors{display:flex;gap:4px;align-items:center;width:100%;max-width:360px;container-type:inline-size}
@@ -90,3 +91,15 @@
 @media(min-width:601px){.friends-tabs{padding-right:calc(24 * var(--tab-unit))}}
 @media(max-width:600px){.friends-toolbar{--header-unit:.54px}}
 @media(prefers-reduced-motion:reduce){.friends-row,.friends-order img{transition:none}}
+/* NoneInfo's white/outlined treatment, adapted for Chinese blog copy. */
+.friends-exchange-scroll{padding:clamp(24px,4vh,48px) clamp(20px,5vw,72px);text-align:center}
+.friends-exchange-scroll .friends-exchange-lead,.friends-empty,.friends-exchange-scroll .friends-config-note{font-family:SekaiRodin,SekaiHan,sans-serif;font-weight:600;color:#fff;-webkit-text-stroke:3px #44446680;paint-order:stroke fill;text-shadow:0 1px 2px #44446655;line-height:1.6}
+.friends-exchange-scroll .friends-exchange-lead{font-size:clamp(23px,2.15vw,32px);margin:0 0 8px;letter-spacing:.035em}
+.friends-exchange-scroll .friends-exchange-help{font-size:15px;line-height:1.8;margin:0 0 24px;color:#444466}
+.friends-exchange h2{max-width:680px;margin:0 auto 20px;padding:0;background:none;border:0;text-align:center;font-family:SekaiRodin,SekaiHan,sans-serif;font-size:clamp(23px,2.15vw,32px);font-weight:600;line-height:1.6;color:#fff;-webkit-text-stroke:3px #44446680;paint-order:stroke fill}
+#friends-own-card{display:block;max-width:680px;margin:0 auto;padding:18px 22px;border-radius:12px;min-height:0;height:164px;resize:none;background:#ebebf2e8;font-size:15px;line-height:2;box-shadow:0 4px 10px #4444660d;text-align:left;overflow:auto}
+.friends-exchange-actions{justify-content:center;margin-top:24px;gap:14px}
+.friends-copy,.friends-contact{min-width:190px}
+.friends-copy-feedback{margin:10px 0 0;font-size:14px;min-height:22px}
+.friends-exchange-scroll .friends-config-note{font-size:17px;opacity:1;margin:14px 0 0;-webkit-text-stroke:2.5px #44446680}
+@media(max-width:600px){.friends-exchange-scroll{padding:26px 16px}.friends-exchange-scroll .friends-exchange-help{font-size:13px}.friends-exchange h2{padding:10px 14px}#friends-own-card{padding:14px;font-size:13px;height:158px}.friends-exchange-scroll .friends-config-note{font-size:15px}}

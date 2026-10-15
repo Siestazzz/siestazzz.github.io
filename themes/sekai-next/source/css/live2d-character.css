@@ -1,0 +1,18 @@
+.live2d-stage{overflow:hidden}
+.live2d-tap{position:absolute;inset:0;border:0;padding:0;background:none;color:inherit;cursor:pointer;width:100%;height:100%;touch-action:manipulation}
+.live2d-viewport{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.live2d-viewport canvas{display:block}
+.live2d-stage:not([data-ready=true]) .live2d-viewport{visibility:hidden}
+.live2d-stage:not([data-ready=true]):not([data-ready=error]) .live2d-talk{visibility:hidden}
+.live2d-stage[data-ready=true] .live2d-viewport,
+.live2d-stage[data-ready=true] .live2d-talk{animation:live2d-ready-in 250ms linear both}
+@keyframes live2d-ready-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+ .live2d-stage[data-ready=true] .live2d-viewport,
+ .live2d-stage[data-ready=true] .live2d-talk{animation:none}
+}
+.live2d-fallback{position:absolute;inset:0;display:grid;place-content:center;color:#454563;font-size:18px;text-shadow:0 1px white}
+.live2d-fallback[hidden]{display:none}
+.live2d-stage .live2d-talk{z-index:2;white-space:pre-line;font-size:clamp(14px,1.35vw,21px);line-height:1.55;bottom:6%;left:18%;width:64%;min-height:0;padding:17px 20px}
+.live2d-tap:focus-visible{outline:3px solid #70e5d4;outline-offset:-4px}
+@media(max-width:700px){.live2d-stage{height:60svh;min-height:380px}.live2d-stage .live2d-talk{bottom:3%;left:48%;width:48%;min-height:0;padding:12px}.live2d-stage .live2d-viewport{right:15%;left:-15%}}

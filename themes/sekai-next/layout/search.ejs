@@ -1,7 +1,7 @@
 <section class="song-select" aria-label="文章选择">
-  <form class="song-search" role="search"><label for="song-query" aria-label="搜索文章"><img src="<%- url_for('/game-assets/icon_search_h34_wh.png') %>" alt=""></label><input id="song-query" type="search" placeholder="tag / 标题 / 内容搜索" autocomplete="off"><button type="submit">搜索</button></form>
+  <form class="song-search" role="search"><label for="song-query" aria-label="搜索文章"><img src="<%- url_for('/game-assets/icon_search_h34_wh.png') %>" alt=""></label><input id="song-query" type="search" placeholder="搜索标题、标签或正文" autocomplete="off"><button type="submit">搜索</button></form>
   <nav class="unit-tabs" aria-label="文章大类" id="unit-tabs"></nav>
   <div class="song-list-area"><p id="song-state" role="status">正在载入文章…</p><div id="song-list" class="song-list"></div></div>
-  <aside class="song-phone"><div class="phone-jacket-wash" aria-hidden="true"><img alt=""></div><div class="phone-notch"></div><div id="song-preview" class="song-preview"><p>载入后选择一篇文章</p></div></aside>
+  <aside class="song-phone"><div class="phone-notch"></div><div id="song-preview" class="song-preview"><p>载入后选择一篇文章</p></div></aside>
   <noscript><p class="no-script">文章筛选需要 JavaScript。<a href="<%- url_for('/archives/') %>">查看静态文章归档</a></p></noscript>
 </section>

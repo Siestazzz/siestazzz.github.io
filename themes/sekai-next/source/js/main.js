@@ -10,7 +10,11 @@ function menu(open) {
   toggle?.setAttribute('aria-expanded', String(open));
   panel?.setAttribute('aria-hidden', String(!open));
   if (panel) panel.inert = !open;
-  (open ? close : toggle)?.focus();
+  const entryPending=document.documentElement.classList.contains('title-entry-pending');
+  for(const selector of ['.site-main','.topbar']){const node=document.querySelector(selector);if(node)node.inert=open||entryPending;}
+  const entry=document.querySelector('.title-entry');if(entry)entry.inert=open;
+  const audioControls=document.getElementById('site-audio-controls');if(audioControls)audioControls.inert=open;
+  (open ? close : entryPending?document.querySelector('.title-entry-menu'):toggle)?.focus();
 }
 if (panel) panel.inert = true;
 toggle?.addEventListener('click', () => menu(true));
@@ -24,23 +28,13 @@ scope.listen(document,'keydown', e => {
     else if (!e.shiftKey && document.activeElement === items.at(-1)) { e.preventDefault(); items[0].focus(); }
   }
 });
-let counts = {};
-try { const stored = JSON.parse(localStorage.getItem('sekai-demo-views') || '{}'); if (stored && typeof stored === 'object' && !Array.isArray(stored)) counts = stored; } catch {}
-const views = path => Number.isSafeInteger(counts[path]) && counts[path] > 0 ? counts[path] : 0;
-const article = document.querySelector('[data-post-path]');
-if (article) {
-  const path = article.dataset.postPath;
-  counts[path] = views(path) + 1;
-  try { localStorage.setItem('sekai-demo-views', JSON.stringify(counts)); } catch {}
-}
-document.querySelectorAll('[data-total-views]').forEach(el => el.textContent = Object.keys(counts).reduce((n,k) => n + views(k), 0));
-document.querySelectorAll('[data-post-views]').forEach(el => el.textContent = views(el.dataset.postViews));
+const views = id => window.SekaiStats?.views(id) ?? '—';
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 scope.listen(window,'pageshow', () => document.body.classList.remove('page-leaving'));
 const line = document.querySelector('#len-line');
 const lines = ['代码先放一边……要不要读点有趣的东西？','报错不是消失了，只是换了一个地方。','今天的目标：写完这篇，然后光速下班。','这不是摸鱼，是在给灵感加载缓存。'];
 let lineIndex = 0;
-document.querySelector('.len-talk')?.addEventListener('click', () => {
+document.querySelector('.len-talk:not(.live2d-talk)')?.addEventListener('click', () => {
   line.textContent = lines[++lineIndex % lines.length];
   line.animate([{opacity:0},{opacity:1}], {duration:reduced.matches ? 0 : 167});
 });
@@ -54,11 +48,7 @@ let category = params.get('category') || '', selected = params.get('post') || ''
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const unitIcons = ['vs','ln','mj','vb','ws','25'];
 const spectrum = '<span class="row-spectrum" aria-hidden="true">' + Array.from({length:6},(_,i) => '<i style="--bar:' + i + '"></i>').join('') + '</span>';
-const covers = ['bg_sekai.png','longLoading_bg_leoneed.png','longLoading_bg_vividbadsquad.png'];
-function cover(post) {
-  if (post.cover) { const url = new URL(post.cover, location.origin + root); if (['https:','http:'].includes(url.protocol)) return url.href; }
-  return asset(covers[posts.indexOf(post) % covers.length]);
-}
+
 function remember() {
   const p = new URLSearchParams();
   if (input.value.trim()) p.set('q',input.value.trim());
@@ -69,10 +59,8 @@ function remember() {
 }
 function select(post) {
   selected = post.path;
-  const wash = document.querySelector('.phone-jacket-wash img');
-  if (wash) wash.src = cover(post); // Decoration may be absent in an older cached page.
   list.querySelectorAll('.song-row').forEach(el => { const active = el.dataset.path === selected; el.classList.toggle('selected', active); el.setAttribute('aria-pressed', String(active)); });
-  preview.innerHTML = '<div class="jacket-wrap"><span class="jacket-label">' + esc(post.categories.join(' / ') || 'RECORD') + '</span><img class="jacket" src="' + esc(cover(post)) + '" alt="文章封面"></div><h1>' + esc(post.title) + '</h1><p class="preview-date">' + esc(post.date) + '</p><div class="preview-tags">' + post.tags.map(t => '<span>' + esc(t) + '</span>').join('') + '</div><p class="preview-excerpt">' + esc(post.excerpt) + '</p><a class="read-start" href="' + esc(root + post.path) + '">开始阅读</a><button class="random-post" type="button"><img src="' + asset('btn_random_lgr.png') + '" alt="">随机一篇</button>';
+  preview.innerHTML = '<p class="preview-category">' + esc(post.categories.join(' / ') || 'RECORD') + '</p><h1>' + esc(post.title) + '</h1><p class="preview-date">' + esc(post.date) + '</p><div class="preview-tags">' + (post.tagLinks || post.tags.map(name=>({name,path:'tags/'+encodeURIComponent(name)+'/'}))).map(t => '<a href="' + esc(root+t.path) + '">' + esc(t.name) + '</a>').join('') + '</div><p class="preview-excerpt">' + esc(post.excerpt) + '</p><a class="read-start" href="' + esc(root + post.path) + '">开始阅读</a><button class="random-post" type="button"><img src="' + asset('btn_random_lgr.png') + '" alt="">随机一篇</button>';
   preview.querySelector('.random-post').addEventListener('click', random);
   preview.querySelector('.random-post').disabled = matched.length < 2;
   if (!reduced.matches) preview.animate([{opacity:.1, transform:'translateX(20px)'},{opacity:1,transform:'translateX(0)'}],{duration:250,easing:'ease-out'});
@@ -87,13 +75,13 @@ function random() {
 function render() {
   const q = input.value.trim().toLocaleLowerCase();
   matched = posts.filter(p => (!category || p.categories.includes(category)) && [p.title,p.text,p.excerpt,...p.tags].join(' ').toLocaleLowerCase().includes(q));
-  state.textContent = matched.length + ' 篇文章 · 阅读量为本机演示计数';
+  state.textContent = matched.length + ' 篇文章';
   const diamonds = '<span class="diamonds" aria-hidden="true">' + ('<img src="' + asset('icon_allPerfect.png') + '" alt="">').repeat(5) + '</span>';
-  list.innerHTML = matched.map(p => '<button type="button" class="song-row" data-path="' + esc(p.path) + '"><span class="view-medal"><small>阅读量</small><b>' + views(p.path) + '</b></span><img class="song-thumb" src="' + esc(cover(p)) + '" alt="">' + spectrum + '<span class="song-info"><strong>' + esc(p.title) + '</strong><time>' + esc(p.date) + '</time>' + diamonds + '</span><span class="row-tag">' + esc(p.tags[0] || 'NOTE') + '</span></button>').join('');
+list.innerHTML = matched.map(p => '<button type="button" class="song-row" data-path="' + esc(p.path) + '"><span class="view-medal"><small>阅读量</small><b data-post-views="' + esc(p.statsId) + '">' + views(p.statsId) + '</b></span>' + spectrum + '<span class="song-info"><strong>' + esc(p.title) + '</strong><time>' + esc(p.date) + '</time>' + diamonds + '</span><span class="row-tag">' + esc(p.tags[0] || 'NOTE') + '</span></button>').join('');
   list.querySelectorAll('button').forEach(el => el.addEventListener('click', () => select(matched.find(p => p.path === el.dataset.path))));
   tabs.querySelectorAll('button').forEach(el => { const active = el.dataset.category === category; el.classList.toggle('active',active); el.setAttribute('aria-pressed',String(active)); const img = el.querySelector('img[data-unit]'); if (img) img.src = asset('icon_tab_unit_' + img.dataset.unit + '_' + (active ? 'on' : 'off') + '.png'); });
   if (matched.length) { select(matched.find(p => p.path === selected) || matched[0]); preview.querySelector('.random-post').disabled = matched.length < 2; }
-  else { selected = ''; document.querySelector('.phone-jacket-wash img')?.removeAttribute('src'); preview.innerHTML = '<div class="empty-selection"><h2>没有匹配的文章</h2><p>试试其他标题、标签或正文关键词。</p><button class="read-start" id="clear-query">清空搜索和分类</button></div>'; preview.querySelector('button').addEventListener('click',()=>{input.value='';category='';render();input.focus();});remember(); }
+  else { selected = ''; preview.innerHTML = '<div class="empty-selection"><h2>没有匹配的文章</h2><p>试试其他标题、标签或正文关键词。</p><button class="read-start" id="clear-query">清空搜索和分类</button></div>'; preview.querySelector('button').addEventListener('click',()=>{input.value='';category='';render();input.focus();});remember(); }
 }
 const postData=window.sekaiPostData||(window.sekaiPostData=fetch(root+'search.json').then(r=>{if(!r.ok)throw Error('index');return r.json();}).catch(error=>{window.sekaiPostData=null;throw error;}));
 postData.then(data => {

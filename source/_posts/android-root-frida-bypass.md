@@ -1,4 +1,5 @@
 ---
+stats_id: android-root-frida-bypass
 title: "一次某梆加固的反root和反frida绕过with GPT5.6sol"
 date: 2026-08-09 15:33:11
 updated: 2026-08-09 15:33:11

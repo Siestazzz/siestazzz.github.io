@@ -1,0 +1,422 @@
+[
+  {
+    "character": "ichika",
+    "talkId": 1,
+    "voice": "system_summer_001_001",
+    "bundle": "sound/system_live2d/voice/voicepack_1",
+    "cache": "0de322f6743c728ba3802ebb78abe698",
+    "bundleSha256": "0062ab71ba42de8293cc6ea157432fd600d229a931b711b883817387ad145536",
+    "path_id": 6266940652636138789,
+    "bank": "voicepack_1_voicepack_1.acb",
+    "subsong": 130,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 402031,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 70456,
+      "streamInfo": {
+        "index": 130,
+        "name": "system_summer_001_001",
+        "total": 151
+      },
+      "playSamples": 402031
+    },
+    "file": "ichika\\system_summer_001_001.ogg",
+    "sha256": "ca3a15636e5bb2a6a682e2f067ed77d453e7a5d79c3cbdc5bb35c40d8714cbeb"
+  },
+  {
+    "character": "ichika",
+    "talkId": 2,
+    "voice": "system_summer_001_002",
+    "bundle": "sound/system_live2d/voice/voicepack_1",
+    "cache": "0de322f6743c728ba3802ebb78abe698",
+    "bundleSha256": "0062ab71ba42de8293cc6ea157432fd600d229a931b711b883817387ad145536",
+    "path_id": 6266940652636138789,
+    "bank": "voicepack_1_voicepack_1.acb",
+    "subsong": 131,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 434856,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 70434,
+      "streamInfo": {
+        "index": 131,
+        "name": "system_summer_001_002",
+        "total": 151
+      },
+      "playSamples": 434856
+    },
+    "file": "ichika\\system_summer_001_002.ogg",
+    "sha256": "c46c14071b08b7d88f27810b545592b9ca8f3dfd7d0276b17db781955cd9b2a8"
+  },
+  {
+    "character": "ichika",
+    "talkId": 3,
+    "voice": "system_summer_001_003",
+    "bundle": "sound/system_live2d/voice/voicepack_1",
+    "cache": "0de322f6743c728ba3802ebb78abe698",
+    "bundleSha256": "0062ab71ba42de8293cc6ea157432fd600d229a931b711b883817387ad145536",
+    "path_id": 6266940652636138789,
+    "bank": "voicepack_1_voicepack_1.acb",
+    "subsong": 132,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 297793,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 70476,
+      "streamInfo": {
+        "index": 132,
+        "name": "system_summer_001_003",
+        "total": 151
+      },
+      "playSamples": 297793
+    },
+    "file": "ichika\\system_summer_001_003.ogg",
+    "sha256": "45fe608ff0a127050f4c0ce3e17b16f9e412aeb1d3466a923018e99250b9497a"
+  },
+  {
+    "character": "rin",
+    "talkId": 79,
+    "voice": "partvoice_13_022",
+    "bundle": "sound/system_live2d/voice/voicepack_22",
+    "cache": "93f81da7765d85af6a7fc96ac930329a",
+    "bundleSha256": "f5aee2715704e4bbb5a2645c0569dd5506938e86984772253e385e5d422bce6a",
+    "path_id": -7709158939598009920,
+    "bank": "voicepack_22_voicepack_22.acb",
+    "subsong": 13,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 31584,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 71846,
+      "streamInfo": {
+        "index": 13,
+        "name": "partvoice_13_022",
+        "total": 52
+      },
+      "playSamples": 31584
+    },
+    "file": "rin\\partvoice_13_022.ogg",
+    "sha256": "ae41eec280d1bc4ccb486acd643c21d2a1b33f9ae2a81110466df6e81f4a4673"
+  },
+  {
+    "character": "rin",
+    "talkId": 80,
+    "voice": "partvoice_10_022",
+    "bundle": "sound/system_live2d/voice/voicepack_22",
+    "cache": "93f81da7765d85af6a7fc96ac930329a",
+    "bundleSha256": "f5aee2715704e4bbb5a2645c0569dd5506938e86984772253e385e5d422bce6a",
+    "path_id": -7709158939598009920,
+    "bank": "voicepack_22_voicepack_22.acb",
+    "subsong": 10,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 37276,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 72384,
+      "streamInfo": {
+        "index": 10,
+        "name": "partvoice_10_022",
+        "total": 52
+      },
+      "playSamples": 37276
+    },
+    "file": "rin\\partvoice_10_022.ogg",
+    "sha256": "ffe866fe873f354442d16d62302b2f48079e506e9dd568b8d65c7742d0a0bbbe"
+  },
+  {
+    "character": "rin",
+    "talkId": 81,
+    "voice": "partvoice_01_022",
+    "bundle": "sound/system_live2d/voice/voicepack_22",
+    "cache": "93f81da7765d85af6a7fc96ac930329a",
+    "bundleSha256": "f5aee2715704e4bbb5a2645c0569dd5506938e86984772253e385e5d422bce6a",
+    "path_id": -7709158939598009920,
+    "bank": "voicepack_22_voicepack_22.acb",
+    "subsong": 1,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 24173,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 72857,
+      "streamInfo": {
+        "index": 1,
+        "name": "partvoice_01_022",
+        "total": 52
+      },
+      "playSamples": 24173
+    },
+    "file": "rin\\partvoice_01_022.ogg",
+    "sha256": "21c188cbe2916b236c7d8b8ceeb03e7cec02c7bb440d2e5cf5e0b1e58bbfa635"
+  },
+  {
+    "character": "len",
+    "talkId": 82,
+    "voice": "partvoice_20_023",
+    "bundle": "sound/system_live2d/voice/voicepack_23",
+    "cache": "045ffb519ff2d852ad236e41ba968976",
+    "bundleSha256": "4c01250d80807ebe61be5c0a1085182b287d8ce5560ec010819d567ae15a14a3",
+    "path_id": -6917725530240085784,
+    "bank": "voicepack_23_voicepack_23.acb",
+    "subsong": 20,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 16143,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 73431,
+      "streamInfo": {
+        "index": 20,
+        "name": "partvoice_20_023",
+        "total": 53
+      },
+      "playSamples": 16143
+    },
+    "file": "len\\partvoice_20_023.ogg",
+    "sha256": "41154b676e67cc5c03c9b48e66b255e7dafff69f75a9eba099c0660756358d74"
+  },
+  {
+    "character": "len",
+    "talkId": 83,
+    "voice": "partvoice_10_023",
+    "bundle": "sound/system_live2d/voice/voicepack_23",
+    "cache": "045ffb519ff2d852ad236e41ba968976",
+    "bundleSha256": "4c01250d80807ebe61be5c0a1085182b287d8ce5560ec010819d567ae15a14a3",
+    "path_id": -6917725530240085784,
+    "bank": "voicepack_23_voicepack_23.acb",
+    "subsong": 10,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 35563,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 72061,
+      "streamInfo": {
+        "index": 10,
+        "name": "partvoice_10_023",
+        "total": 53
+      },
+      "playSamples": 35563
+    },
+    "file": "len\\partvoice_10_023.ogg",
+    "sha256": "c7b6d1a09b89029ba7283d071457050bd918049c7a45429fd19dd2a5a2dd278c"
+  },
+  {
+    "character": "len",
+    "talkId": 84,
+    "voice": "partvoice_04_023",
+    "bundle": "sound/system_live2d/voice/voicepack_23",
+    "cache": "045ffb519ff2d852ad236e41ba968976",
+    "bundleSha256": "4c01250d80807ebe61be5c0a1085182b287d8ce5560ec010819d567ae15a14a3",
+    "path_id": -6917725530240085784,
+    "bank": "voicepack_23_voicepack_23.acb",
+    "subsong": 4,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 22949,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 73791,
+      "streamInfo": {
+        "index": 4,
+        "name": "partvoice_04_023",
+        "total": 53
+      },
+      "playSamples": 22949
+    },
+    "file": "len\\partvoice_04_023.ogg",
+    "sha256": "104f144f4577f5cb7a871d7638bacbb750d48a31904f7b41e5196c4c21948838"
+  },
+  {
+    "character": "miku",
+    "talkId": 61,
+    "voice": "partvoice_02_021_piapro",
+    "bundle": "sound/system_live2d/voice/voicepack_21_piapro",
+    "cache": "1d985c895c4f301e766b0e77460e5ab1",
+    "bundleSha256": "39b3548df4202580537d3b95a45a7a5284dae67a11d3b73040552909d2e130bf",
+    "path_id": 4989480589541615878,
+    "bank": "voicepack_21_piapro_voicepack_21_piapro.acb",
+    "subsong": 2,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 21483,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 75673,
+      "streamInfo": {
+        "index": 2,
+        "name": "partvoice_02_021_piapro",
+        "total": 35
+      },
+      "playSamples": 21483
+    },
+    "file": "miku\\partvoice_02_021_piapro.ogg",
+    "sha256": "0d2b9071aa1b7871e299c1eeb25ae29eeb95fe01386fed11610cd27ade6b889d"
+  },
+  {
+    "character": "miku",
+    "talkId": 62,
+    "voice": "partvoice_03_021_piapro",
+    "bundle": "sound/system_live2d/voice/voicepack_21_piapro",
+    "cache": "1d985c895c4f301e766b0e77460e5ab1",
+    "bundleSha256": "39b3548df4202580537d3b95a45a7a5284dae67a11d3b73040552909d2e130bf",
+    "path_id": 4989480589541615878,
+    "bank": "voicepack_21_piapro_voicepack_21_piapro.acb",
+    "subsong": 3,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 39080,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 72798,
+      "streamInfo": {
+        "index": 3,
+        "name": "partvoice_03_021_piapro",
+        "total": 35
+      },
+      "playSamples": 39080
+    },
+    "file": "miku\\partvoice_03_021_piapro.ogg",
+    "sha256": "c6d89d951fd872d26fe4861215e139e8b53dc392b3fac976053751528a310875"
+  },
+  {
+    "character": "miku",
+    "talkId": 63,
+    "voice": "partvoice_20_021_piapro",
+    "bundle": "sound/system_live2d/voice/voicepack_21_piapro",
+    "cache": "1d985c895c4f301e766b0e77460e5ab1",
+    "bundleSha256": "39b3548df4202580537d3b95a45a7a5284dae67a11d3b73040552909d2e130bf",
+    "path_id": 4989480589541615878,
+    "bank": "voicepack_21_piapro_voicepack_21_piapro.acb",
+    "subsong": 20,
+    "metadata": {
+      "version": "r2117",
+      "sampleRate": 44100,
+      "channels": 1,
+      "mixingInfo": {
+        "inputChannels": 1,
+        "outputChannels": 1
+      },
+      "channelLayout": 4,
+      "loopingInfo": null,
+      "numberOfSamples": 21936,
+      "encoding": "CRI HCA",
+      "layout": "flat",
+      "metadataSource": "CRI HCA header",
+      "bitrate": 74111,
+      "streamInfo": {
+        "index": 20,
+        "name": "partvoice_20_021_piapro",
+        "total": 35
+      },
+      "playSamples": 21936
+    },
+    "file": "miku\\partvoice_20_021_piapro.ogg",
+    "sha256": "70b264f93f1eddf22b5341c9ab60cc1485a31da2efa49f6a5e65f76225f590de"
+  }
+]

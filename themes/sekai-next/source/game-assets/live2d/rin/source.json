@@ -1,0 +1,226 @@
+{
+  "sources": [
+    {
+      "bundle": "live2d/model/22rin_normal",
+      "cache": "11204eaa1d6b020332b6dd0ba6253807",
+      "sha256": "680b27341d3836acd1bd04b1824264402077d2203b7102aab091c0e25998ad0e",
+      "objects": [
+        {
+          "path_id": "-7258520268259005836",
+          "type": "MonoBehaviour",
+          "name": "w-cute-glad06r"
+        },
+        {
+          "path_id": "-6221849565048384864",
+          "type": "Texture2D",
+          "name": "texture_00"
+        },
+        {
+          "path_id": "-328944596605282747",
+          "type": "TextAsset",
+          "name": "22rin_normal_3.0_f_t04.physics3"
+        },
+        {
+          "path_id": "1740719520220870771",
+          "type": "TextAsset",
+          "name": "22rin_normal_3.0_f_t04.model3"
+        },
+        {
+          "path_id": "5091663980001812003",
+          "type": "MonoBehaviour",
+          "name": "BuildModelData"
+        },
+        {
+          "path_id": "6732125377404294541",
+          "type": "TextAsset",
+          "name": "22rin_normal_3.0_f_t04.moc3"
+        }
+      ]
+    },
+    {
+      "bundle": "live2d/motion/22rin_motion_base",
+      "cache": "9b97f8d7e769ee74d234fdb098b482cc",
+      "sha256": "7aa05bbc4ae9ef15331abae64752119f55aecd771905e9e3caea6cc55bf89b5d",
+      "objects": [
+        {
+          "path_id": "-908642572155207272",
+          "name": "w-normal-pose01",
+          "fade": {
+            "path_id": "-7719695379735416942",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "w-normal-pose01",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 1.5,
+          "loop": false,
+          "curves": 59
+        },
+        {
+          "path_id": "-4054463959674421706",
+          "name": "w-happy-angry02",
+          "fade": {
+            "path_id": "1260349947210722157",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "w-happy-angry02",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 1.7000000476837158,
+          "loop": false,
+          "curves": 61
+        },
+        {
+          "path_id": "5674608510477466365",
+          "name": "w-happy-tilthead04",
+          "fade": {
+            "path_id": "2792239166945666331",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "w-happy-tilthead04",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 2.5999999046325684,
+          "loop": false,
+          "curves": 61
+        },
+        {
+          "path_id": "-5160268066114368203",
+          "name": "w-happy-nod03",
+          "fade": {
+            "path_id": "2160181540289017487",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "w-happy-nod03",
+            "FadeInTime": 0.5,
+            "FadeOutTime": 0.5
+          },
+          "duration": 2.5999999046325684,
+          "loop": false,
+          "curves": 61
+        },
+        {
+          "path_id": "6140776405447796333",
+          "name": "face_normal_01",
+          "fade": {
+            "path_id": "-5475179114815117728",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_normal_01",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 39
+        },
+        {
+          "path_id": "-4196942810055302298",
+          "name": "face_smile_02",
+          "fade": {
+            "path_id": "-6054075844847699803",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_smile_02",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 39
+        },
+        {
+          "path_id": "2803264602764843546",
+          "name": "face_smallmouth_01",
+          "fade": {
+            "path_id": "-5715583778750533671",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_smallmouth_01",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 39
+        },
+        {
+          "path_id": "591912371900643072",
+          "name": "face_smile_03",
+          "fade": {
+            "path_id": "-5291069565387311247",
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -309898890820754694
+            },
+            "m_Name": "face_smile_03",
+            "FadeInTime": 0.25,
+            "FadeOutTime": 0.25
+          },
+          "duration": 1.0,
+          "loop": false,
+          "curves": 39
+        }
+      ]
+    }
+  ],
+  "converter": "sssekai 0.8.0 AnimationHelper/to_motion3",
+  "adaptation": "Idle group selection and scheduling are web choices, not recovered game state machine."
+}

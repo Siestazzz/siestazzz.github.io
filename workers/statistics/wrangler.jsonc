@@ -1,0 +1,18 @@
+{
+  "name": "siestablog",
+  "main": "worker.mjs",
+  "account_id": "11c3b70bf1c59eec79ced7e3d7c2a19e",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {"enabled":true,"head_sampling_rate":1,"logs":{"enabled":true,"head_sampling_rate":1,"persist":true,"invocation_logs":true},"traces":{"enabled":false,"persist":true,"head_sampling_rate":1}},
+  "keep_vars": true,
+  "compatibility_date": "2026-10-13",
+  "vars": { "STATS_WRITES_ENABLED": "true" },
+  "d1_databases": [{ "binding": "DB", "database_name": "siestablog", "database_id": "8a3694c2-1467-415a-9a05-7055410ffa0b" }],
+  "kv_namespaces": [{"binding":"VIEWS","id":"c7b1e401727642ca9d904ba797baef2b"}],
+  "ratelimits": [
+    {"name":"READ_LIMITER","namespace_id":"261015101","simple":{"limit":120,"period":60}},
+    {"name":"WRITE_LIMITER","namespace_id":"261015102","simple":{"limit":60,"period":60}}
+  ],
+  "triggers": { "crons": ["17 3 * * *"] }
+}

@@ -1,4 +1,5 @@
 ---
+stats_id: ciscn-2024-reverse
 title: "ciscn2024 Reverse全题解 复盘"
 date: 2025-09-14 15:53:35
 updated: 2025-09-14 15:53:35

@@ -1,23 +1,50 @@
 <!doctype html>
+<% const isTitleEntry = page.title_entry === true || (is_home() && (!page.current || page.current === 1)); %>
 <html lang="<%= config.language || 'zh-CN' %>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#454774">
-  <script src="<%- url_for('/js/page-router.js') %>?v=same-world-parent-2"></script>
+  <% if (isTitleEntry) { %>
+  <% for (const part of ['01','02','03']) { %><link rel="preload" as="image" href="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_'+part+'.png') %>"><% } %>
+  <link rel="preload" as="fetch" crossorigin href="<%- url_for('/game-assets/entry/title-fx.json') %>">
+  <% } %>
+  <script src="<%- url_for('/js/page-router.js') %>?v=random-entry-3"></script>
   <% const documentTitle = page.title || page.category || page.tag; %>
   <title><%= documentTitle ? documentTitle + ' · ' : '' %><%= config.title %></title>
   <meta name="description" content="<%= page.excerpt ? strip_html(page.excerpt).replace(/\n/g, ' ') : config.description %>">
   <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
   <link rel="stylesheet" href="<%- url_for('/css/game.css') %>">
   <link rel="stylesheet" href="<%- url_for('/css/refinements.css') %>">
-  <% const isHome = is_home(); const hasWorld = page.layout !== 'sekai-map'; %>
-  <% if (hasWorld) { %><script>(()=>{let w='27';try{w=localStorage.getItem('sekai-home-world')||w;}catch{}const q=new URLSearchParams(location.search).get('world');if(['5','7','8','9','10','27'].includes(q)){w=q;try{localStorage.setItem('sekai-home-world',w);}catch{}}document.documentElement.dataset.homeWorld=['5','7','8','9','10'].includes(w)?w:'27';})();</script><% } %>
+  <link rel="stylesheet" href="<%- url_for('/css/system-menu.css') %>">
+  <% const isHome = is_home(); const isEntry = isHome || page.layout === 'live'; const hasWorld = true; %>
+  <script src="<%- url_for('/js/visit-world.js') %>"></script>
+  <link rel="stylesheet" href="<%- url_for('/css/entry-screen.css') %>">
+  <link rel="stylesheet" href="<%- url_for('/css/site-audio.css') %>">
+  <% if (isTitleEntry) { %><script src="<%- url_for('/js/title-fx.js') %>"></script><% } %>
+  <script src="<%- url_for('/js/entry-screen.js') %>" data-entry="<%= isTitleEntry %>"></script>
   <% if (hasWorld) { %><link rel="stylesheet" href="<%- url_for('/css/sekai-map.css') %>"><link rel="stylesheet" href="<%- url_for('/css/home-characters.css') %>"><% } %>
-  <% if (isHome) { %><script>try{if(Date.now()-Number(sessionStorage.getItem('sekai-world-transfer'))<15000)document.documentElement.classList.add('world-arriving');}catch{}</script><% } %>
   <% if (page.layout === 'friends') { %><link rel="stylesheet" href="<%- url_for('/css/friends.css') %>"><% } %>
 </head>
-<body class="page-type-<%= isHome ? 'index' : (page.layout === 'index' ? 'archive' : (page.layout || 'other')) %>" data-root="<%- url_for('/') %>">
+<body class="page-type-<%= isEntry ? 'live' : (page.layout === 'index' ? 'archive' : (page.layout || 'other')) %>" data-root="<%- url_for('/') %>">
+  <% if (isTitleEntry) { %><section class="title-entry" aria-label="博客入口" role="dialog" aria-modal="true">
+    <img class="title-entry-art title-entry-base" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_01.png') %>" alt="">
+    <img class="title-entry-art title-entry-tree" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_02.png') %>" alt="">
+    <img class="title-entry-art title-entry-characters" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_03.png') %>" alt="世界树下的角色们">
+    <video class="title-entry-movie" data-src="<%- url_for('/game-assets/entry/title-background.mp4') %>" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture></video>
+    <div class="title-entry-flash" aria-hidden="true"></div>
+    <button class="title-entry-enter" type="button" aria-label="进入博客">
+      <span class="title-entry-heading">
+        <small class="title-logo-kicker" aria-label="WELCOME TO"><img src="<%- url_for('/game-assets/entry/welcome-to.svg') %>" alt="WELCOME TO"></small>
+        <span class="title-logo-wordmark"><span class="title-logo-ornaments" aria-hidden="true"><img class="title-logo-planet" src="<%- url_for('/game-assets/entry/logo-logo_back.png') %>" alt=""><span class="title-logo-stars"><% for(let i=1;i<=6;i++){ %><img src="<%- url_for('/game-assets/entry/logo-o_0'+i+'_star.png') %>" alt=""><% } %></span></span><strong aria-label="<%= config.title %>"><% Array.from(config.title).forEach(function(letter){ %><span class="title-logo-letter" aria-hidden="true"><%= letter === ' ' ? '\u00a0' : letter %></span><% }); %></strong><span class="title-logo-flash" aria-hidden="true"><%= config.title %></span></span>
+        <em><img class="title-logo-clef" src="<%- url_for('/game-assets/entry/logo-subtitle-9.png') %>" alt="">Stories, notes &amp; discoveries</em>
+      </span>
+      <span class="title-entry-start"><img src="<%- url_for('/game-assets/entry/txt_tapToStart.png') %>" alt="TAP TO START"></span>
+    </button>
+    <button class="title-entry-menu" type="button" aria-label="打开菜单"><img src="<%- url_for('/game-assets/icon_menu_wh.png') %>" alt=""></button>
+    <small class="title-entry-note">个人博客 · 非官方同人页面</small>
+    <div class="title-entry-wipe" aria-hidden="true"></div>
+  </section><% } %>
   <div class="world-backdrop" aria-hidden="true">
     <% if (hasWorld) { %><%- partial('_partial/home-world') %><% } %>
     <div class="scene-dim"></div>
@@ -28,44 +55,51 @@
   </div>
 
   <header class="topbar">
-    <% if (isHome) { %><a class="map-globe" href="<%- url_for('/map/') %>" aria-label="打开 SEKAI 地图"><img src="<%- url_for('/game-assets/map/icon_worldMap_wh.png') %>" alt=""></a><% } %>
-    <% const backPath = page.layout === 'post' ? '/search/' : page.layout === 'search' ? '/live/' : page.category ? '/categories/' : page.tag ? '/tags/' : (page.year || page.month) ? '/archives/' : '/'; %>
-    <a class="game-back" href="<%- url_for(backPath) %>" aria-label="返回上一级"><img src="<%- url_for('/game-assets/icon_back_wh.png') %>" alt=""></a>
+    <% const backPath = page.layout === 'post' ? '/search/' : page.category ? '/categories/' : page.tag ? '/tags/' : (page.year || page.month) ? '/archives/' : '/live/'; %>
+    <a class="game-back" href="<%- url_for(backPath) %>" aria-label="返回上一级" <%- isEntry?'hidden style="display:none"':'' %>><img src="<%- url_for('/game-assets/icon_back_wh.png') %>" alt=""></a>
     <div class="topbar__right">
       <a class="game-stat game-stat-rank" href="<%- url_for('/search/') %>"><span class="stat-note" aria-hidden="true"><img src="<%- url_for('/game-assets/icon_playerRank.png') %>" alt=""></span><small>文章数</small><b><%= site.posts.length %></b></a>
-      <span class="game-stat" title="仅当前浏览器的文章访问次数，不是全站统计"><span class="stat-gem">◆</span><small>阅读量</small><b data-total-views>0</b><sup>本机</sup></span>
+      <span class="game-stat" title="全站文章阅读量，同一浏览器30分钟内去重"><span class="stat-gem">◆</span><small>阅读量</small><b data-total-views>—</b></span>
       <button class="round-button menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <aside class="menu-panel" aria-hidden="true">
-    <div class="menu-panel__head"><span>SEKAI MENU</span><button class="menu-close" type="button" aria-label="关闭菜单">×</button></div>
-    <nav>
-      <a href="<%- url_for('/') %>"><b>01</b><span>主页<small>HOME</small></span></a>
-      <a href="<%- url_for('/live/') %>"><b>♪</b><span>阅读入口<small>READING</small></span></a>
-      <a href="<%- url_for('/friends/') %>"><b>◇</b><span>友链<small>FRIENDS</small></span></a>
-      <a href="<%- url_for('/archives/') %>"><b>02</b><span>记录档案<small>ARCHIVE</small></span></a>
-      <a href="<%- url_for('/categories/') %>"><b>03</b><span>分类<small>CATEGORIES</small></span></a>
-      <a href="<%- url_for('/tags/') %>"><b>04</b><span>标签<small>TAGS</small></span></a>
-      <a href="<%- url_for('/search/') %>"><b>05</b><span>搜索<small>SEARCH</small></span></a>
-      <a href="<%- url_for('/about/') %>"><b>06</b><span>关于我<small>PROFILE</small></span></a>
+  <aside class="menu-panel" role="dialog" aria-modal="true" aria-label="菜单" aria-hidden="true">
+    <div class="menu-panel__head"><button class="menu-close" type="button" aria-label="关闭菜单">×</button></div>
+    <nav aria-label="博客菜单">
+      <% const menuItems=[
+        {title:'友链',en:'FRIENDS',path:url_for('/friends/'),icon:'icon_friend_dbl.png'},
+        {title:'GitHub',en:'GITHUB',path:(theme.home||{}).github||'https://github.com/siestazzz',icon:'home/github.svg',external:true},
+        {title:'分类',en:'CATEGORIES',path:url_for('/categories/'),icon:'menu/icon_menu_collection.png'},
+        {title:'标签',en:'TAGS',path:url_for('/tags/'),icon:'menu/icon_menu_text.png'},
+        {title:'个人资料',en:'PROFILE',path:url_for('/about/'),icon:'menu/icon_menu_profile.png'}
+      ]; menuItems.forEach(function(item){ %>
+      <a class="system-menu-card" href="<%= item.path %>" <%- item.external?'rel="noopener noreferrer"':'' %>>
+        <strong><em><%= item.title.slice(0,1) %></em><%= item.title.slice(1) %></strong>
+        <span class="system-menu-english" aria-hidden="true"><%= item.en %></span>
+        <img class="system-menu-icon" src="<%- url_for('/game-assets/'+item.icon) %>" alt="">
+      </a>
+      <% }); %>
     </nav>
   </aside>
   <div class="menu-scrim"></div>
 
+  <div id="site-audio-controls"><button class="bgm-toggle" type="button" aria-label="播放背景音乐与音效" aria-pressed="false"><img src="<%- url_for('/game-assets/icon_tab_unit_vs_on.png') %>" alt=""><span>BGM</span><i aria-hidden="true"></i></button><span class="audio-status" role="status" aria-live="polite"></span></div>
   <main class="site-main"><%- body %></main>
+  <script src="<%- url_for('/js/site-audio.js') %>" defer></script>
   <script src="<%- url_for('/js/tap-mesh.js') %>" defer></script>
   <script src="<%- url_for('/js/effects.js') %>" defer></script>
   <script src="<%- url_for('/js/street-pan.js') %>" defer></script>
   <script src="<%- url_for('/js/street-blur.js') %>" defer></script>
+  <script id="sekai-statistics" src="<%- url_for('/js/statistics.js') %>" data-endpoint="<%= (theme.statistics || {}).endpoint || '' %>" data-origin="<%= (theme.statistics || {}).origin || '' %>" defer></script>
   <script src="<%- url_for('/js/main.js') %>" defer></script>
   <% if (hasWorld) { %><script src="<%- url_for('/game-assets/map/spine-webgl.js') %>" defer></script><script src="<%- url_for('/js/home-world.js') %>" defer></script><script src="<%- url_for('/js/home-effects.js') %>" defer></script><script src="<%- url_for('/js/home-characters.js') %>" defer></script><% } %>
   <% if (page.layout === 'friends') { %><script src="<%- url_for('/js/friends.js') %>" defer></script><% } %>
-  <script src="<%- url_for('/js/jacket-blur.js') %>" defer></script>
   <script src="<%- url_for('/js/reader.js') %>" defer></script>
   <script src="<%- url_for('/js/live-menu.js') %>" defer></script>
+  <link rel="stylesheet" href="<%- url_for('/css/live2d-character.css') %>">
+  <script src="<%- url_for('/js/live2d-character.js') %>" defer></script>
   <script src="<%- url_for('/js/home.js') %>" defer></script>
   <script src="<%- url_for('/js/friends.js') %>" defer></script>
-  <% if (isHome || page.layout === 'sekai-map') { %><script src="<%- url_for('/js/transition-particles.js') %>" defer></script><script src="<%- url_for('/js/world-transfer.js') %>" defer></script><% } %>
 </body>
 </html>
