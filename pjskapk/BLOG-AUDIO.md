@@ -8,6 +8,10 @@ site-audio.js现在初始化即setup/sync/resume尝试播放，浏览器策略�
 
 本轮验证：构建/声音专项回归，新增静音gain=0、时钟持续增长、取消静音gain=.112且trackStartedAt相同、入口点击lastEffectName=SE_TITLE_ENTER断言。现有曲目/循环点/普通导航/菜单/后台回归保持。浏览器可能在初始化resume时阻止出声，不保证无手势首次访问能自动外放；未做实机听辨。
 
+## 2026-10-16 默认播放
+
+site-audio.js初始化固定enabled=true，不读取旧sekai-audio-enabled静音值；每次新文档都立即尝试unlock，当前页点击静音仍保持静音、软导航不重置。浏览器禁止自动播放时，首次pointerdown/Enter/空格解锁。原音源、循环点、增益.112不变；这是用户指定网页策略，不是游戏字段。
+
 ## 最新：右下角与40%音量
 
 按钮改全站右下角，桌面right26/bottom20px、手机right14/bottom14px，取safe-area与间距的较大值。删除with-back特殊位置与32px尺寸，手机统一44px；入口说明文字右边距100px/手机72px，避开按钮。音量是上版的40%：BGM .28→.112，普通SE .30→.12，滚动 .16→.064。源音频不重新编码，原循环点不变。这是用户指定的网页位置/增益适配，覆盖下方旧坐标与增益。

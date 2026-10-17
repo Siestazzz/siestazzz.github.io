@@ -23,6 +23,10 @@
 
 ## 2. 场景与入口
 
+### 2026-10-16 · POST-COVER-EMPTY / FRIENDS / AUDIO-DEFAULT
+
+按用户补充恢复选文列表和手机预览的空封面框，span/div代替img，不请求封面，不恢复jacket-blur模块；列表选中时仍显示原CSS频谱，未选中显示空框。框使用2px半透明白边、3px圆角、白色8%底，均为网页适配。移除入口title-entry-note“个人博客 · 非官方同人页面”，无许可证文件/技术证据文档删除。友链仅保留RinpoStk和JuicyMio及用户给定远程头像；未给简介用“这个人很懒，没有留下他的介绍”，JuicyMio简介Happy hacking。site-audio.js每次文档初始化enabled=true，不再读取旧localStorage静音偏好，仍立即unlock，受浏览器autoplay策略限制；当前页静音、增益与原循环点不变。验证见对应证据最新条目。本轮不提交/推送。
+
 ### 2026-10-16 · BLOG-STATS / POST-COVER-OFF
 
 用户要求：阅读门槛由5000ms改为30000ms（statistics.js），前台累计计时、后台暂停和软导航卸载不变；30分钟去重不变。这是前端策略，不代表后端验证真实停留。

@@ -13,7 +13,9 @@ const {chromium}=require('C:/Users/22596/.cache/codex-runtimes/codex-primary-run
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://localhost:4100/search/',{waitUntil:'domcontentloaded'});
   await page.locator('.song-row').first().waitFor();
-  assert.equal(await page.locator('.song-thumb,.jacket,.phone-jacket-wash').count(),0);
+  assert.equal(await page.locator('img.song-thumb,img.jacket,.phone-jacket-wash').count(),0);
+  assert.equal(await page.locator('.song-thumb.cover-empty').count(),posts.length);
+  assert.equal(await page.locator('.jacket.cover-empty').count(),1);
   await page.locator('.song-row').nth(1).click();
   assert.ok(await page.locator('#song-preview h1').textContent());
   fs.mkdirSync('backups/verification',{recursive:true});

@@ -3,7 +3,7 @@
  if(window.sekaiAudio)return;
  const root=document.body.dataset.root||'/',base=root+'game-assets/audio/';
  const controls=document.getElementById('site-audio-controls'),button=controls.querySelector('button'),status=controls.querySelector('.audio-status');
- let enabled=true;try{enabled=localStorage.getItem('sekai-audio-enabled')!=='0';}catch{}
+ let enabled=true;
  let context,gain,source,current='',version=0,starting=false,lastEffect=0,lastScroll=0,trackStartedAt=0,effectCount=0,lastEffectName='';
  const buffers=new Map(),effects=new Set();
  let voiceSource=null,voiceVersion=0,voiceName='',lastVoice='';

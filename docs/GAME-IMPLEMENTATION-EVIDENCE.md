@@ -1,5 +1,11 @@
 # 游戏实现 → 网页实现：证据对照
 
+## 2026-10-16 · 空封面与默认播放修订
+
+验证：Hexo build、JS语法、verify-no-covers和verify-friends-audio-default均通过；查看1440×900/390×844选文截图确认空框与原频谱、无封面图片网络请求；查看友链截图，两位头像实际正常显示、名称及简介正确。默认播放测试在明确允许autoplay的Chromium验证初始化、静音、刷新重新启用；未声称默认浏览器绕过自动播放限制。入口说明DOM已不存在。本地4100服务已重启，未提交/推送，HEAD仍259878b。
+
+用户要求保留空框：main.js恢复jacket-wrap/jacket-label，div.jacket.cover-empty和span.song-thumb.cover-empty不含src；refinements.css使用2px白70%描边、白8%底、3px圆角，不是新增游戏原值。列表选中沿用已记录的频谱动画，手机不再运行封面模糊，背景场景不动。原封面文件仍不输出。友链仅RinpoStk（https://rinpostk.github.io/，头像/image/2.png）与JuicyMio（https://juicymio.github.io/，头像/avatar.jpg，Happy hacking）；均为用户提供内容，不是游戏资源。删除入口非官方提示仅针对页面文案，不删除第三方许可证。BGM初始化固定enabled=true覆盖之前持久静音读取；保留原游戏音源、循环点、.112增益和首次手势unlock兜底，自动出声仍取决于浏览器，不承诺绕过策略。
+
 ## 2026-10-16 · POST-COVER-OFF / BLOG-STATS-30S
 
 用户明确要求停用文章封面以降低加载开销，移除列表/手机预览/旧大厅精选图片与封面模糊模块挂载，移除所有封面fallback，不影响正文图片和游戏背景。原封面文件保留本地供恢复，Hexo exclude和Git ignore防止生成/发布。列表继续已有CSS频谱：未选中animation:none/scaleY(.35)/opacity .45，选中原动画/opacity1；这是网页适配，不是新恢复的游戏字段。文件/生命周期见总索引同日条目。

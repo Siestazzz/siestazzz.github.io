@@ -30,7 +30,7 @@ const contact = /^(https?:\/\/|mailto:)/i.test(own.contact || '') ? own.contact 
             <span class="friends-avatar <%= avatar ? '' : 'is-placeholder' %>"><img src="<%- url_for(avatar || '/game-assets/friends/icon_tofu_line_wh.png') %>" alt="" loading="lazy"></span>
             <span class="friends-identity"><strong><%= friend.name %></strong>
             </span>
-            <span class="friends-comment"><%= friend.description || '暂未填写个人描述' %></span>
+            <span class="friends-comment"><%= friend.description || '这个人很懒，没有留下他的介绍' %></span>
             <a class="friends-online" href="<%= friend.url %>" target="_blank" rel="noopener noreferrer" aria-label="前往 <%= friend.name %>（新标签页）">前往</a>
           </div>
           <% }) %>
