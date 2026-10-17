@@ -7,6 +7,10 @@ try{
  await page.addInitScript(()=>localStorage.setItem('sekai-audio-enabled','0'));
  await page.goto('http://localhost:4100/friends/',{waitUntil:'domcontentloaded'});
  assert.equal(await page.locator('.friends-row').count(),2);
+ for(const avatar of await page.locator('.friends-avatar img').all()){
+  assert.equal(await avatar.getAttribute('loading'),'eager');
+  assert.equal(await avatar.getAttribute('fetchpriority'),'high');
+ }
  const names=await page.locator('.friends-identity strong').allTextContents();
  assert.deepEqual(names.sort(),['JuicyMio','RinpoStk']);
  assert.equal(await page.locator('[data-friend-name="RinpoStk"] .friends-comment').textContent(),'这个人很懒，没有留下他的介绍');

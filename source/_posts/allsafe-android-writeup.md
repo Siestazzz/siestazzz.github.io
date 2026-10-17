@@ -1,18 +1,20 @@
 ---
 stats_id: allsafe-android-writeup
-title: "allsafe wp"
-date: 2025-09-14 15:53:34
+title: "安卓逆向入门靶场推荐---allsafe wp"
+date: 2025-05-21 20:17:00
 updated: 2025-09-14 15:53:34
 categories:
   - "Android"
 tags:
   - "Android"
+  - "漏洞挖掘"
+  - "逆向工程"
   - "靶场"
   - "Allsafe"
   - "Frida"
   - "漏洞分析"
 excerpt: "Allsafe 安卓靶场题解，涵盖日志、组件、WebView、存储、证书校验等安全问题。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 ## Insecure Logging
 

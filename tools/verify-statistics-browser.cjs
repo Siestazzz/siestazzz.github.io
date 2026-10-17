@@ -36,6 +36,15 @@ const {chromium}=require('C:/Users/22596/.cache/codex-runtimes/codex-primary-run
  await page.evaluate(()=>{disposers.splice(0).forEach(fn=>fn());mount();});
  await page.clock.runFor(30100);
  assert.equal(events.filter(e=>e.kind==='read').length,1);
+ const visitTime=await page.evaluate(()=>Number(localStorage.getItem('sekai-stats-event:visit:site')));
+ await page.clock.setFixedTime(new Date(visitTime+365*86400000-1));
+ await setup('https://siestazzz.github.io/article/');
+ await page.waitForFunction(()=>document.querySelector('[data-total-views]').textContent==='7');
+ assert.equal(events.filter(e=>e.kind==='visit').length,1);
+ await page.clock.setFixedTime(new Date(visitTime+365*86400000));
+ await setup('https://siestazzz.github.io/article/');
+ await page.waitForFunction(()=>document.querySelector('[data-total-views]').textContent==='7');
+ assert.equal(events.filter(e=>e.kind==='visit').length,2);
  const before=events.length;
  await setup('http://localhost:4100/article/');
  await page.clock.runFor(30100);

@@ -1,7 +1,7 @@
 ---
 stats_id: ciscn-2024-reverse
-title: "ciscn2024 Reverse全题解 复盘"
-date: 2025-09-14 15:53:35
+title: "ciscn2024初赛 Reverse全题解 复盘"
+date: 2024-05-23 00:00:00
 updated: 2025-09-14 15:53:35
 categories:
   - "CTF"
@@ -14,7 +14,7 @@ tags:
   - "Rust"
   - "Go"
 excerpt: "CISCN 2024 Reverse 题目复盘，涵盖 ARM、Android native、Rust、GDB 与 Go 逆向。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 ## Reverse
 

@@ -7,6 +7,7 @@
   "fps": 30,
   "loop_start_seconds": 7.533333333333333,
   "file": "title-background.mp4",
-  "bytes": 10710066,
-  "sha256": "687febf8dc010014f2d8619e9569befb99a73d1cbb9d6d9b701f05bec9a88f3a"
+  "bytes": 5849672,
+  "sha256": "4e6715263d0ef53842ed84d51d6502a9b2972366ba879158f7196f413624a56b",
+  "web_encode": "H.264 CRF25 slow, faststart; details in web-compression.json"
 }

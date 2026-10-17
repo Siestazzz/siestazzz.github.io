@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#454774">
   <% if (isTitleEntry) { %>
-  <% for (const part of ['01','02','03']) { %><link rel="preload" as="image" href="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_'+part+'.png') %>"><% } %>
+  <% for (const part of ['01','02','03']) { %><link rel="preload" as="image" href="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_'+part+'.webp') %>"><% } %>
   <link rel="preload" as="fetch" crossorigin href="<%- url_for('/game-assets/entry/title-fx.json') %>">
   <% } %>
   <script src="<%- url_for('/js/page-router.js') %>?v=random-entry-3"></script>
@@ -28,9 +28,9 @@
 </head>
 <body class="page-type-<%= isEntry ? 'live' : (page.layout === 'index' ? 'archive' : (page.layout || 'other')) %>" data-root="<%- url_for('/') %>">
   <% if (isTitleEntry) { %><section class="title-entry" aria-label="博客入口" role="dialog" aria-modal="true">
-    <img class="title-entry-art title-entry-base" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_01.png') %>" alt="">
-    <img class="title-entry-art title-entry-tree" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_02.png') %>" alt="">
-    <img class="title-entry-art title-entry-characters" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_03.png') %>" alt="世界树下的角色们">
+    <img class="title-entry-art title-entry-base" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_01.webp') %>" alt="">
+    <img class="title-entry-art title-entry-tree" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_02.webp') %>" alt="">
+    <img class="title-entry-art title-entry-characters" src="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_03.webp') %>" alt="世界树下的角色们">
     <video class="title-entry-movie" data-src="<%- url_for('/game-assets/entry/title-background.mp4') %>" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture></video>
     <div class="title-entry-flash" aria-hidden="true"></div>
     <button class="title-entry-enter" type="button" aria-label="进入博客">
@@ -57,8 +57,9 @@
     <% const backPath = page.layout === 'post' ? '/search/' : page.category ? '/categories/' : page.tag ? '/tags/' : (page.year || page.month) ? '/archives/' : '/live/'; %>
     <a class="game-back" href="<%- url_for(backPath) %>" aria-label="返回上一级" <%- isEntry?'hidden style="display:none"':'' %>><img src="<%- url_for('/game-assets/icon_back_wh.png') %>" alt=""></a>
     <div class="topbar__right">
-      <a class="game-stat game-stat-rank" href="<%- url_for('/search/') %>"><span class="stat-note" aria-hidden="true"><img src="<%- url_for('/game-assets/icon_playerRank.png') %>" alt=""></span><small>文章数</small><b><%= site.posts.length %></b></a>
+      <span class="game-stat game-stat-rank" title="同一浏览器365天内计一次，非跨设备独立人数"><span class="stat-note" aria-hidden="true"><img src="<%- url_for('/game-assets/icon_playerRank.png') %>" alt=""></span><small>访客数</small><b data-total-visits>—</b></span>
       <span class="game-stat" title="全站文章阅读量，同一浏览器30分钟内去重"><span class="stat-gem">◆</span><small>阅读量</small><b data-total-views>—</b></span>
+      <a class="game-stat game-stat-articles" href="<%- url_for('/search/') %>" title="查看全部文章"><img class="stat-battery" src="<%- url_for('/game-assets/icon_livebonusDrink.png') %>" alt=""><small>文章数</small><b><%= site.posts.length %></b></a>
       <button class="round-button menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>

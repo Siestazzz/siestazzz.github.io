@@ -23,6 +23,34 @@
 
 ## 2. 场景与入口
 
+### 2026-10-17 · TEXT-SELECTION-ALPHA
+
+选区浅青绿底改为rgba(156,232,223,.5)，普通正文保持深灰紫字，深色代码区选中文字为白色以保持对比。正文链接原1px border-bottom移除，避免横线残留在选区下面，保留原链接颜色与手型；不删除正文分割线、代码分隔线或Markdown删除线。网页样式适配，无游戏参数变更。
+
+### 2026-10-17 · TAXONOMY-AUDIT / TEXT-SELECTION
+
+核对11篇文章，6篇补大类tags：Tenda补漏洞挖掘/逆向工程（固件反汇编与复现）；Allsafe补漏洞挖掘/逆向工程（靶场安全分析）；Binder与Qcalc补漏洞挖掘；GPT辅助绕过补AI；Arduino补其他。原细分标签与主分类保留，不把普通刷机标成漏挖。refinements.css移除全局cursor:default!important，恢复原生cursor规则，正文/输入框text，链接与可用按钮pointer；::selection背景#9ce8df、文字#30324f、text-shadow:none。拖拽禁止选择规则与背景交互不变。这是网页可读性适配，无游戏参数依据。验证见同日证据条目。
+
+### 2026-10-17 · VISITOR-YEAR
+
+覆盖此前HUD访客30分钟口径：statistics.js visit本地去重365×86400000ms，Worker receiptSQL按kind区分visit=31536000秒、read=1800秒。同一浏览器UUID滚动365天一次，不是自然年或跨设备UV。scheduled保留visit凭据365天，read仍保留1天；累计总数不重置，已清理的旧凭据无法补回。HUD tooltip同步。纯博客业务，无游戏素材/动画/导航变化。仅本地修改，云端需部署后生效。
+
+### 2026-10-17 · SEARCH-MULTI-TAXONOMY / POST-PUBLICATION
+
+main.js render 对所选category匹配categories与tags的并集，忽略大小写，同一文章可跨大类展示；ALL不筛分类，关键词继续AND过滤，点击分类/随机文章/选中预览生命周期不变。属于博客业务，无新游戏素材/动画。10篇文章标题及发布日期按用户给定博客园列表校正；保留stats_id；新增本地Pixel刷机原稿与本地配图。旧日期路由兼容见NAVIGATION.md。验证见同日证据条目。
+
+### 2026-10-17 · HUD-COUNTS / ENTRY-MEDIA-COMPRESS
+
+`layout/layout.ejs` 全局 HUD 顺序调整为访客数、阅读量、文章数、菜单。访客数使用 statistics.js 的 data-total-visits（现有 Worker visits：浏览器30分钟去重访问次数，非 UV）；本机统计仍禁用显示 —。文章数使用 Hexo posts.length 并链接 /search/。原音符保留，refinements.css 的固定装饰填充由12%改为33.333%；新增原 icon_livebonusDrink.png 体力电池，桌面42×42px，移动端22×26px contain。布局/业务含义为网页适配，不是游戏等级或体力算法。没有新动画；软导航沿用原生命周期。
+
+入口视频同分辨率/帧率转码 H.264 CRF25 slow faststart，10,710,066→5,849,672字节；循环点226/30秒不变。入口3张背景 PNG 改用质量90 WebP，透明通道保留，合计5,444,067→586,702字节；只改入口预加载和图层引用，不压其他游戏贴图/正文图片。原图保留，原视频备份 backups/entry-media-originals，工具 tools/optimize-entry-media.py；当前哈希记录 entry/web-compression.json、title-movie.json。原出现/循环动画与等待策略不变。
+
+验证：Hexo构建通过；verify-header-media.cjs 在1440/1024/768/390宽度检查三栏不重叠、搜索与统计不重叠、电池图加载，入口WebP加载及视频推进通过。实际查看1440/390截图及入口播放截图；未进行公网下载速度或逐帧画质测量。游戏证据与适配见同日证据条目。没有提交/推送。
+
+### 2026-10-17 · FRIENDS-AVATAR-LOAD
+
+friends.ejs两位友链头像由loading=lazy改为eager，并设fetchpriority=high，让浏览器尽早请求。保留原远程src，不下载/代理头像，不改变尺寸、布局或排序。属于网页加载策略，不对应游戏字段；不会消除第三方网络延迟。构建与生成HTML检查见同日证据条目。
+
 ### 2026-10-16 · POST-COVER-EMPTY / FRIENDS / AUDIO-DEFAULT
 
 按用户补充恢复选文列表和手机预览的空封面框，span/div代替img，不请求封面，不恢复jacket-blur模块；列表选中时仍显示原CSS频谱，未选中显示空框。框使用2px半透明白边、3px圆角、白色8%底，均为网页适配。移除入口title-entry-note“个人博客 · 非官方同人页面”，无许可证文件/技术证据文档删除。友链仅保留RinpoStk和JuicyMio及用户给定远程头像；未给简介用“这个人很懒，没有留下他的介绍”，JuicyMio简介Happy hacking。site-audio.js每次文档初始化enabled=true，不再读取旧localStorage静音偏好，仍立即unlock，受浏览器autoplay策略限制；当前页静音、增益与原循环点不变。验证见对应证据最新条目。本轮不提交/推送。

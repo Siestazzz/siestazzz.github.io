@@ -1,7 +1,7 @@
 ---
 stats_id: nepctf-2025-reverse-misc
-title: "Nepctf2025 部分reverse misc题解"
-date: 2025-09-14 15:53:35
+title: "Nepctf2025 reverse misc部分题解"
+date: 2025-07-27 20:29:00
 updated: 2025-09-14 15:53:35
 categories:
   - "CTF"
@@ -13,7 +13,7 @@ tags:
   - "反调试"
   - "RC4"
 excerpt: "NepCTF 2025 部分 Reverse 与 Misc 题解，记录反调试、SMC 和解题过程。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 ## Reverse
 

@@ -1,7 +1,7 @@
 ---
 stats_id: tencent-game-security-2025-pc
-title: "2025腾讯游戏安全技术竞赛PC端初赛"
-date: 2025-09-14 15:53:34
+title: "2025腾讯游戏安全技术竞赛PC端初赛wp"
+date: 2025-04-10 12:08:00
 updated: 2025-09-14 15:53:34
 categories:
   - "CTF"
@@ -12,7 +12,7 @@ tags:
   - "Windows"
   - "驱动分析"
 excerpt: "腾讯游戏安全竞赛 PC 初赛题解，记录可执行文件与驱动的静态分析。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 还不是很会调驱动，所以这次都是做的静态分析
 

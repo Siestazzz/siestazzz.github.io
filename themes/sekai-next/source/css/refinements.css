@@ -7,7 +7,7 @@ body{font-family:SekaiRodin,SekaiHan,"Microsoft YaHei",sans-serif;font-weight:50
 .article-content :is(pre,code){font-family:Consolas,"Cascadia Code",SekaiHan,monospace}
 /* Rank HUD: original icon_playerRank, with a short flat-ended gauge fill
    clipped by the outer capsule. Fixed decorative fill, not a blog level. */
-.game-stat-rank{position:relative;isolation:isolate;overflow:hidden;--rank-fill:12%}
+.game-stat-rank{position:relative;isolation:isolate;overflow:hidden;--rank-fill:33.333%}
 .game-stat-rank:before{content:'';position:absolute;z-index:-1;inset:0 auto 0 0;width:var(--rank-fill);background:#00c5bb}
 .game-stat-rank .stat-note{display:block;flex:none;background:none;border-radius:0;color:inherit;font-size:0;padding:3px}
 .game-stat-rank .stat-note img{display:block;width:100%;height:100%;object-fit:contain}
@@ -314,8 +314,14 @@ body.page-type-index img,body.page-type-index a{-webkit-user-drag:none}
 }
 /* Hide the extension's synthetic agent pointer, not the user's native cursor. */
 #codex-agent-overlay-root{display:none!important}
-/* Keep the user's normal arrow on every surface, including links and dragging. */
-html,html *,html *::before,html *::after{cursor:default!important}
+/* Native text, link and drag cursors; no global forced arrow or custom cursor image. */
+html{cursor:auto}
+.article-content,.article-content :is(p,span,strong,em,li,blockquote,h1,h2,h3,h4,h5,h6,pre,code),input:not([type=button]):not([type=submit]),textarea{cursor:text}
+a[href],button:not(:disabled),summary{cursor:pointer}
+::selection{background:rgba(156,232,223,.5);color:#30324f;text-shadow:none}
+.article-content :is(pre,code,figure.highlight) ::selection,.article-content :is(pre,code)::selection{color:#fff}
+/* Link borders survived selection as a line below the highlight. */
+.article-content a{border-bottom:0;text-decoration:none}
 .collection-card > .category-unit-icon{display:block;width:64px;height:64px;max-width:none;justify-self:center;object-fit:contain;border-radius:0;background:none}
 /* Blog taxonomy feedback: web adaptation, not recovered game hover values. */
 .preview-tags a{border:2px solid #77eedd;border-radius:4px;color:#77eedd;font-size:12px;padding:3px 10px;transition:background-color .15s ease,color .15s ease}
@@ -347,3 +353,18 @@ html,html *,html *::before,html *::after{cursor:default!important}
 .page-type-search .song-search button:hover,.page-type-search .song-search button:focus-visible{background:#33ccbb;color:#20223b}
 @media(max-width:700px){.page-type-search .song-search{gap:7px;padding-left:10px}.page-type-search .song-search button{min-width:64px;padding:0 12px}}
 @media(prefers-reduced-motion:reduce){.tag-cloud a,.tag-stack a,.collection-card,.reader-category-link{transition:none}}
+/* Original live bonus drink sprite; blog counts are a web adaptation. */
+.stat-battery{display:block;width:42px;height:42px;object-fit:contain;flex:none;padding:2px}
+.topbar__right{gap:12px}
+.topbar .game-stat{min-width:138px;gap:7px;padding-right:12px;white-space:nowrap}
+.topbar .game-stat b{max-width:7ch;overflow:hidden;text-overflow:ellipsis}
+@media(min-width:1001px){.page-type-search .song-search{width:min(calc(58vw - 159px),calc(100vw - 760px))}}
+@media(min-width:701px) and (max-width:1000px){.page-type-search .song-search{width:calc(100vw - 550px)}.page-type-search .stat-battery{width:28px;height:28px}.page-type-search .topbar .game-stat{min-width:88px;gap:4px;padding-right:8px}.page-type-search .game-stat small{font-size:12px}.page-type-search .game-stat b{font-size:16px}}
+@media(max-width:700px){
+ .topbar__right{gap:4px}
+ .topbar .game-stat{min-width:0;gap:3px;padding-right:5px;height:32px}
+ .topbar .game-stat small{font-size:10px}
+ .topbar .game-stat b{font-size:14px;max-width:4ch}
+ .topbar .stat-note,.topbar .stat-gem,.topbar .stat-battery{width:22px;height:26px;background-size:22px}
+ .topbar .menu-toggle{width:36px;height:36px}
+}

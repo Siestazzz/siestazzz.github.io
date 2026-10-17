@@ -1,7 +1,8 @@
-const WINDOW = 1800;
+export const VISIT_WINDOW = 365 * 86400;
+const READ_WINDOW = 1800;
 export const receiptSQL = `INSERT INTO receipts(kind,subject,visitor,accepted_at) VALUES(?,?,?,?)
   ON CONFLICT(kind,subject,visitor) DO UPDATE SET accepted_at=excluded.accepted_at
-  WHERE receipts.accepted_at <= excluded.accepted_at - ${WINDOW}
+  WHERE receipts.accepted_at <= excluded.accepted_at - CASE WHEN excluded.kind='visit' THEN ${VISIT_WINDOW} ELSE ${READ_WINDOW} END
   RETURNING accepted_at`;
 
 async function hash(secret, value) {
@@ -90,7 +91,7 @@ export default {
   async scheduled(event,env,ctx) {
     const now = Math.floor(Date.now()/1000);
     ctx.waitUntil(env.DB.batch([
-      env.DB.prepare('DELETE FROM receipts WHERE accepted_at < ?').bind(now-86400),
+      env.DB.prepare("DELETE FROM receipts WHERE (kind='visit' AND accepted_at < ?) OR (kind='read' AND accepted_at < ?)").bind(now-VISIT_WINDOW,now-86400),
       env.DB.prepare('DELETE FROM rate_limits WHERE expires < ?').bind(now)
     ]));
   }

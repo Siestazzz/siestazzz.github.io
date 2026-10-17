@@ -1,7 +1,7 @@
 ---
 stats_id: qwb-s9-qcalc
 title: "强网杯s9初赛 Qcalc wp"
-date: 2025-11-10 11:29:30
+date: 2025-11-10 11:31:00
 updated: 2025-11-10 11:29:30
 categories:
   - "CTF"
@@ -12,8 +12,9 @@ tags:
   - "逆向工程"
   - "Deep Link"
   - "漏洞分析"
+  - "漏洞挖掘"
 excerpt: "Qcalc 题解，分析 Deep Link 输入处理、表达式计算及相关漏洞。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 ## 逆向过程
 

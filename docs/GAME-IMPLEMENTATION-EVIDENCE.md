@@ -1,5 +1,37 @@
 # 游戏实现 → 网页实现：证据对照
 
+## 2026-10-17 · TEXT-SELECTION-ALPHA
+
+用户要求选区底透明一些；refinements.css将alpha设为0.5（网页自选值），深色代码选中文字用白色。排查发现style.styl `.article-content a`自带1px实线下边框，与选中无关、选中仍存在；在refinements.css覆盖为0。未把原正文分割线误删，也未声称所有类型横线均来自链接。构建与浏览器选区/边框测试、截图检查见本次验证。
+
+## 2026-10-17 · TAXONOMY-AUDIT / TEXT-SELECTION
+
+验证：Hexo构建通过，verify-tags-selection.cjs确认11篇主分类均有同名标签、四篇漏挖标签、正文text/返回链接pointer和选区计算颜色；实际查看Tenda正文选区截图。verify-multi-category.cjs再次验证全部六类与ALL的并集筛选及Pixel图片。未提交/推送。
+
+大类标签依据本地11篇Markdown的主题与正文，不是游戏实现：Tenda固件分析/漏洞复现、Allsafe反编译靶场安全问题、Binder身份校验、Qcalc Deep Link安全分析、GPT辅助反调试绕过、Arduino环境配置。补六篇缺失大类，保留其余细分tag。鼠标异常定位到refinements.css全元素cursor:default!important；移除此覆盖，使用浏览器原生文本与交互指针，不增加自定义指针图片。选区浅青绿#9ce8df与深灰紫#30324f为网页自选配色，不宣称游戏原值。无导航或动画改动。
+
+## 2026-10-17 · VISITOR-YEAR
+
+验证：Hexo构建通过；verify-statistics.mjs在本地SQLite验证一年减1秒拒绝、一年边界接受、访客凭据保留/过期清理及阅读30分钟边界；verify-statistics-browser.cjs用虚拟时间验证跨页面一年去重、到期重新上报、正文30秒及本机禁用。未写线上测试计数。仅tooltip文案改动，无视觉布局变动，未新增截图验证。
+
+用户指定访客一年去重，不是原游戏算法。前端statistics.js kind=visit窗口365天，保留localStorage UUID及旧成功时间；后端worker.mjs receiptSQL用CASE分别选择visit31536000秒/read1800秒，继续依赖SQLite唯一键和触发器原子增量。定时清理按kind分别保留365天/1天，防止提前删除visit凭据破坏去重。旧累计数保留，不追溯扣除重复数；旧每日清理已丢失的历史身份无法恢复。只改本地，未部署Worker/站点。
+
+## 2026-10-17 · SEARCH-MULTI-TAXONOMY / POST-PUBLICATION
+
+验证完成：Hexo build通过；tools/verify-multi-category.cjs确认11篇索引、校正日期、旧CISCN地址生成跳转、六类及ALL浏览器结果与标签并集一致、Pixel正文图片正常加载。实际查看Android筛选截图，跨类CTF文章已出现。远程SQL未执行，未提交/推送。
+
+用户给定的11篇标题/发布日期是本次内容依据，未以游戏数据证明博客分类行为。main.js render 从categories单独匹配改为categories+tags并集匹配，忽略大小写；固定主分类仍用于原有外观与文章标识。没有改游戏队标、动画字段或恢复方法体。Pixel正文来自 D:/WorkSpace/blogs/记录一次pixel刷机的过程/记录一次pixel刷机的过程.md，原同目录assets图片复制到source/images/posts/pixel-flashing；未重新撰写正文。legacy-post-dates.js保留六篇旧日期路由。新文章统计白名单只生成本地SQL，未执行远程数据库或部署。
+
+## 2026-10-17 · HUD-COUNTS / ENTRY-MEDIA-COMPRESS
+
+设备19bd96b8截图 `backups/verification/game-header.png`（ADB当前主页）显示等级音符、晶石、带闪电电池的排列。6.8.1 `assets/bin/Data/8aa75aecad1a3b240b28ddb2b1af8383` → Sprite path_id=1，name=icon_livebonusDrink → `pjskapk/export_stamina_assets.py` UnityPy Sprite.image → `game-assets/icon_livebonusDrink.png`，来源记录 stamina-provenance.json → layout.ejs `.stat-battery`。导出后已查看贴图，对应设备电池外观；并非 icon_livepoint（绿色硬币）或 stamina_normal（黄色闪电）。未恢复该头部Prefab尺寸、方法体；42px/22px、栏宽与33.333%填充均为网页适配/用户指定，不冒充原参数。visit计数业务非游戏字段，data-total-visits复用现有API，非独立访客UV。
+
+入口原始资源证据仍沿用 title_screen/anniversary_5th_bg、title-movie.json USM SHA与226帧循环点；本次只对已导出MP4再次H.264 CRF25编码，对3张bg PNG进行质量90 WebP编码。执行工具与原/现字节、当前SHA见 tools/optimize-entry-media.py 和 entry/web-compression.json。PNG原文件保留但入口不再引用；备份目录保留旧MP4，不是新游戏素材。没有改动画时间或解读新的游戏算法。构建、浏览器四档布局断言、入口视频播放/WebP加载通过，实际看桌面/手机/入口截图；不宣称公网耗时改善比例或无损画质。
+
+## 2026-10-17 · FRIENDS-AVATAR-LOAD
+
+用户要求保留外链头像并取消懒加载：layout/friends.ejs img使用loading=eager、fetchpriority=high，适用于当前两位好友；src、布局与游戏素材不变。浏览器调度提示不是游戏原始参数，也不保证跨域请求耗时降低。没有下载头像到仓库；未提交/推送。验证：本轮执行Hexo构建及生成HTML属性/URL断言，不做网络速度对比或宣称具体提速比例。
+
 ## 2026-10-16 · 空封面与默认播放修订
 
 验证：Hexo build、JS语法、verify-no-covers和verify-friends-audio-default均通过；查看1440×900/390×844选文截图确认空框与原频谱、无封面图片网络请求；查看友链截图，两位头像实际正常显示、名称及简介正确。默认播放测试在明确允许autoplay的Chromium验证初始化、静音、刷新重新启用；未声称默认浏览器绕过自动播放限制。入口说明DOM已不存在。本地4100服务已重启，未提交/推送，HEAD仍259878b。

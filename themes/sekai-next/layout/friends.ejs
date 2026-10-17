@@ -27,7 +27,7 @@ const contact = /^(https?:\/\/|mailto:)/i.test(own.contact || '') ? own.contact 
         <div class="friends-rows" data-friends-rows>
           <% friends.forEach(function(friend, i) { const avatar = friend.avatar || ''; %>
           <div class="friends-row" data-friend-name="<%= friend.name %>" data-friend-index="<%= i %>" data-friend-added="<%= friend.added || '' %>">
-            <span class="friends-avatar <%= avatar ? '' : 'is-placeholder' %>"><img src="<%- url_for(avatar || '/game-assets/friends/icon_tofu_line_wh.png') %>" alt="" loading="lazy"></span>
+            <span class="friends-avatar <%= avatar ? '' : 'is-placeholder' %>"><img src="<%- url_for(avatar || '/game-assets/friends/icon_tofu_line_wh.png') %>" alt="" loading="eager" fetchpriority="high"></span>
             <span class="friends-identity"><strong><%= friend.name %></strong>
             </span>
             <span class="friends-comment"><%= friend.description || '这个人很懒，没有留下他的介绍' %></span>

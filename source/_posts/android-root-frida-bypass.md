@@ -1,19 +1,20 @@
 ---
 stats_id: android-root-frida-bypass
 title: "一次某梆加固的反root和反frida绕过with GPT5.6sol"
-date: 2026-08-09 15:33:11
+date: 2026-08-09 15:37:00
 updated: 2026-08-09 15:33:11
 categories:
   - "Android"
 tags:
   - "Android"
   - "逆向工程"
+  - "AI"
   - "Frida"
   - "Root检测"
   - "反调试"
   - "加固"
 excerpt: "记录一次 Android 加固应用的 Root 检测与 Frida 检测分析、定位和绕过过程。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 ## 分析过程
 

@@ -74,7 +74,7 @@ function random() {
 }
 function render() {
   const q = input.value.trim().toLocaleLowerCase();
-  matched = posts.filter(p => (!category || p.categories.includes(category)) && [p.title,p.text,p.excerpt,...p.tags].join(' ').toLocaleLowerCase().includes(q));
+  matched = posts.filter(p => (!category || [...p.categories,...p.tags].some(name => name.toLocaleLowerCase() === category.toLocaleLowerCase())) && [p.title,p.text,p.excerpt,...p.tags].join(' ').toLocaleLowerCase().includes(q));
   state.textContent = matched.length + ' 篇文章';
   const diamonds = '<span class="diamonds" aria-hidden="true">' + ('<img src="' + asset('icon_allPerfect.png') + '" alt="">').repeat(5) + '</span>';
 list.innerHTML = matched.map(p => '<button type="button" class="song-row" data-path="' + esc(p.path) + '"><span class="view-medal"><small>阅读量</small><b data-post-views="' + esc(p.statsId) + '">' + views(p.statsId) + '</b></span><span class="song-thumb cover-empty" aria-hidden="true"></span>' + spectrum + '<span class="song-info"><strong>' + esc(p.title) + '</strong><time>' + esc(p.date) + '</time>' + diamonds + '</span><span class="row-tag">' + esc(p.tags[0] || 'NOTE') + '</span></button>').join('');

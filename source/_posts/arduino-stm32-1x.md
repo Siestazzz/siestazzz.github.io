@@ -1,17 +1,18 @@
 ---
 stats_id: arduino-stm32-1x
 title: "Arduino下载1.x版本stm32方法"
-date: 2025-09-14 15:53:35
+date: 2025-08-07 19:08:00
 updated: 2025-09-14 15:53:35
 categories:
   - "其他"
 tags:
+  - "其他"
   - "Arduino"
   - "STM32"
   - "嵌入式"
   - "环境搭建"
 excerpt: "在 Arduino 中安装旧版 STM32 开发板支持包的操作记录。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 Arduino现在提供的package.json中只包含2.x版本的stm32，旧版本的json文件为https://raw.githubusercontent.com/stm32duino/BoardManagerFiles/master/STM32/package_stm_index.json
 

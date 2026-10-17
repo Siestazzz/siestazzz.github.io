@@ -1,0 +1,35 @@
+{
+  "video_crf": 25,
+  "webp_quality": 90,
+  "loop_start_seconds": 7.533333333333333,
+  "records": [
+    {
+      "source": "title-background.mp4",
+      "output": "title-background.mp4",
+      "original_bytes": 10710066,
+      "bytes": 5849672,
+      "sha256": "4e6715263d0ef53842ed84d51d6502a9b2972366ba879158f7196f413624a56b"
+    },
+    {
+      "source": "tex_anniversary_5th_bg_bg_01.png",
+      "output": "tex_anniversary_5th_bg_bg_01.webp",
+      "original_bytes": 585623,
+      "bytes": 38450,
+      "sha256": "94a895c869c37e76bae36e303272fb33e42e91854a593d3c9c535cb3cb20aab8"
+    },
+    {
+      "source": "tex_anniversary_5th_bg_bg_02.png",
+      "output": "tex_anniversary_5th_bg_bg_02.webp",
+      "original_bytes": 1913807,
+      "bytes": 203310,
+      "sha256": "3bad3629bc51d7b0b44925b8230d556de9a33ae4211788f370bdc826a38e0c92"
+    },
+    {
+      "source": "tex_anniversary_5th_bg_bg_03.png",
+      "output": "tex_anniversary_5th_bg_bg_03.webp",
+      "original_bytes": 2944637,
+      "bytes": 344942,
+      "sha256": "2f379ec3997c1ea3b1b1b421bc2ea4140bf56e5027003deb506480d2879af675"
+    }
+  ]
+}

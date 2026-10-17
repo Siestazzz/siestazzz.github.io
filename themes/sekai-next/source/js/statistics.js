@@ -39,7 +39,8 @@
     const key=kind+':'+(id || 'site'), storageKey='sekai-stats-event:'+key;
     let last=sent.get(key) || 0;
     try { last=Math.max(last,Number(localStorage.getItem(storageKey)) || 0); } catch {}
-    if (Date.now()-last < 1800000 || inflight.has(key)) return;
+    const windowMs = kind === 'visit' ? 365 * 86400000 : 1800000;
+    if (Date.now()-last < windowMs || inflight.has(key)) return;
     const job=request('/events', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind,id,visitor:identity()})})
       .then(async () => {
         const now=Date.now(); sent.set(key,now);

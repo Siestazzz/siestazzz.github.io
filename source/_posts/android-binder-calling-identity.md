@@ -1,18 +1,19 @@
 ---
 stats_id: android-binder-calling-identity
 title: "Binder.getCallingPid()和Binder.getCallingUid()漏洞分析"
-date: 2025-10-11 13:15:41
+date: 2025-10-11 13:16:00
 updated: 2025-10-11 13:15:41
 categories:
   - "Android"
 tags:
   - "Android"
+  - "漏洞挖掘"
   - "Binder"
   - "IPC"
   - "权限校验"
   - "漏洞分析"
 excerpt: "结合 Ghera 示例分析 Binder 调用身份与组件权限校验问题。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 最近在学习安卓漏挖，在分析ghera数据集时发现一个很有意思的binder特性，但还没搞懂底层原理，先挖个坑
 

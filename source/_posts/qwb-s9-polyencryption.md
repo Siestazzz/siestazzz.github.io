@@ -1,7 +1,7 @@
 ---
 stats_id: qwb-s9-polyencryption
 title: "强网杯s9初赛 PolyEncryption wp"
-date: 2025-10-20 19:41:39
+date: 2025-10-20 19:54:00
 updated: 2025-10-20 19:41:39
 categories:
   - "CTF"
@@ -13,7 +13,7 @@ tags:
   - "Python"
   - "密码分析"
 excerpt: "PolyEncryption 题解：从异步状态机反编译到内嵌 Python 程序与加密逻辑分析。"
-source_date_basis: file-mtime
+source_date_basis: user-cnblogs-publication
 ---
 ## 逆向过程
 
