@@ -18,7 +18,7 @@ hexo.extend.generator.register('sekai-search-index', function (locals) {
       title: post.title,
       statsId: post.stats_id || post.slug,
       path: post.path,
-      date: post.date.format('YYYY-MM-DD'),
+      date: hexo.extend.helper.get('date').call({config:hexo.config,page:{}}, post.date.clone(), 'YYYY-MM-DD'),
       categories: post.categories.map(function (item) { return item.name; }),
       tags: post.tags.map(function (item) { return item.name; }),
       tagLinks: post.tags.map(function (item) { return {name:item.name,path:item.path}; }),

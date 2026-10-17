@@ -23,6 +23,14 @@
 
 ## 2. 场景与入口
 
+### 2026-10-17 · STATS-PUBLISH-COMPLETE
+
+云端执行articles.sql的INSERT OR IGNORE同步11篇白名单，Pixel已登记，保留原统计visits4/reads1和各文计数；GET /stats包含pixel-flashing:0。正式站前端365天逻辑、Pixel正文200已核对。新增线上只读校验对照已发布search.json的全部statsId，不再硬编码10篇。修正UTC构建造成CISCN日期/路径偏移：搜索索引用Hexo带时区date helper，Pages构建TZ=Asia/Shanghai；误发的2024/05/22路径保留跳转。无新游戏素材。
+
+### 2026-10-17 · VISITOR-YEAR-DEPLOY
+
+经用户授权，新Worker已部署，版本023a5233-d2f4-4f86-b21f-c9be23212b1a，100%活动流量。365天访客去重/清理已在线生效；只读健康检查通过，未改累计计数。覆盖此前“云端需部署后生效”的历史记录。Pixel统计白名单尚未写入云端，本站前端无新改动。
+
 ### 2026-10-17 · TEXT-SELECTION-ALPHA
 
 选区浅青绿底改为rgba(156,232,223,.5)，普通正文保持深灰紫字，深色代码区选中文字为白色以保持对比。正文链接原1px border-bottom移除，避免横线残留在选区下面，保留原链接颜色与手型；不删除正文分割线、代码分隔线或Markdown删除线。网页样式适配，无游戏参数变更。

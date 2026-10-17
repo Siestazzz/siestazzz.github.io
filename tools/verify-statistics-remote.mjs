@@ -12,16 +12,20 @@ if(process.argv.includes('--disabled')){
  console.log('PASS remote: disabled writes, reads remain available');
  process.exit(0);
 }
-const first=await call('/stats');assert.equal(first.status,200);assert.equal(Object.keys(first.body.articles).length,10);
+const first=await call('/stats');assert.equal(first.status,200);
+if(production){
+ const posts=await fetch(origin+'/search.json',{signal:AbortSignal.timeout(15000)}).then(r=>{assert.equal(r.status,200);return r.json()});
+ const expected=posts.map(p=>p.statsId).sort();
+ assert.deepEqual(Object.keys(first.body.articles).sort(),expected,'Published posts must all be registered in D1');
+ assert.equal(first.cors,origin);
+ console.log('PASS production read-only: '+expected.length+' published articles match D1; statistics and CORS available. No events sent.');
+ console.log(JSON.stringify(first.body));process.exit(0);
+}
 await new Promise(r=>setTimeout(r,1500));
 const cached=await call('/stats?arbitrary-cache-buster='+crypto.randomUUID());
 assert.equal(cached.cache,'HIT');assert.equal(cached.cors,origin);
 assert.equal((await call('/events',{kind:'visit',visitor:crypto.randomUUID()},'https://invalid.example')).status,403);
 assert.equal((await call('/events',{kind:'read',id:'nonexistent-test-article',visitor:crypto.randomUUID()})).status,404);
-if(production){
- console.log('PASS production: 10 articles, canonical cache HIT, CORS rejection, unknown article rejection. No accepted events sent.');
- console.log(JSON.stringify(cached.body));process.exit(0);
-}
 const event={kind:'read',id:'allsafe-android-writeup',visitor:crypto.randomUUID()};
 assert.equal((await call('/events',event)).body.accepted,true);
 assert.equal((await call('/events',event)).body.accepted,false);

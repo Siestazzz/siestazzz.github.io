@@ -1,5 +1,13 @@
 # 游戏实现 → 网页实现：证据对照
 
+## 2026-10-17 · STATS-PUBLISH-COMPLETE
+
+用户要求完成遗漏部署：远程D1执行现有articles.sql，仅INSERT OR IGNORE、不UPDATE/DELETE原计数。前后只读结果visits4/reads1，新增pixel-flashing:0，全部11篇ID与线上search.json一致。Worker保持023a5233-d2f4-4f86-b21f-c9be23212b1a。verify-statistics-remote改生产路径为纯GET比对在线索引；Node直连因网络timeout未通过，用PowerShell HTTP独立验证，不宣称该脚本在线通过。另发现CISCN的UTC构建日期偏移，按已设Asia/Shanghai统一索引helper与CI环境，保留错误旧地址兼容。属于博客部署/日期业务，无原游戏参数。
+
+## 2026-10-17 · VISITOR-YEAR 云端部署
+
+用户明确要求部署后，执行 wrangler deploy --config workers/statistics/wrangler.jsonc。活动版本023a5233-d2f4-4f86-b21f-c9be23212b1a，deployments list确认100%流量；一年访客去重与分类型清理已发布，覆盖下文“仅本地未部署”历史状态。部署前本地SQLite回归通过；线上仅GET /stats验证200、正式域名CORS正确，返回visits4/reads1，未发送计数事件或重置数据。Cloudflare分组标签设置警告不影响上传与触发器部署成功。未执行articles.sql，Pixel登记仍待处理。
+
 ## 2026-10-17 · TEXT-SELECTION-ALPHA
 
 用户要求选区底透明一些；refinements.css将alpha设为0.5（网页自选值），深色代码选中文字用白色。排查发现style.styl `.article-content a`自带1px实线下边框，与选中无关、选中仍存在；在refinements.css覆盖为0。未把原正文分割线误删，也未声称所有类型横线均来自链接。构建与浏览器选区/边框测试、截图检查见本次验证。
