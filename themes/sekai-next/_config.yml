@@ -23,6 +23,10 @@ friends:
     url: https://juicymio.github.io/
     avatar: https://juicymio.github.io/avatar.jpg
     description: Happy hacking
+  - name: crisq
+    url: https://crisq.top/
+    avatar: 'https://blog.crisq.top/_vercel/image?url=_astro%2Favatar.oWlCBz2L.png&w=1200&q=100'
+    description: 一个乐观的记录者
 
 # Blank values inherit the Hexo site configuration. No application backend is implied.
 statistics:
