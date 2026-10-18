@@ -86,6 +86,7 @@
 
   <div id="site-audio-controls"><button class="bgm-toggle" type="button" aria-label="播放背景音乐与音效" aria-pressed="false"><img src="<%- url_for('/game-assets/icon_tab_unit_vs_on.png') %>" alt=""><span>BGM</span><i aria-hidden="true"></i></button><span class="audio-status" role="status" aria-live="polite"></span></div>
   <main class="site-main"><%- body %></main>
+  <% if (isTitleEntry) { %><script src="<%- url_for('/js/entry-parameters.js') %>" defer></script><% } %>
   <script src="<%- url_for('/js/site-audio.js') %>" defer></script>
   <script src="<%- url_for('/js/tap-mesh.js') %>" defer></script>
   <script src="<%- url_for('/js/effects.js') %>" defer></script>

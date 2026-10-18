@@ -34,7 +34,7 @@
    if(result.some(v=>!v))throw Error('动作未能开始');
    setLine(t.serif);host.dataset.talkId=t.id;host.dataset.motion=t.motion;host.dataset.expression=t.expression;
    host.dataset.voice=t.voice;
-   if(host.dataset.ready==='true')window.sekaiAudio?.playVoice(voiceURL(t));
+   if(host.dataset.ready==='true'){window.sekaiAudio?.stopVoice();if(t.voice)window.sekaiAudio?.playVoice(voiceURL(t));}
    if(reduced.matches)renderOnce();
   }finally{state.busy=false;}
  }
@@ -60,7 +60,7 @@
     const [config,talkData]=await Promise.all([get(key+'.model3.json'),get('talks.json')]);
     if(ticket!==state.loading||host!==state.host)return;
     config.url=new URL(key+'.model3.json',dir).href;
-    for(const t of talkData.items)window.sekaiAudio?.preloadVoice(new URL(t.voice+'.ogg',dir).href).catch(()=>{});
+    for(const t of talkData.items)if(t.voice)window.sekaiAudio?.preloadVoice(new URL(t.voice+'.ogg',dir).href).catch(()=>{});
     const model=await PIXI.live2d.Live2DModel.from(config,{autoUpdate:false,autoFocus:false,autoHitTest:false,idleMotionGroup:'__manual__',motionPreload:'ALL'});
     if(ticket!==state.loading||host!==state.host){model.destroy({children:true,texture:true,baseTexture:true});return;}
     if(state.model){state.app.stage.removeChild(state.model);state.model.destroy({children:true,texture:true,baseTexture:true});}
@@ -92,14 +92,14 @@
     if(ticket!==state.loading||host!==state.host)return;
    }
    host.dataset.ready='true';host.querySelector('.live2d-fallback').hidden=true;
-   window.sekaiAudio?.playVoice(voiceURL(state.talks[0]));
+   if(state.talks[0].voice)window.sekaiAudio?.playVoice(voiceURL(state.talks[0]));
    visibility();
   }catch(e){if(host!==state.host||ticket!==state.loading)return;console.warn('Live2D loading failed',e);host.dataset.ready='error';host.querySelector('.live2d-fallback').hidden=false;setLine('模型加载失败，点击立绘或文字框重试。');}
  }
  window.SekaiPages.register('live2d-character',scope=>{
   const host=document.querySelector('[data-live2d-host]');if(!host)return;
   state.host=host;let started=false;
-  const start=()=>{if(started||document.documentElement.classList.contains('title-entry-pending'))return;started=true;const keys=Object.keys(names);select(keys[Math.floor(Math.random()*keys.length)]);};
+  const start=()=>{if(started||document.documentElement.classList.contains('title-entry-pending'))return;started=true;select('miku');};
   observer=new ResizeObserver(fit);observer.observe(host.querySelector('.live2d-viewport'));
   const entryObserver=new MutationObserver(()=>{start();visibility();});entryObserver.observe(document.documentElement,{attributes:true,attributeFilter:['class']});
   const interact=()=>host.dataset.ready==='error'?select(host.dataset.character):talk();

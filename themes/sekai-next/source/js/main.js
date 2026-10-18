@@ -40,11 +40,14 @@ document.querySelector('.len-talk:not(.live2d-talk)')?.addEventListener('click',
 });
 const input = document.querySelector('#song-query');
 if (!input) return;
+// Load on entering the selection page so source inspection can discover the clue.
+const supplementalReady=import(root+'js/search-extra.js').catch(()=>null);
 const state = document.querySelector('#song-state'), list = document.querySelector('#song-list'), preview = document.querySelector('#song-preview'), tabs = document.querySelector('#unit-tabs');
 let params = new URLSearchParams(location.search);
 if(!params.size){try{const saved=new URL(sessionStorage.getItem('sekai-select-return')||location.href,location.origin);if(saved.pathname===location.pathname)params=saved.searchParams;}catch{}}
 input.value = params.get('q') || '';
 let category = params.get('category') || '', selected = params.get('post') || '', posts = [], matched = [];
+let extraPost=null,searchTicket=0;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const unitIcons = ['vs','ln','mj','vb','ws','25'];
 const spectrum = '<span class="row-spectrum" aria-hidden="true">' + Array.from({length:6},(_,i) => '<i style="--bar:' + i + '"></i>').join('') + '</span>';
@@ -61,6 +64,7 @@ function select(post) {
   selected = post.path;
   list.querySelectorAll('.song-row').forEach(el => { const active = el.dataset.path === selected; el.classList.toggle('selected', active); el.setAttribute('aria-pressed', String(active)); });
   preview.innerHTML = '<div class="jacket-wrap"><span class="jacket-label">' + esc(post.categories.join(' / ') || 'RECORD') + '</span><div class="jacket cover-empty" aria-hidden="true"></div></div><h1>' + esc(post.title) + '</h1><p class="preview-date">' + esc(post.date) + '</p><div class="preview-tags">' + (post.tagLinks || post.tags.map(name=>({name,path:'tags/'+encodeURIComponent(name)+'/'}))).map(t => '<a href="' + esc(root+t.path) + '">' + esc(t.name) + '</a>').join('') + '</div><p class="preview-excerpt">' + esc(post.excerpt) + '</p><a class="read-start" href="' + esc(root + post.path) + '">开始阅读</a><button class="random-post" type="button"><img src="' + asset('btn_random_lgr.png') + '" alt="">随机一篇</button>';
+  if(post.cover){const image=document.createElement('img');image.className='jacket';image.src=root+post.cover;image.alt=post.title;preview.querySelector('.jacket').replaceWith(image);}
   preview.querySelector('.random-post').addEventListener('click', random);
   preview.querySelector('.random-post').disabled = matched.length < 2;
   if (!reduced.matches) preview.animate([{opacity:.1, transform:'translateX(20px)'},{opacity:1,transform:'translateX(0)'}],{duration:250,easing:'ease-out'});
@@ -75,10 +79,15 @@ function random() {
 function render() {
   const q = input.value.trim().toLocaleLowerCase();
   matched = posts.filter(p => (!category || [...p.categories,...p.tags].some(name => name.toLocaleLowerCase() === category.toLocaleLowerCase())) && [p.title,p.text,p.excerpt,...p.tags].join(' ').toLocaleLowerCase().includes(q));
+  if(extraPost)matched=[extraPost];
   state.textContent = matched.length + ' 篇文章';
   const diamonds = '<span class="diamonds" aria-hidden="true">' + ('<img src="' + asset('icon_allPerfect.png') + '" alt="">').repeat(5) + '</span>';
 list.innerHTML = matched.map(p => '<button type="button" class="song-row" data-path="' + esc(p.path) + '"><span class="view-medal"><small>阅读量</small><b data-post-views="' + esc(p.statsId) + '">' + views(p.statsId) + '</b></span><span class="song-thumb cover-empty" aria-hidden="true"></span>' + spectrum + '<span class="song-info"><strong>' + esc(p.title) + '</strong><time>' + esc(p.date) + '</time>' + diamonds + '</span><span class="row-tag">' + esc(p.tags[0] || 'NOTE') + '</span></button>').join('');
-  list.querySelectorAll('button').forEach(el => el.addEventListener('click', () => select(matched.find(p => p.path === el.dataset.path))));
+  list.querySelectorAll('button').forEach((el,index) => {
+    const post=matched[index];
+    if(post.cover){const image=document.createElement('img');image.className='song-thumb';image.src=root+post.cover;image.alt='';el.querySelector('.song-thumb').replaceWith(image);}
+    el.addEventListener('click', () => select(post));
+  });
   tabs.querySelectorAll('button').forEach(el => { const active = el.dataset.category === category; el.classList.toggle('active',active); el.setAttribute('aria-pressed',String(active)); const img = el.querySelector('img[data-unit]'); if (img) img.src = asset('icon_tab_unit_' + img.dataset.unit + '_' + (active ? 'on' : 'off') + '.png'); });
   if (matched.length) { select(matched.find(p => p.path === selected) || matched[0]); preview.querySelector('.random-post').disabled = matched.length < 2; }
   else { selected = ''; preview.innerHTML = '<div class="empty-selection"><h2>没有匹配的文章</h2><p>试试其他标题、标签或正文关键词。</p><button class="read-start" id="clear-query">清空搜索和分类</button></div>'; preview.querySelector('button').addEventListener('click',()=>{input.value='';category='';render();input.focus();});remember(); }
@@ -91,9 +100,15 @@ postData.then(data => {
   const categories = ['CTF', 'Android', '漏洞挖掘', '逆向工程', 'AI', '其他'];
   if (!categories.includes(category)) category = '';
   tabs.innerHTML = '<button type="button" data-category="">全部<small>ALL</small></button>' + categories.map((c,i) => '<button type="button" data-category="' + esc(c) + '"><img data-unit="' + unitIcons[i%6] + '" src="' + asset('icon_tab_unit_' + unitIcons[i%6] + '_off.png') + '" alt=""><span>' + esc(c) + '</span></button>').join('');
-  tabs.querySelectorAll('button').forEach(b => b.addEventListener('click',()=>{category=b.dataset.category;render();}));
+  tabs.querySelectorAll('button').forEach(b => b.addEventListener('click',()=>{extraPost=null;searchTicket++;category=b.dataset.category;render();}));
   render();
 }).catch(() => { if(scope.signal.aborted)return;state.textContent='文章加载失败，请刷新重试。'; preview.innerHTML='<a class="read-start" href="' + root + 'archives/">查看文章归档</a>'; });
-input.addEventListener('input',render);
-document.querySelector('.song-search').addEventListener('submit',e=>{e.preventDefault();render();});
+input.addEventListener('input',()=>{extraPost=null;searchTicket++;render();});
+document.querySelector('.song-search').addEventListener('submit',async e=>{
+  e.preventDefault();const ticket=++searchTicket,query=input.value.trim();extraPost=null;
+  const supplemental=await supplementalReady;
+  if(scope.signal.aborted||ticket!==searchTicket)return;
+  extraPost=supplemental?.lookup(query)||null;
+  if(!scope.signal.aborted&&ticket===searchTicket)render();
+});
 });

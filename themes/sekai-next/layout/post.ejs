@@ -1,4 +1,4 @@
-<article class="reader-shell" data-post-path="<%= page.path %>" data-stats-article="<%= page.stats_id || page.slug %>">
+<article class="reader-shell" data-post-path="<%= page.path %>" <% if (!page.ctf_hidden) { %>data-stats-article="<%= page.stats_id || page.slug %>"<% } %>>
   <aside class="reader-side">
     <a class="back-link" href="<%- url_for('/search/') %>">← 返回文章选择</a>
     <div class="chapter-marker"><span>CHAPTER</span><strong><%= date(page.date, 'MM.DD') %></strong></div>
@@ -17,7 +17,7 @@
   <div class="reader-card" style="--accent:<%= categoryPalette[primaryCategory] %>" tabindex="0" aria-label="文章阅读区">
     <header class="article-head" id="article-start">
       <p><% if (page.categories.length) { page.categories.each(function(category) { %><a class="reader-category-link" href="<%- url_for(category.path) %>"><%= category.name %></a> <% }); } else { %>PERSONAL RECORD<% } %></p>
-      <small class="reading-count" title="全站阅读量，同一浏览器30分钟内去重">阅读 <span data-post-views="<%= page.stats_id || page.slug %>">—</span></small>
+      <% if (!page.ctf_hidden) { %><small class="reading-count" title="全站阅读量，同一浏览器30分钟内去重">阅读 <span data-post-views="<%= page.stats_id || page.slug %>">—</span></small><% } %>
       <h1><%= page.title %></h1>
       <% if (page.excerpt) { %><div class="article-lead"><%= strip_html(page.excerpt) %></div><% } %>
     </header>

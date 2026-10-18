@@ -24,8 +24,9 @@
  }
  let manifestPromise;
  const manifest=()=>manifestPromise||(manifestPromise=fetch(base+'manifest.json').then(r=>{if(!r.ok)throw Error('audio manifest');return r.json();}).catch(e=>{manifestPromise=null;throw e;}));
- const wanted=()=>document.documentElement.classList.contains('title-entry-pending')?'music0001':'music0002';
- const title=()=>wanted()==='music0001'?'一緒に歌おう！':'Our Town, Our Life';
+ let challengeTrack='ctf-default';
+ const wanted=()=>challengeTrack;
+ const title=()=> '一緒に歌おう！';
  function ui(message=''){
   const playing=enabled&&context?.state==='running'&&!!source;
   button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?'静音':'取消静音')+'背景音乐与音效：'+title());button.title=(playing?'静音':'取消静音')+' · '+title();
@@ -34,7 +35,7 @@
  }
  function setup(){if(context)return;const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)throw Error('Web Audio unavailable');context=new Audio();gain=context.createGain();gain.gain.value=enabled?.112:0;gain.connect(context.destination);context.onstatechange=()=>ui();}
  async function buffer(key){
-  if(!buffers.has(key))buffers.set(key,manifest().then(m=>fetch(base+m[key].file)).then(r=>{if(!r.ok)throw Error('audio file');return r.arrayBuffer();}).then(data=>context.decodeAudioData(data)).catch(e=>{buffers.delete(key);throw e;}));
+  if(!buffers.has(key))buffers.set(key,(key==='ctf-default'?fetch(root+'game-assets/ctf/theme.ogg'):manifest().then(m=>fetch(base+m[key].file))).then(r=>{if(!r.ok)throw Error('audio file');return r.arrayBuffer();}).then(data=>context.decodeAudioData(data)).catch(e=>{buffers.delete(key);throw e;}));
   return buffers.get(key);
  }
  function stop(){if(source){source.stop();source.disconnect();source=null;}current='';}
@@ -45,9 +46,9 @@
   try{
    const [data,m]=await Promise.all([buffer(key),manifest()]);
    if(ticket!==version)return;
-   const node=context.createBufferSource(),meta=m[key].metadata;node.buffer=data;node.loop=true;
-   node.loopStart=meta.loopingInfo.start/meta.sampleRate;node.loopEnd=meta.loopingInfo.end/meta.sampleRate;
-   node.connect(gain);node.start();trackStartedAt=context.currentTime;source=node;ui('正在播放 '+m[key].title);
+   const node=context.createBufferSource();node.buffer=data;node.loop=true;
+   node.loopStart=0;node.loopEnd=data.duration;
+   node.connect(gain);node.start();trackStartedAt=context.currentTime;source=node;ui('正在播放 '+title());
   }catch{if(ticket===version){current='';ui('音乐加载失败，点击按钮重试');}}
   finally{if(ticket===version)starting=false;}
  }
@@ -81,6 +82,7 @@
  addEventListener('sekai-page-ready',()=>{scrollNode=null;sync();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)context?.suspend();else unlock();});
  addEventListener('pagehide',()=>context?.suspend());addEventListener('pageshow',()=>{ui();if(context)unlock();});
- window.sekaiAudio={preloadVoice,playVoice,stopVoice,get state(){return {enabled,voice:voiceName,lastVoice,bgmGain:gain?.gain.value||0,track:current,playing:!!source&&context?.state==='running',contextTime:context?.currentTime||0,trackStartedAt,loopStart:source?.loopStart,loopEnd:source?.loopEnd,effects:effects.size,effectCount,lastEffectName};}};
+ async function useChallengeAudio(bytes){setup();const decoded=await context.decodeAudioData(bytes.slice(0));buffers.set('ctf-stage',Promise.resolve(decoded));challengeTrack='ctf-stage';await sync();context.resume().catch(()=>{});}
+ window.sekaiAudio={useChallengeAudio,preloadVoice,playVoice,stopVoice,get state(){return {enabled,voice:voiceName,lastVoice,bgmGain:gain?.gain.value||0,track:current,playing:!!source&&context?.state==='running',contextTime:context?.currentTime||0,trackStartedAt,loopStart:source?.loopStart,loopEnd:source?.loopEnd,effects:effects.size,effectCount,lastEffectName};}};
  ui();unlock();if(wanted()==='music0001'&&context)buffer('SE_TITLE_ENTER').catch(()=>{});
 })();
