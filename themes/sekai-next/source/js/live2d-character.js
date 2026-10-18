@@ -2,7 +2,8 @@
 (()=>{
  const scriptURL=document.currentScript.src,base=new URL('../',scriptURL);
  const names={ichika:'星乃一歌',rin:'镜音铃',len:'镜音连',miku:'初音未来'};
- const state={app:null,model:null,key:null,host:null,talks:[],config:null,loading:0,busy:false,nextTalk:0,clock:0};
+ const openingTalk=1;
+ const state={app:null,model:null,key:null,host:null,talks:[],config:null,loading:0,busy:false,clock:0};
  let libraries,observer;
  function loadScript(file){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=new URL('vendor/live2d/'+file,base);s.onload=resolve;s.onerror=()=>{s.remove();reject(Error('无法加载 '+file));};document.head.append(s);});}
  function prepare(){return libraries||(libraries=(async()=>{await loadScript('cubismcore-05.min.js');await loadScript('pixi-7.4.3.min.js');await loadScript('mulmotion-0.5.1.min.js');})().catch(e=>{libraries=null;throw e;}));}
@@ -23,8 +24,8 @@
  function setLine(text){if(state.host)state.host.querySelector('.live2d-line').textContent=text;}
  function idle(){if(!state.model)return Promise.resolve();return state.model.parallelMotion([{group:'Idle',index:0,priority:3},{group:'Expression',index:0,priority:3,toLastFrame:true}]);}
  const voiceURL=t=>new URL('game-assets/live2d/'+state.key+'/'+t.voice+'.ogg',base).href;
- async function playTalk(){
-  const m=state.model,host=state.host,t=state.talks[state.nextTalk++%state.talks.length];state.busy=true;
+ async function playTalk(index){
+  const m=state.model,host=state.host,t=state.talks[index];state.busy=true;
   try{
    const refs=state.config.FileReferences.Motions;
    // Adjacent lines can share an expression; clear reservations so it can restart.
@@ -40,7 +41,10 @@
  }
  async function talk(){
   if(!state.model||state.busy||!state.host||state.host.dataset.ready!=='true')return;
-  try{await playTalk();}catch(e){console.warn('Live2D interaction',e);}
+  const choices=state.talks.map((_,i)=>i).filter(i=>String(state.talks[i].id)!==state.host.dataset.talkId);
+  if(!choices.length)return;
+  const index=choices[Math.floor(Math.random()*choices.length)];
+  try{await playTalk(index);}catch(e){console.warn('Live2D interaction',e);}
  }
  async function select(key){
   const host=state.host;if(!host)return;
@@ -64,7 +68,7 @@
     const model=await PIXI.live2d.Live2DModel.from(config,{autoUpdate:false,autoFocus:false,autoHitTest:false,idleMotionGroup:'__manual__',motionPreload:'ALL'});
     if(ticket!==state.loading||host!==state.host){model.destroy({children:true,texture:true,baseTexture:true});return;}
     if(state.model){state.app.stage.removeChild(state.model);state.model.destroy({children:true,texture:true,baseTexture:true});}
-    state.model=model;state.key=key;state.config=config;state.talks=talkData.items;state.nextTalk=0;
+    state.model=model;state.key=key;state.config=config;state.talks=talkData.items;
     const internal=model.internalModel;
     internal.coreModel.setOverwriteFlagForModelCullings?.(true);
     // A small Web idle breath, not a claim about the game's controller parameters.
@@ -80,8 +84,7 @@
    await idle();
    if(ticket!==state.loading||host!==state.host)return;
    warmPose();
-   state.nextTalk=0;
-   await playTalk();
+   await playTalk(openingTalk);
    if(ticket!==state.loading||host!==state.host)return;
    // Resolve the first dialogue's .5s motion fade and physics offscreen, not Idle.
    warmPose();
@@ -92,7 +95,7 @@
     if(ticket!==state.loading||host!==state.host)return;
    }
    host.dataset.ready='true';host.querySelector('.live2d-fallback').hidden=true;
-   if(state.talks[0].voice)window.sekaiAudio?.playVoice(voiceURL(state.talks[0]));
+   if(state.talks[openingTalk].voice)window.sekaiAudio?.playVoice(voiceURL(state.talks[openingTalk]));
    visibility();
   }catch(e){if(host!==state.host||ticket!==state.loading)return;console.warn('Live2D loading failed',e);host.dataset.ready='error';host.querySelector('.live2d-fallback').hidden=false;setLine('模型加载失败，点击立绘或文字框重试。');}
  }

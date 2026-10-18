@@ -1,7 +1,8 @@
 <%
 const friends = (theme.friends || []).filter(f => /^https?:\/\//i.test(f.url || ''));
 const own = theme.friend_exchange || {};
-const ownCard = ['名称：' + (own.name || config.title), '网址：' + (own.url || config.url), '头像：' + (own.avatar || '暂未设置'), '简介：' + (own.description || config.description)].join('\n');
+const ownAvatar = own.avatar || (theme.profile || {}).avatar;
+const ownCard = ['名称：' + (own.name || config.title), '网址：' + (own.url || config.url), '头像：' + (ownAvatar ? full_url_for(ownAvatar) : '暂未设置'), '简介：' + (own.description || config.description)].join('\n');
 const contact = /^(https?:\/\/|mailto:)/i.test(own.contact || '') ? own.contact : '';
 %>
 <section class="friends-screen" aria-label="友情链接">

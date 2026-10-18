@@ -1,7 +1,7 @@
 {
   "source": "https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/systemLive2ds.json",
   "provenance": "community master snapshot; not extracted from this device",
-  "selection": "CTF branch: only the first displayed serif is replaced; all three original voices, motions and expressions are retained",
+  "selection": "CTF branch: opens with item 62; subsequent clicks randomly select one of the two other items without consecutive repeats. Only item 61 serif is replaced; original voices, motions and expressions are retained",
   "items": [
     {
       "id": 61,
