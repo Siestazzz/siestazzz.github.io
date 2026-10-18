@@ -1,8 +1,0 @@
-{
-  "name": "sekai-live2d-vendor",
-  "private": true,
-  "dependencies": {
-    "pixi.js": "7.4.3",
-    "@sekai-world/pixi-live2d-display-mulmotion": "0.5.1"
-  }
-}
