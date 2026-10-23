@@ -9,7 +9,7 @@
   <% for (const part of ['01','02','03']) { %><link rel="preload" as="image" href="<%- url_for('/game-assets/entry/tex_anniversary_5th_bg_bg_'+part+'.webp') %>"><% } %>
   <link rel="preload" as="fetch" crossorigin href="<%- url_for('/game-assets/entry/title-fx.json') %>">
   <% } %>
-  <script src="<%- url_for('/js/page-router.js') %>?v=random-entry-3"></script>
+  <script src="<%- url_for('/js/page-router.js') %>?v=entry-audio-20261023-2"></script>
   <% const documentTitle = page.title || page.category || page.tag; %>
   <title><%= documentTitle ? documentTitle + ' · ' : '' %><%= config.title %></title>
   <meta name="description" content="<%= page.excerpt ? strip_html(page.excerpt).replace(/\n/g, ' ') : config.description %>">
@@ -18,11 +18,11 @@
   <link rel="stylesheet" href="<%- url_for('/css/refinements.css') %>">
   <link rel="stylesheet" href="<%- url_for('/css/system-menu.css') %>">
   <% const isHome = is_home(); const isEntry = isHome || page.layout === 'live'; const hasWorld = true; %>
-  <script src="<%- url_for('/js/visit-world.js') %>"></script>
+  <script src="<%- url_for('/js/visit-world.js') %>?v=entry-audio-20261023-2"></script>
   <link rel="stylesheet" href="<%- url_for('/css/entry-screen.css') %>">
   <link rel="stylesheet" href="<%- url_for('/css/site-audio.css') %>">
   <% if (isTitleEntry) { %><script src="<%- url_for('/js/title-fx.js') %>"></script><% } %>
-  <script src="<%- url_for('/js/entry-screen.js') %>" data-entry="<%= isTitleEntry %>"></script>
+  <script src="<%- url_for('/js/entry-screen.js') %>?v=entry-audio-20261023-2" data-entry="<%= isTitleEntry %>"></script>
   <% if (hasWorld) { %><link rel="stylesheet" href="<%- url_for('/css/sekai-map.css') %>"><link rel="stylesheet" href="<%- url_for('/css/home-characters.css') %>"><% } %>
   <% if (page.layout === 'friends') { %><link rel="stylesheet" href="<%- url_for('/css/friends.css') %>"><% } %>
 </head>
@@ -87,7 +87,7 @@
   <div id="site-audio-controls"><button class="bgm-toggle" type="button" aria-label="播放背景音乐与音效" aria-pressed="false"><img src="<%- url_for('/game-assets/icon_tab_unit_vs_on.png') %>" alt=""><span>BGM</span><i aria-hidden="true"></i></button><span class="audio-status" role="status" aria-live="polite"></span></div>
   <main class="site-main"><%- body %></main>
   <% if (isTitleEntry) { %><script src="<%- url_for('/js/entry-parameters.js') %>" defer></script><% } %>
-  <script src="<%- url_for('/js/site-audio.js') %>" defer></script>
+  <script src="<%- url_for('/js/site-audio.js') %>?v=entry-audio-20261023-2" defer></script>
   <script src="<%- url_for('/js/tap-mesh.js') %>" defer></script>
   <script src="<%- url_for('/js/effects.js') %>" defer></script>
   <script src="<%- url_for('/js/street-pan.js') %>" defer></script>
