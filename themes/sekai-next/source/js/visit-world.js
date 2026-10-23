@@ -11,9 +11,6 @@
  document.documentElement.dataset.homeWorld=state.world;
  state.startedAt=state.startedAt||now;
  document.documentElement.dataset.visitId=String(state.startedAt);
- // A tab remembers the intro only for this visit (the existing 30-minute policy).
- window.sekaiEntrySeen=false;
- try{window.sekaiEntrySeen=sessionStorage.getItem('sekai-entry-visit')===String(state.startedAt);}catch{}
  const save=()=>{state.lastSeen=Date.now();try{localStorage.setItem(key,JSON.stringify(state));localStorage.setItem('sekai-home-world',state.world);}catch{}};
  function resume(){
   if(document.hidden)return;

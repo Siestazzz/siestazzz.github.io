@@ -24,9 +24,9 @@
  }
  let manifestPromise;
  const manifest=()=>manifestPromise||(manifestPromise=fetch(base+'manifest.json').then(r=>{if(!r.ok)throw Error('audio manifest');return r.json();}).catch(e=>{manifestPromise=null;throw e;}));
- let challengeTrack='ctf-default';
- const wanted=()=>challengeTrack;
- const title=()=> '一緒に歌おう！';
+ let challengeTrack=null;
+ const wanted=()=>challengeTrack||(document.documentElement.classList.contains('title-entry-pending')?'ctf-default':'music0002');
+ const title=()=>wanted()==='music0002'?'Our Town, Our Life':'一緒に歌おう！';
  function ui(message=''){
   const playing=enabled&&context?.state==='running'&&!!source;
   button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?'静音':'取消静音')+'背景音乐与音效：'+title());button.title=(playing?'静音':'取消静音')+' · '+title();
@@ -47,7 +47,9 @@
    const [data,m]=await Promise.all([buffer(key),manifest()]);
    if(ticket!==version)return;
    const node=context.createBufferSource();node.buffer=data;node.loop=true;
-   node.loopStart=0;node.loopEnd=data.duration;
+   const meta=m[key]?.metadata;
+   node.loopStart=meta?meta.loopingInfo.start/meta.sampleRate:0;
+   node.loopEnd=meta?meta.loopingInfo.end/meta.sampleRate:data.duration;
    node.connect(gain);node.start();trackStartedAt=context.currentTime;source=node;ui('正在播放 '+title());
   }catch{if(ticket===version){current='';ui('音乐加载失败，点击按钮重试');}}
   finally{if(ticket===version)starting=false;}

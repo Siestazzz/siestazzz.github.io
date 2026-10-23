@@ -1,9 +1,6 @@
 (()=>{
  const root=document.documentElement;
  if(document.currentScript.dataset.entry!=='true')return;
- if(window.sekaiEntrySeen)return;
- window.sekaiEntrySeen=true;
- try{sessionStorage.setItem('sekai-entry-visit',root.dataset.visitId);}catch{}
  const timelineURL=new URL('../game-assets/entry/title-timeline.json',document.currentScript.src);
  const introRate=2;
  const timelineReady=fetch(timelineURL).then(r=>{if(!r.ok)throw Error('timeline');return r.json();});

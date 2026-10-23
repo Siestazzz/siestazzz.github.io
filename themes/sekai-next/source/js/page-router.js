@@ -13,12 +13,10 @@
   let shown=location.pathname+location.search;
   const eligible=url=>{
     const root=document.body.dataset.root||'/';
-    // The first entry needs a full document; later visits reuse the scene and audio.
+    // Entry owns a document-level intro: explicit visits (including browser Back) replay it.
     const entryPath=new URL(root+'entry/',location.origin).pathname;
     const path=url.pathname.replace(/\/$/,'');
-    const entry=[root.replace(/\/$/,''),root+'index.html',entryPath.replace(/\/$/,'')].includes(path);
-    const challenge=url.searchParams.has('key')||url.searchParams.has('iv');
-    return url.origin===location.origin&&url.pathname.startsWith(root)&&(!entry||(window.sekaiEntrySeen&&!challenge))&&!!document.querySelector('.unknown-scene');
+    return url.origin===location.origin&&url.pathname.startsWith(root)&&![root.replace(/\/$/,''),root+'index.html',entryPath.replace(/\/$/,'')].includes(path)&&!!document.querySelector('.unknown-scene');
   };
   async function navigate(value,{pop=false}={}){
     const url=new URL(value,location.href);
