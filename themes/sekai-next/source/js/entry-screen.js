@@ -1,6 +1,9 @@
 (()=>{
  const root=document.documentElement;
  if(document.currentScript.dataset.entry!=='true')return;
+ if(window.sekaiEntrySeen)return;
+ window.sekaiEntrySeen=true;
+ try{sessionStorage.setItem('sekai-entry-visit',root.dataset.visitId);}catch{}
  const timelineURL=new URL('../game-assets/entry/title-timeline.json',document.currentScript.src);
  const introRate=2;
  const timelineReady=fetch(timelineURL).then(r=>{if(!r.ok)throw Error('timeline');return r.json();});
@@ -14,9 +17,8 @@
   const button=entry.querySelector('.title-entry-enter');entry.tabIndex=-1;entry.focus({preventScroll:true});let entering=false,disposed=false;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,animations=[];
   const movie=entry.querySelector('.title-entry-movie'),loopStart=226/30;
-  let movieActive=false,movieFrame=0,movieLoop=false,movieObjectURL=null;
-  const movieRequest=new AbortController();
-  const stopMovie=()=>{movieActive=false;movieRequest.abort();if(movieFrame&&movie.cancelVideoFrameCallback)movie.cancelVideoFrameCallback(movieFrame);movieFrame=0;movie.pause();movie.removeAttribute('src');movie.load();if(movieObjectURL){URL.revokeObjectURL(movieObjectURL);movieObjectURL=null;}entry.classList.remove('title-entry-movie-active');};
+  let movieActive=false,movieFrame=0,movieLoop=false;
+  const stopMovie=()=>{movieActive=false;if(movieFrame&&movie.cancelVideoFrameCallback)movie.cancelVideoFrameCallback(movieFrame);movieFrame=0;movie.pause();movie.removeAttribute('src');movie.load();entry.classList.remove('title-entry-movie-active');};
   const movieFailed=()=>{if(!movieActive)return;stopMovie();if(!disposed&&!entering)settleIntro();};
   const movieTick=()=>{if(!movieActive||disposed)return;if(!movieLoop&&movie.currentTime>=loopStart){movieLoop=true;movie.playbackRate=1;}if(movie.requestVideoFrameCallback)movieFrame=movie.requestVideoFrameCallback(movieTick);};
   movie.addEventListener('timeupdate',()=>{if(!movie.requestVideoFrameCallback)movieTick();});
@@ -30,12 +32,9 @@
    const done=ok=>{clearTimeout(timer);movie.removeEventListener('loadeddata',loaded);movie.removeEventListener('error',failed);resolve(ok);};
    const loaded=()=>done(true),failed=()=>done(false);
    movie.addEventListener('loadeddata',loaded,{once:true});movie.addEventListener('error',failed,{once:true});
-   timer=setTimeout(()=>{movieRequest.abort();done(false);},6000);
-   // A fully buffered Blob is seekable even on static servers without byte-range support.
-   fetch(movie.dataset.src,{signal:movieRequest.signal}).then(r=>{if(!r.ok)throw Error('title movie');return r.blob();}).then(blob=>{
-    if(movieRequest.signal.aborted||disposed||entering){done(false);return;}
-    movieObjectURL=URL.createObjectURL(blob);movie.src=movieObjectURL;movie.load();
-   }).catch(failed);
+   timer=setTimeout(()=>{done(false);stopMovie();},6000);
+   // Let the media element buffer and seek with HTTP Range requests.
+   movie.src=movie.dataset.src;movie.load();
   });
   let fx=null;
   const fxReady=reduced?Promise.resolve():window.createSekaiTitleFX(entry).then(value=>{if(disposed)value.destroy();else fx=value;}).catch(error=>console.warn('Title particle fallback',error));

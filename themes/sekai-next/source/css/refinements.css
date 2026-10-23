@@ -1,6 +1,6 @@
 /* Restrict Rodin to Latin and kana: every Han character uses the same CN face. */
-@font-face{font-family:SekaiRodin;src:url('../game-assets/FOT-RodinNTLGPro-DB.otf') format('opentype');font-weight:100 600;font-display:swap;unicode-range:U+0000-024F,U+3040-30FF,U+31F0-31FF}
-@font-face{font-family:SekaiRodin;src:url('../game-assets/FOT-RodinNTLGPro-EB.otf') format('opentype');font-weight:700 900;font-display:swap;unicode-range:U+0000-024F,U+3040-30FF,U+31F0-31FF}
+@font-face{font-family:SekaiRodin;src:url('../game-assets/FOT-RodinNTLGPro-DB.woff2') format('woff2');font-weight:100 600;font-display:swap;unicode-range:U+0000-024F,U+3040-30FF,U+31F0-31FF}
+@font-face{font-family:SekaiRodin;src:url('../game-assets/FOT-RodinNTLGPro-EB.woff2') format('woff2');font-weight:700 900;font-display:swap;unicode-range:U+0000-024F,U+3040-30FF,U+31F0-31FF}
 @font-face{font-family:SekaiHan;src:url('../fonts/SourceHanSansCN-VF.woff2') format('woff2');font-weight:250 900;font-display:swap}
 body{font-family:SekaiRodin,SekaiHan,"Microsoft YaHei",sans-serif;font-weight:500}
 .article-content{font-weight:400}

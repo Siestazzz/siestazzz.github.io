@@ -1,4 +1,4 @@
-@font-face{font-family:TitleScript;src:url('../fonts/Allura-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:TitleScript;src:url('../fonts/Allura-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 .title-entry{display:none}
 .title-entry-route-veil{position:fixed;inset:0;z-index:45;background:white;pointer-events:auto}
 .title-entry-pending .title-entry{display:block;position:fixed;inset:0;z-index:45;isolation:isolate;overflow:hidden;background:#e6f9ff}

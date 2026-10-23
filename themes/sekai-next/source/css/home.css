@@ -1,4 +1,4 @@
-@font-face{font-family:SekaiHomeLabel;src:url('../game-assets/FOT-RodinNTLGPro-EB.otf') format('opentype');font-weight:700 900;font-display:swap;unicode-range:U+0000-007F,U+968F,U+673A,U+4E00,U+7BC7,U+5168,U+90E8,U+6587,U+7AE0}
+@font-face{font-family:SekaiHomeLabel;src:url('../game-assets/FOT-RodinNTLGPro-EB.woff2') format('woff2');font-weight:700 900;font-display:swap;unicode-range:U+0000-007F,U+968F,U+673A,U+4E00,U+7BC7,U+5168,U+90E8,U+6587,U+7AE0}
 .home-social{position:absolute;right:3%;top:28%;display:grid;gap:24px;justify-items:center}
 .page-type-index .menu-toggle span{display:block}
 .home-social a{position:static;display:grid;justify-items:center;gap:3px;color:white;text-decoration:none;text-shadow:0 2px 3px #45445f}
